@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<title>KFC</title>
+<script type="text/javascript">
+	var win=document.documentElement.clientWidth||document.body.clientWidth;
+	document.documentElement.style.fontSize = 100 * (win / 720) + "px";
+</script>
+<style type="text/css">
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body,div,p,ul,li,dl,dt,dd{margin:0;padding:0;}
+ul,li{list-style:none;}
+img{border:0;display: block;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#f0e2c3;font-size:0.24rem;color: #5f443b;}
+/*活动主页*/
+.banner{width: 100%;}
+.bookbox{overflow: hidden;}
+.booklist{margin:0.38rem auto 0.4rem;}
+.bookbox .booklist{display: -webkit-box;-webkit-transform:translateX(-4.34rem);}
+.booklist li,.getbox .booklist{width: 4.8rem;height: 5.34rem;-webkit-box-sizing:border-box;background:#fff8eb;border-radius: 0.1rem;border:2px solid #dec299;position: relative;}
+.bookbox .booklist li{transform:scale(0.9);-webkit-transform:scale(0.9);margin:0 0.24rem;transition:1s;-webkit-transition:1s;}
+.booklist div{position: absolute;top:2px;bottom:2px;left:2px;right:2px;border:1px solid #ebd8ba;text-align: center;}
+.booklist img{width: 3.2rem;height: 3.2rem;margin:0.28rem auto 0.24rem;border:1px solid #ebd7b7;}
+.booklist .price{color: #e87262;line-height: 0.3rem;}
+.booklist .price span{text-decoration: line-through;}
+.booklist .desc{line-height: 0.38rem;padding: 0.18rem 0.38rem 0;display: -webkit-box;-webkit-line-clamp:2;overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;color: #5f443b}
+.tag{position: absolute;top:-2px;left:-2px;width:1rem;height: 1rem;background: url(images/free.png) no-repeat;background-size: 2.12rem auto}
+.bookbox .tag{opacity:0;transition:1s;-webkit-transition:1s;}
+.bookbox .booklist .cur{transform:scale(1);-webkit-transform:scale(1);}
+.cur .tag{opacity: 1}
+.cur::after{content: "";position: absolute;bottom: 0;left: 0;right: 0;margin:auto;width: 0;height: 0;border:0.14rem solid transparent;border-bottom: 0.14rem solid #dec299;}
+.freebtn{display: block;height:1rem;line-height:1.02rem;text-align:center;margin:0 0.52rem 0.6rem;background: #5f443b;border-bottom: 0.06rem solid #d3b089;color: #feca29;font-size: 0.4rem}
+.freebtn:active{color: #e9b401;background: #483028;}
+.detail{margin:0 0.52rem}
+.detail dt{position: relative;text-align: center;margin-bottom: 0.14rem}
+.detail dt strong{display:inline-block;font-size:0.4rem;padding: 0 0.2rem;background: #f0e2c3;position: relative;z-index: 10}
+.detail dt::after{content:"";width: 100%;height: 1px;background: #dec299;position: absolute;top:0.18rem;left: 0}
+.detail dd{font-size: 0.26rem;line-height: 0.4rem}
+.detail .cp{color: #c7a573;line-height: 0.28rem;padding: 0.3rem 0 0.38rem;text-align: center;}
+/*已领取*/
+.getbox{display: none;}
+.getbox .mar{margin:0.7rem 0.52rem 1.06rem}
+.tag2{position: absolute;bottom:0.36rem;right:-0.26rem;width:2.12rem;height: 1.62rem;background: url(images/free.png) 0 -1.02rem no-repeat;background-size: 2.12rem auto}
+/*提交qq号*/
+.qqinfo{-webkit-appearance:none;display:block;width:6.16rem;padding:0 0.2rem;text-align:center;margin:-0.14rem 0.52rem 0.14rem;height: 0.8rem;line-height:0.82rem;font-size:0.3rem;background:#fff;-webkit-box-sizing:border-box;border: 1px solid #dec299;}
+.qqinfo:focus{border: 1px solid #e87262;outline: none;color: #000;font-size: 0.34rem}
+.qqinfo::-webkit-outer-spin-button,
+.qqinfo::-webkit-inner-spin-button {
+    -webkit-appearance: none!important;
+    margin:0;
+}
+/*弹窗*/
+.mask{position:fixed;width:100%;height:100%;top:0;left:0;z-index:100;background: rgba(0,0,0,.58);-webkit-box-align:center;-webkit-box-pack:center;/*display: -webkit-box*/display: none;}
+.mask:target{display: none;}
+.tiparea{width:4.74rem;padding:0.68rem 0 0.42rem;background: #fff8eb;border-radius: 10px;text-align: center;}
+.tiparea strong{font-size: 0.36rem;line-height: 0.54rem;color: #333;}
+.tiparea p{color: #666;line-height: 0.4rem;padding-top: 0.06rem}
+.tiparea .hide{display:block;width:3.2rem;height:0.8rem;line-height:0.82rem;box-shadow:inset 0 -3px #d44638;-webkit-box-shadow:inset 0 -3px #d44638;font-size:0.36rem;color:#fff;background:#e87262;border-radius:5px;margin:0.72rem auto 0;}
+.hide:active{color: #fbe5b2;background: #db5a48;box-shadow:inset 0 -3px #c83729;-webkit-box-shadow:inset 0 -3px #c83729;}
+</style>
+</head>
+<body>
+<img src="images/banner.jpg" class="banner"/>
+<div class="bookbox">
+	<ul class="booklist" id="booklist">
+		<li>
+			<div>
+				<img src="images/cover.jpg">
+				<p class="price">5原价：<span>6.99元</span></p>
+				<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+			</div>
+			<i class="tag"></i>
+		</li>
+		<li class="cur" datanum="111">
+			<div>
+				<img src="images/cover.jpg">
+				<p class="price">1原价：<span>6.99元</span></p>
+				<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+			</div>
+			<i class="tag"></i>
+		</li>
+		<li>
+			<div>
+				<img src="images/cover.jpg">
+				<p class="price">2原价：<span>6.99元</span></p>
+				<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+			</div>
+			<i class="tag"></i>
+		</li>
+		<li>
+			<div>
+				<img src="images/cover.jpg">
+				<p class="price">3原价：<span>6.99元</span></p>
+				<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+			</div>
+			<i class="tag"></i>
+		</li>
+		<li>
+			<div>
+				<img src="images/cover.jpg">
+				<p class="price">4原价：<span>6.99元</span></p>
+				<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+			</div>
+			<i class="tag"></i>
+		</li>
+		<li>
+			<div>
+				<img src="images/cover.jpg">
+				<p class="price">5原价：<span>6.99元</span></p>
+				<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+			</div>
+			<i class="tag"></i>
+		</li>
+		<li>
+			<div>
+				<img src="images/cover.jpg">
+				<p class="price">1原价：<span>6.99元</span></p>
+				<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+			</div>
+			<i class="tag"></i>
+		</li>
+	</ul>
+	<a href="#" class="freebtn">领取本书，去QQ阅读免费读</a>
+</div>
+<!-- 已领取 -->
+<div class="getbox">
+	<div class="booklist">
+		<div>
+			<img src="images/cover.jpg">
+			<p class="price">5原价：<span>6.99元</span></p>
+			<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+		</div>
+		<i class="tag"></i>
+		<i class="tag2"></i>
+	</div>
+	<a href="#" class="freebtn mar">去QQ阅读免费读</a>
+</div>
+<!-- ios填写qq -->
+<div class="getbox">
+	<div class="booklist">
+		<div>
+			<img src="images/cover.jpg">
+			<p class="price">5原价：<span>6.99元</span></p>
+			<p class="desc">为了弥补工作失误，司命星君将现代男人陈然的灵魂偷偷从地府带出...</p>			
+		</div>
+		<i class="tag"></i>
+	</div>
+	<input type="number" placeholder="输入QQ号，领取免费书" class="qqinfo" id="qqinfo">
+	<a href="#" class="freebtn">提交</a>
+</div>
+<div class="detail">
+	<dl>
+		<dt>
+			<strong>更多惊喜</strong>
+		</dt>
+		<dd>
+			<p>
+				<strong>活动时间：</strong>2016年3月1-3月31日
+			</p>
+			<p>
+				<strong>精彩活动：</strong><br>
+				【活动一】2016年3月1日-3月31日  每天9:30-23:00 ，在北京地区KFC指定餐厅“买任意现磨咖啡（中）送QQ阅读14天会员卡一张；共30万张，先到先得，送完为止；<br>
+				活动期间，每个账号、每台设备可有三次会员体验卡权益。<br>
+				【活动二】2016年3月1日-3月14日  ，在北京地区KFC指定餐厅，关注肯德基官方微信，即可免费活动“QQ阅读”指定图书一本;<br>
+				活动期间，每个账号每台设备只可领取一次免费书籍;<br>
+			</p>
+			<p>
+				<strong>特别惊喜：</strong><br>
+				1、活动期间，参与活动一或活动二，还有机会参与QQ阅读抽奖活动。17000杯肯德基美式咖啡（热）（中）等你来赢！<br>
+				2、获得特别惊喜的用户，需在24小时内登录QQ阅读App，奖品才可领取成功。超过时间则自动失效。<br>
+				3、美式咖啡（热）（中）券兑奖时间截止到2016年4月30日23:00前。<br>
+				4、活动说明：请将客户端升级至5.3版本以上以免影响本活动显示。
+			</p>
+		</dd>
+	</dl>
+	<p class="cp">本活动最终解释权归QQ阅读所有</p>
+</div>
+<div class="mask" id="mask">
+	<div class="tiparea">
+		<strong>今日免费书已经领完啦</strong>
+		<!-- <strong>今日免费书已经领完啦<br>今日免费书已经领完啦</strong> -->
+		<p>网络繁忙，请稍后再试</p>
+		<a href="#mask" class="hide">知道啦</a>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

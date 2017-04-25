@@ -1,0 +1,81 @@
+测试链接
+安卓
+http://solomotest4.3g.qq.com/book_res/event/act170305/adr/index.html?act_f=170406
+ios
+https://ptsolomo.reader.qq.com/book_res/event/act170305/ios/index.html?act_f=170406
+正式链接
+安卓
+http://iyuedu.qq.com/event/act170305/adr/index.html?act_f=170406
+ios
+https://yuedu.reader.qq.com/event/act170305/ios/index.html?act_f=170406
+
+
+
+
+html5 <video>播放mp4格式视频没有图像的解决办法
+MP4有3种编码，mpg4(xdiv),mpg4(xvid)，avc(h264)，H264才是公认的MP4标准编码。出现问题的视频编码格式不正确。
+解决办法:
+ 利用工具（如：格式工厂）将问题视频的编码格式转换成H264。
+       格式工厂下载地址：http://pan.baidu.com/s/1i5O7mK1，验证码：iri5
+
+2、分享完未刷新页面在分享成功后修改分享成功字段值
+调用 window.afterShare = function(){
+				Local.reqaObj(server() + "pkg170305/sharesuccess", function(data) {
+					self.shared=true;
+				}, [], function() {
+					Local.showToast("网络异常，请稍候重试");
+				}, 1);
+			}
+领完奖未刷新页面 领奖状态改为true
+
+3、ios掉不起客户端分享属于安装包问题
+4、ios跳转填写地址页Local.openInside('https://yuedu.reader.qq.com/event/act161002/ios/contact.html');
+安卓 Local.go('http://iyuedu.qq.com/event/act161002/adr/contact.html');
+5、加书架操作
+安卓 后台实现
+IOS self.bkbid = [{
+		author: "叶非夜",
+		title: "隔墙有男神：强行相爱100天",
+		intro:"隔墙有男神：强行相爱100天",
+		bid: "13700974"
+	}];
+	Local.addToShelfBooks(JSON.stringify(self.bkbid));//数组
+
+6、分享
+shareObj:{
+	url :"http://solomotest4.3g.qq.com/book_res/event/act170306/com/index.html?tf=1",
+	cover :"http://solomotest4.3g.qq.com/book_res/event/act170306/com/images/cover.jpg",
+	title : "言情天后叶非夜送你一份好礼",
+	desc : "新书剧透抢先看，实物周边等你拿！"
+},
+Local.shareTopic(self.shareurl, self.shareObj.cover, self.shareObj.title,self.shareObj.desc, 1);
+
+分享页带客户昵称 后台传个字段用encodeURIComponent编译后拼接到分享链接上
+self.ticked=encodeURIComponent(data.shareticket);
+self.shareurl="http://solomotest4.3g.qq.com/book_res/event/act170305/com/index.html?tf=1"+"&z-tickt="+self.ticked;
+在分享页里
+let ticket = param('z-tickt');
+$.ajax({type : 'GET',
+	url :server()+'pkg170305/shareinit?userticket='+ticket,
+	dataType : "json",
+	timeout : 5000,
+	success : function(data) {
+		console.log(data);
+		self.loading=false;
+		if( typeof data.nick==='string' ){
+			self.username = data.nick;
+		};
+		self.prizename=data.prize;
+		if(data.prize==''){
+			self.showprize=false;
+		}else{
+			self.showprize=true;
+		}
+	},
+	error : function(xhr, type) {
+		console.log(xhr, type);
+	}
+});
+
+7、分享页下载
+

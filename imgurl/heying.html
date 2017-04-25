@@ -1,0 +1,352 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8"> 
+<meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>与金秀贤合影</title>
+	<style type="text/css">
+		html,body,ul,h1,h2,h3,p,input,img,figure{margin: 0;padding: 0;}
+		ul,ol{list-style: none;}
+		html, body{width: 100%;height: 100%;overflow: hidden;-webkit-user-select: none;}
+		body{background:-webkit-linear-gradient(#c5d9f6,#fff 50%);background:linear-gradient(#c5d9f6,#fff 50%);font:12px/21px \5FAE\8F6F\96C5\9ED1;color: #fff;}
+		a, img{outline: 0 none;}
+		.pages{ width:200%; height:100%; overflow:hidden; zoom:1;transition: -webkit-transform 500ms ease-out;}
+		.pages .page{ float:left; width:50%; height:100%;}
+		.p1{ position:relative; width:100%; height:100%; background:url(img/pic2.jpg) no-repeat; background-size:auto 100%;}
+		.real-btn{ position: absolute; left: 50%; top: 330px; margin-left:-140px; width:100px; height:50px; opacity: 0;}
+		.btn-take-photo{ position: absolute; left: 50%; top: 335px; margin-left:-135px; width:90px; height:40px; border:none; border-radius:5px; background:#2aa700; color:#fff; font-size:14px; font-weight:bold; pointer-events:none; }
+		.p2 .editor{ position: relative; width:320px; height:340px; top: 50%; margin:-183px auto 0;background:#fff; overflow:hidden;}
+		.p2{position: relative; background:#eee;}
+		.tools{ position: absolute; left: 0; bottom:0; height:90px; width:100%; overflow:hidden; background:#fff;  }
+		.list-role{ width:1000px;}
+		.list-role li{ float:left; width:110px; padding:5px 0; border-right:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; border-top:1px solid #e8e8e8; color:#000; text-align:center; line-height:24px;}
+		.list-role .thumb{width: 55px;height: 55px;margin:0 auto;border-radius: 30px; background-color: #ffa903; overflow: hidden;}
+		.list-role li:nth-child(1) .thumb{background: #ffa903 url(img/role-none.png);-webkit-background-size: 55px 55px;background-size: 55px 55px;}
+		.list-role .thumb img{width: 55px;}
+		.list-role .current{position: relative;}
+		.list-role .current::after{content: ' ';position: absolute;left: 64px;top: 41px;width: 25px;height: 25px;background: url(img/icon.png) no-repeat -100px -150px;-webkit-background-size: 250px 250px;background-size: 250px 250px;}
+
+	</style>
+</head>
+<body>
+<div class="pages" style=>
+	<div class="page p1">
+		<input id="file" type="file" class="real-btn">
+		<button class="btn-take-photo">我要合影</button>
+	</div>
+	<div class="page p2">
+		<div class="content">
+			<div id="container" class="editor"></div>
+			<div class="tools">
+				<ul class="list-role" style="transition: -webkit-transform 500ms ease-out; transform: translate3d(0px, 0px, 0px);">
+					<li ><div class="thumb"></div><p>原片</p></li>
+					<li class="current" data-fg="{ &quot;src&quot;: &quot;img/pic-ccs.png&quot;,  &quot;pos&quot;: [0, 153]}"><div class="thumb"><img src="img/role-ccs.png" alt=""></div><p>糖果传奇</p></li>
+					<li data-fg="{ &quot;src&quot;: &quot;img/pic-qmx5.png&quot;,  &quot;pos&quot;: [205, 130]}"><div class="thumb"><img src="img/role-qmx5.png" alt=""></div><p>全民炫舞</p></li>
+				<!--	<li data-fg="{ &quot;src&quot;: &quot;img/pic-feiji.png&quot;,  &quot;pos&quot;: [0, 191], &quot;move&quot;: true}"><div class="thumb"><img src="img/role-feiji.png" alt=""></div><p>全民飞机大战</p></li>
+					<li data-fg="{ &quot;src&quot;: &quot;img/pic-ttfw.png&quot;,  &quot;pos&quot;: [0, 155], &quot;move&quot;: true}"><div class="thumb"><img src="img/role-ttfw.png" alt=""></div><p>天天富翁</p></li>
+					<li data-fg="{ &quot;src&quot;: &quot;img/pic-pao.png&quot;,  &quot;pos&quot;: [0, 170]}"><div class="thumb"><img src="img/role-pao.png" alt=""></div><p>天天酷跑</p></li>
+					<li data-fg="{ &quot;src&quot;: &quot;img/pic-qfarm.png&quot;,  &quot;pos&quot;: [0, 135]}"><div class="thumb"><img src="img/role-qfarm.png" alt=""></div><p>全民农场</p></li>
+					<li data-fg="{ &quot;src&quot;: &quot;img/pic-ttxd.png&quot;,  &quot;pos&quot;: [0, 116]}"><div class="thumb"><img src="img/role-ttxd.png" alt=""></div><p>天天炫斗</p></li>
+					<li data-fg="{ &quot;src&quot;: &quot;img/pic-peng.png&quot;,  &quot;pos&quot;: [146, 159]}"><div class="thumb"><img src="img/role-peng.png" alt=""></div><p>天天爱消除</p></li>-->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+		(function(){
+			// name space
+			window.page = {};
+
+			// reset page scroll top
+			// document.documentElement.scrollTop =  0;
+			window.scrollTo(0, 0);
+
+
+			// disabled default events
+			document.documentElement.addEventListener('touchmove', function(e){
+				e.preventDefault();
+			});
+
+			// for the fucking qq browser
+			var pages = document.querySelectorAll('.page');
+			// for(var i = 0; i < pages.length; i++) {
+			// 	pages[i].style.height = window.innerHeight * 3 + 'px';
+			// }
+			var p2Content = document.querySelector('.p2 .content');
+			p2Content.style.height = window.innerHeight - 51 + 'px';
+		})();
+	</script>
+
+	<script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+	<script>if(typeof(pgvMain) == 'function') pgvMain();</script>
+
+	<script src="js/main.js"></script>
+
+	<script>
+		// main
+		(function(){
+
+			// page slide
+			page.pageSlide = new m.Slide({
+				target: document.querySelectorAll('.pages .page'),
+				direction: 'x',
+				onchangebefore: function(i){
+					var pageName = 'others';
+					switch(i){
+						case 0:  pageName = 'home'; break;
+						case 1: pageName = 'eidtor'; break;
+					}
+					pgvSendClick({hottag:'carnival.pages.' + pageName});
+
+					if(page.eidtor) page.eidtor.clear();
+				}
+			});
+			// page.pageSlide.playTo(1);
+
+			// main slide
+			page.p1Slide = new m.Slide({
+				target: document.querySelectorAll('.p1 .sub-page'),
+				trigger: document.querySelectorAll('.p1 nav li'),
+				onchange: function(i){
+					var pageName = 'others';
+					switch(i){
+						case 0: pageName = 'video'; break;
+						case 1: pageName = 'photo'; break;
+						case 2: pageName = 'act'; break;
+					}
+					pgvSendClick({hottag:'carnival.pages.' + pageName});
+				},
+				touchMove: true,
+				direction: 'y'
+			});
+
+			if(/page\s*=\s*photo/.test(decodeURIComponent(location.search))) {
+				var oriAnimTime = page.p1Slide.config.animTime;
+				page.p1Slide.config.animTime = 0;
+				page.p1Slide.playTo(1);
+				window.setTimeout(function(){
+					page.p1Slide.config.animTime = oriAnimTime;
+				}, oriAnimTime);
+			}
+			
+			page.roleSlide = new m.Slide({
+				target: document.querySelectorAll('.tools  .list-role li'),
+				touchMove: true,
+				touchSpeed: 3,
+				direction: 'x'
+			});
+
+
+
+
+			var p2 = document.querySelector('.p2 .tools');
+			var enableScroll = function(elem){
+				var scrollStartPos = 0;
+				elem.addEventListener("touchstart", function(e) {
+					scrollStartPos= this.scrollTop + e.touches[0].pageY;
+					e.preventDefault();
+				},false);
+				elem.addEventListener("touchmove", function(e) {
+					this.scrollTop=scrollStartPos-e.touches[0].pageY;
+					e.preventDefault();
+				},false);	
+			};
+			// enableScroll(p2);
+
+		})();
+	</script>
+
+
+
+	<script>
+		Zepto(function($){
+
+			$('#file').on('click', function(){
+				pgvSendClick({hottag:'carnival.btn.takephoto'});
+			});
+
+
+			page.eidtor = new tg.ImageEditor({
+				trigger: $('#file'),
+				container: $('#container'),
+				width: 320,
+				height: 340,
+				stageX:  $('#container')[0].offsetLeft,
+				iconScale: {
+					url: 'img/icon.png',
+					rect: [300, 300, 25, 25]
+				},
+				iconClose: {
+					url: 'img/icon.png',
+					rect: [400, 300, 25, 25]
+				},
+				event: {
+					beforechange: function(){
+						page.pageSlide.playTo(1);
+						window.setTimeout(function(){
+							 $('.tools .list-role li').eq(1).trigger('tap');
+						}, 1000);
+					
+					},
+					// change: function(){
+					// 	var self = this;
+					// 	var logoImg = new Image();
+					// 	logoImg.onload = function(){
+					// 		self.addImage({'img': logoImg, 'disable': true, 'pos': [10, 10]});
+					// 	};
+					// 	logoImg.src = 'img/logo.png';
+
+
+						 
+					// }
+				}
+			});
+
+
+
+		    	// 合影功能
+		       var roleTrigger =   $('.tools .list-role li');
+		       var mcFg, mcRole;
+		       page.game = 'ttfc';
+		     	roleTrigger.each(function(i, elem){
+		        	$(elem).on('tap', function(e){
+		        		roleTrigger.removeClass('current');
+		        		$(this).addClass('current');
+		        		console.log($(this).index())
+		        		mcFg && page.eidtor.stage.removeChild(mcFg);
+		        		mcRole && page.eidtor.stage.removeChild(mcRole);
+		        		page.game = 'ttfc';
+		        		var elemImg =  $(this).find('img');
+		        		if(elemImg.length > 0) {
+			        		var imgURL = elemImg.attr('src');
+						var img = new Image();
+						img.onload = function(){
+							mcRole = page.eidtor.addImage({'img': img, 'pos': [0, 0]});
+							//page.game = imgURL.replace(/^.+role-(\w+)\.(?:png|jpg|jpeg)$/i, function(a,b,c){return b});
+
+
+						}
+						img.src = imgURL;
+					}
+
+		        		// var fg = $(this).data('fg');
+		        		// if(fg) {
+		        		// 	var fgImg = new Image();
+		        		// 	fgImg.onload = function(){
+		        		// 		mcFg = page.eidtor.addImage({'img': fgImg,  'pos': fg.pos, 'disScale': true, 'disMove': !fg.move});
+		        		// 	}
+		        		// 	fgImg.src = fg.src;
+		        		// }
+
+
+		        	});
+		        });
+				
+			
+		     	$(document).on('touchend', function(){
+		     		page.eidtor.unSelect();
+		     	});
+		});	
+
+	</script>
+
+<!--<script type="text/javascript">
+	var winW=$(document).width(),canW=$("#container").width(),canH=$("#container").height();
+	$("#mycanvas").css({'width':canW,'height':canH})	
+	$('#imgfile').change(function() {
+        var file=$("#imgfile")[0].files[0];
+        var reader=new FileReader();
+        reader.onload=function(e){
+            var result=this.result;var img=new Image();var exif;
+            img.onload=function(){
+            	var orientation=exif?exif.Orientation : 1;
+            	switch (orientation) {
+		        case 3:
+		            imgRotation = 180;
+		            imgRegX = imgWidth;
+		            imgRegY = imgHeight * ratio;
+		            break;
+		        case 6:
+		            imgRotation = 90;
+		            imgWidth = img.height;
+		            imgHeight = img.width;
+		            imgRegY = imgWidth * ratio;
+		            break;
+		        case 8:
+		            imgRotation = 270;
+		            imgWidth = img.height;
+		            imgHeight = img.width;
+		            imgRegX = imgHeight * ratio;
+		            if (/iphone|ipod|ipad/i.test(navigator.userAgent)) {
+		                alert('苹果系统下暂不支持你以这么萌！萌！达！姿势拍照！');
+		                return;
+		            }
+		            break;
+		        };
+            }
+            var base64 = result.replace(/^.*?,/, '');
+            var binary = atob(base64);
+            var binaryData = new BinaryFile(binary);
+            exif = EXIF.readFromBinaryFile(binaryData);
+            img.src = result;
+            var canvans = document.getElementById("mycanvas");//调用canvas接口
+            var context = canvans.getContext("2d");
+            context.drawImage(img, 170, 0,100,100);
+        };
+        reader.readAsDataURL(file);
+        $(".list-role li").each(function(){
+	   		var canvas=document.getElementById("mycanvas");
+	   		var context = canvas.getContext("2d");
+	   		var clss=$(this).attr('class');
+	   		if(clss=='current'){
+	   			var canvas=document.getElementById("mycanvas");
+		 		var cxt=canvas.getContext("2d");
+		 		var img=document.getElementsByClassName("current")[0].getElementsByTagName("img")[0];
+		 		cxt.drawImage(img,0,0,207,640);
+	   		}
+	   	});
+        $(".pages").css("transform","translate3d("+(-winW)+"px, 0px, 0px)");
+        //fr.onload=function(fe){
+        	// var result=this.result;var img=new Image();var exif;
+        	// img.onload=function(){
+        	// 	var orientation=exif?exif.Orientation : 1;//判断拍照设备持有方向调整照片角度
+        	// 	switch (orientation) {
+		       //  case 3:
+		       //      imgRotation = 180;
+		       //      imgRegX = imgWidth;
+		       //      imgRegY = imgHeight * ratio;
+		       //      break;
+		       //  case 6:
+		       //      imgRotation = 90;
+		       //      imgWidth = img.height;
+		       //      imgHeight = img.width;
+		       //      imgRegY = imgWidth * ratio;
+		       //      break;
+		       //  case 8:
+		       //      imgRotation = 270;
+		       //      imgWidth = img.height;
+		       //      imgHeight = img.width;
+		       //      imgRegX = imgHeight * ratio;
+		       //      if (/iphone|ipod|ipad/i.test(navigator.userAgent)) {
+		       //          alert('苹果系统下暂不支持你以这么萌！萌！达！姿势拍照！');
+		       //          return;
+		       //      }
+		       //      break;
+		       //  };
+
+        	// };
+        	// var base64 = result.replace(/^.*?,/, '');
+         //    var binary = atob(base64);
+         //    var binaryData = new BinaryFile(binary);
+         //    exif = EXIF.readFromBinaryFile(binaryData);
+         //    img.src = result;
+         //    context.drawImage(img, 0, 0,207,640);
+
+       // };
+        //reader.readAsDataURL(file);
+        
+    });
+</script>-->
+</body>
+</html>

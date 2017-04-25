@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>学霸答题</title>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<img src="images/banner.png" class="banner"/>
+<div class="board">
+	<img src="images/board.png"/>
+	<a href="javascript:goWithParams('detail.html');" class="begin cl_sum" cld="join"><strong>开始答题</strong></a>
+</div>
+<div class="rule">
+	<strong>活动规则</strong>
+	<p>
+		<span>1.</span>活动时间：2015年10月15日15:00——10月19日15:00
+	</p>
+	<p>
+		<span>2.</span>书城用户（微信登录除外）参加趣味答题，答完6道题后，根据答题分值，获得对应荣誉称号，并奖励不等额书券，登陆后可领取。
+	</p>	
+	<p>
+		<span>3.</span>用户需在活动期间开通/续费包月方可领取奖励。（短信、体验卡开通除外）
+	</p>
+	<p>
+		<span>4.</span>活动期间每个账号限领一次。
+	</p>
+	<p class="cpright">本活动最终解释权归腾讯文学所有。</p>
+</div>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	//适配
+	var fSize=($(window).width()/320)*100;
+    $('html').css('fontSize',fSize+"px");
+    lsr("ad");
+	lsr("rt");
+	$(".cl_sum").click(function() {
+		if(!!$(this).attr("cld"))
+			forceLog(param("act_f"), $(this).attr("cld")); // 1开头表示PV、UV；2开头表示点击；3开头表示未知
+	});
+})
+</script>
+<script type="text/javascript">
+	BasePage.init();
+	forceLog(param("act_f"));
+</script>
+</body>
+</html>

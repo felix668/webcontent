@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS reset */
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body,div,p,ul,li,dl,dt,dd,img,i,strong,h1,h4,h5,span,header{margin:0;padding:0;}
+h1,h2,h3,h4,h5,b,i{font-weight:normal;font-style:normal;}
+body{font-family: "Microsoft YaHei",微软雅黑, Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none; background:#fff; background-size:100% auto;font-size:0.12rem}
+ul,ol,li{list-style:none}
+html,body{-webkit-user-select:none;user-select:none;}
+img { border:0 none; vertical-align:middle;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input{ -webkit-tap-highlight-color:rgba(0,0,0,0);  -webkit-user-modify:read-write-plaintext-only; -webkit-outline:none;-webkit-appearance:none;}
+/********/
+.banner img{ width:100%; display:block;}
+.title_box{ margin:0.17rem auto 0.1rem;  width:1.95rem; height:0.18rem; line-height:0.19rem; text-align:center; font-size:0.17rem; color:#01c1f8; font-weight:bold; background:url(../images/title_bg.png) no-repeat; background-size:1.95rem auto;}
+.zhuanbox{ position:relative; width:2.84rem; height:2.84rem; margin:0 auto;}
+.zhuanbox img{ width:100%; display:block;}
+.btn_cj{ position:absolute; left:50%; top:50%; z-index:10; width:0.89rem; height:0.89rem; margin-left:-0.445rem; margin-top:-0.445rem; background:url(../images/btn_bg.png) no-repeat; background-size:3rem auto;-webkit-transform:rotate(30deg); -webkit-transition:-webkit-transform 3s; }
+.cjbtn_txt{position:absolute; left:50%; top:50%; z-index:15; width:0.89rem; height:0.89rem; margin-left:-0.445rem; margin-top:-0.445rem;font-size:0.18rem; font-weight:bold; color:#fff; text-align:center; line-height:0.89rem; -webkit-text-shadow:0 2px 2px rgba(128,28,9,0.2); text-shadow:0 2px 2px rgba(128,28,9,0.2);}
+.btn_cj.active{ background-position:-1rem 0;}
+.btn_cj.btn_ylg{ background-position:-2rem 0;}
+.praize_info{ margin:0.19rem 0.14rem 0.22rem;color:#5f5f5f;}
+.praize_info h4{ margin-bottom:0.05rem; height:0.15rem; line-height:0.15rem; padding-left:0.22rem; background:url(../images/icon.png) no-repeat; background-size:0.16rem auto; }
+.praize_info li{ padding-left:0.36rem; line-height:0.18rem; height:0.18rem; font-size:0.12rem; overflow:hidden;}
+.praize_info li span{ margin:0 0.3rem 0 0.05rem;}
+.booklist{ margin:0.22rem 0.1rem 0.05rem;}
+.booklist li{ float:left; display:inline-block; width:33.3333%; text-align:center;}
+.booklist li:nth-child(3n+1){clear:both;}
+.booklist li img{ width:0.85rem; height:1.15rem; display:block; margin:0 auto;}
+.booklist li p{width:0.85rem; margin:0.05rem auto 0.22rem;color:#5f5f5f; line-height:0.18rem; text-align:left;display: -webkit-box; -webkit-line-clamp:2; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; overflow:hidden;}
+.rulebox{ clear:both; background:#1990ff; padding:0.1rem 0.14rem 0.25rem; color:#fff;}
+.rulebox h4{ font-size:0.14rem; font-weight:bold; text-align:center; padding:0.1rem 0;}
+.rulebox li{ line-height:0.23rem;}
+.rulebox li span{ margin-right:0.1rem; font-weight:bold;}
+.rulebox p{ text-align:center; color:#003986; font-size:0.1rem; margin:0.2rem 0 0.1rem;}
+/*****弹框**********/
+.show_mask{position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.58); z-index:9999; display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center;}
+.tankuang_box{ display:none;background:#fff url(../images/tabk_bg.png) no-repeat left top; background-size:2.1rem auto;width:2.1rem; height:1.3rem; padding:0.08rem 0 0.14rem; text-align:center; border-radius:0.1rem; overflow:hidden; position:relative;}
+.tankuang_box img{ display:block; margin:0 auto; width:0.57rem; height:0.51rem;}
+.tankuang_box h4{ color:#fff; font-size:0.12rem; font-weight:bold; line-height:0.14rem;text-align:center;}
+.tankuang_box h4.mt33{ margin:0.25rem auto 0.05rem; font-size:0.16rem; line-height:0.22rem;}
+.tankuang_box p{ color:#fff; font-size:0.10rem; line-height:0.14rem; text-align:center;}
+.btn_close{ position:absolute; top:0.08rem; right:0.08rem; display:block; width:0.22rem; height:0.22rem; background:url(../images/btn_close.png) no-repeat; background-size:0.2rem 0.2rem;}
+.btn_zdl{ display:block; position:absolute; left:50%;bottom:0.12rem; margin-left:-0.715rem; width:1.43rem; height:0.32rem; line-height:0.34rem; background:#3787ff; border-bottom:3px solid #165fcb; border-radius:0.32rem; text-align:center; font-size:0.16rem; color:#fff;}
+.btn_zdl.active{ background:#0f6fff;border-bottom:3px solid #1051b3;}

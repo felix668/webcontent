@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>前端接口文档</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+<title>文档</title>
+ <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <style>
+  body {
+  background-color: white;
+  margin:0; padding:0;
+  text-align: center;
+  }
+  div, p, table, th, td {
+    list-style:none;
+    margin:0; padding:0;
+    color:#333; font-size:12px;
+    font-family:Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+  }
+  .ztree li a.curSelectedNode {
+    padding-top: 0px;
+    background-color: #FFE6B0;
+    color: black;
+    height: 16px;
+    border: 1px #FFB951 solid;
+    opacity: 0.8;
+  }
+  .ztree{
+    overflow: auto;
+    height:100%;
+    min-height: 200px;
+    top: 0px;
+  }
+  </style>
+  <p><link rel="stylesheet" href="css/markdownPad2/googlecode.min.css"></p>
+<script src="js/highlight.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="js/ztree_toc.js"></script>
+  <SCRIPT type="text/javascript" >
+  <!--
+  $(document).ready(function(){
+    $('#tree').ztree_toc({
+      is_auto_number:true,
+	  debug: false,
+	  title: "123123"
+    });
+  });
+  //-->
+  </SCRIPT>
+</head>
+<body>
+  <TABLE border=0 width=1200px height=600px align=left>
+  <TR>
+    <TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+      <ul id="tree" class="ztree">
+        
+      </ul>
+    </TD>
+    <TD style="max-width:770px" align=left valign=top>
+
+
+<h1 id="local-js-">local.js文件</h1>
+<h2 id="-">简介</h2>
+<p>　　local.js 提供调用终端本地的js方法，如：唤起登录，客户端数据请求，页面跳转，分享，toast提示等。依赖jsbridge.js</p>
+<h2 id="-">方法详解</h2>
+<h3 id="resApis-">resApis()</h3>
+<p><strong>描述</strong>：android js安全策略,注册native apis<br><strong>参数</strong>：无<br><strong>说明</strong>：ios平台不需要调用</p>
+<pre><code class="lang-javascript">  Local.resApis();</code></pre>
+<h3 id="setBackBtn-">setBackBtn()</h3>
+<p><strong>描述</strong>：处理页面返回逻辑<br><strong>参数</strong>：无</p>
+<pre><code class="lang-javascript"> JSContent.setIsBackToPage(false); //false代表直接返回  //true逐级返回</code></pre>
+<h3 id="init-">init()</h3>
+<p><strong>描述</strong>：页面初始化，注册jsbridge，处理页面返回逻辑<br><strong>参数</strong>：无<br><strong>说明</strong>：ios平台不需要调用</p>
+<pre><code class="lang-javascript">  Local.init();</code></pre>
+<h3 id="login-reload_url-">login(reload_url)</h3>
+<p><strong>描述</strong>：跳转到登录页面<br><strong>参数</strong>：<br>　　reload_url：可选，页面地址，即登录之后要跳转的页面地址。</p>
+<pre><code class="lang-javascript">Local.login() <br>Local.login(window.location.href+"&picking=3");</code></pre>
+<h3 id="go-url-">go(url)</h3>
+<p><strong>描述</strong>：普通重定向<br><strong>参数</strong>：<br>　　url：必需，跳转页地址</p>
+<pre><code class="lang-javascript"> Local.go('contact.html')</code></pre>
+<h3 id="openBookShelf-">openBookShelf()</h3>
+<p><strong>描述</strong>：去书架<br><strong>参数</strong>：<br>　　无</p>
+<pre><code class="lang-javascript"> 
+  Local.openBookShelf();
+  跳转app书架原理：window.location.href="uniteqqreader://nativepage/client/bookshelf";
+</code></pre>
+<h3 id="gomontharea-">goMontharea()</h3>
+<p><strong>描述</strong>：去包月专区<br><strong>参数</strong>：<br>　无</p>
+<pre><code class="lang-javascript"> 
+  Local.gomontharea()
+  跳转a包月专区原理:window.location.href="uniteqqreader://nativepage/discover/vipzone";
+</code></pre>
+<h3 id="addToShelf-bid-">addToShelf(bid)</h3>
+<p><strong>描述</strong>：加入书架<br><strong>参数</strong>：<br>　书籍bid，一次只能加一本书，若加多本需要循环操作，或者后台操作</p>
+<pre><code class="lang-javascript"> Local.addToShelf(bid)</code></pre>
+<h3 id="reqaObj-url-callback-callbackSections-faildCallback-forceReload-">reqaObj(url, callback, callbackSections, faildCallback, forceReload)</h3>
+<p><strong>描述</strong>：请求客户端数据<br><strong>参数</strong>：
+     <br>　　url：必需，请求服务器地址
+     <br>　　callback：必需，请求成功回调函数
+     <br>　　callbackSections：可为[]，请求时的默认loading提示
+     <br>　　faildCallback：可选，请求失败的回调函数
+     <br>　　forceReload：可选，默认不强制刷新</p>
+     <pre><code class="lang-javascript">   Local.reqaObj(server() + "pkg160903/doLottery", function(data) {
+     }, [], function() {
+        Local.showToast("网络异常，请稍候重试");
+      }, 1);
+</code></pre>
+<p><strong>pc端测试链接</strong>:  
+     <br>　　tf：必需，PC端走ajax请求
+     <br>　　skey：必需，ubook.qq.com同步登陆后取cookie里的skey
+     <br>　　timi/uin：必需，ubook.qq.com同步登陆的qq号
+</p>
+<pre><code class="lang-javascript">   adr：http://solomotest4.3g.qq.com/book_res/event/act160902/adr/index.html?tf=1&skey=@VcnluTVWo&timi=1922481934
+   ios: http://solomotest4.3g.qq.com/book_res/event/act160902/ios/index.html?tf=1&skey=@zB0qHfnGp&uin=1922481934
+</code></pre>
+<h3 id="doCharge-from-isLogin">doCharge(from,isLogin)</h3>
+<p><strong>描述</strong>：充值跳转<br><strong>参数</strong>：<br>　　from：非必需，来源<br>　　isLogin：必需，是否登录</p>
+<pre><code>Local.showToast("网络异常，请稍候重试");</code></pre>
+<h3 id="toast-msg-">showToast(msg)</h3>
+<p><strong>描述</strong>：toast提示<br><strong>参数</strong>：<br>　　msg：必需，提示信息</p>
+<pre><code>Local.showToast("网络异常，请稍候重试");</code></pre>
+<h3 id="shareTopic-callback-imgUrl-title-intro-tid">shareTopic(url, imgUrl, title, intro)</h3>
+<p><strong>描述</strong>：app内分享到其他平台<br><strong>参数</strong>：
+<br>　　url：分享链接指向的的页面地址
+<br>　　imgUrl：分享缩略图
+<br>　　title：分享标题
+<br>　　intro：分享描述
+</p>
+<pre><code>   
+      var shareObj = {
+        url : common.sharefront()+"act170106/com/index.html",
+        cover : common.sharefront()+"act170106/com/images/cover.jpg",
+        title : "大奖抽不停",
+        intro : "快来一起领QQ阅读红包爵迹电影票和签名照"
+      };
+      Local.shareTopic(shareObj.url, shareObj.cover, shareObj.title,shareObj.intro);</code></pre>
+<h3 id="setIconForShareing-url-cover-title-intro">setIconForShareing(url,cover,title,intro)</h3>
+<p><strong>描述</strong>：设置客户端右上角分享按钮的参数<br><strong>参数</strong>：同分享设置参数</p>
+<pre><code>
+  var shareObj = {
+    url :common.sharefront()+"act170106/com/index.html",
+    cover :common.sharefront()+"act170106/com/images/cover.jpg",
+    title: "三重红包送不停",
+    intro: "春节红包又出新玩法 今年就在QQ阅读"
+  };
+  Local.setIconForShareing(shareObj.url, shareObj.cover, shareObj.title,shareObj.intro);
+</code></pre>  
+<h3 id="aftershare-">aftershare(url,success)</h3>
+<p><strong>描述</strong>：客户端分享成功回调<br><strong>参数</strong>：<br>　　url：非必需<br>　　success：非必需</p>
+<pre><code>window.afterShare = function(url,success){
+  //分享之后点击返回qq阅读后的回调
+}</code></pre>
+<h3 id="forceLog-act_f-act_b">forceLog(act_f, act_b)</h3>
+<p><strong>描述</strong>：数据统计<br><strong>参数</strong>：
+     <br>　　act_f：必需，pv,uv来源，五位数字，一般直接获取param("act_f"),url+"?act_f=上线时间如，161101"
+     <br>　　act_b：必需，约定事件名称 
+     <pre><code class="lang-javascript">Local.forceLog(param("act_f"),"SSYinit");</code></pre>
+</p>
+<h3 id="openDetailByCode_dataObj">openDetailByCode(dataObj)</h3>
+<p><strong>描述</strong>：跳转到native相应页面<br><strong>参数</strong>：
+     <br>　dataObj：{pagecode:,bid:,title:,positiestr:,negetivestr:,content:}
+     <pre><code class="lang-javascript">
+      跳转书籍详情页：
+        Local.openDetailByCode({
+            pagecode : "1001",
+            bid : bid
+       });
+   </code></pre>
+</p>
+   <h1 id="common-js-">common.js文件</h1>
+<h2 id="-">简介</h2>
+<p>　　common.js 提供配置服务器地址，页面访问地址，处理url、数据统计的方法。  </p>
+<h2 id="-">方法详解</h2>
+<h3 id="server-">server()</h3>
+<p><strong>描述</strong>：返回服务器地址<br><strong>参数</strong>：无<br><strong>说明</strong>：通过调用可以自动切换正式环境和测试环境的服务器访问主地址</p>
+<pre><code class="lang-javascript">common.server() + "pkg161101/pick";<br>正式环境：http://event.book.qq.com/andmain/pkg161101/pick<br>测试环境：http://test3.wapmusic.qq.com/andmain/pkg161101/pick</code></pre>
+<h3 id="front-">front()</h3>
+<p><strong>描述</strong>：返回当前页面的访问地址<br><strong>参数</strong>：无<br><strong>说明</strong>：通过调用可以自动切换正式环境和测试环境的页面主地址，可以用来设置ios平台上分享页面的url</p>
+<pre><code class="lang-javascript">common.front() + "pkg161101/adr/index.html";<br>ios正式环境：https://yuedu.reader.qq.com/event/act170106/ios/index.html<br>测试环境：https://ptsolomo.reader.qq.com/book_res/event/act170106/ios/index.html</code></pre>
+<h3 id="sharefront-">sharefront()</h3>
+<p><strong>描述</strong>：用在app设置当前页面的分享地址<br><strong>参数</strong>：无<br><strong>说明</strong>
+：安卓平台分享到其他平台统一使用https协议，此方法会完成url协议转换</p>
+<pre><code class="lang-javascript">common.sharefront() + "pkg161101/adr/index.html";<br>adr正式环境：http://iyuedu.qq.com/event/act170106/adr/index.html<br>测试环境：http://solomotest4.3g.qq.com/book_res/event/act170106/adr/index.html</code></pre>
+<h3 id="param-">param()</h3>
+<h3 id="setParam-">setParam()</h3>
+<h3 id="reqa-url-callback-errcallback)">reqa(url, callback, errcallback)</h3>
+<p><strong>描述</strong>：ajax异步请求<br><strong>参数</strong>： 
+<br>　　url：服务器地址 
+<br>　　callback:请求成功的回调函数
+<br>　　errcallback:请求失败的回调函数</p>
+<pre><code class="lang-javascript">
+reqa(server() + "andmain/pkg160502/init", function(data) {
+});</code></pre>
+<h1 id="abook-js-">abook.js文件</h1>
+<h2 id="-">简介</h2>
+<p>　　abook.js 提供书籍相关页面的方法，依赖Local对象的部分方法。  </p>
+<h2 id="-">方法详解</h2>
+<h3 id="gotoDetail-bid">gotoDetail(bid)</h3>
+<p><strong>描述</strong>：跳转到书籍详情页<br><strong>参数</strong>：当前书籍的身份id</p>
+<pre><code class="lang-javascript">ABook.gotoDetail(bid);</code></pre>
+<h3 id="gotoRead-bid">gotoRead(bid)</h3>
+<p><strong>描述</strong>：跳转到书籍阅读页<br><strong>参数</strong>：当前书籍的身份id</p>
+<pre><code class="lang-javascript">ABook.gotoRead(bid);</code></pre>
+<h1 id="en-js-">en.js文件</h1>
+<h2 id="-">简介</h2>
+<p>　　en.js 返回平台信息。此文件返回一个对象env</p>
+<h2 id="-">方法详解</h2>
+<h3 id="env-pt">env.pt</h3>
+<p><strong>描述</strong>：根据ua返回平台信息，在app外的平台页面用于实现跨平台操作<br><strong>结果</strong>：ios、adr、ubook</p>
+<pre><code class="lang-javascript">根据平台不同打开不同的页面：N.openPage("http://iyuedu.qq.com/event/act161101/"+env.pt+"/index.html?act_f=161111");</code></pre>
+<h3 id="env-vw">env.vw</h3>
+<p><strong>描述</strong>：根据ua返回平台信息<br><strong>结果</strong>：wx、wb、qq、ot</p>
+<pre><code class="lang-javascript">if (env.vw == "wx") {}</code></pre>
+<h1 id="sns-v1-js-">sns-v1.js文件</h1>
+<h2 id="-">简介</h2>
+<p>　　sns-v1.js 处理微信、微博、qq分享、检测各平台是否安装app，依赖wxshare.js、http://pub.idqqimg.com/qqmobile/qqapi.js?_bid=152</p>
+<h2 id="-">方法详解</h2>
+<h3 id="sns-share-shareinfo-front">share(shareinfo, front)</h3>
+<p><strong>描述</strong>：设置端外页面二次分享相关参数<br><strong>参数</strong>：<br>shareinfo:包含分享标题、描述、图片、url的对象<br>front:非必需,设置文件依赖路径 默认值https://yuedu.reader.qq.com/event/common</p>
+<pre><code class="lang-javascript">
+var shareobj={
+    "cover" : front()+"act161101/com/images/share2.jpg",
+    "url" : window.location.href,
+    "title" : "今年买买买，就在QQ阅读",
+    "desc" : "我在QQ阅读参加双十一秒杀狂欢，超值包好书不断，抢到就是赚到。"
+  };
+  S.share(shareobj);
+</code></pre>
+<h3 id="sns-open-callback-front">open(callback,front)</h3>
+<p><strong>描述</strong>：判断是否安装QQ阅读app<br><strong>参数</strong>：callback:回调函数<br>front:非必需</p>
+<pre><code class="lang-javascript">
+sns.open定义时，为callback回调函数，在不同情况下传入不同的参数
+//installStat为true： false：未安装  -1：wb平台  -2：浏览器
+S.open(function(installStat,plat){
+    if(installStat){ 
+        // 已安装
+    }else{   
+       // 未安装
+    }
+    if(installStat==-1){  
+     //微博平台不能直接唤起 只能提示用户在浏览器打开页面再唤起
+    }
+    if(installStat==-2){   
+    //浏览器判断不了是否安装 会直接执行吊起 n秒之后再弹出下载弹窗提示   
+    }
+})
+</code></pre>
+<h1 id="native-v1-js-">native-v1.js文件</h1>
+<h2 id="-">简介</h2>
+<p>　　native-v1.js 处理app端外打开app、下载app等与app操作相关的方法，依赖androidScheme.js、iosscheme.js</p>
+<h2 id="-">方法详解</h2>
+<h3 id="openpage-url-front">openPage(url, front)</h3>
+<p><strong>描述</strong>：打开app内页面<br><strong>参数</strong>：<br>url：页面地址<br>front:非必需</p>
+<pre><code class="lang-javascript">
+N.openPage("http://iyuedu.qq.com/event/act161101/adr/index.html?act_f=161111");
+adr原理：window.location.href = "uniteqqreader://webpage/" + url;
+</code></pre>
+<h3 id="download-front-channelId">download(front,channelId)</h3>
+<p><strong>描述</strong>：下载app<br><strong>参数</strong>：<br>front：非必需<br>channelId:固定，app渠道号</p>
+<pre><code class="lang-javascript">
+N.downLoad(null, '10024407');
+</code></pre>
+<h3 id="toBookDetail-bid-front">toBookDetail(bid, front)</h3>
+<p><strong>描述</strong>：跳转到app内书籍详情页<br><strong>参数</strong>：<br>bid：必需，书籍bid<br>front：非必需</p>
+<pre><code class="lang-javascript">
+N.toBookDetail("123456");
+原理：window.location.href = "uniteqqreader://nativepage/book/detail?bid=12345";
+</code></pre>
+<h3 id="toReadBook-bid-front">toReadBook(bid, front)</h3>
+<p><strong>描述</strong>：跳转到app内书籍阅读页<br><strong>参数</strong>：<br>bid：必需，书籍bid<br>front：非必需</p>
+<pre><code class="lang-javascript">
+N.toReadBook("123456");
+原理：window.location.href = "uniteqqreader://nativepage/client/readepage?bid=12345";
+</code></pre>
+</TD>
+  </TR>
+</TABLE>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

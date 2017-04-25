@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>大神发红包</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	         //alert(docEl.clientHeight)
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+
+</script>
+<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<div class="root" :class="{'hide':startinit.open && !loading}" id="root">
+	<div class="loadingbox" v-if="loading">
+		<div class="loadingTop">
+			<span class="loads">
+				<svg width="24" height="23" viewBox="0 0 48 46" xmlns="http://www.w3.org/2000/svg">
+					<path d="M47.43 24C47.43 11.06 36.94.57 24 .57S.57 11.06.57 24c0 9.27 5.434 17.55 13.72 21.328 1.006.458 2.192.015 2.65-.99.46-1.005.015-2.192-.99-2.65C9.076 38.555 4.57 31.688 4.57 24c0-10.73 8.7-19.43 19.43-19.43S43.43 13.27 43.43 24c0 7.66-4.473 14.505-11.307 17.655-1.004.462-1.442 1.65-.98 2.653.463 1.004 1.65 1.442 2.654.98C42.037 41.49 47.43 33.234 47.43 24z" class="cls-default"></path>
+				</svg>
+			</span>
+			正在加载...
+		</div>
+	</div>
+	<template v-if="startinit.showstart">
+		<div class="startpage">
+			<img src="images/pack.png" class="elem2">
+			<div class="startbox">	
+				<div class="elem3" id="openbtn" @click="openpack">
+					<img src="images/chai.png">
+				</div>
+				<img src="images/time.png" class="elem4">
+				<img src="images/start-t.png" class="elem5">
+			</div>
+		</div>
+	</template>
+	<div class="wrap">
+		<div class="top">
+			<img src="images/logo.png" class="logo">
+			<div class="arrow-left" id="arrow-left"></div> 
+			<div class="arrow-right" id="arrow-right"></div>
+		    <div class="swiper-container" id="swiper-container">
+		    	<img src="images/banner.png" class="banner">
+		        <div class="swiper-wrapper">
+		        	<div class="swiper-slide" v-for="n in 13"> 
+		         		<img :src="'images/authors/p'+n+'.png'" class="authorp"> 
+		         		<img :src="'images/authors/t'+n+'.png'" class="authort" v-show="daynum==n">
+		         		<img :src="'images/authors/t'+n+'-2.png'" class="authort2" v-show="daynum!==n">
+		        	</div>		         
+		    	</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="swiper-pagination"></div>
+			 <div class="swiper-container" id="page-container">
+		        <div class="swiper-wrapper">
+		        	<div class="swiper-slide"> 
+		         		<div class="page0">
+		         			<div class="title">
+		         				<img src="images/l-reel.png" class="reel">
+		         				<div class="draw">
+		         					<img src="images/title0.png">
+		         				</div>
+		         				<img src="images/r-reel.png" class="reel">
+		         			</div>
+		         			<img src="images/title0-2.png" class="t2">
+		         			<div class="doublepack">
+		         				<div class="dpbox">
+		         					<div class="nobegin" v-if="tab==1">
+		         						<strong>活动时间：</strong>
+		         						<p>1月28日正月初一，8:00开始<br>敬请期待</p>
+		         					</div>
+		         					<template v-if="tab==2">
+		         						<template v-if="doublepack.empty">
+		         							<div class="lastday" v-if="daynum==13">
+		         								<img src="images/empty.png">
+		         								<strong>红包已抢完</strong>
+		         							</div>
+			         						<div class="empty" v-else>
+			         							来晚一步，今日红包已被抢光<br>明天再来，还有{{parseInt(doublepack.multiplier)+1}}倍红包等你抢	
+			         						</div>		         						
+			         					</template>
+			         					<template v-else>
+				         					<div class="unlogin" v-if="!isLogin">
+				         						<img src="images/lottery.png" class="lottery" @click=gologin>
+				         					</div>
+				         					<div class="dpget" v-if="isLogin && !doublepack.geted">
+				         						<p class="summ">已累计来<span>{{doublepack.multiplier}}</span>天</p>
+				         						<div class="computed">
+				         							<img src="images/lottery.png" class="lottery" @click=getDpack>
+				         							<div class="multiply"><i></i><i></i></div>
+				         							<div :class="'base b'+doublepack.multiplier"></div>
+				         							<span>倍</span>
+				         						</div>
+				         					</div>
+				         					<div class="dpsucc" v-if="isLogin && doublepack.geted">
+				         						<span class="status"></span>
+				         						<strong class="congl">恭喜您获得</strong>
+				         						<div class="cdetail">
+				         							<div class="coins">
+				         								<span v-for="n in doublepack.base.length" :class="'b'+doublepack.base.substring(n-1,n)"></span>
+				         							</div>
+				         							阅点<i class="mul">X</i><span :class="'b'+doublepack.multiplier"></span>倍<i class="equal">=</i>
+				         							<div class="coins">
+				         								<span v-for="n in doublepack.count.length" :class="'b'+doublepack.count.substring(n-1,n)"></span>
+					         						</div>
+					         						阅点
+				         						</div>	
+				         						<p class="sended">阅点已自动发放至帐户</p>
+				         						<p class="tomorrow" v-if="daynum<13">明日再来，可领<strong>{{parseInt(doublepack.multiplier)+1}}倍阅点奖励</strong></p>
+				         					</div>
+				         				</template>
+		         					</template>
+		         				</div>
+		         				<img src="images/dbpack.png" class="dpbg">
+		         				<div class="dspic">
+		         					<img :src="'images/authors/p'+daynum+'.png'">
+		         				</div>
+		         			</div>
+		         			<div class="rule" @click="showrule"></div>
+		         		</div>
+		        	</div>
+		            <div class="swiper-slide"> 
+		         		<div class="page1">
+		         			<div class="title">
+		         				<img src="images/l-reel.png" class="reel">
+		         				<div class="draw">
+		         					<img src="images/title1.png">
+		         				</div>
+		         				<img src="images/r-reel.png" class="reel">
+		         			</div>
+		         			<div class="userinfo">
+		         				<div class="avor">
+		         					<div class="headimg">
+		         						<img :src="readpack.icon">
+		         					</div>
+		         				</div>
+		         				<div class="readinfo">
+		         					<p>本周阅读时长：<strong class="total">{{readpack.weekreadtime}}</strong>分钟</p>
+		         					<div class="msg">{{readpack.exchangeBilling==0 ? "阅券可购买书籍，1阅券＝1阅点" :"奖励已翻倍，已兑换"+readpack.exchangeBilling+"阅券"}}</div>
+		         				</div>
+		         			</div>
+		         			<div class="readpack">
+		         				<p>活动期间，阅读时长兑换阅券双倍奖励</p>
+		         				<div class="rpbox">
+		         					<span>当前可兑换：</span>
+		         					<div class="quan">
+		         						<strong>{{readpack.canExchangeBilling}}</strong><i>×2</i>阅券
+		         					</div>
+		         				</div>
+		         				<div class="btn" v-if="readpack.canExchangeBilling" @click=getRpack><span>立即领取双倍阅券红包</span></div> 
+		         			 	<div class="btn" v-if="!readpack.canExchangeBilling && !readpack.hasFinishExchange"><span class="grey">还需阅读{{readpack.needReadTime}}分钟领阅券，双倍奖励</span></div>
+		         				<div class="btn" v-if="readpack.hasFinishExchange"><span class="reached">本周领取额度已满</span></div>
+		         			</div>
+		         			<div class="rule" @click="showrule"></div>
+		         		</div>
+		        	</div>
+		        </div>
+			</div>
+		</div>
+	</div>
+	<template v-if="mask">
+		<div class="mask">
+			<div class="tiparea">
+				<strong>领取成功</strong>
+				<h2>成功兑换<span class="red">{{readpack.curexchangedBilling}}阅券</span></h2>
+				<p>已自动发放至账户</p>
+				<div class="kbtn" @click=hidemask>我知道啦</div>
+			</div>
+		</div>
+	</template>
+	<div class="over" :class="{'overmask':over}">
+	   <div class="over-c">
+	        <img src="images/i-over.png" alt="本期活动已结束">
+	        <p class="over-p1">本期活动已结束</p>
+	        <p class="over-p2">敬请期待下一波活动</p>
+	    </div>
+	</div>
+	<div class="rulemask" :class="{'ruleshow':rule}">
+		<div class="ruledetail">
+			<img src="images/rulet.png">
+			<div class="ruledesc" id="rulebox">
+				<dl>
+					<dt>
+						<i>1</i><strong>活动时间：</strong>
+					</dt>
+					<dd>
+						<p>1月23日—2月4日，大神送红包陆续开启</p>
+						<p>1月23日起，大神送【阅读红包】</p>
+						<p>1月28日起，大神送【翻倍红包】和【整点红包】</p>
+					</dd>
+					<dt>
+						<i>2</i><strong>红包类型：</strong>
+					</dt>
+					<dd>
+						<span>
+							1、【阅读红包】：
+						</span>
+						<p>
+							
+							发放时间为1月23日-2月4日，奖品为阅券，符合阅读时长即可领取，活动期间奖励双倍
+						</p>
+						<span >
+							2、【翻倍红包】：
+						</span>
+						<p>						
+							发放时间为1月28日-2月4日，奖品为阅点，每天可抽取一次，并享受翻倍奖励，倍数等于累计参与活动的天数
+						</p>
+						<span>
+								3、【整点红包】：
+							</span>
+						<p>					
+							发放时间为1月28日-2月4日，奖品为阅点，每天指定时段可领取，数量有限，先到先得
+						</p>
+					</dd>
+					<dt class="marbot"> 
+						<i>3</i>翻倍红包和整点红包总计1亿阅点，大神每天派送，送完即止。
+					</dt>
+					<dt class="marbot">
+						<i>4</i>领取红包的用户，阅点/阅券将直接发送到您的账户中，可在【我的账户】中查询。
+					</dt>
+					<dt>
+						<i>5</i>本活动最终解释权归QQ阅读所有，与苹果公司无关
+					</dt>
+				</dl>
+			</div>
+			<i class="close" @click=hidemask></i>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/fastclick.min.js"></script>
+<script src="index.js"></script>
+<script type="text/javascript" src="https://pingjs.qq.com/h5/stats.js" name="MTAH5" sid="500392720" cid="500393014"></script>
+</body>
+</html>

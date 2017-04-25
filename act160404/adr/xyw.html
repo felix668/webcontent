@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>组队免费看书</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/set.js"></script>
+</head>
+<body>
+<div class="imgBox"><img src="images/head.jpg"></div>
+<div class="inviteArea">
+    <!--app打开-->
+    <div class="actarea hide" id="app">
+        <p class="invite">分享并成功邀请<span class="f18" id="friend_num">2</span>个小伙伴组队，即可<span>免费领取</span><br/>名家-辛夷坞推荐的书</p>
+        <a href="javascript:;" class="btn">邀请好友组队，免费领书</a> 
+    </div>
+    <!--分享页-->
+    <div class="actarea hide" id="noapp">
+       <p class="invite">4人组队成功，<span>免费领取</span>名家-辛夷坞推荐的书</p>
+       <div class="teambox">
+       <ul class="partner" id="teams">
+          <li>
+            <div class="face"><img src="images/facebg.png"><span class="leader">发起者</span></div>
+            <h4></h4>
+          </li>
+          <li>
+            <div class="face"><img src="images/xinyiwu.jpg"><span class="jian">荐</span></div>
+            <h4>作家辛夷坞</h4>
+          </li>
+          <li>
+            <div class="face"><img src="images/facebg.png"><span class="ting">挺</span></div>
+            <h4></h4>
+          </li>
+          <li>
+            <div class="face"><img src="images/facebg.png"><span class="ting">挺</span></div>
+            <h4></h4>
+          </li>
+        </ul>
+        </div>
+        <!--其他打开连接提示-->
+        <div class="inviteBtn hide" id="others">
+            <p class="inviteTipsuc">组队成功后,可免费领取作家推荐的书</p>
+            <a href="javascript:void(0)" class="btn" id="">已挺好友，免费试读</a>
+        </div>
+        <!--本人打开连接提示-->
+        <div class="inviteBtn hide" id="myself"><a href="javascript:void(0)" class="btn_fail" id="">组队尚未成功</a></div>
+    </div>
+    <!--活动结束-->
+    <div class="actarea hide" id="activityend">
+        <p class="invite">4人组队成功，<span>免费领取</span>名家-辛夷坞推荐的书</p>
+        <h4>本次活动已结束</h4>
+        <a href="javascript:Index.toReader();" class="btn" id="more_activity">查看更多精彩活动</a> 
+    </div>
+</div>
+<div class="booklist">
+   <h4>名家为你推荐的书，组队免费读</h4>
+   <ul>
+      <li><img src="images/xywbook1.jpg" onclick="javascript:ABook.gotoDetail(344171);"><p class="bookname">应许之日</p><p class="author">辛夷坞</p><p class="bookPrice">原价：6.99元<span class="p_del"></span></p></li>
+      <li><img src="images/xywbook2.jpg" onclick="javascript:ABook.gotoDetail(715227);"><p class="bookname">小世界</p><p class="author">飘阿兮</p><p class="bookPrice">原价：2.00元<span class="p_del"></span></p></li>
+      <li><img src="images/xywbook3.jpg" onclick="javascript:ABook.gotoDetail(672232);"><p class="bookname">在追求梦想的路上，我们都一样</p><p class="author">何亚娟</p><p class="bookPrice">原价：9.84元<span class="p_del"></span></p></li>
+   </ul>
+</div>
+<div class="rule">
+    <h4><span>活动规则</span></h4>
+    <p><span>1、</span>活动时间：5月1日-5月3日</p>
+    <p><span>2、</span>邀请2个好友组队成功后，书单内书籍将自动加入你的书架，所有小队成员既可在QQ阅读中免费阅读书单内全部作品</p>
+    <p><span>3、</span>必须使用组队成功的QQ帐号、微信帐号登录QQ阅读后，才可以免费领取</p>
+    <p><span>4、</span>每位用户同一书单仅限参与一次，同设备、账号视为一名用户</p>
+    <p><span>5、</span>此活动仅限QQ阅读客户端参与</p>
+    <div class="copyright">本活动最终解释权归QQ阅读所有</div>
+</div>
+<!--弹框-->
+<div class="mask" id="mask">
+  <div class="tiparea" id="failtk">
+    <h4>加入组队失败</h4>
+    <p>你已经加入该小队，请勿重复加入<br>赶快邀请其他好友加入吧！</p>
+    <a href="javascript:void(0);" class="btn_zdl">我知道了</a>
+  </div>
+  <div class="tiparea" id="loadtk">
+    <h4>下载QQ阅读</h4>
+    <p>去qq阅读，组队免费领书</p>
+    <a href="javascript:window.nativechecker.doGotoDownload();" class="btn_load" id="btn_load">下载</a>
+    <a href="javascript:void(0);" class="btn_quxiao">取消</a>
+  </div>
+  <div id="sharetk"><img src="images/share.png"></div>
+</div>
+
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+</body>
+</html>

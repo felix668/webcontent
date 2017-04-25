@@ -1,0 +1,782 @@
+.nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.88rem;
+  z-index: 900;
+  display: none;
+  opacity: 0;
+}
+.nav img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.nav p {
+  position: absolute;
+  left: 2.5rem;
+  top: 0;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  font-size: 0.3rem;
+  color: #444444;
+}
+.CONTAINER {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+}
+.mask .PADDING {
+  width: 100%;
+  height: 0.72rem;
+}
+.mask .mask_bg {
+  width: 100%;
+}
+.mask .content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.mask .content .colors {
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  width: 100%;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+}
+.mask .content .bugle-left {
+  position: absolute;
+  left: 0.18rem;
+  top: 6.5rem;
+  width: 2.1rem;
+  opacity: 0;
+}
+.mask .content .bugle-right {
+  position: absolute;
+  right: 0.18rem;
+  top: 6.5rem;
+  width: 2.1rem;
+  opacity: 0;
+}
+.mask .content .envelope {
+  position: relative;
+  width: 6.46rem;
+  margin: auto;
+  margin-top: 5.42rem;
+}
+.mask .content .envelope .envelope-back {
+  position: absolute;
+  left: 0.58rem;
+  top: -1.24rem;
+  width: 5.28rem;
+}
+.mask .content .envelope .paper {
+  position: absolute;
+  left: 0.96rem;
+  top: -1.5rem;
+  width: 4.56rem;
+}
+.mask .content .envelope .envelope-front {
+  position: absolute;
+  left: 0;
+  width: 6.46rem;
+}
+.mask .content .envelope .button {
+  position: absolute;
+  left: 2.56rem;
+  top: 0.7rem;
+  width: 1.36rem;
+}
+.mask .content .envelope .hand {
+  position: absolute;
+  left: 3.2rem;
+  top: 1.2rem;
+  width: 2.11rem;
+  display: none;
+}
+.mask .content .pDown {
+  position: absolute;
+  left: 1.92rem;
+  top: 8.72rem;
+  width: 3.3rem;
+  opacity: 0;
+  -webkit-transform: scale3d(0, 0, 1);
+          transform: scale3d(0, 0, 1);
+}
+.mask .content .cloud {
+  position: absolute;
+  left: 0;
+  top: 9.1rem;
+  width: 100%;
+  opacity: 0;
+}
+.mask .content .star {
+  position: absolute;
+  top: 8rem;
+  width: 0.4rem;
+  z-index: 999;
+}
+.mask .content .star1 {
+  left: 30%;
+}
+.mask .content .star2 {
+  left: 35%;
+}
+.mask .content .star3 {
+  left: 40%;
+}
+.mask .content .star4 {
+  left: 45%;
+}
+.mask .content .star5 {
+  left: 33%;
+}
+.mask .content .star6 {
+  left: 38%;
+}
+.mask .content .star7 {
+  left: 42%;
+}
+.mask .content .star8 {
+  left: 45%;
+}
+.mask .content .upper {
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  margin-top: 0.5rem;
+  background: white;
+}
+.mask .content .lower {
+  width: 80%;
+  height: 40%;
+  margin: auto;
+  background: white;
+}
+.myResult {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 200;
+  display: none;
+}
+.myResult .backg {
+  width: 100%;
+  height: 11.4rem;
+  overflow: hidden;
+}
+.myResult .backg .bg {
+  width: 100%;
+}
+.myResult .PADDING {
+  width: 100%;
+  height: 0.6rem;
+  background: transparent;
+}
+.myResult .shadow {
+  width: 100%;
+  height: 0.88rem;
+}
+.myResult .hhh {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.88rem;
+  background: green;
+}
+.myResult .content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.myResult .content .congratulations {
+  margin-top: 0.8rem;
+  margin-bottom: 0.18rem;
+  text-align: center;
+  font-size: 0.66rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+.myResult .content .__name {
+  margin-bottom: 0.16rem;
+  font-size: 0.34rem;
+  text-align: center;
+  color: #666666;
+}
+.myResult .content .inThis {
+  margin-bottom: 0.56rem;
+  font-size: 0.28rem;
+  text-align: center;
+  color: #666666;
+}
+.myResult .content .banner {
+  position: relative;
+  width: 4.1rem;
+  margin: auto;
+  margin-bottom: 0.54rem;
+}
+.myResult .content .banner img {
+  width: 100%;
+}
+.myResult .content .banner .__ranking {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0.74rem;
+  line-height: 0.74rem;
+  text-align: center;
+  font-size: 0.36rem;
+  font-weight: bold;
+  color: white;
+}
+.myResult .content .rPrize {
+  width: 3.24rem;
+  margin: auto;
+}
+.myResult .content .acquire {
+  margin-bottom: 0.16rem;
+  font-size: 0.31rem;
+  text-align: center;
+  color: #444444;
+}
+.myResult .content .myPrize {
+  margin-bottom: 0.64rem;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #666666;
+}
+.myResult .content .toContact {
+  display: block;
+  width: 5.8rem;
+  height: 0.9rem;
+  margin: auto;
+  margin-bottom: 0.2rem;
+  border-radius: 0.45rem;
+  background: #5199f7;
+  font-size: 0.31rem;
+  color: white;
+  text-align: center;
+  line-height: 0.9rem;
+}
+.myResult .content .please {
+  margin-bottom: 0.56rem;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #999999;
+}
+.myResult .content .toTop10 {
+  text-align: center;
+  font-size: 0.3rem;
+  color: #444444;
+}
+.result {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 200;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+.result .bg {
+  width: 100%;
+}
+.result .shadow {
+  width: 100%;
+  height: 0.88rem;
+}
+.result .content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.result .content .list {
+  position: absolute;
+  left: 0;
+}
+.result .content .list-1 {
+  top: 8.2rem;
+}
+.result .content .list-2 {
+  top: 12.38rem;
+}
+.result .content .list-3 {
+  top: 17.60rem;
+}
+.result .content .list-4 {
+  top: 23.80rem;
+}
+.result .content .result-item {
+  width: 6.1rem;
+  height: 0.84rem;
+  margin-left: 0.62rem;
+  margin-bottom: 0.24rem;
+}
+.result .content .result-item li {
+  float: left;
+}
+.result .content .result-item .avatar {
+  width: 0.84rem;
+  height: 0.84rem;
+  overflow: hidden;
+}
+.result .content .result-item .avatar .avatar-img {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-top: 0.12rem;
+  margin-left: 0.12rem;
+  border-radius: 999px;
+  background: white;
+  overflow: hidden;
+}
+.result .content .result-item .avatar .avatar-img img {
+  width: 100%;
+  height: 100%;
+}
+.result .content .result-item .name {
+  width: 2.6rem;
+  height: 0.84rem;
+  line-height: 0.84rem;
+  font-size: 0.28rem;
+  text-indent: 0.22rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.result .content .result-item .coin {
+  width: 2.64rem;
+  font-size: 0.28rem;
+  line-height: 0.84rem;
+  color: #999999;
+}
+.result .content .result-item .coin span {
+  float: right;
+  text-align: right;
+  color: black;
+}
+.main {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+.title {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.title img {
+  width: 100%;
+}
+.title .countdown {
+  position: absolute;
+  left: 0;
+  top: 3.45rem;
+  width: 100%;
+  font-size: 0.22rem;
+  text-align: center;
+}
+.title .countdown span {
+  font-size: 0.38rem;
+}
+.title .swiper {
+  position: absolute;
+  left: 0;
+  top: 5.6rem;
+  width: 100%;
+  overflow: hidden;
+}
+.title .swiper .swiper-body {
+  position: relative;
+  width: 3.8rem;
+  height: 2.15rem;
+  margin: auto;
+}
+.title .swiper .swiper-body .train {
+  position: absolute;
+  width: 400.5%;
+  height: 2.15rem;
+  overflow: hidden;
+}
+.title .swiper .swiper-body .train .item {
+  float: left;
+  height: 2.15rem;
+  font-size: 0.2rem;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.title .swiper .swiper-body .train .item img {
+  width: 3.2rem;
+  margin: auto;
+}
+.title .swiper .swiper-body .train .item.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+.title .swiper .prizeNumber {
+  margin-bottom: 0.24rem;
+  font-size: 0.22rem;
+  text-align: center;
+  font-weight: bold;
+}
+.title .swiper .desc {
+  margin-bottom: 0.2rem;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #666666;
+}
+.con2 {
+  width: 100%;
+  padding-top: 0.3rem;
+  padding-bottom: 0.2rem;
+  background: #4B4652;
+  overflow: hidden;
+}
+.con2 .panel {
+  width: 6.68rem;
+  margin: auto;
+  padding-top: 0.32rem;
+  border-radius: 0.15rem;
+  background: white;
+  overflow: hidden;
+}
+.con2 .panel .banner {
+  width: 5.1rem;
+  margin: auto;
+  margin-bottom: 0.26rem;
+}
+.con2 .panel .signin {
+  position: relative;
+  width: 100%;
+  height: 1.4rem;
+  background: #6CC990;
+}
+.con2 .panel .signin:active {
+  background: #5FB07E;
+}
+.con2 .panel .signin .signinBg {
+  position: absolute;
+  left: 0.96rem;
+  top: -0.05rem;
+  width: 4.5rem;
+}
+.con2 .panel .mine {
+  position: relative;
+  display: none;
+}
+.con2 .panel .mine .streak {
+  position: absolute;
+  left: 0.44rem;
+  top: -0.05rem;
+  width: 0.56rem;
+  z-index: 10;
+}
+.con2 .panel .mine .mineTop {
+  position: relative;
+  height: 1.38rem;
+  border-top: 1px solid #BCBCBC;
+  border-bottom: 1px solid #BCBCBC;
+}
+.con2 .panel .mine .mineTop .left {
+  float: left;
+  width: 72%;
+  height: 1.38rem;
+  background: #6CC990;
+}
+.con2 .panel .mine .mineTop .left .myAvatarCtn {
+  position: absolute;
+  left: 0.24rem;
+  top: 0.22rem;
+  z-index: 20;
+  box-sizing: border-box;
+  width: 0.96rem;
+  height: 0.96rem;
+  border-radius: 9rem;
+  border: 0.06rem solid #E3E3E3;
+  overflow: hidden;
+}
+.con2 .panel .mine .mineTop .left .myAvatarCtn .myAvatar {
+  width: 100%;
+}
+.con2 .panel .mine .mineTop .left .text {
+  float: left;
+  margin-top: 0.2rem;
+  margin-left: 1.38rem;
+  font-size: 0.3rem;
+}
+.con2 .panel .mine .mineTop .left .text .myName {
+  font-size: 0.3rem;
+  color: #333333;
+}
+.con2 .panel .mine .mineTop .left .text .coin {
+  font-size: 0.24rem;
+  color: #333333;
+}
+.con2 .panel .mine .mineTop .left .text .coinNumber {
+  font-size: 0.38rem;
+  font-weight: bold;
+  color: #4B4652;
+}
+.con2 .panel .mine .mineTop .right {
+  float: left;
+  width: 28%;
+  height: 1.38rem;
+  background: #FFF9F4;
+}
+.con2 .panel .mine .mineTop .right .currentRanking {
+  margin-top: 0.2rem;
+  margin-bottom: 0.08rem;
+  text-align: center;
+  font-size: 0.24rem;
+  color: #777574;
+}
+.con2 .panel .mine .mineTop .right .myRanking {
+  font-size: 0.38rem;
+  text-align: center;
+  font-weight: bold;
+  color: #4B4652;
+}
+.con2 .panel .mine .line {
+  height: 0.48rem;
+  line-height: 0.48rem;
+  text-align: center;
+  background: #F0ECF2;
+  font-size: 0.24rem;
+}
+.con2 .panel .mine .line a {
+  text-decoration: underline;
+  color: #ff6666;
+}
+.con2 .panel .header {
+  width: 100%;
+  height: 0.75rem;
+  margin-top: 0.24rem;
+  background: #F0ECF2;
+  border-bottom: 1px solid #D8D8D8;
+  overflow: hidden;
+}
+.con2 .panel .header li {
+  float: left;
+}
+.con2 .panel .header .rank {
+  width: 0.66rem;
+  height: 0.4rem;
+  margin-left: 0.3rem;
+  margin-right: 0.43rem;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.75rem;
+}
+.con2 .panel .header .nickname {
+  width: 2.4rem;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.75rem;
+}
+.con2 .panel .header .coin {
+  float: right;
+  width: 2.5rem;
+  margin-right: 0.36rem;
+  text-align: right;
+  font-size: 0.26rem;
+  line-height: 0.75rem;
+}
+.con2 .panel .list li {
+  width: 100%;
+  height: 1rem;
+  border-bottom: 1px solid #D8D8D8;
+}
+.con2 .panel .list li:nth-child(1) .badge p,
+.con2 .panel .list li:nth-child(2) .badge p,
+.con2 .panel .list li:nth-child(3) .badge p {
+  color: white;
+}
+.con2 .panel .list li:nth-child(1) .avatar .round,
+.con2 .panel .list li:nth-child(2) .avatar .round,
+.con2 .panel .list li:nth-child(3) .avatar .round {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.16rem;
+  border-radius: 0.35rem;
+}
+.con2 .panel .list li .badge {
+  position: relative;
+  float: left;
+  width: 1.14rem;
+  height: 100%;
+  overflow: hidden;
+}
+.con2 .panel .list li .badge img {
+  width: 0.62rem;
+  margin: auto;
+  margin-top: 0.3rem;
+}
+.con2 .panel .list li .badge p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 1rem;
+  font-size: 0.26rem;
+  text-align: center;
+}
+.con2 .panel .list li .avatar {
+  position: relative;
+  float: left;
+  width: 1.14rem;
+}
+.con2 .panel .list li .avatar .crown {
+  position: absolute;
+  top: -0.15rem;
+  left: 0.35rem;
+  width: 0.48rem;
+}
+.con2 .panel .list li .avatar .round {
+  width: 0.54rem;
+  height: 0.54rem;
+  margin: auto;
+  margin-top: 0.2rem;
+  border-radius: 0.27rem;
+  overflow: hidden;
+}
+.con2 .panel .list li .avatar .round img {
+  width: 100%;
+  height: 100%;
+}
+.con2 .panel .list li .name {
+  float: left;
+  width: 1.86rem;
+  line-height: 1rem;
+  font-size: 0.26rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.con2 .panel .list li .number {
+  float: right;
+  margin-right: 0.36rem;
+  line-height: 1rem;
+  font-size: 0.26rem;
+  text-align: right;
+}
+.con2 .panel .bottom {
+  position: relative;
+}
+.con2 .panel .bottom .more {
+  display: block;
+  width: 5.16rem;
+  height: 0.82rem;
+  line-height: 0.82rem;
+  margin: auto;
+  margin-top: 0.26rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.41rem;
+  background: #6CC990;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #333333;
+}
+.con2 .panel .bottom .more:active {
+  background: #5FB07E;
+}
+.con2 .panel .bottom .triangle {
+  width: 6.4rem;
+  margin: auto;
+}
+.rules-con {
+  position: relative;
+  width: 100%;
+  height: 1.3rem;
+  overflow: hidden;
+}
+.rules-con .rules {
+  width: 100%;
+}
+.rules-con .rules-content-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.rules-con .rules-content-2 p {
+  width: 6.54rem;
+  margin: auto;
+  margin-top: 1.3rem;
+  font-size: 0.22rem;
+  color: #666666;
+}
+.rules-content {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #fff9f3;
+}
+.rules-content div {
+  width: 6.4rem;
+  margin: auto;
+  font-size: 0.26rem;
+  color: #666666;
+  line-height: 0.46rem;
+}
+.rules-content .p-top {
+  height: 0.46rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+.rules-content .p-one {
+  height: 0.46rem;
+  margin-bottom: 0.3rem;
+}
+.rules-content .p-two {
+  height: 0.92rem;
+  margin-bottom: 0.3rem;
+}
+.rules-content .p-three {
+  height: 1.38rem;
+  margin-bottom: 0.3rem;
+}
+.rules-content .p-bottom {
+  height: 0.92rem;
+  margin-bottom: 0.8rem;
+}

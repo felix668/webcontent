@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>豪气送流量 400万兆等你来抢</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="http://pingjs.qq.com/ping.js"></script>
+    <script type="text/javascript">
+        if(typeof(pgvMain) == 'function'){
+            pgvMain();
+        }
+    </script>
+</head>
+<body onclick="pgvWatchClick();">
+    <div id="app" class="wrap">
+        <div class="process-way-box">
+            <div class="bg-weather bg-day weather-fade"></div>
+            <div class="bg-weather bg-night"></div>
+            <img class="top-slogan" src="images/top-slogan.png">
+            <div class="way-line-box">
+                <div class="way-line-c">
+                    <div class="parent-point pp1 active">
+                        <div class="parent-point-text">
+                            <span>1</span>次
+                        </div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div class="parent-point pp2" v-bind:class="{ 'active': signArray[1] }">
+                        <div class="parent-point-text">
+                            <span>2</span>次
+                        </div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div class="parent-point pp3" v-bind:class="{ 'active': signArray[2] }">
+                        <div class="parent-point-text">
+                            <span>3</span>次
+                        </div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div class="parent-point pp4" v-bind:class="{ 'active': signArray[3] }">
+                        <div class="parent-point-text">
+                            <span>4</span>次
+                        </div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div class="parent-point pp5" v-bind:class="{ 'active': signArray[4] }">
+                        <div class="parent-point-text">
+                            <span>5</span>次
+                        </div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div class="parent-point pp6" v-bind:class="{ 'active': signArray[5] }">
+                        <div class="parent-point-text">
+                            <span>6</span>次
+                        </div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div class="parent-point pp7" v-bind:class="{ 'active': signArray[6] }">
+                        <div class="parent-point-text">
+                            <span>7</span>次
+                        </div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sign-handel-box">
+            <a class="btn-sign " href="javascript:;" @click="signHandel" v-bind:class="{'active':hasSignIn||signDays>=7}" v-cloak>
+                <div class="btn-sign-active"></div>
+                <div class="btn-sign-text">
+                    打卡领好礼
+                </div>
+            </a>
+
+        </div>
+        <div class="prize-pick-box" v-cloak>
+            <ul class="prize-list">
+                <li class="picking">
+                    <div class="prize-item-bg"></div>
+                    <div class="prize-item-wrap">
+                        <div class="prize-item-c">
+                            <img class="prize-icon" src="images/i-yuequan.png">
+                            <div class="prize-desc-c">
+                                <h2>阅券礼包</h2>
+                                <span >
+                                    累计打卡满1次
+                                    （1/1）
+                                </span>
+                            </div>
+                            <a href="javascript:;" class="btn-prize-pick" data-type="1" @click="pickHandel">
+                                <div class="btn-prize-mask"></div>
+                                <div class="btn-prize-text">
+                                    领取
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="liuliang"
+                    v-bind:class="signDays>=3?(!prize2?(last50<=0?'pickout':'picking'):'picked'):'disabled'">
+                    <div class="prize-item-bg"></div>
+                    <div class="prize-item-wrap">
+                        <div class="prize-item-c">
+                            <img class="prize-icon" src="images/i-liuliang.png">
+                            <div class="prize-desc-c">
+                                <h2>30M-50M流量包</h2>
+                                <span >
+                                    累计打卡满3次
+                                    （1/3）
+                                </span>
+                            </div>
+                            <a href="javascript:;" class="btn-prize-pick" data-type="2" @click="pickHandel">
+                                <div class="btn-prize-mask"></div>
+                                <div class="btn-prize-text">
+                                {{ signDays>=3?(!prize2?(last50<=0?'已抢完':'领取'):'已领取'):'未达标' }}
+                                </div>
+                            </a>
+                            <div class="remain-tip">
+                                {{last50<=0?'明天早点来':'今日剩余'+last50+'份'}}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="liuliang"
+                    v-bind:class="signDays>=7?(!prize3?(last100<=0?'pickout':'picking'):'picked'):'disabled'">
+                    <div class="prize-item-bg"></div>
+                    <div class="prize-item-wrap">
+                        <div class="prize-item-c">
+                            <img class="prize-icon" src="images/i-liuliang.png">
+                            <div class="prize-desc-c">
+                                <h2>70M-100M流量包</h2>
+                                <span >
+                                    累计打卡满7次
+                                    （1/7）
+                                </span>
+                            </div>
+                            <a href="javascript:;" class="btn-prize-pick" data-type="3" @click="pickHandel">
+                                <div class="btn-prize-mask"></div>
+                                <div class="btn-prize-text">
+                                    {{ signDays>=7?(!prize3?(last100<=0?'已抢完':'领取'):'已领取'):'未达标' }}
+                                </div>
+                            </a>
+                            <div class="remain-tip">
+                                {{last100<=0?'明天早点来':'今日剩余'+last100+'份'}}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="bottom-desc-box">
+            <h2>活动规则</h2>
+            <table>
+                <tr>
+                    <td>1.</td>
+                    <td>活动时间：11月3日15:00–11月20日23:59；</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>每个用户每天可以打卡一次（同一QQ号，微信号，设备号均视为同一用户）；</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>兑换成功后，流量将在72小时内到账；</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>本活动仅限中国移动、联通和电信用户参加；</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>流量包份数有限，先到先得，抢完为止，活动停止后不再进行兑换。</td>
+                </tr>
+            </table>
+            <span>本活动与苹果公司无关，最终解释权归QQ阅读所有</span>
+        </div>
+
+        <!-- 浮层 -->
+        <maskmodal :show.sync="showMask"
+                   :prize1.sync="prize1"
+                   :prize2.sync="prize2"
+                   :prize3.sync="prize3"
+                   :signdays="signDays"
+                   :islogin="isLogin"
+                   :pagename="pageName">
+        </maskmodal>
+
+        <script type="x/template" id="mask_template">
+            <div class="mask-bg active" v-show="show" transition="maskmodal" @click="closeMask"></div>
+
+            <div class="mask-c mask-picking yuequan-picked " v-show="show" transition="maskmodal">
+                <i @click="closeMask"></i>
+                <h2>恭喜获得<span>{{ yuequanNum }}</span></h2>
+                <img class="picked-suc" src="images/i-yuequan-mask.png">
+                <p>阅券会直接发放到您的账户，请到【我的账户】中查看</p>
+
+                <template v-if="signdays<3">
+                    <div class="dashed-line"></div>
+                    <div class="mask-bot-tip">
+                        再打卡 <span>{{ 3-signdays }}</span> 天可领取30M-50M流量包
+                    </div>
+                </template>
+                <template v-if="signdays>=3 && signdays<7">
+                    <div class="dashed-line"></div>
+                    <div class="mask-bot-tip">
+                        再打卡 <span>{{ 7-signdays }}</span> 天可领取70M-100M流量包
+                    </div>
+                </template>
+                <template v-if="signdays>=7">
+                    <div class="dashed-line" style="border: none;"></div>
+                </template>
+            </div>
+
+
+            <div class="mask-c mask-picking liuliang-picking" v-show="show" transition="maskmodal">
+                <i @click="closeMask"></i>
+                <h2>恭喜获得流量包</h2>
+                <img src="images/i-liuliang.png">
+                <p class="tel-tip">仅限中国移动、联通、电信用户</p>
+                <input class="tel-input" type="tel" maxlength="11" name="" v-model="phoneNum">
+                <a class="btn-mask-pick" href="javascript:;" @click="pickFlow">现在领取</a>
+            </div>
+
+
+
+            <div class="mask-c mask-picked suc">
+                <i @click="closeMask"></i>
+                <img class="picked-suc" src="images/i-picked-success.png">
+                <h2>{{ liuliangNum }}流量包领取成功！</h2>
+                <p>流量包会在稍后发放到您的手机中，请注意查收</p>
+                <template v-if="signdays<7">
+                    <div class="dashed-line"></div>
+                    <div class="mask-bot-tip">
+                        再打卡 <span>{{ 7-signdays }}</span> 天可领取70M-100M流量包
+                    </div>
+                </template>
+                <template v-else>
+                    <div class="dashed-line" style="border:none;"></div>
+                </template>
+
+            </div>
+
+
+
+            <div class="mask-c mask-picked failed ">
+                <i @click="closeMask"></i>
+                <img class="picked-fail" src="images/i-liuliang-out.png">
+                <h2>今天的流量包被抢完了<br>明天再来吧</h2>
+                <p>打卡满指定天数后，每天均可参与抢流量包，不同额度的奖品同一用户只可以领一次</p>
+                <template v-if="signdays<7">
+                    <div class="dashed-line"></div>
+                    <div class="mask-bot-tip">
+                        再打卡 <span>{{ 7-signdays }}</span> 天可领取70M-100M流量包
+                    </div>
+                </template>
+                <template v-else>
+                    <div class="dashed-line" style="border:none;"></div>
+                </template>
+            </div>
+
+
+
+            <div class="mask-c error ">
+                <i @click="closeMask"></i>
+                <img class="picked-fail" src="images/i-liuliang-out.png">
+                <h2>出错啦，请稍后再试</h2>
+            </div>
+        </script>
+
+        <!-- 活动过期mask -->
+        <div class="over" v-bind:class="{'overshow':overMask}">
+            <div class="over-c">
+                <img src="images/i-over.png" alt="本期活动已结束">
+                <p class="over-p1">本期活动已结束</p>
+                <p class="over-p2">敬请期待下一波活动</p>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="js/vue-v1.0.26.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

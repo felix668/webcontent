@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 72
+gulpfile.js
+package.json
+node_modules
+src
+webpack.config.js
+zongjie.txt
+
+END

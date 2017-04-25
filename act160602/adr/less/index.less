@@ -1,0 +1,86 @@
+.home {
+	position: relative;
+	width: 100%;
+	.bg {
+		width: 100%;
+	}
+	.content {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		.panel {
+			width: 5.3rem;
+			margin: auto;
+			margin-top: 3.4rem;
+			background: #6881b1;
+			overflow: hidden;
+			.button {
+				width: 3.9rem;
+				margin: auto;
+				margin-top: 0.45rem;
+				margin-bottom: 0.45rem;
+			}
+			.desc {
+				padding: 0 0.32rem 0 0.32rem;
+				font-size: 0.3rem;
+				font-weight: bold;
+				color: white;
+			}
+			.twenty {
+				padding: 0.15rem 0.32rem 0.15rem 0.32rem;
+				font-size: 0.22rem;
+				color: white;
+			}
+			.six {
+				padding: 0 0.32rem 0.25rem 0.32rem;
+				font-size: 0.22rem;
+				color: white;
+			}
+		}
+	}
+}
+
+.mask {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	display: none;
+	.bg {
+		width: 100%;
+		height: 100%;
+		background: black;
+		opacity: 0.5;
+	}
+	.mask-panel {
+		position: absolute;
+		left: 0;top: 0;right: 0;bottom: 0;
+		margin: auto;
+		width: 4.7rem;
+		height: 3rem;
+		border-radius: 0.2rem;
+		background: white;
+		.text {
+			margin-top: 0.85rem;
+			text-align: center;
+			font-size: 0.36rem;
+		}
+		.buttons {
+			width: 4rem;
+			margin: auto;
+			margin-top: 0.55rem;
+			.download {
+				float: left;
+				width: 1.9rem;
+			}
+			.cancel {
+				float: right;
+				width: 1.9rem;
+			}
+		}
+	}
+}

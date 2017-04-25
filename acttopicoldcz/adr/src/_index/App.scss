@@ -1,0 +1,22 @@
+$blue: #9bdbca;
+$black: #494949;
+$orange: #ff9b42;
+
+%container {
+	width: 1000px;
+	margin: auto;
+}
+
+#root {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	.main {
+		width: 100%;
+		overflow: hidden;
+		background: #f8dfb9;
+		.title_img {
+			width: 100%;
+		}
+	}
+}

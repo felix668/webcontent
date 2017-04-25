@@ -1,0 +1,19 @@
+$blue: #9bdbca;
+$black: #494949;
+$orange: #ff9b42;
+
+%container {
+	width: 1000px;
+	margin: auto;
+}
+
+#root {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	.main {
+		width: 100%; height: 100vh;
+		overflow: hidden;
+		//background: #2d345e;
+	}
+}

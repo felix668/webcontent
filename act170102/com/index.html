@@ -1,0 +1,194 @@
+<html>
+<head>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>吃豆游戏</title>
+<link rel="stylesheet" href="css/style.css">
+    <script>
+        /* 根据窗口宽度自动计算html基准字体大小，用于移动端弹性布局 */
+        (function (){
+            var docEl = document.documentElement,
+                    docBody = document.body,
+                    baseFontSize = 100,
+                    pageMaxWidth = 750,
+                    rootHtml = document.getElementsByTagName('html')[0],
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = clientWidth = docEl.clientWidth || docBody.clientWidht;
+
+                        //最大宽度显示为750的宽度
+                        if(clientWidth > pageMaxWidth){
+                            clientWidth = pageMaxWidth
+                        }
+
+                        if (!clientWidth) return;
+                        rootHtml.style.fontSize = baseFontSize * (clientWidth / 1080) + 'px';
+                    };
+            if (!window.addEventListener) return;
+
+            window.addEventListener(resizeEvt, recalc, false);
+
+            recalc();
+        })();
+    </script>
+</head>
+<body>
+<div class="wrapper" id = "wrapper">
+    <div class="pop tc dn" id = "pop">
+        <div class="mask"></div>
+        <div class="pop-conatinter">
+            <div class = "pop-box">
+                <div class = "pop-icon"></div>
+                <div class = "pop-title"></div>
+                <div class = "pop-content"></div>
+                <div class = "pop-footer ovh">
+                    <a class = "btn left-btn" data-click = "" title = "" href = "javascript:;"></a>
+                    <a class = "btn right-btn" data-click = "" title = "" href = "javascript:;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "share-guide dn" id = "shareGuide" data-click = "closeShareGuide"></div>
+    <div class = "header"></div>
+    <div class = "ovh part1">
+        <div class = "l items">
+            <span class = "l icon icon-life"></span>
+            <span class = "l ml5">X</span>
+
+            <!--当前的生命值，初始化页面的时候，需要赋值-->
+            <span class = "l txt life" id = "life">000</span>
+        </div>
+        <div class = "l items">
+            <span class = "l icon icon-score"></span>
+            <span class = "l txt score" id = "score">000</span>
+        </div>
+        <div class = "l items">
+            <span class = "l icon icon-time"></span>
+            <span class = "l txt time" id = "time">00:00</span>
+        </div>
+        <a class = "r my-history" href = "" data-click = "myHistory">我的战绩</a>
+    </div>
+
+    <!--data-status的值，取值为1，2，3，默认值为1即可-->
+    <div class = "canvas-area" data-status = "1">
+        <canvas id="canvas" class="canvas">不支持画布</canvas>
+        <div class = "un-begin-overlay full-screen" data-click = "beiginGame">
+            <span class = "beigin-tip tc">
+                滑动控制方向<br/>
+                今日还有 5 次机会
+            </span>
+        </div>
+        <div class = "my-result">
+            <div class = "ovh">
+                <div class = "result-title" data-click = "myTab" data-status = "3">我的战绩</div>
+                <div class = "result-title" data-click = "myTab" data-status = "4">通关排行榜</div>
+            </div>
+            <div class = "cur-result tc">
+                <div class = "cur-result-title">游戏结束</div>
+                <!--上一次的吃豆得分，和最佳成绩，需要赋值在span标签内部-->
+                <div class = "cur-result-item">吃豆得分：<span class = "c-ffd75a" id = "thisGameScore"></span></div>
+                <div class = "cur-result-item">最佳成绩：<span class = "c-ffd75a" id = "bestGameScore"></span></div>
+                <div class = "cur-btn" data-click = "tryToPlayGame">再来一次</div>
+                <div class = "cur-get-change ovh">
+                    <div class = "l">
+                        <i class = "r get-change-number">X 3</i>
+                        <i class = "icon icon-life r"></i>
+                        <i class = "get-change-btn r" data-click = "shareGame">分享</i>
+                    </div>
+                    <div class = "r">
+                        <i class = "get-change-btn l" data-click = "downAppNew">下载</i>
+                        <i class = "icon icon-life l"></i>
+                        <i class = "l get-change-number">X 3</i>
+                    </div>
+                </div>
+                <div class = "game-over-gift">
+                    <div class = "gift-title rel">
+                        通关奖励
+                        <i class = "left-line"></i>
+                        <i class = "right-line"></i>
+                    </div>
+                    <div class = "gift-items ovh">
+                        <div class = "l">起点币<i class = "icon icon-qidianbi"></i>X 100</div>
+                        <div class = "l">游戏币<i class = "icon icon-youxibi"></i>X 1000</div>
+                        <div class = "l">游戏钻<i class = "icon icon-youxizuan"></i>X 300</div>
+                    </div>
+
+                    <!--gift-btn在已领取的时候，是不需要显示的添加dn的className-->
+                    <!--gift-btn可领取的时候，添加active的className-->
+                    <div class = "gift-btn" data-click = "getGiftBtn">领取</div>
+
+                    <!--gift-detail在已领取的时候，去掉dn，显示，领取的礼品码，放到giftCode内部-->
+                    <div class = "gift-detail dn c-ffd75a">起点币已发放到绑定账户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;游戏礼包码：<span id = "giftCode">11111</span></div>
+                </div>
+            </div>
+            <div class = "game-rank">
+                <div class = "rank-title ovh tc">
+                    <div class = "rank-number">排名</div>
+                    <div class = "rank-time">通关时间</div>
+                    <div class = "rank-name">昵称</div>
+                </div>
+                <ul class = "rank-items tc"></ul>
+                <div class = "my-rank ovh">
+                    <a class = "back-game r tc" data-click = "tryToPlayGame">返回游戏</a>
+                    <div id = "myRank">我的排名：您还没有通关哦</div>
+                </div>
+            </div>
+            <div class = "my-result-loadding"></div>
+        </div>
+        <div class = "activity-detail">
+            <span class = "detail-close" data-click = "closeDetail"></span>
+            <div class = "detail-header tc">活动说明</div>
+            <div class = "detail-title tc">活动时间：待定</div>
+            <div class = "detail-title tc mt-line">游戏玩法</div>
+            <div class = "detail-content">滑动屏幕操纵书本运动方向，吃完所有豆子即可通关；吃到大豆时，书本短暂变成无敌状态；书本被起小班人物抓到或游戏通关时，游戏结束。</div>
+            <div class = "detail-title tc mt-line">游戏机会</div>
+            <div class = "detail-content">每天默认5次游戏机会；每成功分享一次活动可获得3次游戏机会，分享奖励可重复领取；成功下载升级版APP可获得10次游戏机会，下载奖励仅限领取一次；</div>
+            <div class = "detail-title tc mt-line">奖励说明</div>
+            <div class = "detail-content">通关即可领取奖励；起点币将直接发放到 <a class = "detail-bind" href="" >绑定</a> 账号，游戏金币和钻石奖励请复制礼包码，登录到APP中兑换；兑换方法：下载并进入游戏-点击兑换-粘贴礼包码兑换；</div>
+            <div class = "detail-footer tc mt-line">-本活动法律范围内最终解释权归起点读书所有-</div>
+        </div>
+    </div>
+    <div class = "footer ovh mt10">
+        <span class = "l down-app tc" data-click = "downAppNew">下载升级版</span>
+        <span class = "r activity-briefing tc" data-click = "openActivityDetail">活动说明</span>
+        <div class = "footer-text">
+            真人对战，炫酷装备，丰富奖励<br/>
+            4787人正在升级版中对战！
+        </div>
+
+    </div>
+</body>
+<script src="//qidian.gtimg.com/lib/jquery.1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    yueWenActivityInstance({
+
+        //平台，5代表微信IOS，6代表微信Android
+        uA : '5',
+
+        //产品环境，如果不需要，在这里和JS中，同步删除就可以了
+        domainPrefix : "local",
+
+        //活动状态
+        //对比一下readMe中的文档吧
+        activityStatus : "0",
+
+        //登陆状态
+        isLogin : true,
+
+        //剩余生命次数
+        life : 1,
+
+        //通关大礼包的状态，与readMe中的getReward的属性相同
+        getReward : 2,
+
+        //用户的信息
+        userInfo : {
+            nickName : "大明星",
+            score : "100"
+        }
+
+    });
+
+</script>
+</html>

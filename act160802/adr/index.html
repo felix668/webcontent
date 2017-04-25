@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>大神说</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        function recalc() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = (clientWidth / 7.2) + 'px';
+        };
+        if(!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</head>
+<body>
+<!--未升级用户-->
+<div class="nograde">
+	<img src="images/upgrade.png" />
+	<h4>大神说</h4>
+	<p>与大神零距离的语音问答，可偷听大神回答的问题，还可向TA提问</p>
+	<a href="javascript:" id="updateBtn">升级QQ阅读，与大神零距离接触</a>
+</div>
+<!--升级用户-->
+<div class="upgrade">
+	<img src="images/topimg.png" class="topimg" />
+	<!---->
+	<h4 class="title"><div>试试偷听</div></h4>
+	<p class="small_tt">推荐3个专属你的大神说</p>
+	<div class="swiper_container">
+		<div class="recommend_box">
+			<ul id="recomlist" style="">
+				<li>
+					<div class="item">
+						<div class="ask_box">
+							<div class="face userface"><img src="images/userface_defa.png"></div>
+							<div class="askcontent">1作者你好，请问一下，你在鬼咒里面写了很多爱情故事，其中有主角丁二苗的爱情，也有配角李伟年的爱情，结局都是皆大欢喜，花好月</div>
+						</div>
+						<div class="authorbox">
+							<div class="face authorface"><img src="images/authorface_defa.png"></div>
+							<div class="authorname"><span>1authorname </span></div>
+							<div class="authorcontent"><em></em><span>免费听</span></div><div class="timenum">55”</div>
+							<div class="heardnum">听过 <span>999</span></div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="ask_box">
+							<div class="face userface"><img src="images/userface_defa.png"></div>
+							<div class="askcontent">2作者你好，请问一下，你在鬼咒里面写了很多爱情故事，其中有主角丁二苗的爱情，也有配角李伟年的爱情，结局都是皆大欢喜，花好月</div>
+						</div>
+						<div class="authorbox">
+							<div class="face authorface"><img src="images/authorface_defa.png"></div>
+							<div class="authorname"><span>2authorname </span></div>
+							<div class="authorcontent"><em></em><span>免费听</span></div><div class="timenum">55”</div>
+							<div class="heardnum">听过 <span>999</span></div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="ask_box">
+							<div class="face userface"><img src="images/userface_defa.png"></div>
+							<div class="askcontent">3作者你好，请问一下，你在鬼咒里面写了很多爱情故事，其中有主角丁二苗的爱情，也有配角李伟年的爱情，结局都是皆大欢喜，花好月</div>
+						</div>
+						<div class="authorbox">
+							<div class="face authorface"><img src="images/authorface_defa.png"></div>
+							<div class="authorname"><span>3authorname </span></div>
+							<div class="authorcontent"><em></em><span>免费听</span></div><div class="timenum">55”</div>
+							<div class="heardnum">听过 <span>999</span></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!---->
+	<h4 class="title"><div>没听过瘾？</div></h4>
+	<p class="small_tt">去大神说主页偷听更多免费问题</p>
+	<div class="more_dashen"><a href="javascript:" class="dashenbtn">偷听更多></a></div>
+	<!---->
+	<h4 class="title"><div>你也可以向大神提问</div></h4>
+	<p class="small_tt">为你推荐一位大神，试着向TA提问</p>
+	<div class="dashenface"><img src="images/authorface_defa.png"></div>
+	<div class="dasheninfo">白金签约作家，代表作《斗破苍穹》《武功乾坤》《大主宰》，拥有超高人气！</div>
+	<a href="javascript:" class="askbtn">向TA提问</a>
+	<div class="other">对TA不感兴趣，可以点击发现>点击大神说>点击<br>名人堂，选择喜欢的作者，向TA 提问哦</div>
+</div>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script><!---->
+
+</body>
+</html>

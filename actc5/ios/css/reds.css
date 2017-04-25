@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSSreset */
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body,div,p,ul,li,img,i,strong,h1,h2,h3,span{margin:0;padding:0;}
+ul,li{list-style:none;}
+img{border:0 none; vertical-align:middle; display:block;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;font-size: 0.24rem; background-color:#dd584f;}
+html,body{height:100%}
+.auto-x{position:absolute;left:0;right:0;margin:0 auto}
+.over{ width:100%; height:100%; overflow:hidden; background-color:#bf302b}
+/* top图 */
+.head{ position:relative;}
+.head img{ width:100%;}
+.goods { width:6.34rem; top:4.02rem; padding:0.12rem; -webkit-border-radius:1.2rem;  background:#feec34 url(../images/hongbao.png) no-repeat 4.5rem 0.1rem; -webkit-background-size:1.6rem 1.45rem;border-bottom: 0.08rem solid #e4aa1e; z-index:100;}
+.goods.active{ background-color:#decd2d;}
+.goods img{ width:0.96rem; height:0.96rem; -webkit-border-radius:1.16rem;}
+.goods h3{ left:1.35rem; top:0.22rem; line-height:1em; position:absolute; font-size:0.36rem; font-weight:normal}
+.goods p{ left:1.35rem; line-height:1em; position:absolute; font-size:0.28rem; color:#95450b; top:0.72rem;}
+.goods p span{ padding-right:0.05rem; font-weight:bold;}
+.gpoint{ width:0.6rem; height:0.6rem; display:block; position:absolute; background:url(../images/point.png) no-repeat; -webkit-background-size:cover; top:50%; margin-top:-0.3rem; right:0.3rem;}
+/* 专区头部标题 */
+.layout{ padding-top:1.74rem; padding-bottom:1.1rem; position:relative;}
+.title{ width:5.52rem; height:0.7rem; background:url(../images/discountTitle.png) no-repeat; -webkit-background-size:5.52rem 0.7rem; top:0.38rem;}
+.discount09{ width:2.7rem; height:0.52rem; top:0.1rem;background:url(../images/discount09.png) no-repeat; -webkit-background-size:2.7rem 0.52rem;}
+.limitTime{ width:3.4rem; height:0.4rem; top:0.9rem; line-height:0.4rem; text-align:center; font-size:0.12rem; background-color:#e38176; -webkit-border-radius:0.4rem; font-size:0.22rem; color:#fff;}
+.limitTime span{ margin:0 0.1rem; font-weight:bold;}
+.vline{ width:1.6rem; border-left:1px solid #e38176; border-right:1px solid #e38176; top:0.7rem; height:0.24rem; display:block;}
+/* 5折专区 */
+.layout5{padding-top:0.94rem; padding-bottom:0.98rem; position:relative; background-color:#f77970;}
+.discount5{ width:2.54rem; height:0.55rem; top:0.08rem;background:url(../images/discount5.png) no-repeat; -webkit-background-size:2.54rem 0.55rem;}
+.layout5 .title{top:-0.36rem;}
+.layout5 .limitTime{ background-color:#f79990;}
+.layout5 .sbooklist li {background-color:#da675f;}
+.layout5 .vline{border-left:1px solid #f79990; border-right:1px solid #f79990;}
+/* 2折专区 */
+.layout2{padding-top:0.94rem; padding-bottom:0.98rem; position:relative; background-color:#dd584f;}
+.discount2{ width:1.73rem; height:0.55rem; top:0.08rem;background:url(../images/discount2.png) no-repeat; -webkit-background-size:1.73rem 0.55rem;}
+.layout2 .title{top:-0.36rem;}
+.layout2 .limitTime{ background-color:#e5827a;}
+
+/* 大书封列表 */
+.booklist { display: -webkit-box; -webkit-box-sizing: border-box; padding:0.22rem 0.3rem 0 0.3rem; -webkit-box-align: top; position: relative; height:3.76rem;}
+.booklist li { -webkit-box-flex: 1; width:1.7rem; -webkit-box-sizing: border-box; margin: 0 auto 0.4rem; position: relative }
+.booklist li span { position: absolute; left: 0; top: 0; width:1.68rem; height:2.1rem; }
+.booklist li span.active { background: #000; opacity: .1; position: absolute; left: 0; top: 0; width:1.68rem; height:2.1rem; border: 1px }
+.booklist li img { border: 1px solid #c75229; display: block; width:1.68rem; height:2.1rem; margin-bottom:5px }
+.booklist li p { font-size:11px;line-height: 16px; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; }
+.booklist li p.book_name { font-size:13px; color: #330800; -webkit-line-clamp: 2; line-height: 18px }
+.booklist li:last-child { position: absolute; right: 15px }
+.booklist li:first-child { position: absolute; left: 14px }
+.priceDel{ text-decoration:line-through; color:#94292c;}
+.priceNow{ color:#fff2d9;}
+/* 小书封列表 */
+.sbooklist { overflow:hidden; display:-webkit-box;width:100%;box-sizing: border-box; padding:0.04rem 0.3rem 0 0.3rem;}
+.sbooklist li { -webkit-box-flex: 1; -webkit-box-sizing: border-box; height:1.2rem; padding:0.2rem 0.1rem; background-color:#c44b43; position: relative;display:block; margin-right:0.04rem; padding-left:0.84rem; width:100%;}
+.sbooklist li.active,.layout5 .sbooklist li.active{ background-color:#a2423b;}
+.sbooklist li:last-child{ margin-right:0;}
+.sbooklist li span { position: absolute; left: 0; top: 0; width:1.68rem; height:2.1rem; }
+.sbooklist li span.active { background: #000; opacity: .1; position: absolute; left: 0; top: 0; border: 1px }
+.sbooklist li img { border: 1px solid #c75229; width:0.62rem; height:0.78rem; position:absolute; left:0.1rem; top:0.2rem;}
+.sbooklist li p {line-height:1.2em; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-sizing: border-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-box-align: top; word-break: break-all; font-size:11px;}
+.sbooklist li p.book_name { font-size: 13px; color: #330800; -webkit-line-clamp:1; line-height:18px }
+.sbooklist li p.priceNow{ color:#fff2d9;}
+
+/* 倒计时 */
+.limitTime{ width:3.6rem; height:0.4rem; line-height:0.4rem; text-align:center; font-size:0.22rem; background-color:#e38176; -webkit-border-radius:0.4rem;}
+.limitTime span{ color:#fff; margin:0 0.1rem;}
+/* 倒计时 */
+.titles{ height:0.5rem;background:url(../images/title.png) no-repeat 0 0; -webkit-background-size:2.2rem 0.5rem; line-height:0.5rem; color:#fff; text-indent:0.32rem; font-size:0.32rem; font-style:italic; margin-bottom:0.1rem; margin-top:0.4rem}
+
+/* 活动规则 */
+.rulebox{ background:#b2423b; padding:0.64rem 0.32rem 0.4rem 0.32rem; position:relative;}
+.rulebox h4{ width:100%; height:1.13rem;background:url(../images/rule.gif) no-repeat 0 0; -webkit-background-size:cover; position:absolute; left:0; top:-1.05rem; text-indent:-9999px;}
+.rulebox li{ color:#fbda72; line-height:0.5rem; position:relative;text-indent:0.42rem; font-size:13px;}
+.rulebox li:before{ content: ''; position: absolute; left:0.12rem; top: 12px; width: 2px; height: 2px; background: #fbda72; -webkit-border-radius:2px; overflow: hidden }
+.rulebox li a{ color:#ffea5e; font-size:0.13rem;}
+.copyright{ font-size:13px; color:#fbda72; text-align:center; margin:0.2rem auto 0.1rem;}
+
+/* 活动已结束 */
+.cntnone{ text-align:center; padding-top:40px; font-size:16px; color:#fff;}
+
+/* 升级 */
+.redbag{ width:5.2rem; height:5.86rem; background:url(../images/redbag.png) no-repeat; background-size:cover; position:absolute; left:0; bottom:0; z-index:10}
+.book{ width:100%; height:2.83rem; background:url(../images/books.png) no-repeat; background-size:100% auto; position:absolute; left:0; bottom:0; z-index:12}
+
+@media screen and (max-width: 320px){
+.over .head{top:-0.6rem;}
+.over .goods{top:3.3rem;}
+}
+@media screen and (min-width:321px) and (max-width:375px){
+.over .head{top:-0.2rem;}
+.over .goods{top:3.7rem;}
+}
+@media screen and (min-width:376px) and (max-width: 414px){
+
+}

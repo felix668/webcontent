@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS reset */
+*{ margin:0; padding:0;}
+html,body,div,p,ul,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img{margin:0;padding:0;font-size:15px; font-family:"微软雅黑";}
+em{ font-style:normal;}
+body{font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-text-size-adjust:none;padding:0;margin:0;}
+ul,ol,li{list-style:none}
+.clearfix { clear:both; overflow:hidden }
+img { border:0 none; vertical-align:middle;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.active{background-color:#e5e5e5!important;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0); margin:0; padding:0;}
+
+.imgBox{ position:relative;}
+.imgBox img{ display:block; width:100%;}
+.daybg{ position:absolute; width:320px; left:50%; margin-left:-160px; height:20px; background:url(../images/day.png) no-repeat center top;-webkit-background-size:320px 20px; top:0; text-align:center; font-size:14px; line-height:22px; color:#fff;}
+
+.btn{ padding:0 75px 25px; background:#ecfaff;}
+.btn.blue{ background:#08baf5;}
+.btn a { -webkit-box-flex: 1; display:block; height:40px; line-height:40px; font-size:16px; font-weight:bold; text-align:center; background:#f9bb00; margin:0;margin-right:10px; color:#6f3f00; -webkit-border-radius:20px;-webkit-box-shadow:0 2px 0 #a47000; background:#f9bb00;}
+.padd_ad{ padding:0 14px 24px;}
+
+/* 规则 */
+.rule{ background:#ffffff; overflow:hidden; padding:18px 14px 12px 14px; position:relative; z-index:99;}
+.rule ul{}
+.rule li{ line-height:20px; font-size:12px; color:#768794; position:relative; margin-bottom:5px;}
+.rule li h3,.rule.infoblue h3{ font-weight:bold; color:#768794; display:block; padding-left:18px; position:relative; font-size:13px;}
+.rule li h4{ color:#82d4ef; font-size:12px; font-weight:normal}
+.rule li h3 span{ width:14px; height:14px; background:#768794; display:block; position:absolute; left:0; top:2px; color:#fff; text-align:center; line-height:16px;-webkit-border-radius:7px; font-size:11px;}
+
+.rule.infoblue h3{ color:#08baf5; margin-bottom:5px;}
+.rule.infoblue h3 span{background:#08baf5;}
+.rule.infoblue p{ font-size:12px;font-size:12px;line-height:22px; margin-bottom:8px;}
+
+a.blue{ color:#147cd1;}
+.copyright{color:#b1bec9;}
+/* 规则详情 */

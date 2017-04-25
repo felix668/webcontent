@@ -1,0 +1,159 @@
+@charset "utf-8";
+body,p,img,b,i,ul,li,div,h2{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+img{border:none;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,li{list-style: none;}
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background-color: #ffb159;text-align: center;
+}
+.banner{
+    width: 100%;
+}
+.content {
+    width: 6.86rem;
+    margin: 0 auto;
+}
+.content li{
+    width: 100%;
+    height: 3.06rem;
+    position: relative;
+    margin-bottom:0.22rem; 
+    display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    background: url("images/libg.png") 0 -4.48rem no-repeat;
+    background-size:100% auto;
+}
+.inner{
+    position: absolute;
+    top: .2rem;
+    bottom: .28rem;
+    right: .2rem;
+    left:.2rem;
+    background: #fff;
+    border-radius: .1rem;
+    -webkit-box-shadow:inset 0px 0px 3px rgba(0,0,0,.29),0px 1px 0px rgba(255,255,255,.25);
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,.29),0px 1px 0px rgba(255,255,255,.25);
+}
+.info{
+    font-size: 0;
+    color: #484f53;
+    margin:.38rem 0 .4rem;
+}
+.info i{
+    font-weight: bold;
+    font-size: 0.46rem;
+    font-style: normal;
+}
+.info b{
+    font-size: 0.22rem;
+    margin: 0 .08rem 0 .06rem;
+    vertical-align: .05rem;
+}
+.info span{
+    font-weight: bold;
+    font-size: .5rem;
+    margin:0 .22rem;
+}
+.info img:nth-of-type(1){
+    width: 0.62rem;
+}
+.info img:nth-of-type(2){
+    width: 0.66rem;
+}
+.btn{
+    display: inline-block;
+    width: 5.84rem;
+    height: 1.02rem;
+    background: url("images/btn.png") 0 0 no-repeat;
+    background-size:100% auto;
+}
+.btn:active{
+    background-position: 0 -1.84rem;
+}
+.btn strong{
+    display: inline-block;
+    vertical-align: top;
+    font-size: .4rem;     
+    color:#fff;
+    line-height: .92rem;
+    position: relative;
+}
+.btn strong::after{content: "";width: .44rem;height: .44rem;background: url(images/arrow.png) 0 -.76rem no-repeat;background-size: 100% auto;position: absolute;top: 0.26rem;right:-.6rem;}
+/*人气优惠*/
+.content .hot{
+    background-position:0 0;
+}
+.hot .inner{
+    background: #6b3429;
+}
+.hot .info{color: #fff;}
+.hot .btn{
+    background-image:url(images/hotbtn.png);
+}
+.hot .btn strong::after{
+    background-position:0 0;
+}
+/*规则*/
+.rule{
+    margin:.44rem .18rem .64rem;
+    font-size: 0.28rem;
+    color: #333;
+}
+.title{
+    position: relative;
+}
+.title strong{
+    display: inline-block;
+    width:2rem;
+    height:.6rem;
+    margin-bottom: .34rem;
+    background-color: #e5863a;
+    font-size:.32rem;
+    line-height: .62rem;
+    color: #fff; 
+    border-radius:.3rem;  
+}
+.title::after,.title::before{
+    content: "";
+    width: 2.28rem;
+    height: .02rem;
+    background-color: #e5863a;
+    position: absolute;
+    top: .3rem;
+    left: 0
+}
+.title::after{
+    right: 0;
+    left: auto;
+}
+.rule p{
+    line-height: 0.48rem;
+    margin-bottom: 0.2rem;
+    padding-left: .52rem;
+    text-align: left;
+    position: relative;
+}
+.rule p span{
+    position: absolute;
+    top:.02rem;
+    left: 0;
+    width: 0.4rem;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.42rem;
+    border-radius: 0.2rem;
+    background-color: #65441f;
+    color: #fff;
+}
+/*活动结束*/
+.mask{width: 100%;height: 100%;position: fixed;top:0;left:0;background:rgba(0,0,0,.4);text-align: center;z-index: 100;display: none;}
+.show{display: -webkit-box;-webkit-box-align:center;-webkit-box-pack:center;}
+.over{background: #fff;width:4.74rem;height:5.4rem;border-radius:.2rem;line-height: .58rem}
+.mask img{width: 3.16rem;margin-top:.66rem}
+.mask h2{color: #333;font-size: .34rem;margin-top: .36rem}
+.mask p{color: #777;font-size: .3rem;}

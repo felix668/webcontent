@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>排行</title>
+<link href="css/rank.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src='js/set.js'></script>
+</head>
+<body>
+<div class="head"><img src="images/head.jpg"/>
+<!--未登录样式-->
+<div class="user unLogin" id="nologin" onclick="javascript:Local.login();">
+<div class="face"><img src="images/dface.png"></div>
+<h2>登录查看排行</h2>
+</div>
+<!--已登录样式-->
+<div class="user" id="logined">
+<div class="face"><img id= "myAvor" src="images/face.jpg"></div>
+<div class="userInfo"><h2 id="myName">-</h2><p>当前排名<span id="myRank">0</span></p></div>
+<div class="ldNum" id="myLd">0<strong class="add ani" id="add">+20</strong></div>
+</div>
+<div class="picbox" id="picbox">
+<p>铃铛值排行前10名必中以下奖励：</p>
+    <ul class="piclist" id="piclist">
+      <li><img src="images/Prize1.png"></li>
+      <li><img src="images/Prize2.png"></li>
+      <li><img src="images/Prize3.png"></li>
+      <li><img src="images/Prize4.png"></li>
+      <li><img src="images/Prize5.png"></li>
+      <li><img src="images/Prize6.png"></li>
+    </ul>
+  </div>
+  <p class="headsay auto-x">一招助你冲榜单！</p>
+  <div class="changeBtn" onclick="javascript:Index.getMoreLD();">500书币兑换20个铃铛<span class="btnSd"></span></div>
+</div>
+<div class="prizeNote" id="more">
+	<!--未中奖用户-->
+	<p class="noP" style="display: none;">
+		每日20:00将从前300名中选出两位幸运用户，<br /> 送<span class="red">20Q币</span>
+	</p>
+	<!--中奖用户-->
+	<div class="goods" id="goods" style="display:none ;">
+		<div class="gooduser" id="todayLuckys">
+			<span>12月25日幸运用户：</span>
+		</div>
+		<p class="goodP">
+			每日20:00从Top300中选2名用户<span class="red">送20Q币</span>
+		</p>
+	</div>
+</div>
+<div class="rank">
+<div class="rankList">
+<p>Top10<span>铃铛值</span></p>
+<ul id="ranks">
+</ul>
+<p class="ranks"><a href="javascript:;">查看全部排名></a></p>
+</div>
+</div>
+<div class="ways">
+	<p>更多获取铃铛的方式：</p>
+	<ul class="enters">
+		<li>
+			<img src="images/gift1.png"/>
+		</li>
+		<li>
+			<img src="images/gift2.png"/>
+		</li>
+	</ul>
+</div>
+<div class="rule">
+<h4>活动规则</h4>
+<p>
+1、活动时间：2015年12月1日-12月31日；<br>     
+2、铃铛排行榜：活动期间，通过积攒铃铛进行冲榜，活动结束后榜单前十用户予以实物奖励；<br>     
+3、幸运榜：活动期间每天20：00随机在排行榜20-300名之间产生两位幸运用户，可获得20Q币奖励，将在中奖后5个工作日内发放至账户；<br>     
+4、书币换铃铛：500书币可购买20铃铛，购买的铃铛可累积参与排行和抽奖；<br>     
+5、关于奖励发放：排行榜中奖名单活动结束后公布；Q币奖励将在5个工作日内发放至QQ帐号，请注意查收。<br>     
+</p>
+</div>
+<!-- 弹窗-->
+<div class="mask">
+	<!-- 领取失败-->
+	<div class="tiparea" id="tiparea1" style="display:">
+		<h3>您的书币余额不足500,请先充值</h3>
+		<a class="knowbtn" href="javascript:;">知道啦</a>
+        <a class="closebtn" href="javascript:;"></a>
+	</div>
+	<!-- 很遗憾 -->
+	<div class="tiparea" id="tiparea2" style="display:none">
+		<strong>很遗憾，您没有中奖</strong>
+		<p>活动期间12-7至12-31，每日八点
+从前300名中随机选2名幸运用户</p>
+		<a class="tipbtn" href="javascript:;">知道啦</a>
+		<a class="closebtn" href="javascript:;"></a>
+	</div>
+	<!-- 恭喜你 -->
+	<div class="tiparea" id="tiparea3" style="display:none">
+		<strong>恭喜你</strong>
+		<p>成为<span class="red" id="red"></span>幸运用户，获得<span class="red">20Q币</span><br/>
+Q币将于7日内自动发放至QQ号码</p>
+		<a class="tipbtn" href="javascript:;">知道啦</a>
+		<a class="closebtn" href="javascript:;"></a>
+	</div>
+	<!-- 获得奖品 填写联系方式 -->
+	<div class="tiparea" id="tiparea4">
+		<strong>恭喜你</strong>
+		<p>成为<span class="red">幸运用户</span>，获得<span class="red">20Q币</span><br/>
+Q币将于7日内自动发放至QQ号码，已填过不用再填写</p>
+<p class="p0"><input name="" type="text" class="qqInput" placeholder="请输入QQ号码"></p>
+        <a class="disbtn" href="javascript:;">提交</a>
+		<a class="closebtn" href="javascript:;"></a>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	var indx=0,curPos,touchStartX,touchStartY;
+	var winW=$(window).width();
+	var wid=$('#piclist>li').width();
+	var len=$('#piclist>li').length-4;
+	$('#picbox').on('touchstart',function(ev){
+        touchStartX=ev.targetTouches[0].pageX; 
+        touchStartY=ev.targetTouches[0].pageY;
+        $('#picbox').on('touchmove',function(ev){
+			var disX=ev.targetTouches[0].pageX - touchStartX;
+        	var disY=ev.targetTouches[0].pageY - touchStartY;
+        	if(Math.abs(disX)>Math.abs(disY)){
+        		ev.preventDefault();
+        	}          
+        })
+        $('#picbox').on('touchend',function(ev){  
+            var offsetX=ev.changedTouches[0].pageX - touchStartX;
+			$('#piclist').addClass('domove');
+            if(offsetX > 30){
+               indx--;	
+				if(indx<=0){
+					indx=0;
+				}  
+            }else if(offsetX <- 30){
+                indx++;	
+				if(indx>=len){
+					indx=len;
+				}
+            }
+            scroll();
+            $('#picbox').off('touchmove touchend');
+        })	
+	})
+	function scroll(){
+		$('#num>li').eq(indx).addClass('cur').siblings().removeClass('cur');
+		$('#piclist').css('-webkit-transform','translateX('+-wid*indx*2+'px)');
+	}
+})
+</script>
+</body>
+</html>

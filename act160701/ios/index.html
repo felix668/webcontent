@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+    <meta name="description" content="QQ阅读"/>
+    <title>暑你惠读书</title>
+    <script type="text/javascript">
+       (function (doc, win) {
+            var docEl = doc.documentElement;
+            function recalc() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth / 7.2) + 'px';
+            };
+            if(!doc.addEventListener) return;
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<img src="images/banner.jpg" class="banner">
+<ul class="content">
+    <li>
+        <div class="inner">
+            <div class="info">
+                <i>1200</i><b>阅点</b>
+                <img src="images/icon1.png"><span>+</span><i>68</i><b>阅券</b><img src="images/icon2.png">
+            </div>
+            <a href="javascript:Index.cz(12)" class="btn">
+                <strong>充12元领取</strong>
+            </a>
+        </div>
+    </li>
+    <li class="hot">
+        <div class="inner">
+            <div class="info">
+                <i>61800</i><b>阅点</b>
+                <img src="images/icon1.png"><span>+</span><i>6180</i><b>阅券</b><img src="images/icon2.png">
+            </div>
+            <a href="javascript:Index.cz(618)" class="btn">
+                <strong>充618元领取</strong>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="inner">
+            <div class="info">
+                <i>3000</i><b>阅点</b>
+                <img src="images/icon1.png"><span>+</span><i>188</i><b>阅券</b><img src="images/icon2.png">
+            </div>
+            <a href="javascript:Index.cz(30)" class="btn">
+                <strong>充30元领取</strong>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="inner">
+            <div class="info">
+                <i>9800</i><b>阅点</b>
+                <img src="images/icon1.png"><span>+</span><i>888</i><b>阅券</b><img src="images/icon2.png">
+            </div>
+            <a href="javascript:Index.cz(98)" class="btn">
+                <strong>充98元领取</strong>
+            </a>
+        </div>
+    </li>
+</ul>
+<div class="rule">
+    <div class="title">
+        <strong>活动规则</strong>
+    </div>
+    <p><span>1</span>活动时间：2016年7月11日15点——7月18日0点</p>
+    <p><span>2</span>充值赠送：单次（一次性）充值达到指定额度，则赠送对应额度阅券，多充多送</p>
+    <p><span>3</span>活动所赠阅券有效期均为15天并且即时到账，可<br/>用于直接购买书籍</p>
+    <p><span>4</span>本活动最终解释权归QQ阅读所有，与苹果公司无关</p>
+</div>
+<!-- 活动结束 -->
+<div class="mask" id="mask">
+    <div class="over">
+        <img src="images/over.png">
+        <h2>本期活动已结束</h2>
+        <p>敬请期待下一波活动</p>
+    </div>
+</div>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+</body>
+</html>

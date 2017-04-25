@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读"/>
+<title>全民阅读，免费狂欢</title>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        function recalc() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = (clientWidth / 7.2) + 'px';
+        };
+        if(!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<style type="text/css">
+body,div,p,h1,h2,ul,li{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{border:0 none;vertical-align:top;width: 100%;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,li{list-style: none;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:url(images/bg.png) repeat;background-size: .2rem auto}
+.wrap{display: none;}
+.banner{position: relative;}
+.banner h1{position:absolute;top:5.92rem;left:0;width:100%;height:.56rem;line-height:.58rem;font-size:.28rem;color: #232429;text-align: center;}
+/*======列表======*/
+.booklist{margin:0.1rem .14rem .5rem;}
+.booklist li{display: -webkit-flex;display:flex;display:-webkit-box;display:box;padding:.12rem .12rem .3rem .12rem;margin-bottom:.12rem;background: #fff;position: relative;}
+.booklist li::after{content:"";position: absolute;width:100%;height:.18rem;bottom:0;left:0;background: url(images/shelf.png) 0 0 no-repeat;background-size:100% 100%}
+.bookcover{width:1.58rem;height:1.98rem;border:1px solid #444;margin-right:.16rem;}
+.bookcover img{width:100%;height: 100%;}
+/*右侧书籍信息*/
+.bookinfo{width:4.64rem;font-size: .24rem;color: #999}
+.bookinfo p{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;line-height: .36rem;}
+.bookinfo p:nth-child(1){font-size: .32rem;color: #343434;line-height: .38rem}
+.bookinfo p:nth-child(2){font-size:.26rem;color: #444;line-height: .5rem;}
+.bookinfo p:nth-child(3){color: #999;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;white-space: normal;}
+.bookinfo span{display: inline-block;}
+.author{line-height: .5rem}
+.bookinfo .category{padding:0 .08rem;margin-left:.06rem;height: .24rem;line-height: .26rem;color: #444;font-size: .16rem;vertical-align:1px;}
+.bookinfo .tip{margin-top: .14rem;}
+.free{width:.7rem;height:.32rem;line-height: .34rem;background:#f08e60;color:#fff;font-size:.22rem;text-align: center;margin-right: .12rem;font-weight: bold;font-style: italic;}
+.price{text-decoration:line-through}
+.bor{position: relative;}
+.bor::after{content:"";position: absolute;width:200%;height:200%;top:0;left:0;border:1px solid #232429;-webkit-transform:scale(.5); -webkit-transform-origin:0 0; transform:scale(.5);transform-origin:0 0;-webkit-box-sizing:border-box;box-sizing:border-box;} 
+.category::after{border-color:#666;border-radius: 4px}
+/*======提示页======*/
+.mask{width: 100%;height: 100%;position: fixed;top:0;left:0;background: url(images/mask.jpg) no-repeat;background-size: 100% 100%;font-size: .32rem;text-align: center;z-index: 100;}
+.mask>div{display: none;}
+.mask img{width: 4.8rem;margin-top:1.96rem}
+.mask h2{color: #444}
+.mask p{color: #777}
+.msg{line-height:.32rem;color: #444;margin:.7rem 0 .42rem;}
+.btn{display: inline-block;width:4.5rem;height:.92rem;line-height:.92rem;background:#ff7e64;border-radius: .08rem}
+.btn strong{color:#fff;position: relative;}
+.btn strong::after{content:"";position:absolute;top:.1rem;right:-.4rem;width:.18rem;height:.18rem;border-bottom:.04rem solid #fff;border-right:.04rem solid #fff;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
+.btn:active{background-image:-webkit-linear-gradient(top,rgba(0,0,0,.19),rgba(0,0,0,.19));background-image:linear-gradient(top,rgba(0,0,0,.19),rgba(0,0,0,.19))}
+.over h2{font-size: .38rem;line-height: .38rem;margin: .64rem 0 .36rem}
+.over p{font-size: .34rem;}
+.nopart h2{font-size: .34rem;line-height: .34rem;margin: .68rem 0 .3rem}
+/*.nopart p{font-size: .3rem;}*/
+.mask .loading{display: block;}
+.loading .loadpic{width:102px;height:98px;margin:1.96rem auto 0;background: url(images/load.png) 0 0 no-repeat;background-size: 100% auto;-webkit-animation:book 1s steps(9,start) infinite;animation:book 1s steps(9,start) infinite;}
+@-webkit-keyframes book{ 
+    0%{background-position:0 0;}
+    100%{background-position:0 -882px;} 
+}
+@keyframes book{  
+    0%{background-position:0 0;}
+    100%{background-position:0 -882px;} 
+}
+.loading .loadtxt{width:99px;font-size:17px;color: #666;margin: .6rem auto 0;}
+.loading .loadtxt p{width:84px;text-align: left;overflow:hidden;white-space:nowrap;-webkit-animation:dot 1s steps(4,start) infinite backwards;animation:dot 1s steps(4,start) infinite backwards;}
+@-webkit-keyframes dot{ 
+    to{width:99px;}
+}
+@keyframes dot{   
+    to{width:99px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+    <script id="tpl" type="text/html">
+        <div class="banner">
+            <img src="images/banner.jpg">
+            <h1>限时免费时间：<%=start+"—"+end%></h1>
+        </div>
+        <ul class="booklist" id="booklist">
+            <%for(var i = 0; i < list.length; i++) {%>
+            <li onclick="javascript:Local.openBookDetail(<%=list[i].bid%>,<%=isLegacy%>);">
+                <div class="bookcover"><img src=<%=list[i].cover%>></div>
+                <div class="bookinfo">
+                    <p><%=list[i].title%></p>
+                    <p><%=list[i].author%><span class="category bor"><%=list[i].category%></span></p>
+                    <p><%=list[i].intro%></p>
+                    <div class="tip">
+                        <span class="free bor">免费</span>
+                         <%if(list[i].price!=0){%>
+                            <span class="price">原价<%=list[i].price/100%>元/本</span>
+                        <%}else{%>
+                             <span class="price">原价<%=list[i].uprice/100%>元/千字</span>
+                        <%}%>
+                    </div>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+    </script>
+</div>
+<div class="mask" id="mask">
+    <div class="loading" id="loading">
+        <div class="loadpic"></div>
+        <div class="loadtxt"><p>正在加载中...</p></div>
+    </div>
+    <div class="login" id="login">
+        <img src="images/login.png" alt="登录后，查看专属你的阅读书单">
+        <p class="msg">登录后，查看专属你的阅读书单</p>
+        <a href="javascript:Local.login();" class="btn">
+            <strong>快速登录</strong>
+        </a>
+    </div>
+    <div class="over" id="over">
+        <img src="images/over.png" alt="本期活动已结束">
+        <h2>本期活动已结束</h2>
+        <p>敬请期待下一波活动</p>
+    </div>
+    <div class="nopart" id="nopart">
+        <img src="images/over.png" alt="暂不能参与活动">
+        <h2>很遗憾，您未抽中活动参与资格</h2>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/template.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+(function() {
+	Local.init();
+    init();
+    //填充模板数据
+    function fillInfo(list,start,end,isLegacy){
+        var html=template($("#tpl").html(), {list: list,start:start,end:end,isLegacy:isLegacy});
+        $("#wrap").html(html);
+        hidemask(); 
+    }   
+    //未登录
+    function unlogin(){
+        showmask("login");
+    }
+    function init(){
+        //请求数据 模拟"http://test3.wapmusic.qq.com/api/rec8?uin=2858783768&plat=2"
+        Local.reqaObj(server()+"pkg160603/init?act_f=160631", function(obj) {
+        //新闻 5.x 之前版本进入html详情页
+        var isLegacy = false;
+        if (obj.version < "qqreader_5") {
+        	isLegacy = true;
+        }
+        //处理初始化数据
+        console.log("初始化", obj);
+        initpage(obj, isLegacy);
+    }, [], function() {
+        Local.showToast("网络异常，请稍候重试");
+    }, 1);
+    }
+    function initpage(obj, isLegacy){
+        // obj.isLogin=true;
+        // obj.code=1;
+        //活动结束
+        if(obj.code==-4){
+            over();
+            return;
+        }
+        //已登录
+        if(obj.isLogin){
+            if(obj.code==1){
+                fillInfo(obj.rec,obj.start,obj.end,isLegacy);             
+            }else{//没有参与资格
+               nopart(); 
+            }
+        }else{
+           showmask("login"); 
+        }
+    }
+    //活动结束
+    function over(){
+        showmask("over");
+    }
+    //用户不能参与
+    function nopart(){
+        showmask("nopart");
+    }
+    //显示弹窗
+    function showmask(id){
+        $("#loading").hide();
+        $("#"+id).show();
+    }
+    //隐藏弹窗
+    function hidemask(){
+        $("#wrap").show();
+        $("#mask").hide();    
+    }
+    forceLog(160631);
+})()
+</script>
+</body>
+</html>

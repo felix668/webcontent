@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="copyright" content="Copyright (c) 1998-2011 Tencent." />
+    <meta name="description" content="android书城" />
+    <meta name="format-detection" content="telephone=no">
+    <title>我的刮刮卡</title>
+<style>
+body, div, p, ul,li,h4,h5 { margin:0; padding:0; font-size:14px; color:#666666; list-style:none;}
+body {font-family:"微软雅黑", Helvetica, STHeiTi, sans-serif; -webkit-text-size-adjust:none; background:#f2f3e9;}
+img { border:0; width:100%;}
+a, img { -webkit-touch-callout:none; }
+html, body { -webkit-user-select:none; user-select:none;}
+a {text-decoration:none; -webkit-tap-highlight-color:rgba(0,0,0,0.5); -webkit-user-select:none; }
+a {-webkit-touch-callout:none; }
+* {-webkit-tap-highlight-color:rgba(0, 0, 0, .5) }
+
+.cnt{width:320px; margin:20px auto 0;}
+ul{padding-top:15px;}
+ul li{clear:both; zoom:1; overflow:hidden; margin-bottom:17px;}
+ul li .fl{background:#999999; width:38px; height:42px; float:left; margin-right:12px; text-align:center; line-height:42px; color:#ccc; font-size:22px;}
+.yellow{background:#ff9900!important; color:#fff!important;}
+ul li .w{float:left; line-height:21px; color:#999999; font-size:14px;}
+ul li .w span{color:#666666; font-size:14px;}
+.getmore{line-height:30px; padding-left:50px;}
+.nocard{line-height:80px; font-size:20px;text-align:center;}
+
+
+.card{width:185px; height:100px; background:#999999; margin:25px auto 0; text-align:center; line-height:100px; color:#cccccc; font-size:14px;}
+.card_w{line-height:32px; padding:7px 0; text-align:center; font-size:18px;}
+.card_w a{color:#12b37d; font-size:18px;}
+.card_no{background:#fcf5bb; height:149px; border:5px solid #d9dad3; width:290px; margin:100px auto 0;}
+.scratch_area{border:5px solid #d9dad3; height:149px; width:290px; margin:100px auto 0; display:none;}
+.card_no a{display:block; background:#f77400; width:166px; height:54px; margin:47px auto 0; border-radius:2px; padding-top:1px;}
+.card_no a span{border-top:1px solid #f8b95b; display:block; line-height:53px; height:53px; text-align:center; color:#fff; font-size:20px;}
+.card_in{width:290px; margin:100px auto 0; text-align:center; border:5px solid #d9dad3;}
+.card_in img{display:block; margin:0; padding:0; width:100%;}
+</style>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="content">
+    <!-- function fillContent(data)
+    
+   <div class="cnt">
+   if(nl(data.cards)) {
+        <div class="card_in"><img src="images/none.png"></div>
+ 		<div class="card_w">很遗憾，您还没有刮刮卡。<br>
+	  	<a href="javascript:go(\'rules.html\');">如何获得刮刮卡></a>
+	</div>
+   } else {
+       <ul>
+           for(var i=0;i<data.cards.length;i++) {
+           <li>
+               if(data.cards[i].used) {
+                   <div class="fl">刮</div>
+                   <div class="w" onclick="javascript:go(\'carddetail.html?lid=${data.cards[i].id}&pid=${data.cards[i].prizeId}&pname=${data.cards[i].prizeName}&ie=${data.cards[i].expired}&used=${data.cards[i].used}\');">
+                   <span>${data.cards[i].createDate}   已刮开</span><br>
+                   if(data.cards[i].win) {
+                       ${'恭喜您！获得了' + data.cards[i].prizeName}
+                   } else {
+                       ${'很遗憾！没有中奖，再接再励吧！'}
+                   }
+                   </div>
+               } else {
+                   if(data.cards[i].expired){
+                       <div class="fl yellow">刮</div>
+                       <div class="w">
+                       <span>${data.cards[i].createDate}   已经过期 </span><br>
+                        ${'很抱歉，此刮刮卡已过期！'}
+                        </div>
+                   } else {
+                       <div class="fl yellow">刮</div>
+                       <div class="w" onclick="javascript:go(\'carddetail.html?lid=${data.cards[i].id}&pid=${data.cards[i].prizeId}&pname=${data.cards[i].prizeName}&ie=${data.cards[i].expired}&used=${data.cards[i].used}\');">
+                       <span>${data.cards[i].createDate}    等你刮开</span><br>
+                        ${'恭喜！获得刮刮卡，快来刮奖！'}
+                        </div>
+                    }
+               }
+           </li>
+           }
+       </ul>
+   }
+   </div>
+   -->
+</div>
+<div class="loading p-20" id="getmore" style="display: none">显示更多</div>
+</body>
+<script src="mycard.js"></script>
+<script src="mycardx.js"></script>
+<script src="js/jsbridge.js"></script>
+<script src="js/local.js"></script>
+<script src="js/zbook.js"></script>
+<script src="js/cfoot.js"></script>
+</html>

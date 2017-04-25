@@ -1,0 +1,100 @@
+<script id="t1" type="text/html">
+<div class="top">
+	<img src="images/banner.jpg"/>
+	<div class="info" id="userinfo">
+		{{if !isLogin}}
+		<div class="unlogin">
+			<div class="headpic">
+				<img src="images/nologin.png"/>				
+			</div>
+			<a onclick="Local.login();" class="ltip" id="ltip">登录查看书券余额&nbsp;&gt;</a>
+		</div>
+		{{else}}
+		<div class="logined">
+			<a onclick="Local.openPage('bookTicketDetail.html');">
+				<div class="headpic">
+					<img src="{{icon}}" id="headpic"/>				
+				</div>
+				<div class="bookt">
+					<p id="coupon">剩余书券：{{bookTicket}}</p>
+					<span>1书券=1书币=0.01元</span>
+				</div>
+				<span class="time">书券到<br>期时间</span>
+			</a>
+		</div>
+		{{/if}}
+	</div>
+</div>
+		
+</script>
+<script id="t2" type="text/html">
+<div class="fbooks" id="shelf">
+	<div class="tit">
+		<h2>书架好书正在读</h2>
+		<span>趁着书券未过期，赶紧买买买</span>
+	</div>
+	<ul class="flist">
+		{{each shelf as value i}}
+		<li>
+			<a onclick="pageObject.goRead({{value.id}},{{value.lastReadCid}},{{value.offset}},'shelf');" class="bookcover">
+				<img src="{{value.cover}}">
+			</a>
+			<div class="bookmsg" id="b{{value.id}}">
+				<p>{{value.title}}</p>
+				<p>{{value.author}}</p>
+				{{if value.maxBuyed==-1}}
+					<p>未购买，购买整本</p>
+				{{else if value.maxBuyed==0}}
+					<p>未购买，购买付费章节</p>
+				{{else}}
+					<p>已购买至第{{value.maxBuyed}}章，继续购买</p>
+				{{/if}}
+			</div>
+			<span onclick="javascript:Index.doBuy({{value.id}},this);" class="btn">花书券</span>
+		</li>
+		{{/each}}
+	</ul>
+</div>
+	
+</script>
+<script id="t3" type="text/html">
+<div class="hotbooks" id="hot">
+	<div class="tit">
+		<h2>热销榜单</h2>
+		<span>书城卖得最好的书，强势推荐</span>
+	</div>
+	{{each hot as value i}}
+	{{if i%3==0}}
+	<ul class="hlist">
+	{{/if}}
+		<li>
+			<a onclick="pageObject.goDetail({{value.id}});" class="bookcover">
+				<img src="{{value.cover}}">
+			</a>
+			<p>{{value.title}}</p>
+			<p>{{value.author}}</p>
+			<span onclick="pageObject.goRead({{value.id}},'','','list');" class="btn">阅读</span>
+		</li>
+	{{if i%3==2}}
+	</ul>
+	{{/if}}
+	{{/each}}
+	<span onclick="pageObject.goJx();" class="more">更多好书尽在精选&nbsp;&gt;</span>
+</div>
+	
+</script>
+<script id="t4" type="text/html">
+<div class="rules">
+<strong>活动规则：</strong>
+<dl>
+	<dt>1.书券有什么用？</dt>
+	<dd>书券和书币都是QQ阅读书城货币，用来购买书籍，100书券=100书币=1元。</dd>
+	<dt>2.书券为什么会到期？</dt>
+	<dd>书券根据发放性质会有7/15/30天有效期限，一旦到期就分文不值了哟~</dd>
+	<dt>3.如何获得更多书券？</dt>
+	<dd>日常签到、参与活动等都可以获得大量书券，免费看书不再发愁。</dd>
+	<dt>4.充值成功，仍提示余额不足，请<a href="http://iyuedu.qq.com/event/actb2/valuePackage/contact.html">联系我们&gt;</a></dt>
+</dl>
+<p>本活动最终解释权归QQ阅读所有</p>
+</div>
+</script>

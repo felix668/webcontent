@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>打卡</title>
+<link href="css/check.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src='js/set.js'></script>
+</head>
+<body>
+<!--大广告图模块-->
+<div class="banner"><img src="images/banner.jpg"><span class="rp"></span><div class="jioabiao"></div></div>
+<!--头部打卡模块-->
+<div class="head"> <img src="images/head.jpg"/> 
+  <!--书券的图标，这里的图标可换-->
+  <div class="topIcon"><img src="images/ztquan.png"></div>
+  <div class="topTitle"><img src="images/ztTitle.png"></div>
+  <!--书券的图标，这里的图标可换-->
+  <p class="canGain" style="display:none">今日打卡可获：<span>888</span> 书券</p>
+  <p class="canGain">今日打卡可获：<span>8</span>书券 + <span>50</span>铃铛</p>
+  <p class="gainld" style="display:none">打卡领书券和铃铛<br/> 
+铃铛可以抽奖或冲榜，赢大礼</p>
+  <p class="errorTip" style="display:none">出错啦,请稍后重试</p>
+  <!--打卡成功后加上active-->
+  <p class="errorTip active">书券可以购买书籍,1书券=1书币</p>
+  <!--打卡成功后加上acted-->
+  <div class="punchBtn" style="display:none">立即领取</div>
+  <div class="punchBtn acted">打卡成功,明天打卡可获50铃铛</div>
+<div class="tip"></div>
+<span class="rp"></span>
+<div class="jioabiao"></div>
+</div>
+<div class="space"></div>
+<!--左右两个广告图模块-->
+<div class="twoAd">
+  <ul>
+    <li><img src="images/ad1.png"><span class="rp"></span></li>
+    <li><img src="images/ad2.png"><span class="rp"></span></li>
+  </ul>
+</div>
+<div class="space"></div>
+<!--活动列表模块-->
+<div class="ztList">
+      <div class="ztFace"><img src="images/banner1.png"><span class="rp"></span></div>
+      <p>10元超值圣诞礼包限量抢！</p>
+</div>
+<div class="space"></div>
+<div class="ztList">
+      <div class="ztFace"><img src="images/banner1.png"><span class="rp"></span></div>
+      <p>10元超值圣诞礼包限量抢！</p>
+</div>
+<div class="space"></div>
+<div class="ztList">
+      <div class="ztFace"><img src="images/banner1.png"><span class="rp"></span></div>
+      <p>10元超值圣诞礼包限量抢！</p>
+</div>
+<div class="mask" style="display: none;">
+  <div class="tiparea">
+  <span class="tipClose"></span>
+  <div class="tipTitle"><img src="images/ttitle.png"></div>
+  <ul class="rule">
+  <li>活动时间:活动时间12月4日－12月31日；</li>
+  <li>活动期间每台设备、每个账号每天只有一次打卡机会；</li>
+  <li>打卡所得书券有效期为15天，铃铛仅在活动期间内有效；</li>
+  <li>此活动解释权归QQ阅读所有，和苹果公司无任何关系；</li>
+  </ul>
+  <a href="#" class="tipBtn">我知道了</a>
+  </div>
+  </div>
+</div>
+<!--居中load-->
+<div class="loading" id="getmore" style="display: none;"><span class="loads"></span>加载中...</div>
+<!--跟随load-->
+<div class="loadingTop" style="display: none;"><span class="loadtc"><span class="loads"></span>加载中...</span></div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="punch.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

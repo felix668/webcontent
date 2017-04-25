@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>老用户推荐</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body :class="{'noscroll':showmask!==''}" class="brown">
+	<top banner="banner2" pack="pack2"></top>
+	<div class="wrap">
+		<div class="box" v-if="loaded">
+			<box5 :dataobj="initdata"></box5>
+			<box4 pic="part3-2" :booklist="initdata.booklist2"></box4>
+		</div>
+	</div>
+	<div class="cpr"><p>本活动解释权归QQ阅读所有</p></div>
+	<over-box v-if="over"></over-box>
+	<mask-shelf v-show="showmask=='maskShelf'"></mask-shelf>
+	<script type="text/javascript" src="js/vendor.js"></script>
+	<script type="text/javascript" src="js/jsbridge.js"></script>
+	<script type="text/javascript" src="js/local.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/abook.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

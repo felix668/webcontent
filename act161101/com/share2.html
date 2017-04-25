@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>双十一秒杀狂欢</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="top">
+	<img src="images/banner.jpg" alt="超值包好书不断" class="banner">
+	<template v-if="over">
+		<div class="over">活动已结束</div>
+	</template>
+</div>
+<div class="wrap">
+	<div class="pack1" v-if="!over">
+		<div class="um"></div>
+		<div class="title">
+			<h2>精品秒杀</h2>
+		</div>
+		<div class="cont">
+			<div class="book">
+				<div class="cover" @tap="goactpage">
+					<img :src="'images/'+sk[2]+'.jpg'" v-if="sk[2]">
+					<i class="tag"></i>
+				</div>
+				<div class="info">
+					<h3>{{sk[1]}}</h3>
+					<p class="author">{{sk[0]}}</p>
+					<div class="price">
+						<span>原价0.05元/千字</span>
+						<strong>2折</strong>
+					</div>
+					<div class="timer">
+						<p @tap="goactpage">去抢购</p>
+						<div class="count">
+							<strong>秒杀还剩：</strong><span>{{hour}}</span>时<span>{{minute}}</span>分
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tip"><span>去书籍详情页点击下载即可抢购</span></div>
+		</div>
+	</div>
+	<div v-for="n in 4" :class="'pack'+(n+2)">
+		<div class="um"></div>
+		<div class="title">
+			<h2>{{booklist[n][0]}}</h2><strong>狂降{{parseInt(booklist[n][1])-11}}元</strong>
+		</div>
+		<div class="cont">
+			<ul class="booklist">
+				<li v-for="i in 3" :class="{'item':n==1 && i!=0}">
+					<div class="cover" @tap="goactpage">
+						<img :src="'images/'+booklist[n][i+2].split('_')[2]+'.jpg'">
+					</div>
+					<div class="info">
+						<h3>{{booklist[n][i+2].split('_')[1]}}</h3>
+						<p class="author">{{booklist[n][i+2].split('_')[0]}}</p>
+					</div>
+				</li>
+			</ul>
+			<div class="buybox">
+				<div class="price">
+					<span>原价{{parseInt(booklist[n][1])}}元</span>
+					<strong>三本购买价11.11元</strong>
+					<p>本书包买一赠一，购买后可送给好友</p>
+				</div>				
+				<div class="buybtn" @tap="goactpage">立即抢购</div>
+			</div>
+		</div>
+	</div>
+</div>
+<template v-if="mask">
+	<div class="mask">
+		<div class="tiparea" v-if="dload">
+			<h3>下载QQ阅读,畅读海量小说</h3>
+			<p>如果还未安装QQ阅读，你可以：</p>
+			<div class="btns">
+				<span class="cancle" @tap="hidemask">取消</span>
+				<span class="certain" @tap="dload">下载QQ阅读</span>
+			</div>
+		</div>
+	</div>	
+</template>
+<script type="text/javascript" src="js/rem.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/v.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="share2.js"></script>
+<script type="text/javascript" src="http://iyuedu.qq.com/event/common/en.js"></script>
+<script type="text/javascript" src="http://pingjs.qq.com/ping.js"></script>
+<script type="text/javascript">
+	if(typeof(pgvMain) == 'function'){
+		pgvMain();
+	}
+</script>
+<script type="text/javascript" data-main="http://iyuedu.qq.com/event/common/ne.js" src="http://iyuedu.qq.com/event/common/require.js"></script>
+</body>
+</html>

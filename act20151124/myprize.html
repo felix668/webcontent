@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="copyright" content="Copyright (c) 1998-2014 Tencent."/>
+    <meta name="description" content="QQ阅读"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>我的奖品</title>
+    <link href="css/stylecss.css" rel="stylesheet" type="text/css"/>
+    <script>
+           var fontsize=(document.documentElement.clientWidth)/320*100;
+           document.documentElement.style.fontSize = fontsize + 'px';
+    </script>
+</head>
+
+<body>
+
+<div class="prize_box" id="content">
+
+
+</div>
+
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="myprize.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script id="t1" type="text/html">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <th>日期</th>
+            <th>奖品</th>
+        </tr>
+        {{each prizelist as value i}}
+            <tr class="bold">
+                <td>{{value.time}}</td>
+                <td>{{value.name}}{{if value.id==4}}{{value.savedCradNo}}<br><span>有效期截止2015年12月01日</span>{{/if}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</script>
+</html>

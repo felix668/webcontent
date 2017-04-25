@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; }
+  * :focus {
+    outline: none; }
+
+html {
+  font-family: 'Microsoft Yahei'; }
+
+ul, li {
+  list-style: none; }
+
+img, input {
+  display: block; }
+
+.clearfix {
+  clear: both; }
+
+/* Media Queries */
+@media (max-width: 350px) {
+  .desc {
+    font-size: 0.18rem !important; }
+  .rules p {
+    font-size: 0.16rem !important; } }
+
+#root[data-v-7c0526df] {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#root .main[data-v-7c0526df] {
+  width: 100%;
+  overflow: hidden;
+  background: #fbeec7;
+}
+#root .main .title_img[data-v-7c0526df] {
+  width: 100%;
+}
+
+.DEBUG[data-v-750491d8] {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.DEBUG .fixed__[data-v-750491d8] {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+.MaskLoading[data-v-a5c4cf9e] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+}
+.MaskLoading ._text[data-v-a5c4cf9e] {
+  padding: 10px 0;
+  font-size: 0.28rem;
+  color: grey;
+  text-align: center;
+}
+
+.MaskOver[data-v-b2466fa2] {
+  display: table;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+}
+.MaskOver .content_666[data-v-b2466fa2] {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.MaskOver .content_666 .content_667 img[data-v-b2466fa2] {
+  margin: auto;
+  margin-bottom: 0.2rem;
+  width: 3rem;
+}
+.MaskOver .content_666 .content_667 p[data-v-b2466fa2] {
+  font-size: 0.3rem;
+  text-align: center;
+}
+
+.MaskInfo[data-v-dc2319ee] {
+  display: table;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+.MaskInfo .content_666[data-v-dc2319ee] {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.MaskInfo .content_666 .content_667[data-v-dc2319ee] {
+  position: relative;
+  box-sizing: border-box;
+  width: 5.9rem;
+  border-radius: 0.22rem;
+  border: 0.04rem solid black;
+  margin: auto;
+  background: white;
+}
+.MaskInfo .content_666 .content_667 .close[data-v-dc2319ee] {
+  position: absolute;
+  right: 0.12rem;
+  top: 0.12rem;
+  width: 0.54rem;
+  height: 0.54rem;
+}
+.MaskInfo .content_666 .content_667 .line1[data-v-dc2319ee] {
+  margin-top: 0.66rem;
+  margin-bottom: 0.16rem;
+  font-size: 0.36rem;
+  font-weight: bold;
+  text-align: center;
+}
+.MaskInfo .content_666 .content_667 .line2[data-v-dc2319ee] {
+  height: 1.1rem;
+  padding: 0 0.2rem;
+  font-size: 0.28rem;
+  text-align: center;
+  color: #666666;
+}
+
+.Btn[data-v-39296e46] {
+  width: 5.18rem;
+  height: 0.86rem;
+  margin: auto;
+  margin-bottom: 0.24rem;
+  border-radius: 0.25rem;
+  border: 0.04rem solid black;
+  font-size: 0.36rem;
+  line-height: 0.86rem;
+  text-align: center;
+  font-weight: bold;
+  color: #63372a;
+  background: #ffde8a;
+}
+.Btn.pressed[data-v-39296e46] {
+  background: #f0b269;
+}
+
+.Charge[data-v-a1e0fe7a] {
+  width: 100%;
+  padding-bottom: 0.4rem;
+}
+.Charge .banner_charge[data-v-a1e0fe7a] {
+  width: 4.63rem;
+  margin: auto;
+  margin-bottom: 0.16rem;
+}
+.Charge .info[data-v-a1e0fe7a] {
+  margin-bottom: 0.54rem;
+}
+.Charge .info .info__[data-v-a1e0fe7a] {
+  font-size: 0.3rem;
+  text-align: center;
+  color: #333333;
+}
+.Charge .info .info__2[data-v-a1e0fe7a] {
+  font-size: 0.3rem;
+  text-align: center;
+  color: #333333;
+}
+.Charge .panel--[data-v-a1e0fe7a] {
+  box-sizing: border-box;
+  width: 6.5rem;
+  height: 2.84rem;
+  margin: auto;
+  margin-bottom: 0.4rem;
+  border-radius: 0.25rem;
+  border: 0.04rem solid black;
+  background: #6e5ca9;
+}
+.Charge .panel-- .table[data-v-a1e0fe7a] {
+  width: 100%;
+  height: 0.62rem;
+  line-height: 0.62rem;
+  margin-top: 0.28rem;
+  margin-bottom: 0.12rem;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.36rem;
+  color: white;
+}
+.Charge .panel-- .table span.small[data-v-a1e0fe7a] {
+  vertical-align: middle;
+  font-size: 0.36rem;
+}
+.Charge .panel-- .table .coins[data-v-a1e0fe7a] {
+  display: inline-block;
+  width: 0.49rem;
+  vertical-align: middle;
+}
+.Charge .panel-- .table span.big[data-v-a1e0fe7a] {
+  display: inline-block;
+  height: 0.6rem;
+  vertical-align: middle;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  font-weight: bold;
+}
+.Charge .panel-- .table .bills[data-v-a1e0fe7a] {
+  display: inline-block;
+  width: 0.59rem;
+  vertical-align: middle;
+}
+.Charge .panel-- .bottom[data-v-a1e0fe7a] {
+  font-size: 0.3rem;
+  text-align: center;
+  color: #c2affe;
+}
+.Charge .panel-- .bottom a[data-v-a1e0fe7a] {
+  color: #fac70c;
+}
+
+.Monthly[data-v-4de5fd8e] {
+  width: 100%;
+}
+.Monthly .banner_monthly[data-v-4de5fd8e] {
+  width: 4.63rem;
+  margin: auto;
+  margin-bottom: 0.36rem;
+}
+.Monthly .panel--[data-v-4de5fd8e] {
+  box-sizing: border-box;
+  width: 6.5rem;
+  margin: auto;
+  margin-bottom: 0.76rem;
+  border-radius: 0.25rem;
+  border: 0.04rem solid black;
+  background: #fbeec7;
+  overflow: hidden;
+}
+.Monthly .panel-- .panel-upper[data-v-4de5fd8e] {
+  position: relative;
+  background: #3b8756;
+  overflow: hidden;
+}
+.Monthly .panel-- .panel-upper .table[data-v-4de5fd8e] {
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  margin-top: 0.28rem;
+  margin-bottom: 0.22rem;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.36rem;
+  color: white;
+}
+.Monthly .panel-- .panel-upper .table span.small[data-v-4de5fd8e] {
+  vertical-align: middle;
+  font-size: 0.36rem;
+}
+.Monthly .panel-- .panel-upper .table span.bold[data-v-4de5fd8e] {
+  vertical-align: middle;
+  font-size: 0.36rem;
+  font-weight: bold;
+}
+.Monthly .panel-- .panel-upper .table span.big[data-v-4de5fd8e] {
+  display: inline-block;
+  height: 0.5rem;
+  vertical-align: middle;
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  font-weight: bold;
+}
+.Monthly .panel-- .panel-upper .info[data-v-4de5fd8e] {
+  padding-bottom: 0.2rem;
+  font-size: 0.26rem;
+  text-align: center;
+  color: white;
+}
+.Monthly .panel-- .panel-upper .btn[data-v-4de5fd8e] {
+  width: 5.18rem;
+  height: 0.86rem;
+  margin: auto;
+  margin-bottom: 0.24rem;
+  border-radius: 0.25rem;
+  border: 0.04rem solid black;
+  background: #ffb115;
+  font-size: 0.36rem;
+  line-height: 0.86rem;
+  text-align: center;
+  font-weight: bold;
+  color: #443594;
+}
+.Monthly .panel-- .panel-upper .bottom[data-v-4de5fd8e] {
+  margin-bottom: 0.34rem;
+  font-size: 0.3rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.Monthly .panel-- .panel-upper .bottom a[data-v-4de5fd8e] {
+  color: #ffdd84;
+  text-decoration: underline;
+}
+.Monthly .panel-- .curve[data-v-4de5fd8e] {
+  width: 100%;
+  margin-bottom: 0.18rem;
+}
+.Monthly .panel-- .previledge[data-v-4de5fd8e] {
+  margin-bottom: 0.48rem;
+  text-align: center;
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #63372a;
+}
+.Monthly .panel-- .covers[data-v-4de5fd8e] {
+  width: 5.46rem;
+  margin: auto;
+  margin-bottom: 0.36rem;
+}
+.Monthly .panel-- .line[data-v-4de5fd8e] {
+  padding: 0 0.7rem;
+  font-size: 0.3rem;
+  line-height: 0.48rem;
+  color: #63372a;
+}
+.Monthly .panel-- .line_2[data-v-4de5fd8e] {
+  margin-bottom: 0.36rem;
+}
+
+.Rules[data-v-55a877b8] {
+  width: 100%;
+}
+.Rules .rContent[data-v-55a877b8] {
+  background: #fbeec7;
+}
+.Rules .rContent .r_title[data-v-55a877b8] {
+  width: 3.52rem;
+  margin: auto;
+  margin-bottom: 0.35rem;
+}
+.Rules .rContent .subtitle[data-v-55a877b8] {
+  margin-left: 0.5rem;
+  font-size: 0.3rem;
+  line-height: 0.5rem;
+  font-weight: bold;
+  color: #333333;
+}
+.Rules .rContent p[data-v-55a877b8] {
+  position: relative;
+  padding-left: 0.86rem;
+  padding-right: 0.5rem;
+  font-size: 0.3rem;
+  line-height: 0.46rem;
+  color: #666666;
+  overflow: hidden;
+}
+.Rules .rContent p span[data-v-55a877b8] {
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  font-size: 0.3rem;
+  line-height: 0.46rem;
+  color: #666666;
+}
+.Rules .rContent .copyright[data-v-55a877b8] {
+  padding-top: 0.24rem;
+  padding-bottom: 0.38rem;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #666666;
+}

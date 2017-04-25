@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; }
+  * :focus {
+    outline: none; }
+
+/*
+::-webkit-scrollbar {
+	display: none;
+}
+*/
+html {
+  font-family: 'Microsoft Yahei'; }
+
+ul, li {
+  list-style: none; }
+
+img, input {
+  display: block; }
+
+.clearfix669 {
+  clear: both;
+  -webkit-transform: scale(2);
+          transform: scale(2); }
+
+/* Media Queries */
+@media (max-width: 350px) {
+  .desc {
+    font-size: 0.18rem !important; }
+  .rules p {
+    font-size: 0.16rem !important; } }
+
+.DEBUG[data-v-14938e97] {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+.DEBUG .fixed__[data-v-14938e97] {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+.MaskLoading[data-v-6451b063] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+}
+.MaskLoading ._text[data-v-6451b063] {
+  padding: 10px 0;
+  font-size: 0.28rem;
+  color: grey;
+  text-align: center;
+}
+
+.MaskOver[data-v-03fe2586] {
+  display: table;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+}
+.MaskOver .content_666[data-v-03fe2586] {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.MaskOver .content_666 .content_667 img[data-v-03fe2586] {
+  margin: auto;
+  margin-bottom: 0.2rem;
+  width: 3rem;
+}
+.MaskOver .content_666 .content_667 p[data-v-03fe2586] {
+  font-size: 0.3rem;
+  text-align: center;
+}
+
+#root[data-v-1f514cdc] {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#root .main[data-v-1f514cdc] {
+  position: relative;
+  width: 100%;
+  background: #d5c6ab;
+  overflow: hidden;
+  color: white;
+  font-size: 16px;
+}
+#root .main .boiler[data-v-1f514cdc] {
+  position: relative;
+  padding-top: 1.2rem;
+}
+#root .main .boiler .close[data-v-1f514cdc] {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  width: 0.44rem;
+}
+#root .main .boiler .title__[data-v-1f514cdc] {
+  font-size: 0.4rem;
+  color: #514129;
+  font-weight: 600;
+  text-align: center;
+}
+#root .main .boiler .p_[data-v-1f514cdc] {
+  padding: 0 0.4rem;
+  margin: 0.25rem 0;
+  font-size: 0.36rem;
+  line-height: 0.6rem;
+  color: #514129;
+  text-indent: 0.6rem;
+  text-align: justify;
+}
+#root .main .boiler .footer[data-v-1f514cdc] {
+  padding: 0.4rem;
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  text-align: justify;
+  color: #b3ada1;
+  background: #575146;
+}

@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* :focus {
+  outline: none;
+}
+html {
+  font-size: 100px;
+  font-family: 'Microsoft Yahei';
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+}
+.clearfix {
+  clear: both;
+}
+/* Media Queries */
+@media (-webkit-min-device-pixel-ratio: 2) {
+}
+@media (max-width: 350px) {
+  .desc {
+    font-size: 0.18rem!important;
+  }
+  .rules p {
+    font-size: 0.16rem!important;
+  }
+}
+.main {
+  width: 100%;
+  overflow: hidden;
+}
+.banner {
+  width: 5.1rem;
+  margin: auto;
+  margin-bottom: 0.26rem;
+  margin-top: 0.32rem;
+}
+.signin {
+  position: relative;
+  width: 100%;
+  height: 1.4rem;
+  background: #6CC990;
+}
+.signin:active {
+  background: #5FB07E;
+}
+.signin .signinBg {
+  position: absolute;
+  left: 0.96rem;
+  top: -0.05rem;
+  width: 4.5rem;
+}
+.mine {
+  position: relative;
+  display: none;
+}
+.mine .streak {
+  position: absolute;
+  left: 0.44rem;
+  top: -0.05rem;
+  width: 0.56rem;
+  z-index: 10;
+}
+.mine .mineTop {
+  position: relative;
+  height: 1.38rem;
+  border-top: 1px solid #BCBCBC;
+  border-bottom: 1px solid #BCBCBC;
+}
+.mine .mineTop .left {
+  float: left;
+  width: 72%;
+  height: 1.38rem;
+  background: #6CC990;
+}
+.mine .mineTop .left .myAvatarCtn {
+  position: absolute;
+  left: 0.24rem;
+  top: 0.22rem;
+  z-index: 20;
+  box-sizing: border-box;
+  width: 0.96rem;
+  height: 0.96rem;
+  border-radius: 9rem;
+  border: 0.06rem solid #E3E3E3;
+  overflow: hidden;
+}
+.mine .mineTop .left .myAvatarCtn .myAvatar {
+  width: 100%;
+}
+.mine .mineTop .left .text {
+  float: left;
+  margin-top: 0.2rem;
+  margin-left: 1.38rem;
+  font-size: 0.3rem;
+}
+.mine .mineTop .left .text .myName {
+  font-size: 0.3rem;
+  color: #333333;
+}
+.mine .mineTop .left .text .coin {
+  font-size: 0.24rem;
+  color: #333333;
+}
+.mine .mineTop .left .text .coinNumber {
+  font-size: 0.38rem;
+  font-weight: bold;
+  color: #4B4652;
+}
+.mine .mineTop .right {
+  float: left;
+  width: 28%;
+  height: 1.38rem;
+  background: #FFF9F4;
+}
+.mine .mineTop .right .currentRanking {
+  margin-top: 0.2rem;
+  margin-bottom: 0.08rem;
+  text-align: center;
+  font-size: 0.24rem;
+  color: #777574;
+}
+.mine .mineTop .right .myRanking {
+  font-size: 0.38rem;
+  text-align: center;
+  font-weight: bold;
+  color: #4B4652;
+}
+.mine .line {
+  height: 0.48rem;
+  line-height: 0.48rem;
+  text-align: center;
+  background: #F0ECF2;
+  font-size: 0.24rem;
+}
+.mine .line a {
+  text-decoration: underline;
+  color: #ff6666;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 0.75rem;
+  margin-top: 0.24rem;
+  background: #F0ECF2;
+  border-bottom: 1px solid #D8D8D8;
+  overflow: hidden;
+}
+.header li {
+  float: left;
+}
+.header .rank {
+  width: 0.66rem;
+  height: 0.4rem;
+  margin-left: 0.3rem;
+  margin-right: 0.43rem;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.75rem;
+}
+.header .nickname {
+  width: 2.2rem;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.75rem;
+}
+.header .coin {
+  position: absolute;
+  top: 0;
+  right: 0.36rem;
+  width: 2.5rem;
+  text-align: right;
+  font-size: 0.26rem;
+  line-height: 0.75rem;
+}
+.list li {
+  width: 100%;
+  height: 1rem;
+  border-bottom: 1px solid #D8D8D8;
+}
+.list li:nth-child(1) .badge p,
+.list li:nth-child(2) .badge p,
+.list li:nth-child(3) .badge p {
+  color: white;
+}
+.list li:nth-child(1) .avatar .round,
+.list li:nth-child(2) .avatar .round,
+.list li:nth-child(3) .avatar .round {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.16rem;
+  border-radius: 0.35rem;
+}
+.list li .badge {
+  position: relative;
+  float: left;
+  width: 1.14rem;
+  height: 100%;
+  overflow: hidden;
+}
+.list li .badge img {
+  width: 0.62rem;
+  margin: auto;
+  margin-top: 0.3rem;
+}
+.list li .badge p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 1rem;
+  font-size: 0.26rem;
+  text-align: center;
+}
+.list li .avatar {
+  position: relative;
+  float: left;
+  width: 1.14rem;
+  height: 100%;
+}
+.list li .avatar .crown {
+  position: absolute;
+  top: -0.15rem;
+  left: 0.35rem;
+  width: 0.48rem;
+}
+.list li .avatar .round {
+  width: 0.54rem;
+  height: 0.54rem;
+  margin: auto;
+  margin-top: 0.2rem;
+  border-radius: 0.27rem;
+  overflow: hidden;
+}
+.list li .avatar .round img {
+  width: 100%;
+  height: 100%;
+}
+.list li .name {
+  float: left;
+  width: 1.86rem;
+  line-height: 1rem;
+  font-size: 0.26rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.list li .number {
+  float: right;
+  margin-right: 0.36rem;
+  line-height: 1rem;
+  font-size: 0.26rem;
+  text-align: right;
+}
+.loading {
+  padding: 0.3rem 0 0.3rem 0;
+  font-size: 0.3rem;
+  text-align: center;
+}
+.loading img {
+  width: 0.3rem;
+  margin: auto;
+}

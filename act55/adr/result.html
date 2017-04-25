@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>测试你的阅读心</title>
+<link href="css/topic.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top">
+	<div class="resDes">
+		<img class="banner" src="images/banner.jpg"/>
+		<img class="bookpic" id="bookpic" src=""/>
+		<p class="testRes">你拥有：<em id="testRes"></em></p>
+		<strong class="remdRes" id="remdRes">推荐你进入<span id="remdMod"></span></strong>
+	</div>
+	<div class="funcMsg">
+		<h1 id="adnote"></h1>
+		<p>正有<strong></strong>用户使用此功能</p>
+	</div>
+</div>
+<div class="wrap">
+	<div class="content">
+		<div class="cj"></div>
+		<ul>
+			<li class="gift1 act">
+				<img src="images/gift1.png">
+				<span>iPhone 6</span>
+			</li>
+			<li class="gift2">
+				<img src="images/gift2.png">
+				<span>100 书券</span>
+			</li>
+			<li class="gift3">
+				<img src="images/gift3.png">
+				<span>100 Q币</span>
+			</li>
+			<li class="gift4">
+				<img src="images/gift4.png">
+				<span>定制钱包</span>
+			</li>
+			<li class="gift5">
+				<img src="images/gift2.png">
+				<span>5 书券</span>
+			</li>
+			<li class="gift6">
+				<img src="images/gift6.png">
+				<span>QQ 公仔</span>
+			</li>
+			<li class="gift7">
+				<img src="images/gift2.png">
+				<span>40 书券</span>
+			</li>
+			<li class="gift8">
+				<img src="images/gift8.png">
+				<span>1 Q币</span>
+			</li>
+		</ul>
+		<!-- 按下的时候添加样式active -->
+		<div class="lottery haslottery click cl_sum"  cld="lottery" onclick="javascript:Index.startScratch();" style="display: none">
+			<span>还有<b>2</b>次<br/>抽奖机会</span> 
+			<strong>抽奖</strong>
+		</div>
+		<!--没有抽奖机会时-->
+		<div id="usedAll" class="lottery nolottery" style="display: none">
+			<span>机会已用完<br/>敬请期待<br/>下次活动</span> 
+		</div>
+		<div class="lottery nolottery">
+			<strong>抽奖</strong> 
+		</div>
+	</div>
+	<a class="mygift" href="javascript:Local.go('myprize.html')">
+		<span>我的奖品及联系方式&gt;</span>
+	</a>
+</div>
+<!-- 中奖弹窗 -->
+<div class="mask" id="mask6" style="display:none">
+	<div class="tiparea">
+		<img src="images/area.png" class="areaTit"/>
+		<div class="giftCont">
+			<div class="showgift">
+				<img class="gPic"/>
+				<p class="gInfo"></p>
+			</div>
+			<strong>恭喜您</strong>
+			<p class="gname"></p>
+		</div>
+		<div class="newtip" style="display:none">将在活动结束7个工作日之内<br>发放<i>同等金额 </i>的书券到您的账户</div>
+		<!-- 按下添加样式on -->
+		<a class="knowbtn" href="javascript:void(0);">知道啦</a>
+	</div>
+</div>
+<!-- 无网络弹窗 -->
+<div class="mask" id="mask7" style="display:none">
+	<div class="network">
+        <h4>非常抱歉！</h4>
+        <p>无法连接网络，请稍后 再来抽奖</p>
+      	<a class="linkbtn" href="javascript:void(0);">知道了</a>
+		<span class="close"></span>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="result.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript">
+$(function(){
+	var textArry=[{desc:"特立独行之心",remd:"【精选】",notice:"智能个性化推荐，给你爱看的！"},{desc:"海纳百川之心",remd:"【书库】",notice:"海量书籍全网第一，分门别类找得快!"},{desc:"坚韧不拔之心",remd:"【签到】",notice:"每天戳一戳，7天更有礼！"},{desc:"疯狂粉丝之心",remd:"【名人堂】",notice:"大神独家资讯看过来！"}];
+	function localRes(num){
+		$("#bookpic").attr("src","images/resp"+num+".jpg");
+		$("#testRes").text(textArry[num].desc);
+		$("#remdMod").text(textArry[num].remd);
+		$("#adnote").text(textArry[num].notice);
+		if(num==2){
+			$("#remdRes").html("推荐你使用<span>"+textArry[num].remd+"</span>");
+		}
+	}
+	localRes(param("checkin"));
+	function mockInPage(){
+		$(".funcMsg p strong").html(mock(parseInt(param("checkin")|1+1),parseInt(param("checkin")|1)));
+	}
+	setInterval(mockInPage, 100*13);
+})
+</script>
+</body>
+</html>

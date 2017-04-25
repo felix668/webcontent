@@ -1,0 +1,141 @@
+.mask {
+  z-index: 10;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.mask .mask-panel {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5.5rem;
+  height: 3.6rem;
+  margin: auto;
+  border-radius: 0.1rem;
+  background: white;
+}
+.mask .mask-panel .top {
+  box-sizing: border-box;
+  height: 0.9rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.28rem;
+  line-height: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+.mask .mask-panel .middle {
+  box-sizing: border-box;
+  height: 1.8rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.28rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+.mask .mask-panel .bottom {
+  overflow: hidden;
+}
+.mask .mask-panel .bottom li {
+  float: left;
+  width: 50%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.28rem;
+  text-align: center;
+}
+.mask .mask-panel .bottom .confirm {
+  background: #3d8dcf;
+  color: white;
+}
+.main {
+  position: relative;
+  width: 100%;
+}
+.main .bg {
+  width: 100%;
+}
+.main .main-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.main .main-content .chip0 {
+  position: absolute;
+  left: 0.68rem;
+  top: 2.78rem;
+}
+.main .main-content .chip1 {
+  position: absolute;
+  left: 1.96rem;
+  top: 0.9rem;
+}
+.main .main-content .chip2 {
+  position: absolute;
+  left: 2.6rem;
+  top: 3.2rem;
+}
+.main .main-content .chip3 {
+  position: absolute;
+  left: 4.58rem;
+  top: 4.48rem;
+}
+.main .main-content .chip4 {
+  position: absolute;
+  left: 5.14rem;
+  top: 2.46rem;
+}
+.main .main-content .chip5 {
+  position: absolute;
+  left: 5.84rem;
+  top: 1.42rem;
+}
+.main .main-content .chip6 {
+  position: absolute;
+  left: 6.24rem;
+  top: 3rem;
+}
+.main .main-content .btn {
+  position: relative;
+  width: 5.75rem;
+  margin: auto;
+  margin-top: 7.6rem;
+}
+.main .main-content .btn .btn-img {
+  width: 100%;
+}
+.main .main-content .btn .btn-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.main .main-content .btn .btn-content .logo {
+  position: absolute;
+  left: 0.88rem;
+  top: 0.16rem;
+  width: 3.56rem;
+}
+.main .main-content .btn .btn-content .arrows {
+  position: absolute;
+  left: 4.6rem;
+  top: 0.36rem;
+  overflow: hidden;
+}
+.main .main-content .btn .btn-content .arrow {
+  float: left;
+  width: 0.15rem;
+}
+.main .main-content .panel {
+  width: 6.58rem;
+  margin: auto;
+  margin-top: 0.44rem;
+}

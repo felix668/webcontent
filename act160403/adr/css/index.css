@@ -1,0 +1,244 @@
+body,div,p,ul,h4,h2{margin:0;padding:0;}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+em{ font-style:normal;}
+body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none;background: url(../images/bg.jpg) no-repeat; background-size:100% 100%;font-size: 0.32rem}
+html,body{ width:100%; height:100%; overflow:hidden;}
+.hide{ display:none;}
+.page{ position: relative; overflow:hidden;}
+.page img{width:100%; display:block;}
+/****登录页****/
+.loginDiv,.load{ position:absolute; left:0; top:0; z-index:1; width:100%; height:100%;}
+.loginbox{ position:absolute; left:50%; top:6.7rem; margin-left:-2.54rem; width:5.08rem; padding-top:1.36rem; background:url(../images/load_txt.png) no-repeat 0.74rem -0.8rem; background-size:3.7rem auto;}
+.loginDiv .loads{ top:2.2rem;}
+.loginDiv .time_machine{ top:3.98rem;}
+.btnbox{display:block; width:5.08rem; height:1.04rem; background:url(../images/btn_bg.png) no-repeat 0 -1.14rem; background-size:5.08rem auto; margin:0 auto;}
+.btnbox:active{ background-position:0 0;}
+.btnbox span{ display:block; margin:0 auto; width:0.98rem; height:1.04rem; background:url(../images/btn_txt.png) no-repeat; background-size:3.08rem auto;}
+/*loading*/
+.loginDiv img,.load img{ width:100%;}
+.loads{ position:absolute; left:50%; top:3.4rem; margin-left:-1.42rem; width:2.84rem; height:2.84rem;}
+.time_machine{ position:absolute;left:50%; top:5.2rem; margin-left:-2.11rem; width:4.22rem; height:2.32rem;}
+.load_img{position:absolute; left:50%; top:7rem; margin-left:-1.3rem; width:2.6rem; height:0.6rem; background: url(../images/load_txt.png) no-repeat; background-size:3.7rem 1.64rem;}
+.percent{ position:absolute; top:1.25rem; left:0; width:100%; text-align:center; font-size:0.32rem; color:#1e3578;}
+.load .loads img{-webkit-animation:rorate 8s 0.2s linear infinite;}
+/*滑动指示*/
+.arrow_up{ position:absolute; left:50%; bottom:20px; z-index:200; margin-left:-0.24rem; width:0.48rem; height:0.28rem; opacity:0;}
+.upshow img{ width:100%; -webkit-animation:arrowUp 2s 0.2s infinite;}
+.arrow_up.upshow{ opacity:1; -webkit-transition:all 5s;}
+@-webkit-keyframes arrowUp{
+  0%{ -webkit-transform:translateY(8px); opacity:0.2}
+  100%{ -webkit-transform:translateY(0px);opacity:1}
+}
+/*背景音乐*/
+.bgmusic{position: absolute;top:0.15rem;right: 0.2rem;width:0.62rem;height:0.62rem;background: url(../images/amusic.png) no-repeat;background-size:0.62rem auto;z-index:1000;}
+.bgmusic .pause{width:0.62rem;height:0.62rem; background: url(../images/amusic.png) no-repeat 0 -0.85rem;background-size:0.62rem auto; display:none;}
+/***新用户页面****/
+.new_box{ position:absolute; left:50%; top:6.8rem; margin-left:-2.69rem; width:5.38rem;}
+.page4 .new_box,.page5 .new_box{margin-left:-3.06rem; width:6.12rem;}
+.new6{ position:absolute; top:2.2rem; left:50%; margin-left:-2.19rem; width:4.38rem; height:3.36rem;}
+.new_box .share_box{ padding-top:0.4rem; background:none;}
+.active .new_box{-webkit-animation:boochIn 1s 1.5s forwards;opacity:0;}
+/*page1*/
+.box{-webkit-transition:all 0.5s}
+.cloud{ position:absolute; left:4.18rem; top:0.6rem;z-index:3; width:2.14rem; height:0.6rem; }
+.people{ position:absolute; left:50%; top:0.8rem; z-index:3; margin-left:-2.69rem; width:5.38rem; height:4.68rem;}
+.txt_box{ position:absolute; left:0; top:6.2rem; width:100%; text-align:center; }
+.sunshine{ position:absolute; left:0.14rem; top:-0.02rem;z-index:-1; width:1.26rem; height:1.12rem; }
+.txt_box img{display:inline-block; vertical-align:top;}
+.username{ height:0.44rem; display:inline-block; margin:0 auto 0.32rem;position:relative;}
+.username img{ width:2.06rem;}
+.bird{ position:absolute; top:-0.2rem; right:-0.56rem; width:0.78rem; height:0.32rem; background:url(../images/bird.png) no-repeat; background-size:0.78rem 0.32rem;}
+.username span{ font-size:0.44rem; line-height:1em; color:#d21b00; margin-right:0.28rem;}
+.ranking{ height:0.46rem; margin-bottom:0.76rem;position:relative;}
+.l_img,.r_img{display:inline-block;vertical-align:middle;}
+.ranking .l_img{ width:0.44rem; height:0.46rem;}
+.ranking .r_img{ width:1.2rem; height:0.46rem;}
+.read_booknum{display:inline-block;vertical-align:top;}
+.read_booknum img{display:inline-block; vertical-align:top;}
+.ranking .read_booknum img{width:0.4rem;}
+.first_time{ height:0.34rem; line-height:0.36rem; display:inline-block; vertical-align:top; margin:0 auto; position:relative;}
+.first_time span{ display:inline-block; vertical-align:middle; color:#1e3578; font-size:0.36rem; margin-right:2px;}
+.first_time div{display:inline-block; vertical-align:middle; margin:0; padding:0;}
+.first_time .year,.first_time .monthly{ width:0.3rem; height:0.34rem;}
+.first_time .day{ width:2.8rem;}
+.mon_calendar{ position:absolute; left:.23rem; top:-0.46rem; width:0.48rem; height:0.32rem; background:url(../images/mon_calendar.png) no-repeat; background-size:0.48rem 0.32rem;}
+.first_book{ font-size:0.36rem; color:#d21b00; line-height:1.5em;}
+.active .cloud img{-webkit-animation:floated 3s 1.6s linear both infinite;}
+@-webkit-keyframes floated{
+	50%{ -webkit-transform:translateX(10px);}
+	100%{-webkit-transform:translateX(0px);}
+}
+.active .sunshine{-webkit-animation:shines 1.5s 1.6s infinite;}
+@-webkit-keyframes shines{
+	0%,100%{-webkit-transform:scale(0.9); opacity:1;}
+	50%{-webkit-transform:scale(1); opacity:0.5;}
+}
+.active .people,.active .cloud,.active .txt_box{-webkit-animation:boochIn 1s 0.9s;-webkit-animation-fill-mode:forwards; opacity:0;}
+.active .txt_box{-webkit-animation-delay:1.5s;}
+/*page2*/
+.lamp{ width:0.7rem; height:2.9rem; position:absolute; left:1.36rem; top:-1px;opacity:0;}
+.sofa{ position:absolute; left:50%; top:1.1rem; margin-left:-1.97rem; width:3.94rem; height:3.98rem;opacity:0; }
+.books{ position:absolute; left:50%; top:4.7rem; margin-left:-2.75rem; width:5.58rem; height:0.9rem;opacity:0;}
+.bookanmall{ position:absolute; left:3.45rem; top:0.12rem; width:0.82rem; height:0.68rem; background:url(../images/book_page.png) no-repeat; background-size:2.4rem auto;}
+.page2 .txt1{ width:4.94rem; height:0.46rem; margin:0 auto 0.28rem;}
+.page2 .txt2{ height:0.64rem; overflow:hidden; margin-bottom:0.61rem;}
+.txt2 .l_img{ display:inline-block;vertical-align:top; width:0.46rem; height:0.28rem; margin-right:0.24rem;}
+.txt2 .r_img{display:inline-block;vertical-align:top; height:0.64rem; width:1.32rem; height:0.64rem;}
+.page2 .read_booknum img{ width:0.54rem;}
+.txt3,.txt4{ display:inline-block;vertical-align:top; height:0.32rem;line-height:0.34rem; text-align:center; margin-bottom:0.15rem; position:relative;}
+.txt3 .l_img{ width:2.12rem;}
+.txt3 .r_img{ width:1.06rem;}
+.sq_metre,.yuan{ display:inline-block; vertical-align:middle; font-size:0.34rem;color:#de1a00; margin:0 3px 0 2px;}
+.house{ position:absolute; top:-0.45rem; right:-0.24rem; width:0.38rem; height:0.34rem; background:url(../images/houseimg.png) no-repeat; background-size:0.38rem auto;}
+.txt4 .l_img{ width:4.3rem;}
+.txt4 .r_img{ width:0.28rem;}
+.active .lamp img{ -webkit-animation:swing 3s 1.6s linear both infinite;-webkit-transform-origin:0 0;}
+@-webkit-keyframes swing{
+	25%{-webkit-transform:rotate(3deg)}
+	50%{-webkit-transform:rotate(0deg)}
+	75%{-webkit-transform:rotate(-3deg)}
+	100%{-webkit-transform:rotate(0deg)}
+}
+.active .books{ -webkit-animation:boochIn 1s 1.5s forwards; opacity:0;}
+.active .bookanmall{-webkit-animation:bookanimate 2.5s steps(1) infinite; opacity:0;}
+@-webkit-keyframes bookanimate{
+	0%{background-position:0.8rem 0;}
+	5%{background-position:0 0;}
+	10%{ background-position:-0.8rem 0;}
+	15%{ background-position:-1.6rem 0;}
+	20%,100%{background-position:0.8rem 0;}
+	
+}
+.active .lamp,.active .sofa{-webkit-animation:boochIn 1s 0.9s;-webkit-animation-fill-mode:forwards; opacity:0;}
+/*page3*/
+.affinity_img{ position:absolute; left:50%; top:0.8rem; margin-left:-2.97rem; width:5.94rem; height:4.4rem; opacity:0;}
+.affinity_img .eye{ position:absolute; left:2.38rem; top:1.79rem; width:0.32rem; height:0.28rem;}
+.affinity_img .eye:last-child{ left:2.85rem; top:1.83rem;}
+.kechien_num{ height:0.64rem; margin-bottom:0.28rem;}
+.kechien_num .l_img{ width:1.34rem; height:0.64rem; margin-right:0.02rem;}
+.kechien_num .r_img{ width:1.98rem; height:0.64rem;}
+.kechien_num .read_booknum img{width:0.55rem;}
+.three_kechien{ width:1.8rem; height:0.44rem; margin:0 auto 0.6rem;}
+.author_say{ font-size:0.36rem; line-height:1.5em;text-indent:2em;  margin:0 0.4rem; text-align:left;}
+.author_say span.author_name{ color:#d21b00;}
+.author_say span{ color:#1e3578;}
+.page3 .txt_box{top:6rem;}
+.glasses{ position:absolute; left:1.38rem; top:1.47rem; width:0.88rem; height:0.42rem; background:url(../images/glasses.png) no-repeat; background-size:0.88rem 0.42rem;}
+.active .eye img{-webkit-animation:eyes 1s 1.6s ease both infinite;}
+@-webkit-keyframes eyes{
+   50%{ -webkit-transform:scale(0.4);}
+   100%{-webkit-transform:scale(1);}
+}
+.active .affinity_img{-webkit-animation:boochIn 1s 0.9s;-webkit-animation-fill-mode:forwards; opacity:0;}
+/***page4**/
+.ip_txt{ position:absolute; top:0.38rem; left:50%; margin-left:-2.15rem; width:4.3rem; height:3.4rem;}
+.ip_imgs{ position:absolute; left:50%; top:3.02rem; margin-left:-2.98rem; width:5.96rem; height:2.56rem;}
+.friend{ height:0.64rem; text-align:center; margin-bottom:0.28rem;}
+.friend .l_img{ width:0.64rem; height:0.64rem;}
+.friend .r_img{ width:3.34rem; height:0.64rem;}
+.friend .read_booknum img{ width:0.55rem;}
+.page4 .three_kechien{ width:3.12rem; height:0.44rem; margin-bottom:0;}
+.read_bookname{ font-size:0.4rem; color:#d21b00; line-height:1.5em; margin-bottom:0.4rem;}
+.population{ font-size:0.36rem; color:#1e3578;}
+.book_icon{ position:absolute; left:5.23rem; top:1.86rem; width:0.44rem; height:0.46rem; background:url(../images/bookimg.png) no-repeat; background-size:0.44rem 0.46rem;}
+.active .ip_txt img{ -webkit-animation:gradient 3s 0.2s ease both infinite; }
+@-webkit-keyframes gradient{
+   50%{ opacity:0.5;}
+   100%{opacity:1;}
+}
+.active .topimg{-webkit-animation:boochIn 1s 0.9s;-webkit-animation-fill-mode:forwards; opacity:0;}
+/***page5**/
+.clock{ position:absolute; left:50%; top:0.2rem; margin-left:-3rem; width:6rem; height:5.48rem;opacity:0;}
+.cecond_hand{ position:absolute; left:2.72rem; top:2.72rem; width:1.02rem; height:0.08rem;}
+.page5 .three_kechien{ width:4.08rem; height:0.44rem; margin-bottom:0.28rem;}
+.read_time{ width:6.24rem; height:2.04rem; margin:0 auto;}
+.page5 .txt_box{top:6.3rem;}
+.active .cecond_hand{ -webkit-animation:rorate 60s 1.6s linear infinite; -webkit-transform-origin:0.09rem 0.035rem;}
+@-webkit-keyframes rorate{
+   0%{ -webkit-transform:rotate(0);}
+   100%{-webkit-transform:rotate(360deg);}
+}
+.active .clock{-webkit-animation:boochIn 1s 0.9s;-webkit-animation-fill-mode:forwards;}
+/***page6**/
+.gene_box{ position:absolute; left:50%; top:1.24rem; z-index:3; margin-left:-2.53rem; width:5.06rem; height:5.02rem;opacity:0;}
+.userface{ position:absolute; left:50%; top:50%; z-index:-1; margin-left:-0.53rem; margin-top:-0.50rem; width:1.1rem; height:1.1rem; border-radius:100%; overflow:hidden;}
+.userface img{border-radius:100%;}
+.zhuan{ position:absolute; left:0; top:0; z-index:2;width:5.06rem; height:5.02rem;}
+.classify{position:absolute; z-index:3; border-radius:100%; overflow:hidden; background:url(../images/class_bg.png) no-repeat;background-size:100% 100%;display:-webkit-box; -webkit-box-align:center; -webkit-box-pack:center; font-size:0.21rem; color:#1e3578;  text-align:center; line-height:1.2em;}
+.class1{  left:2.72rem; top:-0.48rem; width:0.94rem; height:0.94rem;-webkit-transform:rotate(-55deg); }
+.class2{ left:3.98rem; top:0.55rem; width:1.24rem; height:1.24rem;}
+.class3{ left:3.14rem; top:1.66rem; width:0.94rem; height:0.94rem;-webkit-transform:rotate(-25deg);}
+.class4{ left:2.4rem; top:3.62rem; width:1.08rem; height:1.08rem;-webkit-transform:rotate(55deg);}
+.class5{ left:-0.45rem; top:2.62rem; width:1.1rem; height:1.1rem;-webkit-transform:rotate(180deg);}
+.class6{ left:0.66rem; top:0.66rem; width:1.2rem; height:1.2rem;-webkit-transform:rotate(235deg);}
+.class1 .class_txt{ -webkit-transform:rotate(55deg);}
+.class3 .class_txt{ -webkit-transform:rotate(25deg);}
+.class4 .class_txt{ -webkit-transform:rotate(-55deg);}
+.class5 .class_txt{ -webkit-transform:rotate(-180deg);}
+.class6 .class_txt{ -webkit-transform:rotate(-235deg);}
+.class1 .class_txt,.class3 .class_txt,.class4 .class_txt{ width:0.5rem;  margin-top:0.05rem; overflow:hidden;font-size:0.21rem; color:#1e3578;  text-align:center; line-height:1.2em;}
+.astronaut{ position:absolute; left:4.52rem; top:2.8rem; z-index:4; width:1.56rem; height:1.96rem;}
+.share_box{ width:5.42rem; height:1.5rem; padding-top:1.23rem; background:url(../images/page6_txt.png) no-repeat; background-size:5.42rem 3.34rem; margin:0.5rem auto 0;}
+.share_box .btnbox span{ background-position:0 -1.04rem;}
+.btn_go{ display:block; width:100%; height:0.7rem; position:absolute; left:0; bottom:0;}
+.awaken{ position:absolute; left:50%; top:0.7rem; margin-left:-3.3rem; width:6.6rem; padding-top:0.64rem; background:url(../images/page6_txt1.png) no-repeat; background-size:6.6rem auto;}
+.awaken span{ width:3.08rem;background-position:0 -2.2rem;}
+.active .zhuan img{ -webkit-animation:rorate 100s 1.6s linear both infinite;}
+.active .astronaut img{ -webkit-animation:fly 6s 1.6s linear infinite;}
+@-webkit-keyframes fly{
+   50%{ -webkit-transform:translate(-10px,5px);}
+   100%{-webkit-transform:translate(0);}
+}
+.active .gene_box{-webkit-animation:boochIn 1s 0.9s;-webkit-animation-fill-mode:forwards; opacity:0;}
+@-webkit-keyframes boochIn{
+   100%{ opacity:1;}
+}
+/***弹框**/
+.mask{position:fixed; left:0; top:0;width:100%;height:100%;background:rgba(0,0,0,.4); z-index:1000;-webkit-box-align:center;-webkit-box-pack:center; display:none;}
+.tiparea{width:4.74rem;height:3.64rem;background:#fff;border-radius:10px;text-align: center;position: relative;z-index:100;}
+.tiparea h4{ font-size:0.34rem; padding-top:0.7rem; padding-bottom:0.18rem; color:#333; font-weight:bold;}
+.tiparea p{ font-size:0.27rem; color:#666; margin-bottom:0.6rem;}
+.tiparea a{display:inline-block; width:1.9rem; height:0.74rem; border-radius:5px; line-height:0.78rem; font-size:0.36rem; color:#1e3578; text-align:center;}
+.tiparea a.btn_load{ background:#fff68f; border-bottom:3px solid #fede4c; margin-right:0.13rem;}
+.tiparea a.btn_quxiao{ background:#f1f1f1; border-bottom:3px solid #ddd;}
+.tiparea a.btn_load:active{ background:#fede4c;}
+.tiparea a.btn_quxiao:active{ background:#ddd;}
+/*适配*/
+.h_screen{ position:fixed; left:0; top:0; bottom:0; width:100%; height:100%; z-index:1000; background:#393939; display:none; -webkit-box-align:center; -webkit-box-pack:center;}
+.islandscape_img{ margin:0 auto;width:49%;}
+.islandscape_img img{ width:100%;}
+@media screen and (max-height: 420px) {
+.loads{top:3rem;}
+.time_machine{top:4.8rem;}
+.load_img{top:6.6rem;}
+.cloud{left:4.48rem;top:0.3rem;width:1.7rem;}
+.people{top:0.52rem;margin-left:-2.2rem; width:4.4rem;}
+.sunshine{left:0.12rem; top:-0.03rem;z-index:-1; width:1rem; height:1.12rem; }
+.txt_box{top:4.8rem;}
+.ranking{ margin-bottom:0.6rem;}
+.lamp{ width:0.5rem; height:2.9rem; position:absolute; left:1.36rem; top:-1px;}
+.sofa{top:0.6rem; margin-left:-1.58rem; width:3.16rem;}
+.books{ top:3.52rem;margin-left:-2.13rem; width:4.46rem;}
+.affinity_img{ top:0.6rem; margin-left:-2.38rem; width:4.76rem; height:3.52rem; }
+.affinity_img .eye{left:1.9rem; top:1.432rem; width:0.26rem; height:0.22rem; }
+.affinity_img .eye:last-child{ left:2.28rem; top:1.464rem;}
+.page3 .txt_box{top:4.7rem;}
+.ip_txt{ top:0.1rem; margin-left:-1.72rem; width:3.44rem; height:2.72rem;}
+.ip_img{ top:2.3rem; margin-left:-2.38rem; width:4.76rem; height:2.05rem;}
+.clock{ top:0.3rem;margin-left:-2.4rem;width:4.8rem; height:4.28rem;}
+.cecond_hand{left:2.16rem; top:2.176rem; width:0.816rem; height:0.064rem;}
+.page4 .txt_box{top:5rem;}
+.page5 .txt_box{top:5rem;}
+.gene_box{top:0.7rem;}
+.awaken{top:1.2rem;}
+.share_box{ margin:1rem auto 0;}
+.new_box{ top:5rem;}
+.new6{top:1.1rem;}
+}
+@media all and (orientation : landscape) {/*　　这是匹配横屏的状态，横屏时的css代码　　*/
+.w_screen{ display:none;}
+.h_screen{ display:-webkit-box;}
+} 

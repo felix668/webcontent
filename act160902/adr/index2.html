@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>赏阅.赏你最爱</title>
+<script>
+    // var scale = 1 / devicePixelRatio;
+    // document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- <div class="top" v-show="!over"> -->
+<div class="top">
+	<img src="images/title.png" class="title">
+	<img src="images/reunion.png" class="reunion">
+	<div class="userinfo">
+		<div class="avor">
+			<div class="abox">
+				<div class="clip">
+					<img v-bind:src=avor>
+				</div>
+			</div>
+		</div>
+		<div class="nick" v-show="isLogin">{{nickname}}</div>
+	</div>
+	<div class="loginbtn" v-show="!isLogin">
+		<a href="javascript:Local.login();"></a>
+		<div class="arrows">
+			<i></i><i></i>
+		</div>
+	</div>
+	<div class="lights">
+		<img src="images/light.png">
+		<img src="images/light.png">
+	</div>
+	<div class="clouds">
+		<img src="images/cloud.png">
+		<img src="images/cloud.png">
+		<img src="images/cloud.png">
+	</div>
+	<div class="lanterns">
+		<img src="images/lantern.png">
+		<img src="images/lantern.png">
+		<img src="images/lantern.png">
+	</div>
+	<div class="tag"></div>
+	<img src="images/rabbit.png" class="rabbit">
+</div>
+<img src="images/text.png" class="text" v-bind:class="{'up':!isLogin}">
+<div class="wrap">
+	<div class="main">
+		<img src="images/reward.png" class="reward">
+		<div class="author">
+			<img src="images/authortxt.png">
+			<img src="images/authorpic.png" class="apic">
+		</div>
+		<!-- 书单部分 -->
+		<ul class="booklist" id="booklist">
+			<li>
+				<div class="bcover">
+					<img src="images/book1.jpg">
+				</div>
+				<a href="#" class="btn"></a>
+				<p>小城故事</p>
+				<p>无名氏</p>
+			</li>
+			<li>
+				<div class="bcover">
+					<img src="images/book2.jpg">
+				</div>
+				<a href="#" class="btn"></a>
+				<p>小城故事</p>
+				<p>无名氏</p>
+			</li>
+			<li>
+				<div class="bcover">
+					<img src="images/book1.jpg">
+				</div>
+				<a href="#" class="btn"></a>
+				<p>小城故事</p>
+				<p>无名氏</p>
+			</li>
+		</ul>
+		<div class="tips">
+			<h3>如何送礼物？</h3>
+			<img src="images/tip.png">
+		</div>
+		<div class="msg">
+			<h2>你打赏的中秋礼物，助推作者获奖励</h2>
+			<p>打赏周榜（9.12-9.18）前3名的作品，将定制推广</p>
+			<div class="ranklist">
+				<a href="javascript:Local.go('{{qurl}}');">查看打赏榜排名》</a>
+			</div>
+			<div class="scrollbox">
+				 <a class="arrow-left" href="javascript:;"></a> 
+			     <a class="arrow-right" href="javascript:;"></a>
+			     <div class="swiper-container">
+			        <div class="swiper-wrapper">
+			        	<div class="swiper-slide"> 
+			         		<img src="images/s1.jpg"> 
+			         		<p>全量用户手机通知消息1次</p>
+			        	</div>
+			            <div class="swiper-slide"> 
+			        		<img src="images/s2.jpg"> 
+			        		<p>信息流书单推送1次</p>
+			         	</div>
+			         	<div class="swiper-slide">
+			           		<img src="images/s3.jpg" class="s1"> 
+			           		<p class="s2">精选顶部封推5天</p>
+			         	</div>
+			       </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<div class="rules">
+		<h3>活动规则</h3>
+		<div class="detail">
+			<p>你送出的中秋打赏，将帮助你喜爱的作者获得万众瞩目的机会</p>
+			<p>
+				<span>1</span>
+				本周（9.12-9.18）男频、女频、出版打赏周榜前三名的作品，将会获得特别书籍推荐<br>
+				a.推荐形式：专属专题（9本书合并1个专题）<br>
+				b.推荐位置：精选顶部封推5天、信息流1次、全量消息推送1次<br>
+				c.推荐时间：9月21日-9月25日
+			</p>
+			<p><span>2</span>当周打赏榜按正常打赏比例分成</p>
+			<p><span>3</span>此活动推荐展示仅限于QQ阅读安卓和iOS客户端，不包含其他周边网站及客户端的推荐</p>
+		</div>
+	</div>
+	<div class="bottom">
+		<img src="images/grass.png" class="grass">
+		<img src="images/lantern.png" class="lantern">
+		<ul class="dots">
+			<li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="http://pingjs.qq.com/h5/stats.js" name="MTAH5" sid="500306852" cid="500306854"></script>
+</body>
+</html>

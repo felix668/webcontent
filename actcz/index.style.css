@@ -1,0 +1,52 @@
+.MaskLoading[_v-0a568631] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+}
+.MaskLoading ._text[_v-0a568631] {
+  padding: 10px 0;
+  font-size: 0.28rem;
+  color: grey;
+  text-align: center;
+}
+.over[_v-37fa9a2f] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1999;
+}
+.over .over-c[_v-37fa9a2f] {
+  height: 4.16rem;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.over .over-c img[_v-37fa9a2f] {
+  width: 2.05rem;
+  height: 2.19rem;
+  margin: 0.32rem auto 0;
+}
+.over p[_v-37fa9a2f] {
+  color: #999;
+  font-size: 0.30rem;
+  line-height: 1;
+}
+.over .over-p1[_v-37fa9a2f] {
+  margin-top: 0.33rem;
+}
+.over .over-p2[_v-37fa9a2f] {
+  margin-top: 0.24rem;
+  margin-bottom: 0.48rem;
+}

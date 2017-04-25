@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>限免推荐</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="mask" v-show="showLoadMask">
+		<div class="loadingTop">
+			<span class="loads">
+				<svg width="24" height="23" viewBox="0 0 48 46" xmlns="http://www.w3.org/2000/svg"><path d="M47.43 24C47.43 11.06 36.94.57 24 .57S.57 11.06.57 24c0 9.27 5.434 17.55 13.72 21.328 1.006.458 2.192.015 2.65-.99.46-1.005.015-2.192-.99-2.65C9.076 38.555 4.57 31.688 4.57 24c0-10.73 8.7-19.43 19.43-19.43S43.43 13.27 43.43 24c0 7.66-4.473 14.505-11.307 17.655-1.004.462-1.442 1.65-.98 2.653.463 1.004 1.65 1.442 2.654.98C42.037 41.49 47.43 33.234 47.43 24z" class="cls-default"></path>
+			</svg>
+			</span>正在加载...</span>
+		</div>
+	</div>
+	<img :src=banner alt="免费书不容错过" class="banner">
+	<p class="title">
+		<span v-for="intro in intro">
+			{{intro}}<br>
+		</span>
+	</p>
+	<div class="free-module">
+		<div class="m-name">
+			<h2>{{column1.title}}</h2>
+		</div>
+		<div class="m-box special">
+			<div class="book-detail">
+				<a href="javascript:;" class="book-cover">
+					<img :src=c1books.cover class="blur">
+					<img :src=c1books.cover class="pic" bid={{c1books.bid}} position={{c1books.position}} @click="goreadpage($event)">
+				</a>
+				<div class="book-info">
+					<h1>{{c1books.title}}</h1>
+					<p class="author">{{c1books.author}}</p>
+					<div class="commt">
+						<div class="star">
+							<span :style="{width:c1books.score*10+'%'}"></span>
+						</div>
+						<span>{{c1books.score}}分</span>
+						<span v-show="c1books.readerCount!=='false'">&nbsp;/&nbsp;{{c1books.readerCount}}万点击</span>
+					</div>
+					<a href="javascript:;" class="btn" bid={{c1books.bid}} position={{c1books.position}} @click="goreadpage($event)">立即阅读</a>
+				</div>
+			</div>
+			<p class="desc">
+				{{c1books.reason.trim()}}
+			</p>
+			<p class="intro" v-bind:class="{'intro open':c1books.intro.trim().length>80}" @click="openintro($event)">
+				{{c1books.intro.trim()}}
+				<span class="openico"></span>
+			</p>
+		</div>
+	</div>
+	<div class="free-module" v-for="list in column2">
+		<div class="m-name">
+			<h2>{{list.title}}</h2>
+		</div>
+		<div class="book-list" v-for="book in list.books">
+			<div class="m-box">
+				<div class="book-detail">
+					<a href="javascript:;" class="book-cover">
+						<img :src=book.cover bid={{book.bid}} position={{book.position}} @click="goreadpage($event)">
+					</a>
+					<div class="book-info">
+						<h3>{{book.title}}</h3>
+						<p class="author">{{book.author}}</p>
+						<div class="commt">
+							<div class="star">
+								<span :style="{width:book.score*10+'%'}"></span>	
+							</div>
+							<span>{{c1books.score}}分</span>
+							<span v-show="book.readerCount!=='false'">&nbsp;/&nbsp;{{book.readerCount}}万点击</span>
+						</div>
+						<a href="javascript:;" class="btn" bid={{book.bid}} position={{book.position}} @click="goreadpage($event)">立即阅读</a>
+					</div>
+				</div>
+				<p class="desc">
+					{{book.reason.trim()}}
+				</p>
+				<p class="intro" v-bind:class="{'intro open':book.intro.trim().length>60}" @click="openintro($event)">
+					{{book.intro.trim()}}
+					<span class="openico"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="sheme-module">
+		<div class="m-name">
+			<h2>{{column3.title}}</h2>
+		</div>
+		<div class="book-list">
+			<div class="m-box" v-for="book in c3books">
+				<a href="javascript:;" class="book-cover">
+					<img :src=book.cover bid={{book.bid}} position={{book.position}} @click="goreadpage($event)">
+				</a>
+				<div class="book-info">
+					<h3>{{book.title}}</h3>
+					<p class="author">{{book.author}}</p>
+					<div class="commt">
+						<div class="star">
+							<span :style="{width:book.score*10+'%'}"></span>		
+						</div>
+						<span>{{book.score}}分</span>
+					</div>
+					<a href="javascript:;" class="btn" bid={{book.bid}} position={{book.position}} @click="goreadpage($event)">立即阅读</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="logo">
+	<img src="images/logo.png" alt="QQ阅读">
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

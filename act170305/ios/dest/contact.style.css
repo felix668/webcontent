@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* :focus {
+  outline: none;
+}
+/*
+::-webkit-scrollbar {
+	display: none;
+}
+*/
+html {
+  font-family: 'Microsoft Yahei';
+}
+ul,
+li {
+  list-style: none;
+}
+img,
+input {
+  display: block;
+}
+.clearfix669 {
+  clear: both;
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+.Contact {
+  position: relative;
+}
+.Contact .mask__ {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  background: white;
+  font-size: 20px;
+  text-align: center;
+  color: grey;
+  text-decoration: underline;
+}
+.Contact .form-editing {
+  padding: 0.32rem;
+}
+.Contact .form-editing .one {
+  height: 0.64rem;
+  font-size: 0.26rem;
+  line-height: 0.64rem;
+  color: #999999;
+}
+.Contact .form-editing li {
+  overflow: hidden;
+}
+.Contact .form-editing li .error {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  font-size: 0.26rem;
+  color: #c40000;
+}
+.Contact .form-editing li .necc {
+  float: left;
+  height: 0.84rem;
+  line-height: 0.84rem;
+  font-size: 0.26rem;
+  text-indent: 0.26rem;
+  color: #999999;
+}
+.Contact .form-editing input {
+  box-sizing: border-box;
+  float: left;
+  width: 5.76rem;
+  height: 0.84rem;
+  border: 1px solid grey;
+  font-size: 0.26rem;
+  line-height: 0.26rem;
+  text-indent: 0.26rem;
+}
+.Contact .form-editing input:focus {
+  border: 1px solid #0a79af;
+}
+.Contact .form-editing .submit {
+  width: 5.68rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  border-radius: 0.05rem;
+  margin: auto;
+  margin-top: 0.7rem;
+  font-size: 0.4rem;
+  text-align: center;
+  background: #6699cc;
+  color: white;
+}
+.Contact .form-done {
+  padding: 0.32rem;
+}
+.Contact .form-done .one {
+  height: 0.64rem;
+  font-size: 0.26rem;
+  line-height: 0.64rem;
+  color: #999999;
+}
+.Contact .form-done li {
+  overflow: hidden;
+}
+.Contact .form-done li .error {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  font-size: 0.26rem;
+  color: #c40000;
+}
+.Contact .form-done .text {
+  height: 0.84rem;
+  font-size: 0.26rem;
+  line-height: 0.84rem;
+}
+.Contact .form-done .edit {
+  width: 5.68rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  border-radius: 0.05rem;
+  margin: auto;
+  margin-top: 0.7rem;
+  font-size: 0.4rem;
+  text-align: center;
+  background: #6699cc;
+  color: white;
+}

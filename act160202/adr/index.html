@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<title>大神发红包</title>
+<script type="text/javascript">
+	var win=document.documentElement.clientWidth;
+	document.documentElement.style.fontSize = 100 * (win / 640) + "px";
+</script>
+<style type="text/css">
+	@charset "utf-8";
+	body,div,p,span,a,img{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+	body,div,p{margin:0;padding:0;}
+	img{border:0;display: block;width: 100%;}
+	a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;}
+	body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#b2302f;font-size:0.24rem;}
+	.wrap{margin: -1.72rem 0.28rem 0.4rem;background: #ffb36e;padding-top: 0.24rem;position: relative;}
+	.wrap::before{content:"";width:6.1rem;height: 0.58rem;background: url(images/wbg.png) no-repeat;background-size: 100% auto;position: absolute;top:-0.34rem;left: -0.2rem}
+	.author{width: 5.22rem;height: 1.1rem;margin:0 auto;background: url(images/pack.png) 0 -4.51rem no-repeat;background-size: 100% auto;display: -webkit-box;-webkit-box-align:center;}
+	.pic{width: 1.1rem;height: 1.1rem;margin:0 0.2rem 0 0.6rem;-webkit-box-sizing:border-box;border-radius: 50%;border: 1px solid #792518;overflow: hidden;-webkit-animation:rotateIn 1.8s ease-in-out forwards;}
+	@-webkit-keyframes rotateIn{
+	  0%{-webkit-transform:rotateY(0deg);}
+	  50%{-webkit-transform:rotateY(180deg);}
+	  100%{-webkit-transform:rotateY(360deg);}
+	}
+	.pic img{height: 100%;border-radius: 50%;}
+	.author span{width:0;display:inline-block;padding-top:0.06rem;color: #711414;white-space:nowrap;overflow:hidden;-webkit-animation:word 1s 1s linear;-webkit-animation-fill-mode:forwards;}
+	@-webkit-keyframes word{
+		100%{width:3rem}
+	}
+	.author .tip{width: 100%;padding-top: 0.09rem;color: #5f5f5f;text-align: center;display: none;}
+	.over .author .pic,.over .author span{display: none}
+	.over .tip{display: block;}
+	.title{width: 4rem;margin:0.4rem auto 0.28rem;}
+	.pack{width: 5.22rem;height:2.12rem;margin:0 auto;background:url(images/pack.png) 0 -2.32rem;background-size:100% auto;position: relative;color: #500b0b;}
+	.pack1{margin-bottom:0.2rem;background-position:0 0}
+	.pack span{display:block;padding: 0.55rem 0 0.07rem 1.24rem;font-size: 0.32rem;line-height:0.48rem;}
+	.pack span strong{color: #ffd58c;font-size: 0.48rem}
+	.pack p{width:4.06rem;font-size: 0.3rem;line-height: 0.3rem;text-align: center;}
+	.pack p strong{font-size: 0.36rem}
+	.btn{position: absolute;top:0.6rem;right:0.32rem;width: 1.16rem;height: 1.12rem;background: url(images/btn.png);background-size: 1.16rem auto;}
+	.pack1 .btn{-webkit-animation:pop 0.8s 1.6s linear infinite alternate;}
+	@-webkit-keyframes pop{
+		0%{-webkit-transform:scale(1);}
+		100%{-webkit-transform:scale(1.05);}
+	}
+	.btn:active{background-position: 0 -1.12rem}
+	.over .btn,.over .btn:active{background-position: 0 -2.24rem;-webkit-animation:none}
+	.rule{padding-bottom:0.55rem;margin-top:0.22rem;overflow: hidden;}
+	.rule::before{display:block;content:"";width:100%;height: 0.12rem;background: url(images/wbg.png) 0 -0.86rem;background-size:6.1rem auto;}
+	.rule img{width: 4rem;margin:0.34rem auto 0.14rem;}
+	.rule p{padding:0.03rem 0.12rem 0.03rem 0.42rem;line-height:0.46rem;color: #8e1d1d;font-weight: bold;position: relative;}
+	.rule span{position: absolute;top: 0;left:0.12rem;line-height: 0.52rem}
+</style>
+</head>
+<body>
+<img src="images/banner.jpg" class="banner"/>
+<!-- 活动结束 加over -->
+<div class="wrap">
+	<div class="author">
+		<div class="pic">
+			<img id="avor" src="images/headpic.png">
+		</div>
+		<span id="author">天蚕土豆给您发红包啦！</span>
+		<p class="tip">活动已结束</p>
+	</div>
+	<img src="images/tit.png" alt="首次充值，专享红包" class="title">
+	<div class="pack pack1">
+		<span>首充<strong>10</strong>元</span>
+		<p>领1000书币，送<strong>500</strong>书券</p>
+		<a href="javascript:Index.cz(10);" class="btn"></a>
+	</div>
+	<div class="pack">
+		<span>首充<strong>1</strong>元</span>
+		<p>领100书币，送<strong>100</strong>书券</p>
+		<a href="javascript:Index.cz(1);" class="btn"></a>
+	</div>
+	<div class="rule">
+		<img src="images/rule.png">
+		<p><span>1</span>活动时间：2016年2月23日-2月29日</p>
+		<p><span>2</span>QQ阅读平台第一次充值的用户，单次（一次性）充值达到指定额度，将获得由QQ阅读旗下大神作者送出的红包一个（红包内包含对应额度的书券），该红包仅能领取一次；</p>
+		<p><span>3</span>本活动仅限QQ登录并首次充值的用户参加（微信登录无法参加），所赠书券均为即时到账，可用于直接购买书籍；</p>
+		<p><span>4</span>本活动最终解释权归QQ阅读所有</p>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

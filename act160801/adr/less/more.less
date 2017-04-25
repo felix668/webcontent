@@ -1,0 +1,192 @@
+@import './common.less';
+
+.main {
+	width: 100%;
+	overflow: hidden;
+}
+.banner {
+	width: 5.1rem;
+	margin: auto; margin-bottom: 0.26rem; margin-top: 0.32rem;
+}
+.signin {
+	position: relative;
+	width: 100%; height: 1.4rem;
+	background: @green;
+	&:active {
+		background: @green-dark;
+	}
+	.signinBg {
+		position: absolute; left: 0.96rem; top: -0.05rem;
+		width: 4.5rem;
+	}
+}
+.mine {
+	position: relative;
+	display: none;
+	.streak {
+		position: absolute; left: 0.44rem; top: -0.05rem;
+		width: 0.56rem;
+		z-index: 10;
+	}
+	.mineTop {
+		position: relative;
+		height: 1.38rem;
+		border-top: 1px solid #BCBCBC;
+		border-bottom: 1px solid #BCBCBC;
+		.left {
+			float: left;
+			width: 72%; height: 1.38rem;
+			background: @green;
+			.myAvatarCtn {
+				position: absolute; left: 0.24rem; top: 0.22rem; z-index: 20;
+				box-sizing: border-box;
+				width: 0.96rem; height: 0.96rem;
+				// margin: 0.22rem 0.18rem 0 0.22rem; 
+				border-radius: 9rem;
+				border: 0.06rem solid #E3E3E3;
+				overflow: hidden;
+				.myAvatar {
+					width: 100%;
+				}
+			}
+			.text {
+				float: left;
+				margin-top: 0.2rem; margin-left: 1.38rem;
+				font-size: 0.3rem;
+				.myName {
+					font-size: 0.3rem; color: #333333;
+				}
+				.coin {
+					font-size: 0.24rem; color: #333333;
+				}
+				.coinNumber {
+					font-size: 0.38rem; font-weight: bold; color: #4B4652;
+				}
+			}
+		}
+		.right {
+			float: left;
+			width: 28%; height: 1.38rem;
+			background: #FFF9F4;
+			.currentRanking {
+				margin-top: 0.2rem; margin-bottom: 0.08rem;
+				text-align: center;
+				font-size: 0.24rem;
+				color: #777574;
+			}
+			.myRanking {
+				font-size: 0.38rem; text-align: center; font-weight: bold; color: #4B4652;
+			}
+		}
+	}
+	.line {
+		height: 0.48rem; line-height: 0.48rem;
+		text-align: center;
+		background: @grey-header;
+		font-size: 0.24rem;
+		a {
+			text-decoration: underline; color: #ff6666;
+		}
+	}
+}
+
+.header {
+	position: relative;
+	width: 100%; height: 0.75rem;
+	margin-top: 0.24rem;
+	background: @grey-header;
+	border-bottom: 1px solid @grey-border;
+	overflow: hidden;
+	li {
+		float: left;
+	}
+	.rank {
+		width: 0.66rem;
+		height: 0.4rem;
+		margin-left: 0.3rem;
+		margin-right: 0.43rem;
+		text-align: center; font-size: 0.26rem; line-height: 0.75rem;
+	}
+	.nickname {
+		width: 2.2rem;
+		text-align: center;
+		font-size: 0.26rem; line-height: 0.75rem;
+	}
+	.coin {
+		position: absolute; top: 0; right: 0.36rem;
+		width: 2.5rem;
+		text-align: right; font-size: 0.26rem; line-height: 0.75rem;
+	}
+}
+.list {
+	li {
+		width: 100%; height: 1rem;
+		border-bottom: 1px solid @grey-border;
+		&:nth-child(1),&:nth-child(2),&:nth-child(3){
+			.badge p {color:white;}
+			.avatar {
+				.round {
+					width: 0.7rem; height: 0.7rem;
+					margin-top: 0.16rem;
+					border-radius: 0.35rem;
+				}
+			}
+		}
+		.badge {
+			position: relative; float: left;
+			width: 1.14rem; height: 100%;
+			overflow: hidden;
+			img {
+				width: 0.62rem;
+				margin: auto; margin-top: 0.3rem;
+			}
+			p {
+				position: absolute; left: 0; top: 0;
+				width: 100%; height: 100%;
+				line-height: 1rem; font-size: 0.26rem; text-align: center;
+			}
+		}
+		.avatar {
+			position: relative; float: left;
+			width: 1.14rem;
+			height: 100%;
+			.crown {
+				position: absolute; top: -0.15rem; left: 0.35rem;
+				width: 0.48rem;
+			}
+			.round {
+				width: 0.54rem; height: 0.54rem;
+				margin: auto;
+				margin-top: 0.2rem;
+				border-radius: 0.27rem;
+				overflow: hidden;
+				img {
+					width: 100%; height: 100%;
+				}
+			}
+		}
+		.name {
+			float: left;
+			width: 1.86rem;
+			line-height: 1rem;
+			font-size: 0.26rem;
+			overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+		}
+		.number {
+			float: right;
+			margin-right: 0.36rem;
+			line-height: 1rem;
+			font-size: 0.26rem;
+			text-align: right;
+		}
+	}
+}
+
+.loading {
+	padding: 0.3rem 0 0.3rem 0;
+	font-size: 0.3rem; text-align: center;
+	img {
+		width: 0.3rem;
+		margin: auto;
+	}
+}

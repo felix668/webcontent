@@ -1,0 +1,47 @@
+@import './ani-rubber-band.less';
+@import './ani-float.less';
+
+@keyframes enter-up {
+  0% {
+    opacity: 0;
+    transform: translate3d( 0, 0.4rem, 0 );
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d( 0,0,0 );
+  }
+}
+
+.enter-up {
+  animation: enter-up 1000ms forwards;
+}
+
+@keyframes pop-right {
+  0% {
+    opacity: 0.5;
+    transform: translate3d(-30%,0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.pop-right {
+  // animation: pop-right 1s linear infinite;
+}
+
+@keyframes pop-left {
+  0% {
+    opacity: 0.5;
+    transform: translate3d(30%,0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.pop-left {
+  // animation: pop-left 1s linear infinite;
+}

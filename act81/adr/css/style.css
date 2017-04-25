@@ -1,0 +1,77 @@
+*{-webkit-tap-highlight-color:rgba(0,0,0,.1)}
+html,body{-webkit-user-select:none;user-select:none;}
+body,div,p,ul,h1,h2,img{margin:0;padding:0; font-weight:normal;}
+ul,ol,li{list-style:none}
+img {border:0 none;vertical-align:middle;}
+a{text-decoration:none;color:#eb5420;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+body{font-family: "微软雅黑",helvetica,arial;-webkit-text-size-adjust:none;background-color:#fff3c7;color:#a42230;font-size: 12px;}
+.cf:before,.cf:after{content:".";display:block;height:0;visibility:hidden;}
+.cf:after{clear:both;}
+.cf{zoom:1; overflow:hidden;}
+.banner img{width: 100%;display: block}
+.title{ width:280px; height:35px; line-height:30px; text-align:center; color:#fff7d8; font-size:17px; font-weight:bold; margin:0 auto 24px; background:url(../images/title.png) no-repeat; background-size:280px auto;}
+.title b{ font-size:30px; vertical-align:-1px; display:inline-block; color:#ffe682;}
+.tt_one{ background-position:0 0;}
+.tt_two{ background-position:0 -40px;}
+.tt_three{ background-position:0 -80px;}
+.imgbox{ width:230px; margin:0 auto;}
+.imgbox img{ width:100%; display:block;}
+.onebox,.twobox,.rule_box{padding:25px 0;}
+.onebox{ background:#ffefb0; }
+.twobox{background:#f28f20; position:relative; }
+.twobox:before{ content:''; position:absolute; left:0; top:0; right:0; height:5px; background:url(../images/top_border.jpg) repeat-x; background-size:8px 5px;}
+.twobox:after{ content:''; position:absolute; left:0; bottom:0; right:0; height:5px; background:url(../images/bot_border.jpg) repeat-x; background-size:8px 5px;}
+.btn_cz{ display:block; width:153px; height:44px; margin:22px auto 0; text-align:left; text-indent:-153px; overflow:hidden;   }
+.onebox a{background:url(../images/btn.png) no-repeat;background-size:475px auto;}
+.twobox a{background:url(../images/btn.png) no-repeat -160px 0;background-size:475px auto;}
+.btn_cz:hover,.btn_cz.active{ background-position:0 -45px;}
+.twobox a:hover,.twobox .btn_cz.active{background:url(../images/btn.png) no-repeat -160px -45px;background-size:475px auto; }
+.btn_cz.noclick{background-position:0 -90px;}
+.btn_cz.noclick:hover{background-position:0 -90px;}
+.frist_charge{ width:280px; margin:0 auto;}
+.frist_charge img{ width:100%; display:block;}
+.sign_box{ width:280px; height:206px; position:relative; background:url(../images/sign_bg.jpg) no-repeat; background-size:100% 100%;margin:20px auto;}
+.sign_box>ul{  position:absolute; left:0px;  top:103px; z-index:2; right:0; height:24px;}
+.sign_box>ul li{ width:20px; height:20px; line-height:20px; border-radius:100%;  margin:0 20px 0 0; position:absolute; top:0;}
+.sign_box>ul li:first-child{left:3px; top:-4px; width:29px; height:29px; overflow:hidden; background:url(../images/one.png) no-repeat; background-size:29px auto; text-indent:-80px; overflow:hidden; z-index:5;}
+.sign_box>ul li:nth-child(2){  left:57px;}
+.sign_box>ul li:nth-child(3){ left:107px;}
+.sign_box>ul li:nth-child(4){ left:157px;}
+.sign_box>ul li:nth-child(5){ left:206px;}
+.sign_box>ul li:nth-child(6){ left:256px;}
+.sign_box>ul li span{position:absolute; left:0px; top:0px; z-index:2; width:20px; height:20px;border-radius:100%;  display:block;text-align:center; font-size:12px; font-weight:bold; color:#ed5824; -webkit-transform:rotate(-15deg); -webkit-text-shadow:inherit 3px 2px rgba(108,98,88,0.2);background:#fdf5d5; display:none;}
+.sign_box>ul li em{ position:absolute; left:-1px; top:-1px; z-index:3; width:22px; height:22px; display:block;border-radius:100%; background:url(../images/signed.png) no-repeat; background-size:22px auto; box-shadow:0 0 3px rgba(255,110,22,0.35); display:none; }
+.package a{background:url(../images/btn.png) no-repeat -320px 0;background-size:475px auto;}
+.package a:hover,.package .btn_cz.active{background-position:-320px -45px;}
+.package a.btn_cz.noclick{background-position:-320px -90px;}
+.package a.btn_cz.noclick:hover{background-position:-320px -90px;}
+.package a.btn_cz.tomorrow{background-position:-320px -135px;}
+.package a.btn_cz.tomorrow:hover{background-position:-320px -135px;}
+.sign_notic h4{ height:12px; width:250px; margin:25px auto 24px; text-align:center; border-bottom:1px solid #ffefb0;}
+.sign_notic h4 span{ display:inline-block; height:25px; width:75px; text-indent:-15em; overflow:hidden;  padding:0 18px; margin:0 auto; background:#f28f20 url(../images/tt4.png) no-repeat center center; background-size:75px auto;}
+.swipebox{width: 252px;margin: 0 auto;}
+.picbox{width: 252px;height:114px;margin: 8px auto 16px;position: relative;overflow: hidden;}
+.piclist{width:1260px;height:114px;display: -webkit-box;position: absolute;top: 0;left: 0;-webkit-transition:all 0.6s;}
+.piclist img{width:252px}
+.num{width:60px;margin: 0 auto;display: -webkit-box}
+.num li{width: 8px;height: 2px;border:1px solid #ffefb0;margin-right: 5px;}
+.num .cur{background:#ffefb0;}
+
+.rules{ padding:0 14px;}
+.rules li{ text-align:left;  position:relative; line-height:20px;}
+.rules li span{ display:inline-block; vertical-align:top; margin-top:3px; margin-right:7px;width:12px; height:12px; line-height:14px; text-align:center; border-radius:100%; color:#fff3c7; font-size:13px; font-weight:bold; background:#a42230; overflow:hidden;}
+.rules li p{ padding-left:20px;}
+.rules li b{ font-weight:blod; margin:0;}
+.nitic{ margin:20px 0  30px 0; text-indent:20px;}
+.rules a{ text-align:center; color:#eb5420; display:block; padding:20px 0;}
+.rule_page li{ padding-bottom:25px;}
+.copy{ margin-top:20px;}
+
+/***弹框**/
+.mask{ position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.58); z-index:100; display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center;}
+.tank{ width:210px; height:154px; background:url(../images/tank_bg.png) no-repeat; background-size:210px auto; position:relative;}
+.tank p{ padding:44px 10px 0; font-size:16px; line-height:22px; text-align:center; font-weight:bold; color:#ffefb0;}
+.tank span{ color:#e5e4e4; font-size:12px; display:block; text-align:center;}
+.btn_zd{ position:absolute; left:50%; top:102px; margin-left:-73px;  display:block;width:147px; height:40px;background:url(../images/tank_btn.png) no-repeat; background-size:147px auto;}
+.btn_zd.active,.btn_zd:hover{ background-position:0 -45px;}
+.tank p.white{ color:#e5e4e4;}

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="author" content="xgwang" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读安卓" />
+<meta name="format-detection" content="telephone=no">
+<title>月票助好书</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" >
+<script>
+  var fontsize=(document.documentElement.clientWidth)/320*100;
+  document.documentElement.style.fontSize = fontsize + 'px';
+</script>
+</head>
+<body>
+<div class="banner">
+  <img src="images/banner.png">
+  <div id="monthTicketLeftDiv" class="surplus" style="visibility:hidden"><span><em></em>剩余月票：<b id="monthTicketLeft"></b></span></div>
+</div>
+<!-- function bookList(data,from)
+	if(nl(data)){
+		return;
+	}
+	<ul class="book_list cf">
+	for(var i=0;i<data.length;i++){
+		var book=data[i];
+	    <li>
+	      <div class="bookbox">
+	        <img onclick="Index.openDetail(${book.id})" src="${book.cover}">
+	        <p>${book.title}</p>
+	        <p>${book.author}</p>
+	        <a href="javascript:Index.vote(${book.id},\'${from}\');" class="btn_vote">投1票</a>
+	      </div>
+	    </li>
+	 }
+	 </ul>
+ -->
+<div class="box" id="shelfBooks">
+<!-- function shelfBooks(data)
+  <div class="title"><h4>月票好书正在读</h4></div>
+  <div>${bookList(data.shelfBooks,'shelf')}</div> 
+ -->
+</div>
+<div class="box" id="columnBooks">
+<!-- function columnBooks(data)
+  <div class="title"><h4>原创文学风云榜</h4></div>
+  <div>${bookList(data.columnBooks,'column')}</div> 
+  <a id="moreBookBtn" href="javascript:void(0);" class="btn_more">> 更多好书 <</a>
+   -->
+</div>
+<div class="box">
+  <div class="title"><h4>关于月票</h4></div>
+  <div class="vote_info">
+    <p><span>1、月票有什么用？</span>
+作品获得的月票越多，在原创文学风云榜排名就越靠前，说不定就成为神作了！
+<span>2、怎样得到更多月票？</span>
+你的VIP等级和消费情况将决定本月的月票获得张数，所以赶紧升级和看书消费吧！
+<span>3、投月票有限制吗？</span>
+普通VIP用户对单本作品每日最多投2张，每月总计最多投5张。月票获取不易，请好好珍惜~</p>
+<a href="javascript:Local.openPage('help/help6.html');" class="more_vote">更多月票规则 ></a>
+  </div>
+</div>
+<div id="tip" class="mask" style="visibility:hidden">
+  <div id="tipContent" class="tank">
+    <!--  function tipContent(data)
+    if(data.ret==-101){
+	    <h4>书籍不存在</h4>
+	    <p></p>
+	    <a href="javascript:void(0)" onclick="vh(\'tip\')" class="btn_zdl">知道啦</a>
+    }else if(data.ret==-102){
+	    <h4>这本书不支持投月票</h4>
+	    <p></p>
+	    <p>本月月票 ${bookMonthCnt} <span class="red">+1</span></p>
+	     <a href="javascript:void(0)" onclick="vh(\'tip\')" class="btn_zdl">知道啦</a>
+    }else if(data.ret==-10000||data.ret==-3000){
+    	<h4>票数不足</h4>
+    	<p>提升VIP等级及订阅消费<br>可获得更多月票</p>
+    	 <a href="javascript:void(0)" onclick="vh(\'tip\')" class="btn_zdl">知道啦</a>
+    }else if(data.ret==-10001||data.ret==-10002){
+    	<h4>使用超限，投票失败</h4>
+    	if(data.fansLevel==10){
+   		 	<p>该书盟主用户每日最多投5票<br>每月最多投5票</p>
+   		}else{
+   			<p>普通VIP用户对单本作品<br>每日最多投2票<br>每月总计最多投5票</p>
+   		}
+    	 <a href="javascript:void(0)" onclick="vh(\'tip\')" class="btn_zdl">知道啦</a>
+    }else if(data.ret==0){
+	    <h4>投票成功</h4>
+	    <p>《${data.book.title}》</p>
+	    <p>本月月票 ${data.bookMonthCnt} <span class="red">+1</span></p>
+	     <a href="javascript:void(0)" onclick="vh(\'tip\');Index.refreshUserMonthTicketLeft();" class="btn_zdl">知道啦</a>
+    }else{
+    	<h4>投票失败${data.ret}</h4>
+	    <p>系统繁忙，请稍候再试</p>
+	     <a href="javascript:void(0)" onclick="vh(\'tip\')" class="btn_zdl">知道啦</a>
+    }
+    
+    -->
+  </div>
+  </div>
+  
+
+</body>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js?r=1047"></script>
+<script type="text/javascript" src="js/scroll.js?r=1047"></script>
+<script type="text/javascript" src="index.js?r=1047"></script>
+<script type="text/javascript" src="indexx.js?r=1047"></script>
+<script type="text/javascript" src="js/jsbridge.js?r=1047"></script>
+<script type="text/javascript" src="js/local.js?r=1047"></script>
+<script type="text/javascript" src="js/zbook.js?r=1047"></script>
+<script type="text/javascript" src="js/cfoot.js?r=1047"></script>
+</html>

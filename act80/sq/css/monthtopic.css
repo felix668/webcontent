@@ -1,0 +1,34 @@
+*{-webkit-tap-highlight-color:rgba(0,0,0,.1)}
+html,body{-webkit-user-select:none;user-select:none;}
+body,div,p,ul,h1,h2,img{margin:0;padding:0; font-weight:normal;}
+ul,ol,li{list-style:none}
+img {border:0 none;vertical-align:middle;}
+a{text-decoration:none;color:#333;-webkit-tap-highlight-color:rgba(0,0,0,.1);-webkit-touch-callout:none;}
+body{font-family: "微软雅黑",helvetica,arial;-webkit-text-size-adjust:none;background-color:#754462;color:#ffade8;text-align: center;font-size: 16px;}
+.cf:before,.cf:after{content:".";display:block;height:0;visibility:hidden;}
+.cf:after{clear:both;}
+.cf{zoom:1; overflow:hidden;}
+.banner img{width: 100%;display: block}
+.rules,.msg{padding: 0 20px}
+.step li{background-image: url(../img/monthly-bg.png);background-repeat: no-repeat;background-size: 300px auto}
+.title{ height:14px; border-top:2px solid #865975; margin-top:10px; text-align:center; }
+.title h2{ color:#fff; font-size:20px; height:20px; display:inline-block; background:#754462; padding:0 10px;position:relative; top:-12px; }
+.actyIntro{padding-bottom: 40px; padding-top:30px;}
+.msg{line-height: 32px;margin: 16px auto; width:290px; color:#ffe178;}
+.step{width:280px;margin: 0 auto}
+.step .step1,.step .step2{width: 134px;height: 93px}
+.step .step1{background-position:0 -22px;float: left;margin-bottom: 20px}
+.step .step2{background-position:-146px -22px;float: right;}
+.step .step3{clear:both;width:280px;height:90px;background-position:0 -129px;}
+.step .step3 img{width: 100%}
+.rules{font-size: 14px;line-height:20px;margin: 18px 0 10px;text-align: left}
+.tip{text-align: left;padding-left:20px;position: relative;font-size: 14px; padding:0 20px 0 38px;}
+.tip::before{content: '注';width: 14px;height: 14px;position: absolute;top:0;left: 20px;border-radius: 10px;background: #ffade8;color: #8f2270;font-size: 10px;line-height: 14px;text-align: center}
+.monthly{padding-bottom: 16px}
+.wayIntro{margin: 30px auto 13px; width:280px;}
+.wayIntro ul{ display:-webkit-box; -webkit-box-sizing:border-box; -webkit-box-align:center;}
+.wayIntro li{ -webkit-box-flex:1; width:128px; height: 69px; margin-right:24px;background: url(../img/monthly-get.png) no-repeat 3px 0;background-size: 276px auto}
+.wayIntro li:last-child{background-position: -152px 0;margin-right:0;}
+.more{ clear:both;height: 40px;display: block}
+.more span{color:#ffe178;position: relative; height:16px; line-height:16px;}
+.more span::after{position: absolute;right: -11px;top: 4px;content: '';width: 7px;height: 7px;border:solid #ffe178;border-width: 1px 1px 0 0;-webkit-transform:rotate(45deg);}

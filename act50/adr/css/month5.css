@@ -1,0 +1,62 @@
+body,div,span,strong,img,a,ul,li,p,h2,h3,i,dl,dd,dt{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,li{list-style:none}
+img{border:none;-webkit-touch-callout:none;display: block;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none}
+html,body{-webkit-user-select:none;user-select:none;}
+body{font-family:"Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;font-size: 14px;background:#fff;}
+.top{position: relative;}
+.banner{width: 100%}
+.banner img{width: 100%;display: block;}
+.actInfo{position: absolute;bottom: 25px;left: 0;right: 0;margin: auto;text-align: center;}
+.tipbtns a{display: inline-block;height: 44px;line-height: 44px;text-align: center;border-radius: 4px;font-size: 19px;margin: 0 auto}
+.tp1,.tp2{background: #fcd22a;box-shadow: inset 2px 2px #fffb50, 2px 2px 2px rgba(178,53,29,.8);color: #905700;text-shadow:0 1px 1px rgba(255,255,255,0.14);}
+.tp1{width: 180px}
+.tp2{padding: 0 25px}
+.tp1.active,.tp2.active{background: #ffe063;box-shadow: inset 2px 2px #ffeb87, 2px 2px 2px rgba(178,53,29,.8)}
+.tp3{width:180px;background: #505e64;box-shadow: inset 2px 2px #768a93, 2px 2px 2px rgba(34,42,46,.8);color: #fff;text-shadow:0 1px 1px rgba(0,0,0,0.14);}
+.actInfo strong{display: block;color: #07709a;line-height: 20px;margin: 11px 0 3px;}
+.actInfo p{color: #3a8cad;font-size: 10px;line-height: 18px}
+/*大神的书*/
+.dsbooks{padding:20px 0 27px;background-color: #fffce5;position: relative;}
+.tit{margin: 0 48px 8px;position: relative;}
+.tit strong{padding:6px 0;width: 100%;display: block;background:#ff5768;font-size: 17px;color: #ffed8d;text-align: center;z-index: 2;position: relative;text-shadow:0 1px 1px rgba(0,0,0,0.14);}
+.tit::before,.tit::after{content: '';width:34px;height: 30px;background:url(../images/m-arrow.png) no-repeat;background-size: 100% auto;position: absolute;bottom: -10px}
+.tit::before{left: -26px}
+.tit::after{right: -26px;-webkit-transform:rotateY(180deg);}
+.bookBox .recom{position: relative;padding: 14px 14px 0}
+.bookBox .recom h2{font-size: 16px;line-height: 16px;color: #ff5768;}
+.bookBox .more{position: absolute;top:0;right:0;font-size: 10px;color: #ff909b;padding:14px;text-decoration: underline;}
+.booklist li a{color: #707070;padding:14px;border-bottom: 1px solid #e4dfb8;position: relative;display: block;}
+.booklist .bookface{width: 50px;height: 63px;border:1px solid #e4dfb8;position: absolute;top:14px;left: 14px} 
+.booklist .bookinfo{padding-left: 63px;}
+.booklist .bookinfo dt{color: #4d4d4d;font-size: 16px;line-height: 16px;padding-bottom: 10px}
+.booklist dd{font-size: 13px;line-height: 21px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.mbooks .recom h1{color: #5cbadf;}
+.mbooks .more{color: #98cfe5}
+.pbooks .recom h1{color: #00c17b;}
+.pbooks .more{color: #85debe}
+.dsbooks::after{content: '';width: 100%;height: 8px;position: absolute;bottom: 0;left: 0;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUZFNDk0OURFRDU0MTFFNDg5NDFEOTlGMjBCODY4MTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUZFNDk0OUVFRDU0MTFFNDg5NDFEOTlGMjBCODY4MTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5RkU0OTQ5QkVENTQxMUU0ODk0MUQ5OUYyMEI4NjgxMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5RkU0OTQ5Q0VENTQxMUU0ODk0MUQ5OUYyMEI4NjgxMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuL3wnAAAACeSURBVHjaYvz//z8DJYAJi5gWEPcB8XUg/gHF16BiWhiqQS6AYjYgngLEf//jBiC5GUDMCdOHrHn3f+LBXqgeuAFT/5MOQK5lYAQS2kCfXARiZhLD7y8Q64MCMYUMzQxQPSkgF4BCW4PMWLwBMuAnkMFGpgG/mBgoA2AD7lFgwEOQATsoMGAPKAx0gIwLZEajASUJaSpVkzLZmQkgwAAlKIOsEfJ7ZQAAAABJRU5ErkJggg==) repeat-x;background-size: 8px auto;}
+/*规则*/
+.rules{margin-top: 16px}
+.rules .details{margin-top: 20px;padding-bottom:38px}
+.rules p{font-size:12px;line-height: 20px;color: #707070;margin: 0 14px;padding: 5px 0 0 17px;position: relative;}
+.rules p:last-child{padding: 6px 0 0 0;color: #acacac}
+.rules p i{font-style:normal;font-size: 12px;color: #ebfeff;position: absolute;width: 12px;height: 12px;background:#707070;-webkit-border-radius:6px;left: 0;top:9px;text-align: center;line-height: 12px}
+/*弹窗*/
+.mask{position:fixed; left:0; top:0;width:100%;height:100%;padding:0 20px;background:rgba(0,0,0,.2); z-index:9;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;-webkit-box-sizing:border-box;}
+.tiparea{background:#ebfeff;border-radius:10px;text-align: center;padding:20px 5px 25px;position: relative;/*width: 100%;-webkit-box-sizing:border-box;margin: 0 auto*/-webkit-box-flex:1;}
+.tiparea strong{font-size: 16px;line-height: 24px;display: block;color: #0096bf;}
+.tiparea p{line-height: 20px;color: #707070;font-size: 12px}
+.tiparea .knowbtn,.tiparea .btns a,.tiparea .qqbtn{margin:10px 27px 0;display: block;height: 42px;line-height:42px;text-align: center;background:#0096bf;border-radius:2px;box-shadow: inset 0 -2px #006986}
+.tiparea .knowbtn span,.tiparea .btns span{font-size: 15px;color: #ffeda4;text-shadow:0 1px 0 #0085ab}
+.tiparea .closebtn{position: absolute;width:20px;height: 20px;background:#418ca1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjVFN0FBNkJFNzA0MTFFNDhFQzJCRUNCMzk2OTg5OTkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjVFN0FBNkNFNzA0MTFFNDhFQzJCRUNCMzk2OTg5OTkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCNUU3QUE2OUU3MDQxMUU0OEVDMkJFQ0IzOTY5ODk5OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCNUU3QUE2QUU3MDQxMUU0OEVDMkJFQ0IzOTY5ODk5OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtK7D+0AAADVSURBVHjatNVBCsIwEAXQdPAKHsFV3UkPoBvB2+rKlT1AwZVdeYTeQf2BEUJImz+JDvxuUh4k/JDV9Ho7zBG5I5OrmzWyQ66Czwm5IDddqEF75OxNDw/IE9lW4F+0VWsQ3f4eGRXvjXiIjmpNoosh3hrwJOoXJPjJis+iMWzBF9EUzOBZ1E+jPWa36hg0B6dwx6AMHOOOQefO+Ccjxp7SPRdjT+mei7H89CWSgvJTuFhvFItLAUrhUohmcYnQhwFdxD3cIRtFD4XvXoh7q2v+9Zh+BBgAqit4IyqM3YAAAAAASUVORK5CYII=) 5px 5px no-repeat;background-size:11px auto;border-radius: 16px;top: 8px;right: 8px}
+.tiparea .kttip{margin-top: 20px}
+.tiparea .btns{display: -webkit-box;margin:10px 15px 0;}
+.tiparea .btns a{-webkit-box-flex:1;margin:0 7px;}
+.tiparea .btns .cancle{background: #8dd6ea;box-shadow:inset 0 -2px #65bfd8}
+.tiparea .btns .cancle span{color: #007393;text-shadow:0 1px 0 #a4f9ff}
+.tiparea .qqb{width:70px;margin: 9px auto 14px}
+.tiparea .tipban{width:100%;}
+.tiparea .timemsg{position: absolute;top: 56%;left: 0;right: 0;margin: auto;color: #277ea3}
+.tiparea .tp1{position: absolute;top: 65%;left:12%;right:12%;margin:0;display: block;height: 40px;line-height: 40px;text-align: center;border-radius: 4px;font-size: 15px}
+.tiparea2{padding: 2px 2px 2px 10px}

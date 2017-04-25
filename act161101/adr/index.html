@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>双十一秒杀狂欢</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<img src="images/banner.jpg" alt="超值包好书不断" class="banner">
+<div class="wrap" v-if="!over">
+	<div class="pack1">
+		<div class="um"></div>
+		<div class="title">
+			<h2>精品秒杀</h2>
+		</div>
+		<div class="cont">
+			<div class="book">
+				<a href="javascript:ABook.gotoDetail({{sk[2]}})" class="cover" @click="ms">
+					<img :src="'images/'+sk[2]+'.jpg'" v-if="sk[2]">
+					<i class="tag"></i>
+				</a>
+				<div class="info">
+					<h3>{{sk[1]}}</h3>
+					<p class="author">{{sk[0]}}</p>
+					<div class="price">
+						<span>原价0.05元/千字</span>
+						<strong>2折</strong>
+					</div>
+					<div class="timer">
+						<a href="javascript:ABook.gotoDetail({{sk[2]}})" @click="ms">去抢购</a>
+						<div class="count">
+							<strong>秒杀还剩：</strong><span>{{hour}}</span>时<span>{{minute}}</span>分
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tip"><span>去书籍详情页点击下载即可抢购</span></div>
+		</div>
+	</div>
+	<div v-for="n in 4" :class="'pack'+(n+2)">
+		<div class="um"></div>
+		<div class="title">
+			<h2>{{booklist[n][0]}}</h2><strong>狂降{{!userinfo.isPayUser && n==1 ? parseInt(booklist[n][1])-1 : parseInt(booklist[n][1])-11}}元</strong>
+		</div>
+		<div class="cont">
+			<ul class="booklist">
+				<li v-for="i in 3" :class="{'item':n==1 && i!=0}">
+					<a href="javascript:ABook.gotoDetail({{booklist[n][i+2].split('_')[2]}})" class="cover">
+						<img :src="'images/'+booklist[n][i+2].split('_')[2]+'.jpg'">
+					</a>
+					<div class="info">
+						<h3>{{booklist[n][i+2].split('_')[1]}}</h3>
+						<p class="author">{{booklist[n][i+2].split('_')[0]}}</p>
+					</div>
+				</li>
+			</ul>
+			<div class="buybox">
+				<template v-if="package[n]">
+					<p class="msg">本书包买一赠一，购买后可送给好友</p>
+					<div class="freebtn" @click="sharepk(n,$event)">免费赠书</div>
+				</template>
+				<template v-else>
+					<div class="price">
+						<span>原价{{parseInt(booklist[n][1])}}元</span>
+						<strong>三本购买价{{!userinfo.isPayUser && n==1 ? 1.11 : 11.11}}元</strong>
+						<p>本书包买一赠一，购买后可送给好友</p>
+					</div>					
+					<div class="buybtn" @click.prevent="buybook(n,$event)">立即抢购</div>
+				</template>
+			</div>
+			<template v-if="package[n]">
+				<i class="ico"></i>
+			</template>
+		</div>
+	</div>
+</div>
+<div class="sharebtn" @click="share">如此低价，邀请好友一起狂欢</div>
+<div class="rules" v-if="!over">
+	<div class="gz"><strong>活动规则</strong></div>
+	<div class="detail">
+		<p><span>1</span>活动时间：2016年11月11日-11月13日</p>
+		<p><span>2</span>秒杀书籍在固定时间内享受折扣价格，活动结束后恢复原价。</p>
+		<p><span>3</span>每名用户购买超值包后，即可获得超值包内书籍永久免费阅读权限。</p>
+		<p><span>4</span>每名用户购买超值包后，可赠送超值包中书籍给一位好友。赠书页面可多次分享，但仅一位好友能获得赠书。活动结束后，赠书无法领取。</p>
+		<p><span>5</span>同一QQ号，微信号和同一设备均视为同一用户。</p>
+	</div>
+	<div class="cp">本活动最终解释权归QQ阅读所有</div>
+</div>	
+<over-box v-if="over"></over-box>
+<buy-mask v-if="mask" :buyinfo="buyinfo" :zmoney="userinfo.zmoney" :money="userinfo.money"></buy-mask>	
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/v.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="http://pingjs.qq.com/ping.js"></script>
+<script type="text/javascript">
+	if(typeof(pgvMain) == 'function'){
+		pgvMain();
+	}
+</script>
+</body>
+</html>d

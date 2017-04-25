@@ -1,0 +1,24 @@
+.btn {
+  position: relative;
+  border-radius: 0.1rem;
+  font-size: 0.36rem;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 0.05rem 0 0 #d39411;
+  background: #f2c93d;
+  color: #823a00;
+  display: block;
+}
+.btn:active {
+  background: #cda92f;
+  -webkit-transform: translate3d(0, 0.05rem, 0);
+          transform: translate3d(0, 0.05rem, 0);
+  box-shadow: 0px 0.01rem 0px 0px;
+}
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+.blue:hover {
+  background-color: #6FC6FF;
+}

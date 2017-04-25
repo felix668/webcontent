@@ -1,0 +1,439 @@
+.mask {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.maskOver {
+	display: none;
+	.panelOver {
+		position: absolute;
+		left: 0; top: 0; right: 0; bottom: 0;
+		margin: auto;
+		width: 4.7rem;
+		height: 5.4rem;
+	}
+}
+
+.maskSuccessful {
+	display: none;
+	.panel {
+		position: absolute;
+		left: 0;top: 0;right: 0;bottom: 0;
+		width: 6rem;
+		height: 4.1rem;
+		margin: auto;
+		background: #3f362a;
+		border-radius: 0.1rem;
+		.textSuccessful {
+			width: 5.4rem;
+			margin: auto;
+			margin-top: 0.25rem;
+		}
+		.gotitSuccessful {
+			width: 4.5rem;
+			margin: auto;
+			margin-top: 0.4rem;
+		}
+	}
+}
+.maskOut {
+	display: none;
+	.panel {
+		position: absolute;
+		left: 0;top: 0;right: 0;bottom: 0;
+		width: 6rem;
+		height: 3.6rem;
+		margin: auto;
+		background: #3f362a;
+		border-radius: 0.1rem;
+		p {
+			margin-top: 1rem;
+			font-size: 0.36rem;
+			text-align: center;
+			color: #f3a91b;
+		}
+		.gotitOut {
+			width: 4.5rem;
+			margin: auto;
+			margin-top: 1rem;
+		}
+	}
+}
+
+.main {
+	width: 100%;
+	overflow: hidden;
+	.panel1 {
+		width: 6.25rem;
+		margin: auto;
+		margin-top: 10rem;
+		margin-bottom: 1.15rem;
+		.gift1 {
+			width: 2.4rem;
+			margin: auto;
+		}
+		.desc {
+			margin-top: 0.25rem;
+			text-align: center;
+			font-size: 0.28rem;
+			color: #705834;
+		}
+		.state1 {
+			display: none;
+		}
+		.couponUnreceived {
+			.coupon {
+				width: 4.5rem;
+				margin: auto;
+				margin-top: 0.45rem;
+			}
+			.getCoupon {
+				width: 4.5rem;
+				margin: auto;
+				margin-top: 0.32rem;
+			}
+		}
+		.couponOver {
+			font-size: 0.5rem;
+		}
+		.couponOut {
+			.couponGrey {
+				width: 4.5rem;
+				margin: auto;
+				margin-top: 0.45rem;
+			}
+			.getCouponGrey {
+				width: 4.5rem;
+				margin: auto;
+				margin-top: 0.32rem;
+			}
+		}
+		.couponReceived {
+			overflow: hidden;
+			.congratulations {
+				margin-top: 0.25rem;
+				margin-bottom: 0.35rem;
+				font-size: 0.4rem;
+				line-height: 0.52rem;
+				color: #f3a91b;
+				text-align: center;
+			}
+			.copyIt {
+				margin-bottom: 0.18rem;
+				font-size: 0.24rem;
+				color: #8f7d65;
+				text-align: center;
+			}
+			.code {
+				width: 6rem;
+				height: 0.88rem;
+				margin: auto;
+				margin-bottom: 0.38rem;
+				border-radius: 0.12rem;
+				background: #d3d3d3;
+				text-align: center;
+				font-size: 0.36rem;
+				line-height: 0.88rem;
+			}
+			.how {
+				margin-bottom: 0.35rem;
+				font-size: 0.28rem;
+				color: #8f7d65;
+			}
+			.swiperPanel {
+				position: relative;
+				width: 6.1rem;
+				height: 4.2rem;
+				margin: auto;
+				box-sizing: border-box;
+				border-radius: 0.1rem;
+				border: 0.05rem #c4beb0 solid;
+				background: #c4beb0;
+				.swiperText {
+					padding: 0.15rem;
+					font-size: 0.24rem;
+					color: #8f7d65;
+				}
+				.lower {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 3.55rem;
+					//background: red;
+					.swiper {
+						width: 4.52rem;
+						height: 3.47rem;
+						margin: auto;
+						//background: green;
+						overflow: hidden;
+						.train {
+							width: 300%;
+							height: 3.47rem;
+							.item {
+								float: left;
+								width: 4.52rem;
+								height: 3.47rem;
+								img {
+									width: 100%;
+								}
+							}
+						}
+					}
+
+				}
+			}
+			.dotsContainer {
+				position: relative;
+				float: left;
+				left: 50%;
+				.dots {
+					position: relative;
+					overflow: hidden;
+					float: left;
+					right: 50%;
+					margin: auto;
+					.dot {
+						float: left;
+						width: 0.16rem;
+						height: 0.16rem;
+						margin: 0.24rem 0.12rem 0 0.12rem;
+						border-radius: 0.08rem;
+						border-radius: 50%;
+						background: #999999;
+					}
+					.dot.active {
+						background: #515151;
+					}
+				}
+			}
+		}
+	}
+	.panel2 {
+		width: 6.25rem;
+		margin: auto;
+		margin-bottom: 0.7rem;
+		.gift2 {
+
+			width: 2.4rem;
+			margin: auto;
+		}
+		.desc {
+			margin-top: 0.25rem;
+			text-align: center;
+			font-size: 0.28rem;
+			color: #705834;
+		}
+		.state2 {
+			display: none;
+		}
+		.over {
+			width: 100%;
+			padding-top: 0.3rem;
+			.upper {
+				width: 5.66rem;
+				margin: auto;
+				margin-bottom: 0.3rem;
+				overflow: hidden;
+				.book {
+					float: left;
+					width: 2.55rem;
+				}
+				.right {
+					float: left;
+					width: 3.1rem;
+					overflow: hidden;
+					.text-blue1 {
+						margin-top: 0.2rem;
+						font-size: 0.42rem;
+						line-height: 0.6rem;
+						color: #004557;
+					}
+					.text-blue2 {
+						line-height: 0.6rem;
+						font-size: 0.42rem;
+						color: #004557;
+					}
+					.p-score {
+						//height: 0.3rem;
+						padding: 0.15rem 0 0.15rem 0;
+						font-size: 0.24rem;
+						.stars {
+							width: 1.1rem;
+							display: inline;
+
+						}
+						.score {
+							color: #BEB5A6;
+						}
+					}
+					.favorite {
+						font-size: 0.24rem;
+						color: #BEB5A6;
+					}
+				}
+			}
+			.overGrey {
+				position: relative;
+				margin: auto;
+				width: 4.5rem;
+				img {
+					width: 100%;
+				}
+				p {
+					position: absolute; left: 0; top: 0;
+					width: 100%; height: 0.8rem; line-height: 0.8rem;
+					font-size: 0.4rem; color: #8d8d8d; text-align: center;
+				}
+			}
+		}
+		.before {
+			width: 100%;
+			padding-top: 0.3rem;
+			.upper {
+				width: 100%;
+				overflow: hidden;
+				.book {
+					float: left;
+					width: 2.55rem;
+				}
+				.right {
+					float: left;
+					//width: 3.6rem;
+					overflow: hidden;
+					.text-blue1 {
+						margin-top: 0.2rem;
+						font-size: 0.42rem;
+						line-height: 0.6rem;
+						color: #004557;
+					}
+					.text-blue2 {
+						line-height: 0.6rem;
+						font-size: 0.42rem;
+						color: #004557;
+					}
+					.p-score {
+						//height: 0.3rem;
+						padding: 0.15rem 0 0.15rem 0;
+						font-size: 0.24rem;
+						.stars {
+							width: 1.1rem;
+							display: inline;
+
+						}
+						.score {
+							color: #BEB5A6;
+						}
+					}
+					.favorite {
+						font-size: 0.24rem;
+						color: #BEB5A6;
+					}
+				}
+			}
+			.text-pwd {
+				margin-bottom: 0.2rem;
+				font-size: 0.24rem;
+				line-height: 0.4rem;
+				color: #705733;
+			}
+			.lower {
+				//overflow: hidden;
+				.inputBox {
+					float: left;
+					position: relative;
+					height: 0.75rem;
+					.error {
+						position: absolute;
+						left: 0;
+						bottom: -0.35rem;
+						font-size: 0.28rem;
+						color: #af1b1a;
+					}
+					img {
+						height: 100%;
+					}
+					input {
+						position: absolute;
+						left: 0;
+						top: 0.22rem;
+						width: 100%;
+						height: 0.32rem;
+						font-family: 'Microsoft Yahei';
+						font-size: 0.28rem;
+						line-height: 0.32rem;
+						text-indent: 0.16rem;
+						border: none;
+						color: #999999;
+						display: block;
+						background: transparent;
+					}
+				}
+				.complete {
+					float: right;
+					width: 1.58rem;
+					height: 0.70rem;
+					line-height: 0.7rem;
+				}
+			}
+		}
+	}
+	.after {
+		margin-top: 0.5rem;
+		display: none;
+		.congratulations {
+			margin-bottom: 0.3rem;
+			text-align: center;
+			font-size: 0.4rem;
+			color: #f3a91b;
+		}
+		.youth {
+			margin-bottom: 0.3rem;
+			font-size: 0.32rem;
+			text-align: center;
+			color: #f3a91b;
+		}
+		.time {
+			margin-bottom: 0.25rem;
+			text-align: center;
+			font-size: 0.24rem;
+			color: #8f7d65;
+		}
+		.readItNow {
+			width: 4.5rem;
+			height: 0.8rem;
+			line-height: 0.8rem;
+			margin: auto;
+		}
+	}
+	.rules {
+		width: 6.25rem;
+		margin: auto;
+		img {
+			height: 0.3rem;
+			margin-bottom: 0.2rem;
+		}
+		p {
+			margin-bottom: 0.3rem;
+			padding-left: 0.26rem;
+			text-indent: -0.26rem;
+			font-size: 0.24rem;
+			line-height: 0.4rem;
+			color: #8F7D65;
+			span {
+				font-weight: bold;
+				color: #655130;
+			}
+		}
+	}
+	.bottomTicket {
+		width: 100%;
+		margin-bottom: 0.25rem;
+	}
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title></title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" type="text/css" href="./build/index.css"/>
+    <script>
+        function setRem(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        setRem();
+        window.addEventListener('resize',setRem);
+    </script>
+</head>
+<body>
+<div class="wrap" id="app" v-cloak :class="{'hide': showPage}">
+    <img class="banner" :src="config.banner" />
+    <div class="content" :style="{backgroundColor: config.bg_color,backgroundImage: 'url(' +config.bg_img+')'}">
+        <first-list v-if="config.first_list" :firstlist="config.first_list" :islogin="config.isLogin"></first-list>
+        <common-list v-if="config.common_list" :commonlist="config.common_list" :islogin="config.isLogin"></common-list>
+
+        <rule v-if="config.rule" :rule="config.rule"></rule>
+
+    </div>
+    <over v-if="over"></over>
+</div>
+</body>
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./lib/zepto-1.2.0.min.js"></script>
+<script type="text/javascript" src="./lib/jsbridge.js"></script>
+<script type="text/javascript" src="./lib/common.js"></script>
+<script type="text/javascript" src="./lib/local.js"></script>
+<script type="text/javascript" src="./lib/zbook.js"></script>
+<script type="text/javascript" src="./lib/abook.js"></script>
+
+<script type="text/javascript" src="./build/bundle.js"></script>
+</html>

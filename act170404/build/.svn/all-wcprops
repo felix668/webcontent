@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/mqq/mqq_book_rep/!svn/ver/290233/book_proj/trunk/src/BookEventFront/WebContent/act170404/build
+END
+webpack.config.base.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/mqq/mqq_book_rep/!svn/ver/290233/book_proj/trunk/src/BookEventFront/WebContent/act170404/build/webpack.config.base.js
+END
+webpack.config.dev.js
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/mqq/mqq_book_rep/!svn/ver/290233/book_proj/trunk/src/BookEventFront/WebContent/act170404/build/webpack.config.dev.js
+END
+server.hot.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/mqq/mqq_book_rep/!svn/ver/290233/book_proj/trunk/src/BookEventFront/WebContent/act170404/build/server.hot.js
+END
+webpack.config.prod.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/mqq/mqq_book_rep/!svn/ver/290233/book_proj/trunk/src/BookEventFront/WebContent/act170404/build/webpack.config.prod.js
+END

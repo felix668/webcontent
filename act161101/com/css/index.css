@@ -1,0 +1,95 @@
+body,p,ul,li,h2,h3{margin:0;padding:0;}
+ul,li{list-style:none}
+img{border:none;width:100%;display: block;}
+a{text-decoration:none;-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;-webkit-user-select:none;font-size: .28rem;background: #29262f}
+/*======wrap======*/
+.wrap>div{width: 7.5rem;background-size: 100% auto;background-repeat: no-repeat;position: relative;overflow: hidden;}
+.um{position: absolute;left:0;right:0;z-index:10;margin:auto;width:7.3rem;height:1.3rem;background: url(../images/um.png) no-repeat;background-size: 100% auto}
+.cont{width: 6.76rem;background: #fffaf1;border:.06rem solid #de7744;border-top:none;margin:.22rem auto 0;-webkit-box-sizing:border-box;box-sizing: border-box;position: relative;}
+.title{height: .88rem;line-height: .88rem;text-align: center;color: #fff;position: relative;margin-top: .34rem}
+.title h2{font-size: .34rem;}
+.title strong{font-size: .28rem;position: absolute;top: 0;left: 5.1rem}
+.wrap .pack1{height:6.92rem;background-image: url(../images/p1.jpg);}
+.pack1 .um{top:.58rem;}
+.pack1 .title{margin-top:0;}
+.pack1 .cont{height:4.98rem;margin:.18rem auto 0;padding-top:1.1rem;}
+.wrap .pack2{height:7.86rem;background-image: url(../images/p2.jpg);}
+.pack2 .um{top:.56rem;}
+.pack2 .cont{height:6.26rem;padding-top:1.18rem;}
+.pack2 .title{margin-top: 0}
+.wrap .pack3{height:8.84rem;background-image: url(../images/p3.jpg);}
+.pack3 .um{top:.92rem;}
+.pack3 .cont{height:6.88rem;padding-top:1rem;}
+.wrap .pack4{height:8.26rem;background-image: url(../images/p4.jpg);}
+.pack4 .um{top:.92rem;}
+.pack4 .cont{height:6.3rem;padding-top: 1.14rem}
+.wrap .pack5{height:8.82rem;background-image: url(../images/p5.jpg);margin-bottom: .6rem}
+.pack5 .um{top:.92rem;}
+.pack5 .cont{height:6.88rem;padding-top: 1.72rem}
+/*pack1*/
+.book,.booklist{display: -webkit-box;display: box;}
+.cover{width:2.16rem;position:relative;margin:0 .46rem 0 .4rem;}
+.cover img{margin:0 auto;width: 1.96rem;position: relative;}
+.cover::before{content: "";width:100%;height:.16rem;display: block;background: url(../images/cover.png) no-repeat;background-size: 100% 100%;margin:0 auto;}
+.cover::after{content: "";width:100%;height:.46rem;display: block;background: url(../images/shelf.png) no-repeat;background-size: 100% auto}
+.cover .tag{position:absolute;top:.38rem;left:0;width: .82rem;height: .46rem;background: url(../images/disc.png) no-repeat;background-size: 100% auto}
+.pack1 .info{padding-top: .12rem}
+h3{font-size: .28rem;line-height: .36rem;color: #333;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
+.author{font-size: .2rem;color: #999;line-height: .38rem;margin-bottom: .18rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.price{font-size: .28rem;line-height: .28rem}
+.price span{color: #666;text-decoration: line-through;}
+.price strong{color: #ef9256;margin-left: .1rem}
+.timer{width: 3.06rem;height: 1.48rem;background: #fff;border-radius: .1rem;margin-top: .32rem;overflow: hidden;text-align: center;}
+.timer p{height:.7rem;line-height:.7rem;color: #fff;background: #ef9256;font-weight: bold;border-top-left-radius: .1rem;border-top-right-radius: .1rem;}
+.count{margin-top: .14rem;font-size: .2rem;color: #444}
+.count strong{color: #666}
+.count span{display: inline-block;vertical-align:middle;width:.5rem;height:.52rem;margin:0 .06rem;background: url(../images/count.jpg) no-repeat;background-size: 100% auto;color: #fff;line-height: .52rem}
+.tip{color: #666;text-align: center;font-size: .24rem;margin-top: -.1rem}
+.tip span{position: relative;padding:0 .2rem;}
+.tip span::after,.tip span::before{content: "";width:.1rem;height:.1rem;background: #d1cdc7;position: absolute;top:.1rem;}
+.tip span::after{right: 0}
+.tip span::before{left: 0}
+.pack1 .price{font-size: .26rem;line-height: .26rem}
+/*pack2*/
+.booklist{-webkit-box-pack:justify;margin:0 .2rem;text-align: center;}
+.booklist li{width: 1.8rem}
+.booklist .cover{width:100%;margin:0;}
+.booklist .cover img{width: 1.56rem}
+.booklist .cover::before{width: 1.72rem}
+.booklist h3{font-size: .22rem;margin-top: -.24rem;}
+.booklist .author{font-size: .18rem;margin:-.04rem 0 0 0}
+.buybox{position:absolute;bottom:0;left:0;width:100%;height:1.5rem;border-top: 1px solid #c4c0ba;box-shadow:inset 0 .12rem 1.5rem rgba(0,0,0,.12);-webkit-box-sizing:border-box;box-sizing: border-box;display: -webkit-box;-webkit-box-align:center;-webkit-box-pack:center;}
+.buybox .price{width: 4rem;}
+.buybox p{font-size: .2rem;color: #999;line-height: .28rem;margin-top:.16rem;}
+/*pack3*/
+.pack3 .booklist{margin-left: .24rem;position: relative;}
+.pack3 .info{margin-left: .12rem;width: 1.76rem}
+.pack3 .booklist li:nth-child(1){width: 2.38rem}
+.pack3 .booklist li:nth-child(1) img{width: 2.12rem}
+.pack3 .booklist li:nth-child(1) .info{margin:0 auto;width: 2.2rem}
+.pack3 .booklist li:nth-child(1) .cover::before{width: 2.38rem}
+.pack3 .item{width: 1.5rem;display: -webkit-box;-webkit-box-align:center;position: absolute;text-align: left;}
+.pack3 .item img{width: 1.2rem}
+.pack3 .item .cover::before{width: 1.34rem;}
+.pack3 .booklist li:nth-child(2){;top:-.04rem;left:2.76rem}
+.pack3 .booklist li:nth-child(3){top:1.86rem;right: .04rem}
+.pack3 .booklist li:nth-child(3) .info{margin-left: -3.3rem;text-align: right;}
+/*pack5*/
+.pack5 .booklist li:nth-child(2){margin-top: -.64rem}
+/*btn*/
+.buybtn{width:2.08rem;height:.94rem;line-height: .96rem;font-size: .28rem;background: #ef9256;text-align: center;color: #fff;font-weight: bold;box-shadow: inset 0 -3px 0 #b26939;border-radius: .1rem}
+[v-cloak]{display: none}
+/*======mask======*/
+.mask{position:fixed;top:0;left:0;width: 100%;height: 100%;background:rgba(0,0,0,0.7);display:-webkit-flex;-webkit-align-items:center;-webkit-justify-content:center;z-index: 100;}
+.tiparea{width:6.4rem;background: #fff;border-radius:0.04rem;text-align: center;color: #444;font-size: .28rem;line-height:.4rem;position: relative;}
+.tiparea h3{font-weight: normal;padding:.26rem 0;border-bottom: 1px solid #e3e4e6;font-size: .28rem}
+.tiparea p{padding: 0.64rem 0}
+.btns{display: -webkit-flex;-webkit-flex:1;width: 100%}
+.btns span{height: 1rem;display: block;width: 100%;line-height: 1rem;-webkit-box-sizing:border-box;}
+.btns .certain{background: #3d8dcf;color: #fff;}
+.btns .cancle{color: #444;border-top: 0.01rem solid #e3e4e6;}
+/*over*/
+.top{position: relative;}
+.over{position: absolute;bottom:0;left:0;width:100%;height:1.38rem;background:#fff6de;font-size: .36rem;color:#4a333f;font-weight: bold;text-align: center;line-height: 1.4rem}

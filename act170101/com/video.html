@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>视频直播</title>
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<style>
+	body{height: 100%; overflow: hidden;}
+		#livePlayer{ position: absolute; left: 0 ;top: 0; width: 100%; height: 100%;  overflow: hidden;}
+	</style>
+</head>
+<body>
+	 <div id="livePlayer"><video controls autoplay width="100%" height="100%" src="https://4870.liveplay.myqcloud.com/4870_1c3e8285d3fa11e691eae435c87f075e.m3u8" x-webkit-airplay="true" webkit-playsinline="true"></video></div>
+  <!--<div id="livePlayer"></div>
+   <script type="text/javascript" src="js/zepto.min.js"></script>
+   <script type="text/javascript" src="https://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js"></script>
+   <script type="text/javascript" src="js/v.js"></script>-->
+   <script type="text/javascript">
+ //   	var app=new Vue({
+	// 	el:'#app',
+	// 	data:{
+			
+	// 	},
+	// 	methods: {
+	// 		initLivePlayer: function() {
+	// 			var winw=$("#livePlayer").width();
+	// 			var heih=$("#livePlayer").height();
+	// 			console.log(winw, heih);
+	// 		    var video = new tvp.VideoInfo();
+	// 		    var player = new tvp.Player();
+	// 		    video.setChannelId("104013501");
+	// 		    player.create({
+	// 		        width: winw,
+	// 		        height: heih,
+	// 		        type: 1,
+	// 		        video: video,
+	// 		        modId: "livePlayer",
+	// 		        flashWmode: "direct",
+	// 		        autoplay: false
+	// 		    });
+	// 		}
+	// 	},
+	// 	created:function(){
+	// 		//页面初始化
+	//         this.initLivePlayer();
+
+	// 	},
+	// });
+   		
+   </script>
+</body>
+</html>

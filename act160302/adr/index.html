@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>读书追剧两不误 星光璀璨好莱坞</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/set.js"></script>
+</head>
+<body>
+<div class="box">
+    <img class="banner" src="images/banner.jpg"/>
+    <div class="wrap"> 
+            <div class="headpic">
+                <img src="images/defaultpic.png" id="headpic"/>
+            </div>
+            <div class="unlogin" onclick="javascript:Local.login();">
+                <p class="tip">登录查看已消耗书币 &gt;</p>
+                <p>消耗的书币主要来自活动期间(4.5-4.11)<br>看书累计花掉的书币</p>
+            </div>
+            <div class="logined">
+                <p class="tip">当前已消耗书币：<span class="num" id="cosnum">0</span></p>
+                <p>消耗的书币主要来自活动期间(4.5-4.11)<br>看书累计花掉的书币</p>
+            </div>
+    </div>
+    <div class="package_box">
+       <div class="packagewap">
+          <h4>星光礼包</h4>
+          <div class="package1"><p class="surplus">今日还剩:<span id="num1">0</span>份</p><a href="javascript:Local.login();" class="normal_btn" id="btn50">登录领取</a></div>
+          <div class="package2"><p class="surplus">今日还剩:<span id="num2">0</span>份</p><a href="javascript:Local.login();" class="normal_btn" id="btn500">登录领取</a></div>
+          <div class="package3"><p class="surplus">今日还剩:<span id="num3">0</span>份</p><a href="javascript:Local.login();" class="normal_btn" id="btn5000">登录领取</a></div>
+       </div>
+    </div>
+    <div class="privilege">
+         <h4>好莱坞会员特权</h4>
+         <ul>
+            <li><span></span>院线新片</li>
+            <li><span></span>独家美剧</li>
+            <li><span></span>免广告</li>
+            <li><span></span>蓝光高清&nbsp;</li>
+         </ul>
+         <a href="http://mcgi.v.qq.com/commdatav2?cmd=4&confid=1326&platform=aphone">使用腾讯视频享特权 &gt;</a>
+    </div>
+    <div class="drama">
+        <h4>好莱坞新剧</h4>
+        <div class="bookarea">
+          <div class="bookface"><img src="images/book270.jpg"></div>
+          <div class="bookinfo">
+             <h2>重生之名流巨星</h2>
+             <p>一部剧看透娱乐圈,讲述艺人励志成长史一部剧看透娱乐圈,讲述艺人励志成长史一部剧看透娱乐圈圈人励志成长史</p>
+             <a href="javascript:ABook.gotoDetail(227943);">立即阅读</a>
+          </div>
+        </div>
+    </div>
+    <div class="classic">
+       <h4></h4>
+       <p>读原著来QQ阅读,精彩电视剧尽在腾讯视频</p>
+       <ul class="classic_list">
+          <li><div class="book"><a href="javascript:ABook.gotoDetail(432556);"><img src="images/book1.png"></a><p class="bookname">谋杀似水年华</p><p class="author">蔡骏</p></div></li>
+          <li><div class="book"><a href="javascript:ABook.gotoDetail(464654);"><img src="images/book2.png"></a><p class="bookname">琅琊榜</p><p class="author">海晏</p></div></li>
+          <li><div class="book"><a href="javascript:ABook.gotoDetail(750518);"><img src="images/book3.png"></a><p class="bookname">伪装者</p><p class="author">张勇</p></div></li>
+       </ul>
+    </div>
+</div>
+<div class="rules">
+	<h4>活动规则</h4>
+	<div class="details">
+		<p>活动时间:4月5日-4月11日<br>
+          活动消耗包含章节订阅、全本购买；不含书券消耗数据 <br>
+          1、活动期间内，累计消耗书币（不含书券消耗）达到指定金额即可领取对应礼包；每位用户每个档位礼包限领取一次。<br>
+          2、好莱坞会员体验券为每日限量领取，先到先得。如当天未能领取成功，次日可再次领取。<br>
+          3、好莱坞体验卡可叠加使用，已开通好莱坞会员的用户在原有基础上续加开通时长。<br>
+          4、同一QQ账户，每个档位礼限领取一次，安卓手机和苹果手机不能重复领取礼包。
+        </p>
+	</div>
+</div>
+<div class="mask">
+	<div class="tiparea" id="no_card">
+		<strong>确认领取?</strong>
+		<p>今日好莱坞会员已被抢光, <br>只能领取<span class="other">10书券</span>,是否继续领取?</p>
+		<a href="javascript:void(0);" class="btn tomorrow">明日再领</a>
+        <a href="javascript:void(0);" class="btn recive">领取</a>
+	</div>
+    <div class="tiparea" id="seccess_result">
+		<p><span class="pickname">书券</span>已及时到账,去<span class="where color">我的账户</span>查看<br>好莱坞会员已及时开通,<br>去<span class="color">腾讯视频</span>看精彩大片</p>
+		<a href="http://mcgi.v.qq.com/commdatav2?cmd=4&confid=1326&platform=aphone" class="btn">下载腾讯视频</a>
+        <a href="javascript:void(0);" class="btn_close"></a>
+	</div>
+    <div class="tiparea" id="user_notice">
+         <p>本活动仅支持QQ登录用户参与</p>
+         <a href="javascript:void(0);" class="btn">我知道了</a>
+    </div>
+    <div class="activity_end"><img src="images/over.png"></div>
+</div><!---->
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+</body>
+</html>

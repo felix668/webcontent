@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS reset */
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body,div,p,ul,li,img,i,strong,h1,h3,h4,span,header{margin:0;padding:0;}
+html{ font-size:50px;}
+ul,li{list-style:none}
+img{border:0 none;vertical-align:middle;width:100%;display:block;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#f0f1f2;}
+
+.head{ position:relative; padding-bottom:0.62rem;background:#fafbfc;}
+.head p{ color:#235b7c}
+.topIcon{ position:absolute; left:0; top:0; width:100%;}
+.topTitle{ position:absolute; width:7.04rem; height:1.39rem; top:1.09rem; left:0.07rem;}
+.canGain{ position:absolute; width:100%; top:2.9rem; line-height:1em; font-size:0.34rem; text-align:center; color:#235b7c;}
+.canGain span{font-size:0.56rem;color:#ff0e00;}
+.gainld{ position:absolute; width:100%; top:2.8rem; line-height:0.44rem; font-size:0.34rem; text-align:center;}
+
+.twoAd{background:#fafbfc;}
+.punchBtn,.tipBtn{ display:block;-webkit-box-shadow: inset 0 -3px #BC1812; width:5.12rem;text-align:center; line-height:1em; padding:0.32rem 0; font-size:0.36rem; font-weight:bold; background:#DD3428;-webkit-border-radius:46px; position:absolute; left:50%; margin-left:-2.56rem; bottom:0.38rem; color:#fff;}
+.punchBtn.acted{ background:#ccc;line-height:1em; font-size:0.3rem; padding:0.3rem 0;-webkit-box-shadow: inset 0 -3px #a3a3a3; font-weight:normal;}
+.errorTip{position:absolute; width:100%; bottom:1.56rem; line-height:1em; font-size:0.24rem; text-align:center; color:#0033ff;}
+.errorTip.active{ color:#999}
+.space{ height:10px; background:#f0f1f2; border-top:1px solid #e3e4e5;border-bottom:1px solid #e3e4e5;}
+.twoAd ul{ padding:0.32rem; padding-left:0; height:1.26rem;}
+.twoAd ul li{ width:50%; padding-left:0.32rem;-webkit-box-sizing: border-box; position:relative; float:left}
+.tip{ width:1.04rem; height:0.8rem; background:url(../images/tip.png) no-repeat; background-size:1.04rem 0.64rem; position:absolute; z-index:99; top:0; left:0;}
+
+.ztList {background:#fafbfc; padding-top:0.24rem; }
+.ztFace{ margin:0 0.32rem 0 0.32rem;height:2.18rem;-webkit-border-radius:0.06rem; position:relative;}
+.punchBtn .rp{right:0; top:0;}
+.banner .rp,.head .rp{right:0.08rem; top:0.2rem;}
+.ztFace>img{-webkit-border-radius:0.06rem; width:6.56rem; height:2.18rem;}
+.ztList p{font-size:0.32rem; line-height:1em; padding:0.24rem 0.32rem;}
+
+/*弹窗*/
+.mask{position:fixed; left:0; top:0;width:100%;height:100%;padding:0 0.32rem;background:rgba(0,0,0,.6); z-index:9;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;-webkit-box-sizing:border-box;}
+.tiparea{background:#3f362a;border-radius:0.2rem;text-align: center;position: relative;-webkit-box-flex:1; width:6.56rem; height:5.34rem; padding-top:1.9rem; z-index:99; background:url(../images/tbig.png) no-repeat; background-size:6.56rem 7.24rem; }
+.tipClose{ width:0.8rem; height:0.8rem;background:url(../images/tclose.png) no-repeat; background-size:0.8rem 0.8rem; display:block; z-index:100; position:absolute; right:0; top:-0.8rem;}
+.tipTitle{ width:4.05rem; height:0.69rem; position:absolute; top:0.56rem; left:50%; margin-left:-2.02rem;}
+.rule li{ line-height:0.36rem; margin-bottom:0.28rem; font-size:0.28rem; color:#235b7c; text-align:left; padding:0 0.4rem 0 0.78rem; background:url(../images/lipoint.png) no-repeat 0.42rem 0.1rem ;background-size:0.14rem 0.14rem;}
+.tipBtn{bottom: 0.6rem;}
+
+/* 加载中 */
+.loading{line-height:24px; text-align:center; color:#999;height:44px; width:120px; left:50%; margin-left:-60px; position:absolute; top:50%; text-align:center; margin-top:-22px; font-size:13px;}
+.loads{-webkit-animation:rotate 1s linear infinite; width:24px; height:24px; background:url(../images/loading.png); background-size:24px 24px; display:block; margin:0 auto}
+@-webkit-keyframes rotate{
+	0%{-webkit-transform:rotate(0deg)}
+	100%{-webkit-transform:rotate(360deg);}
+}
+.loadingTop{ display:block; margin:0 auto; text-align:center; padding:16px 0;}
+.loadtc{display:inline-block; line-height:26px; height:24px; position:relative; padding-left:28px; color:#999; font-size:13px;}
+.loadingTop .loads {display:inline-block; position:absolute; left:0; top:0;}
+.loadTop{ line-height:50px; text-align:center; color:#999; font-size:13px;}
+
+/* 红点动画 */
+.rp{ width:22px; height:20px;-webkit-animation:rtip .6s ease both; background:url(../images/xqpl.png) 0 0 no-repeat; -webkit-background-size: auto 38px;display:block;position:absolute; right:-0.24rem; top:-18px; z-index:3;}
+@-webkit-keyframes rtip{
+0%{-webkit-transform:scale(.1);-webkit-transform-origin:0 100%; opacity:0;}
+70%{-webkit-transform:scale(1.2);-webkit-transform-origin:0 100%; opacity:1;}
+85%{-webkit-transform:scale(.9);-webkit-transform-origin:0 100%; opacity:1;}
+100%{-webkit-transform:scale(1);-webkit-transform-origin:0 100%; opacity:1;}
+}
+.rp.rps{-webkit-animation:lrlook 1.6s .6s step-start infinite;background:url(../images/xqpl.png) 0 0 no-repeat;-webkit-background-size: auto 38px;}
+@-webkit-keyframes lrlook{
+	0%{background-position: 0 0}
+	30%{background-position:0 -20px}
+}
+.banner,.head{ width:100%; overflow:hidden; position:relative;}
+.banner .rp,.head .rp{right:0.075rem; top:0.1rem;}
+.jioabiao{ position:absolute; top:-19px; right:0px; z-index:1; width:66px; height:66px; background:rgba(0,0,0,0.2); -webkit-transform:rotate(45deg);transform:rotate(45deg); -webkit-transform-origin:100% 100%; transform-origin:100% 100%;}

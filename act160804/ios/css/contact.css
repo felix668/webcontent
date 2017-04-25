@@ -1,0 +1,86 @@
+.form-editing {
+  padding: 0.32rem;
+}
+.form-editing .one {
+  height: 0.64rem;
+  font-size: 0.26rem;
+  line-height: 0.64rem;
+  color: #999999;
+}
+.form-editing li {
+  overflow: hidden;
+}
+.form-editing li .error {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  font-size: 0.26rem;
+  color: red;
+}
+.form-editing li .necc {
+  float: left;
+  height: 0.84rem;
+  line-height: 0.84rem;
+  font-size: 0.26rem;
+  text-indent: 0.26rem;
+  color: #999999;
+}
+.form-editing input {
+  box-sizing: border-box;
+  float: left;
+  width: 5.76rem;
+  height: 0.84rem;
+  border: 1px solid grey;
+  font-size: 0.26rem;
+  line-height: 0.26rem;
+  text-indent: 0.26rem;
+}
+.form-editing input:focus {
+  border: 1px solid #0a79af;
+}
+.form-editing .submit {
+  width: 5.68rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  border-radius: 0.05rem;
+  margin: auto;
+  margin-top: 0.7rem;
+  font-size: 0.4rem;
+  text-align: center;
+  background: #6699cc;
+  color: white;
+}
+.form-done {
+  padding: 0.32rem;
+}
+.form-done .one {
+  height: 0.64rem;
+  font-size: 0.26rem;
+  line-height: 0.64rem;
+  color: #999999;
+}
+.form-done li {
+  overflow: hidden;
+}
+.form-done li .error {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  font-size: 0.26rem;
+  color: red;
+}
+.form-done .text {
+  height: 0.84rem;
+  font-size: 0.26rem;
+  line-height: 0.84rem;
+}
+.form-done .edit {
+  width: 5.68rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  border-radius: 0.05rem;
+  margin: auto;
+  margin-top: 0.7rem;
+  font-size: 0.4rem;
+  text-align: center;
+  background: #6699cc;
+  color: white;
+}

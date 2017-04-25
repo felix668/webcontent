@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读"/>
+<title>8折书单</title>
+ <script>
+    var winW=document.documentElement.clientWidth;
+    document.documentElement.style.fontSize=(winW/720)*100+"px";
+</script>
+<style type="text/css">
+body,div,p,ul,li{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{border:0 none;vertical-align:top;width: 100%;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:url(images/bodybg.jpg) no-repeat;background-size:cover;font-size: 0.24rem}
+ul,li{list-style:none;}
+.auto-x{position: absolute;top:0;left: 0;right: 0;margin:auto;}
+/*top*/
+.top{position: relative;}
+.msg{width:5.04rem;position: relative;margin:-0.88rem auto 0;}
+.tags{position: relative;z-index: 2;-webkit-animation:fadeInLeft 1s .4s ease both;}
+@-webkit-keyframes fadeInLeft{
+	0%{opacity:0;-webkit-transform:translateX(-20px)}
+	100%{opacity:1;-webkit-transform:translateX(0)}
+}
+.headpic{width: 1.02rem;height: 1.02rem;border-radius: 50%;overflow: hidden;top:2.1rem;-webkit-animation:fadeInLeft 1s .4s ease both;}
+.person{width:1.46rem;position: absolute;right:-0.94rem;bottom:0.32rem;z-index: 3;-webkit-animation:fadeInRight 1s .5s ease both;}
+@-webkit-keyframes fadeInRight{
+	0%{opacity:0;-webkit-transform:translateX(20px)}
+	100%{opacity:1;-webkit-transform:translateX(0)}
+}
+.person img{-webkit-animation:bounce 2s .6s linear infinite alternate;}
+@-webkit-keyframes bounce{
+	0%{-webkit-transform:translateY(0)}
+	50%{-webkit-transform:translateY(4px)}
+	100%{-webkit-transform:translateY(-4px)}
+}
+/*wrap*/
+.wrap{margin:0.28rem 0.28rem 0;}
+.title{width: 5.04rem;margin:0.3rem auto 0.2rem;display: block;}
+.bcover{position:relative;}
+/*.bcover::before{content:"";position: absolute;top:0;left:0;width: 0.64rem;height: 0.64rem;background: url(images/ico.png) no-repeat;background-size: 100% auto}*/
+/*免费*/
+.booklist{display: -webkit-box;-webkit-box-pack:justify;margin-bottom: 0.44rem}
+.booklist li{width: 1.68rem;}
+.booklist li img{height: 2.1rem;}
+.booklist p{line-height: 0.38rem}
+.booklist .bName{font-size: 0.32rem;color: #343434;margin:0.16rem 0 0.05rem;display: -webkit-box; -webkit-line-clamp:2;overflow:hidden; -webkit-box-orient: vertical; word-break:break-all; text-overflow:ellipsis;}
+.booklist .rprice{ color:#939393;display: -webkit-box; -webkit-line-clamp:1;overflow:hidden; -webkit-box-orient: vertical; word-break:break-all; text-overflow:ellipsis;}
+.ftag{color:#d0003b;}
+.oprice{color: #d0003b;}
+/*折扣专区*/
+.bookbox li{display: -webkit-flex;display:flex;display:-webkit-box;display:box;-webkit-box-align:center;box-align:center;-webkit-align-items:center;align-items:center;margin-bottom:0.5rem;}
+.bookbox img{width:1.68rem;height:2.1rem;margin-right:0.2rem;}
+/*右侧书籍信息*/
+.bookinfo{width:4.64rem;font-size: 0.26rem;}
+.bookinfo p{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;line-height: 0.38rem;color:#939393;position: relative;}
+.bookinfo p:nth-child(1){font-size: 0.32rem;padding:0.05rem 0;color: #343434}
+.bookinfo p:nth-child(3){display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;white-space: normal;}
+.bookinfo p.ftag{color:#d0003b;}
+/*未登录*/
+.nologin .title{margin: 0.46rem auto 0.44rem}
+.btn{display:block;margin:0 auto 0.4rem;width: 4.08rem;height: 0.98rem;background: url(images/btns.png) no-repeat;background-size:10rem auto}
+.btn:active{background-position: right 0;}
+/*** 基因**/
+.gene_box{ position:relative; left:50%; top:-0.2rem; z-index:3; margin-left:-2.53rem; width:5.06rem; height:5.02rem;}
+.userface{ position:absolute; left:50%; top:50%; z-index:-1; margin-left:-0.53rem; margin-top:-0.50rem; width:1.1rem; height:1.1rem; border-radius:100%; overflow:hidden;}
+.userface img{border-radius:100%;}
+.zhuan{ position:absolute; left:0; top:0; z-index:2;width:5.06rem; height:5.02rem;-webkit-animation:rorate 100s 0.2s linear infinite;}
+@-webkit-keyframes rorate{
+   0%{ -webkit-transform:rotate(0);}
+   100%{-webkit-transform:rotate(360deg);}
+}
+.classify{position:absolute; z-index:3; border-radius:100%; overflow:hidden; background:url(images/class_bg2.png) no-repeat;background-size:100% 100%;display:-webkit-box; -webkit-box-align:center; -webkit-box-pack:center; font-size:0.21rem; color:#1e3578;  text-align:center; line-height:1.2em;}
+.class1{  left:2.72rem; top:-0.48rem; width:0.94rem; height:0.94rem;-webkit-transform:rotate(-55deg); }
+.class2{ left:3.98rem; top:0.55rem; width:1.24rem; height:1.24rem;}
+.class3{ left:3.14rem; top:1.66rem; width:0.94rem; height:0.94rem;-webkit-transform:rotate(-25deg);}
+.class4{ left:2.4rem; top:3.62rem; width:1.08rem; height:1.08rem;-webkit-transform:rotate(55deg);}
+.class5{ left:-0.45rem; top:2.62rem; width:1.1rem; height:1.1rem;-webkit-transform:rotate(180deg);}
+.class6{ left:0.66rem; top:0.66rem; width:1.2rem; height:1.2rem;-webkit-transform:rotate(235deg);}
+.class1 .class_txt{ -webkit-transform:rotate(55deg);}
+.class3 .class_txt{ -webkit-transform:rotate(25deg);}
+.class4 .class_txt{ -webkit-transform:rotate(-55deg);}
+.class5 .class_txt{ -webkit-transform:rotate(-180deg);}
+.class6 .class_txt{ -webkit-transform:rotate(-235deg);}
+.class1 .class_txt,.class3 .class_txt,.class4 .class_txt{ width:0.5rem;  margin-top:0.05rem; overflow:hidden;font-size:0.21rem; color:#1e3578;  text-align:center; line-height:1.2em;}
+.astronaut{ position:absolute; left:4.52rem; top:2.8rem; z-index:4; width:1.56rem; height:1.96rem;-webkit-animation:fly 6s 0.2s linear infinite;}
+@-webkit-keyframes fly{
+   50%{ -webkit-transform:translate(-10px,5px);}
+   100%{-webkit-transform:translate(0);}
+}
+.times{ font-size:0.26rem; color:#d0003b; text-align:center; margin-bottom:0.5rem;}
+</style>
+</head>
+<body>
+<div class="main">
+	<div class="top">
+		<img src="images/top.png">
+		<img src="images/gene.png" alt="专属你的阅读基因" class="gene auto-x">
+		<div class="gene_box">
+               <img src="images/gene_bg.png">
+               <div class="userface"><img id="userface" src=""></div>
+               <div class="zhuan"><img src="images/zhuan.png"></div>
+               <div class="classify class1"><div class="class_txt"><span class="classify_name">传奇</span></div></div>
+               <div class="classify class2"><div class="class_txt"><span class="classify_name">文学</span></div></div>
+               <div class="classify class3"><div class="class_txt"><span class="classify_name">时代</span></div></div>
+               <div class="classify class4"><div class="class_txt"><span class="classify_name">经典</span></div></div>
+               <div class="classify class5"><div class="class_txt"><span class="classify_name">美文</span></div></div>
+               <div class="classify class6"><div class="class_txt"><span class="classify_name">情感</span></div></div>
+               <div class="astronaut"><img src="images/person.png"></div>
+           </div>		
+	</div>
+	<div class="wrap">	
+		<img src="images/title.png" alt="按照你的阅读基因，为你推荐特惠书单" class="title">
+        <div class="times" id="times">（4月22日-24日）</div>	
+		<ul id="b1" class="booklist">
+	        <script id="b1_t" type="text/html">
+	        {{each books as b i}}
+     			<li>
+	            <div class="bcover" onclick="ABook.gotoDetail({{b.bid}});";>
+	            	<img src="{{b.cover}}">
+	            </div>
+	            <p class="bName">{{b.title}}</p>
+	            <p class="rprice">{{b.author}}</p>
+	            <p class="oprice ftag">限时8折</p>
+	        </li>
+			{{/each}}
+			</script>
+	    </ul>
+		<ul class="booklist" id="b2">
+	        <script id="b2_t" type="text/html">
+	        {{each books as b i}}
+     			<li>
+	            <div class="bcover" onclick="ABook.gotoDetail({{b.bid}});">
+	            	<img src="{{b.cover}}">
+	            </div>
+	            <p class="bName">{{b.title}}</p>
+	            <p class="rprice">{{b.author}}</p>
+	            <p class="oprice ftag">限时8折</p>
+	        </li>
+			{{/each}}
+			</script>
+	    </ul>
+		<ul class="bookbox" id="b3">
+			<script id="b3_t" type="text/html">
+	        {{each books as b i}}
+     			<li>
+	            <div class="bcover" onclick="ABook.gotoDetail({{b.bid}});">
+	            	<img src="{{b.cover}}">
+	            </div>
+				<div class="bookinfo">
+	                <p>{{b.title}}</p>
+	                <p>{{b.author}}</p>
+	                <p>{{b.intro}}</p>
+	                <p class="ftag">限时8折</p>
+	            </div>
+	            </li>
+			{{/each}}
+			</script>
+		</ul>
+	</div>
+</div>
+<div class="nologin" style="display:none">
+	<div class="top">
+		<img src="images/top.png">
+		<img src="images/gene.png" alt="专属你的阅读基因" class="gene auto-x">
+		<div class="msg">
+			<img src="images/notags.png" class="tags">
+			<img src="images/person.png" class="person">
+		</div>		
+	</div>
+	<img src="images/login.png" class="title">
+	<a href="javascript:Local.login(false,'d');" class="btn"></a>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="books.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+</body>
+</html>

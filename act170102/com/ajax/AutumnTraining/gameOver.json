@@ -1,0 +1,10 @@
+{
+    "code":0,
+    "msg":"success",
+    "data":{
+        "life":"4",
+        "lastScore":"221",
+        "bestScore":"350",
+        "rewardState":"0"
+    }
+}

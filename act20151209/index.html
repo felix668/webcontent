@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>天天送好礼</title>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script type="text/javascript" src="js/set.js"></script>
+</head>
+<body>
+<img src="images/banner.jpg" class="banner"/>
+<img src="images/logo.png" class="logo">
+<div class="wrap">
+	<div class="part1">
+		<h2>好礼1：QQ阅读超级礼包</h2>
+		<p class="tip">活动期间首次创建<a href="http://dlied5.myapp.com/myapp/6337/gods/10012086_Moba_1.10.0.89570_android_ver12.apk.protect.apk">全民超神</a>角色即可领取本礼包</p>
+		<img src="images/pack1.jpg"/>
+		<a href="javascript:Index.gift1();" class="btn btn1">领取QQ阅读超级礼包</a>
+		<a href="javascript:Index.select();" class="btn btn2" style="display: none;">选区领取QQ阅读超级礼包</a>
+		<a href="javascript:;" class="btn btn3" style="display: none;">已成功领取</a>
+	</div>
+	<div class="part2">
+		<h2>好礼2：全民超神超级礼包</h2>
+		<p class="tip">首次安装QQ阅读并登录QQ即可领取本礼包</p>
+		<img src="images/pack2.jpg"/>
+		<a href="javascript:Index.gift2();" class="btn btn1">领取全民超神超级礼包</a>
+		<a href="javascript:Index.select1();" class="btn btn2" style="display: none;">选区领取全民超神超级礼包</a>
+		<a href="javascript:;" class="btn btn3" style="display: none;">已成功领取</a>
+	</div>
+	<div class="part3">
+		<h2>好礼3：全民超神超级礼包</h2>
+		<p class="tip">每日可参与1次抽奖，100%中奖</p>
+		<div class="box">
+		    <ul>
+		       <li class="ipadmini">
+		       	<img src="images/prize1.png">
+		       	<p>15天包月体<br>验卡</p>
+		       </li>
+		       <li>
+		       	<img src="images/prize2.png">
+		       	<p>10成长值</p>
+		       </li>
+		       <li>
+		       	<img src="images/prize3.png">
+		       	<p>黑魔法之神<br>灵魂石×1</p>
+		       </li>
+		       <li>
+		       	<img src="images/prize4.png">
+		       	<p>5Q币</p>
+		       </li>
+		       <li>
+		       	<img src="images/prize2.png">
+		       	<p>5成长值</p>
+		       </li>
+		       <li>
+		       	<img src="images/prize6.png">
+		       	<p>全民超神8888<br>金币</p>
+		       </li>
+		    </ul>
+		    <div class="btn_cj" id="zhuanpan"></div>
+     		<div class="cjbtn_txt"></div>
+		</div>
+	</div>
+</div>
+<dl class="rule">
+	<dt>活动规则</dt>
+	<dd>
+		1、活动时间：2016年1月13日 15:00-1月19日 15:00；<br>
+		2、活动期间首次创建全民超神游戏角色即可领取QQ阅读超级礼包；<br>
+		3、首次安装QQ阅读并登录QQ的用户即可领取全民超神超级礼包；<br>
+		4、QQ阅读超级礼包和全民超神超级礼包每位用户限领一次； 每位用户每日可参与抽奖1次，次日不累计；<br>
+		5、获得书券和成长值的用户，及时到账，可在我的账户中查询。书券有效期为：自领取之日起，30天有效；<br>
+		6、获得全民超神道具礼包的用户，道具礼包将直接加入到您的QQ账号，在全民超神游戏登录即可查询。
+	</dd>
+</dl>
+<!-- 弹窗 -->
+<div class="mask">
+	<!-- 领取QQ礼包弹窗 -->
+	<div class="tiparea" id="tiparea1">
+		<strong>需登录QQ号才可领取礼包</strong>
+		<p>此活动只针对QQ 帐号。去设置页面退出当前帐号，切换QQ帐号登录</p>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+	<div class="tiparea" id="tiparea2">
+		<strong class="ageted">已领取过礼包，不要贪心哦</strong>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+	<!-- 选择服务器弹窗 -->
+	<div class="tiparea" id="tiparea3">
+		<strong class="choose">请选择服务器</strong>
+		<div class="serverlist" id="serverlist">
+			<ul id="innerlist">
+				<li>精灵之森【QQ1区】</li>
+				<li>月光林地【QQ2区】</li>
+				<li>祈祷之木【QQ3区】</li>
+				<li>原力水晶【QQ4区】</li>
+				<li>守御阵线【QQ5区】</li>
+				<li>黑石峡谷【QQ6区】</li>
+				<li>氏族的水晶【QQ7区】</li>
+				<li>武道竞技场【QQ8区】</li>
+				<li>遥远沙漠【QQ9区】</li>
+				<li>丛林竞技场【QQ10区】</li>
+				<li>苍发虎王【QQ11区】</li>
+				<li>极光与暗夜【QQ12区】</li>
+				<li>剑魂水晶【QQ13区】</li>
+				<li>剑魔斗技场【QQ14区】</li>
+				<li>黑死神之巢【QQ15区】</li>
+				<li>尘暴世界【QQ16区】</li>
+				<li>魔法乱流【QQ17区】</li>
+				<li>巨斧咆哮【QQ18区】</li>
+				<li>沙漠水晶【QQ19区】</li>
+				<li>冥王之手【QQ20区】</li>
+			</ul>
+		</div>
+		<a id="submit" href="javascript:Index.submit();" class="close">提交</a>
+		<a href="javascript:;" class="hidebtn"></a>
+	</div>
+	<div class="tiparea" id="tiparea4">
+		<strong>没有找到该角色</strong>
+		<p class="again">请您重新选择或下载游戏创建角色</p>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+	<!-- 抽奖弹窗 -->
+	<div class="resultbox">
+		<div class="packbox">
+			<img src="images/prize1.png">
+		</div>
+		<div class="cong">
+			<strong>恭喜你</strong>
+			<strong>获得<span class="red">15天包月体验卡</span></strong>
+		</div>
+		<p>您已成为QQ阅读15天包月会员，10万册包月书在线免费看</p>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+
+	<div class="resultbox">
+		<div class="packbox">
+			<img src="images/prize2.png">
+		</div>
+		<div class="cong">
+			<strong>恭喜你</strong>
+			<strong>获得<span class="red">10成长值</span></strong>
+		</div>
+		<p>已即时到账，可以去我的账户查看</p>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+
+	<div class="resultbox">
+		<div class="packbox">
+			<img src="images/prize3.png">
+		</div>
+		<div class="cong">
+			<strong>恭喜你</strong>
+			<strong>获得<span class="red">黑魔法之神灵魂石×1</span></strong>
+		</div>
+		<p>奖品已发放，可以去全民超神查看</p>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+	<div class="resultbox">
+		<div class="packbox">
+			<img src="images/prize4.png">
+		</div>
+		<div class="cong">
+			<strong>恭喜你</strong>
+			<strong>获得<span class="red">5Q币</span></strong>
+		</div>
+		<p>已即时到账，可以去我的账户查看</p>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+
+	<div class="resultbox">
+		<div class="packbox">
+			<img src="images/prize2.png">
+		</div>
+		<div class="cong">
+			<strong>恭喜你</strong>
+			<strong>获得<span class="red">5成长值</span></strong>
+		</div>
+		<p>已即时到账，可以去我的账户查看</p>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+
+	<div class="resultbox">
+		<div class="packbox">
+			<img src="images/prize6.png">
+		</div>
+		<div class="cong">
+			<strong>恭喜你</strong>
+			<strong>获得<span class="red">全民超神8888金币</span></strong>
+		</div>
+		<p>奖品已发放，可以去全民超神查看</p>
+		<a href="javascript:;" class="close">知道啦</a>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

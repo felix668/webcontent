@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS reset */
+body,div,p,strong{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{border:0 none;vertical-align:middle;width:100%;display: block}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:url(../images/bc.png) repeat;}
+.banner{position:relative;}
+.logo{width:1.12rem;position: absolute;top:0.16rem;right:0.16rem;}
+.wrap{position: relative;width:5.84rem;margin:-0.04rem auto 0.7rem;}
+.wrap p{padding: 0 0.12rem;color: #291b15;font-size:0.26rem;line-height:0.44rem}
+.btn{display:block;width: 2.96rem;height: 0.68rem;margin:0.09rem auto 0;text-align:center;line-height:0.7rem;background: url(../images/btn.png) 0 0 no-repeat;background-size: 2.96rem auto}
+.active{background-position: 0 -0.72rem}
+.btn strong{font-size: 0.32rem;color: #432100;display: block}
+.videobox{width:5.2rem;height: 2.46rem;margin:0 auto 0.16rem;}
+.red{font-weight: bold;font-size: 0.36rem;color: #b92528}

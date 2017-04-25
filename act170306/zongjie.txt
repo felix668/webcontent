@@ -1,0 +1,14 @@
+安卓
+http://solomotest4.3g.qq.com/book_res/event/act170306/adr/index.html?act_f=170407
+ios
+https://ptsolomo.reader.qq.com/book_res/event/act170306/ios/index.html?act_f=170407
+正式链接：
+ios
+https://yuedu.reader.qq.com/event/act170306/ios/index.html?act_f=170407
+安卓
+http://iyuedu.qq.com/event/act170306/adr/index.html?act_f=170407 
+问题：
+游客没有成长值奖励
+游客无法回调分享成功，设置2s后给可抽奖权利
+
+ <iframe frameborder="0" width="100%" height="100%" src="https://v.qq.com/iframe/player.html?vid=c0020kszy9x&tiny=0&auto=0" allowfullscreen></iframe>

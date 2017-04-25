@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>抢红包</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = clientWidth / 7.5 + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+	<div class="loadingbox" v-if="loading">
+		<div class="loadingTop">
+			<span class="loads">
+				<svg width="24" height="23" viewBox="0 0 48 46" xmlns="http://www.w3.org/2000/svg">
+					<path d="M47.43 24C47.43 11.06 36.94.57 24 .57S.57 11.06.57 24c0 9.27 5.434 17.55 13.72 21.328 1.006.458 2.192.015 2.65-.99.46-1.005.015-2.192-.99-2.65C9.076 38.555 4.57 31.688 4.57 24c0-10.73 8.7-19.43 19.43-19.43S43.43 13.27 43.43 24c0 7.66-4.473 14.505-11.307 17.655-1.004.462-1.442 1.65-.98 2.653.463 1.004 1.65 1.442 2.654.98C42.037 41.49 47.43 33.234 47.43 24z" class="cls-default"></path>
+				</svg>
+			</span>
+			正在加载...
+		</div>
+	</div>
+	<div class="wrap">
+		<img src="images/sheme.jpg" class="banner">		
+		<div class="content">		
+			<div class="swiper-container" id="swiper-container">
+				<div class="swiper-pagination"></div>
+		        <div class="swiper-wrapper">
+		        	<div class="swiper-slide"> 
+		         		<img :src="plat=='ios'?'images/t-titleios.png':'images/t-title.png'" class="title">
+		         		<div :class=["tpack",{'flip':flip}] ref="tpack">
+		         			<div class="front">
+								<div class="grab" @click="backflip">
+									<div class="top"></div>
+									<div class="light">
+										<img src="images/light.png">
+									</div>
+								</div>
+								<div class="total">
+									<strong v-for="item in totalNum">{{item}}</strong>
+									<span>份</span>
+								</div>
+							</div>
+							<div class="back">
+								<template v-if="tab==1">
+									<img src="images/clock.png">
+									<h1>整点红包活动</h1>
+									<div class="notice">4月20日 0点准时开始</div>
+									<p class="wait">敬请期待</p>
+								</template>
+								<template v-else>
+									<template v-if="!timepack.isRest && !timepack.getNum">
+										<img src="images/cry.png">
+										<p class="fail">真遗憾</p>
+										<div class="tip">{{curTime}}红包已被抢光，{{nextTime}}再来抢</div>
+										<div class="go" @click="goLink">去参加其他活动</div>
+									</template>
+									<template v-if="timepack.getNum">
+										<p class="succ">恭喜您获得</p>
+										<div class="result"><strong>{{timepack.getNum}}</strong><span>{{quan}}</span></div>	
+										<p class="tip">{{nextTime}}记得准时来抢哦</p>
+										<div class="go" @click="goOther">用{{quan}}去看书</div>
+									</template> 
+								</template>							
+							</div>
+		         		</div>
+						<div class="sharebtn" @click="share">
+							<i></i>
+						</div>					
+		        	</div>
+		            <div class="swiper-slide page1"> 
+		         		<img :src="plat=='ios'?'images/r-titleios.png':'images/r-title.png'"  class="title">
+		         		<div class="userinfo">
+	         				<div class="avor">
+	         					<img :src="readpack.icon">
+	         				</div>
+	         				<div class="readinfo">
+	         					<p>本周阅读时长：<strong class="totaltime">{{readpack.weekReadTime}}</strong>分钟</p>
+	         					<div class="msg" v-if="plat=='ios'">{{readpack.exchangedBilling==0 ? "阅券可购买书籍，1阅券＝1阅点" :"奖励已翻倍，已兑换"+readpack.exchangedBilling+"阅券"}}</div>
+	         					<div class="msg" v-if="plat=='adr'">{{readpack.exchangedBilling==0 ? "书券可购买书籍，1书券＝1书币" :"奖励已翻倍，已兑换"+readpack.exchangedBilling+"券"}}</div>
+	         				</div>
+	         			</div>
+	         			<div class="readpack">
+		         			<p>活动期间，阅读时长兑换{{quan}}双倍奖励</p>
+		         			<div class="rpbox">
+	         					<ul class="rplist" :class="{'martop':readpack.critIndex<4 && readpack.critIndex!==-1}">
+	         						<li v-for="(value,index) in readpack.exchangeDetailList" :class="{'critli':value.isCrit,'canchange':value.type==1,'changed':value.type==0}">
+	         							<div class="stepstyle">
+	         								<strong :class="{'three': value.isCrit && readpack.critNum >=5}">{{value.isCrit ? readpack.critNum*value.billing : value.billing/2}}</strong>
+	         							</div>
+	         							<img src="images/quanlight.png" class="qlight" v-if="value.type==1 && !value.isCrit">
+         								<time>{{value.readTime}}分钟</time>
+         								<i class="steppoint"></i>
+         								<div class="line" v-if="index>0"></div>
+         								<p class="critmsg" v-if="value.isCrit && value.type!=0">可以获{{readpack.critRange}}倍奖励</p>  
+         								<p class="critmsg" v-if="value.isCrit && value.type==0">已获{{readpack.critNum}}倍奖励</p> 
+	         						</li>		         			
+	         					</ul>
+		         			</div>
+		         			<div class="getbtn" v-if="readpack.canExchangeBilling" @click=getRpack>立即领取双倍{{quan}}红包</div> 
+		         			<div class="getbtn grey" v-if="!readpack.canExchangeBilling && !readpack.hasFinishExchange">再阅读{{readpack.needReadTime}}分钟领双倍{{quan}}</div>
+		         			<div v-if="readpack.hasFinishExchange" class="reached">本周领取额度已满</div>
+		         		</div>	         			
+		         	</div>
+		    	</div>
+			</div>
+			<img src="images/link.png" class="link" @click="goLink">
+			<dl class="rule">
+				<dt>－ 活动规则－</dt>
+				<dd>
+					<p>
+						<span>1.</span>
+						活动时间4月23日-5月1日；
+					</p>
+					<p>
+						<span>2.</span>
+						每天有8个场次红包派发，祝大家手气棒棒；
+					</p>		
+					<p>
+						<span>3.</span>
+						每个场次红包数量有限，先到先得，抢完为止；
+					</p>
+					<p>
+						<span>4.</span>
+						红包奖品有效期7天，将在30分钟发放至账户中，可以用于抵扣购书款；
+					</p>
+					<p>
+						<span>5.</span>
+						本活动最终解释权归QQ阅读所有。
+					</p>
+				</dd>
+			</dl>
+			<img src="images/logo.png" class="logo">
+		</div>
+	</div>
+	<template v-if="mask">
+		<div class="mask">
+			<div class="tiparea">
+				<strong>领取成功</strong>
+				<h2>成功兑换<span class="red">{{curexchangedBilling+quan}}</span></h2>
+				<p>已自动发放至账户</p>
+				<div class="getbtn" @click=hidemask>我知道啦</div>
+			</div>
+		</div>
+	</template>
+	<div class="over" :class="{'overmask':over}">
+	   <div class="over-c">
+	        <img src="images/i-over.png" alt="本期活动已结束">
+	        <p class="over-p1">本期活动已结束</p>
+	        <p class="over-p2">敬请期待下一波活动</p>
+	    </div>
+	</div>
+</div>	
+<script src="js/common.js"></script>	
+<script src="js/jsbridge.js"></script>
+<script src="js/local.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="dist/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS reset */
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body,div,p,img,ul,li,h1{margin:0;padding:0;}
+ul,li{list-style:none;}
+h1{font-weight: normal;}
+img{border:0;width: 100%;vertical-align: middle;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#fff;font-size:0.24rem}
+.banner{display:block;}
+.title{width: 6.88rem;height: 1.22rem;background: url(../images/tit.png) no-repeat;background-size: 100% auto;margin:0.2rem auto;}
+.title h1{font-size: 0.26rem;color: #c3050a;line-height: 0.38rem;padding: 0.24rem 0.3rem 0 0.2rem}
+.box{margin:0 0.1rem;padding:0.12rem 0 0.2rem;display:flex;display: -webkit-flex;flex-wrap:wrap;-webkit-flex-wrap:wrap}
+.box a{display:block;margin:0 0.06rem 0.3rem;width:3.38rem;background: #f4f4f4}
+.box a img{width: 2.02rem;position: relative;top: -1px;margin:0 0.32rem 0 0.2rem;}
+.box a span{font-size: 0.28rem;color: #0d0d0d}
+/*========列表页========*/
+.lists li{border-bottom:1px solid #e6e6e6;padding:0.24rem 0.28rem;display: -webkit-box;}
+.lists li:last-child{border: none}
+.lists .bcover{width:1rem;min-height:1.43rem;background: #e5e5e5}
+.lists .bcover img{opacity: 0}
+.lists .info{padding-left:0.26rem;max-width: 80%}
+.lists .info p{font-size:0.26rem;color: #999;line-height:0.44rem;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;}
+.lists .info p:first-child{font-size: 0.32rem;line-height:0.38rem;color: #000;padding-bottom: 0.1rem}

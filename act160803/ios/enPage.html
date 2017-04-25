@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>哈利波特英文版</title>
+<script>
+    var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<body>
+<div class="enlist">
+    <ul class="blist2" id="blist2">
+        <li bid="833330">
+            <img src="images/b1.jpg">
+            <div class="info">
+                <p>Harry Potter and the Philosopher's Stone</p>
+                <p>-哈利·波特与魔法石</p>
+                <strong class="discount">特价</strong>
+                <a href="javascript:ABook.gotoDetail(833330);">下载</a>
+            </div>
+        </li>
+        <li bid="833331">
+            <img src="images/b2.jpg">
+            <div class="info">
+                <p>Harry Potter and the Chamber of Secrets</p>
+                <p>-哈利·波特与密室</p>
+                <a href="javascript:ABook.gotoDetail(833331);">下载</a>
+            </div>
+        </li>
+        <li bid="833332">
+            <img src="images/b3.jpg">
+            <div class="info">
+                <p>Harry Potter and the Prisoner of Azkaban</p>
+                <p>-哈利·波特与阿兹卡班的囚徒</p>
+                <a href="javascript:ABook.gotoDetail(833332);">下载</a>
+            </div>
+        </li>
+        <li bid="833333">
+            <img src="images/b4.jpg">
+            <div class="info">
+                <p>Harry Potter and the Goblet of Fire</p>
+                <p>-哈利·波特与火焰杯</p>
+                <a href="javascript:ABook.gotoDetail(833333);">下载</a>
+            </div>
+        </li>
+        <li bid="833334">
+            <img src="images/b5.jpg">
+            <div class="info">
+                <p>Harry Potter and the Order of the Phoenix</p>
+                <p>-哈利·波特与凤凰社</p>
+                <a href="javascript:ABook.gotoDetail(833334);">下载</a>
+            </div>
+        </li>
+        <li bid="833335">
+            <img src="images/b6.jpg">
+            <div class="info">
+                <p>Harry Potter and the Half-Blood Prince</p>
+                <p>哈利·波特与“混血王子”</p>
+                <a href="javascript:ABook.gotoDetail(833335);">下载</a>
+            </div>
+        </li>
+        <li bid="833336">
+            <img src="images/b7.jpg">
+            <div class="info">
+                <p>Harry Potter and the Deathly Hallows</p>
+                <p>哈利·波特与死亡圣器</p>
+                <a href="javascript:ABook.gotoDetail(833336);">下载</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<p class="interp">活动最终解释权归QQ阅读所有</p>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script>
+    if(localStorage.getLoaded){
+        var arr=localStorage.getLoaded.split(",");
+        isLoaded(arr);
+    }
+    function isLoaded(arr){
+        var blists=document.querySelectorAll("#blist2 li");
+        for(var i=0;i<arr.length;i++){
+            for(var j=0;j<blists.length;j++){
+                if (blists[j].getAttribute("bid")==arr[i]){
+                    blists[j].querySelector("a").innerText="已下载";
+                };
+            }
+        }
+    }
+</script>
+</body>
+</html>

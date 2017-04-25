@@ -1,0 +1,63 @@
+﻿html,body{
+    background-color:#87a95f;
+}
+.top{
+    width:100%;
+    height:9.78rem;
+    background:url("../images/p_1.jpg") no-repeat;
+    background-size:100%;
+}
+.film-notes{
+    position:relative;
+    width:100%;
+    height:5.22rem;
+    background:url("../images/p_2.jpg") no-repeat;
+    background-size:100%;
+}
+.free-read{
+    position:absolute;
+    right:1rem;
+    bottom:.15rem;
+    width:1.62rem;
+    height:.66rem;
+}
+.welfare{
+    position:relative;
+    width:100%;
+    height:5.45rem;
+    background:url("../images/p_3.jpg") no-repeat;
+    background-size:100%;
+}
+.welfare a{
+    position:absolute;
+    bottom:.4rem;
+    width:1.85rem;
+    height:.65rem;
+}
+.red-packet{
+    right:2.8rem;
+}
+.preferential-purchase{
+    right:1rem;
+}
+.hanhan{
+    position:relative;
+    width:100%;
+    height:4.34rem;
+    background:url("../images/p_4.jpg") no-repeat;
+    background-size:100%;
+}
+.start-read{
+    position:absolute;
+    right:4.15rem;
+    bottom:.15rem;
+    width:2rem;
+    height:.5rem;
+}
+.rules{
+    position:relative;
+    width:100%;
+    height:6.9rem;
+    background:url("../images/p_5.jpg") no-repeat;
+    background-size:100%;
+}

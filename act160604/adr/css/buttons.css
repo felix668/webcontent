@@ -1,0 +1,17 @@
+.button-3d {
+  box-shadow: 0 7px 0 #bbbbbb, 0 8px 3px rgba(0, 0, 0, 0.2);
+}
+.button-3d:hover,
+.button-3d:focus {
+  box-shadow: 0 7px 0 #bbbbbb, 0 8px 3px rgba(0, 0, 0, 0.2);
+}
+.button-3d:active,
+.button-3d.active,
+.button-3d.is-active {
+  top: 5px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
+  box-shadow: 0 2px 0 #bbbbbb, 0 3px 3px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>分享</title>
+</head>
+<body>
+<p style="color:#333;font-size:30px;height:100px" id="btn">分享测试 111</p>
+<script type="text/javascript" src="js/debug.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script>
+var shareObj = {
+	url : "",
+	cover :"http://solomotest4.3g.qq.com/book_res/event/act161103/adr/images/cover.jpg",
+	title: " 测试分享标题",
+	desc: "测试分享描述"
+};
+//设置app右上角分享
+Local.setIconForShareing(shareObj.url, shareObj.cover, shareObj.title,shareObj.desc);
+document.querySelector("#btn").ontouchend=function(){
+	//分享当前页面
+	Local.shareTopic(shareObj.url, shareObj.cover, shareObj.title, shareObj.desc);
+}
+</script>
+</body>
+</html>

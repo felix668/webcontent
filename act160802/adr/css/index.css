@@ -1,0 +1,47 @@
+body,div,p,h4,ul,li{margin:0;padding:0;}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+em{ font-style:normal;}
+body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none; }
+.topimg{display: block;width: 100%;}
+.nograde{background: #fff; color: #6e9ac6; display: none;}
+.nograde img{ width: 5.44rem; display: block; margin: 10% auto 1%;}
+.nograde h4{display: -webkit-box;-webkit-box-align:center; -webkit-box-pack:center; width: 100%; height: 1.3rem; font-size: .6rem;}
+.nograde p{padding: 0 .42rem .6rem; font-size: .32rem; line-height: 1.5em; text-align: center;}
+.nograde a{display: -webkit-box;-webkit-box-align:center; -webkit-box-pack:center; width: 6rem; height: 1rem; margin: 0 auto; background: #ffa729;border-radius: 10px; font-size: .32rem; color: #fff;}
+.nograde a:active{background: #ff920d;}
+/******/
+.upgrade{background: #dedede;color: #333;}
+h4.title{ margin: .2rem auto 0; height: .88rem; font-size: .48rem; text-align: center;}
+h4.title div{ display: inline-block;  margin: 0 auto;position:relative; }
+h4.title div:before{ content: ''; position: absolute;left:-.7rem; top:-.15rem; width: .9rem; height:.6rem; background: url(../images/titlebg.png) no-repeat; background-size:3.3rem .6rem;}
+h4.title div:after{ content: ''; position: absolute;right:-.7rem; top:-.15rem; width: .7rem; height:.6rem; background: url(../images/titlebg.png) no-repeat -2.6rem 0; background-size:3.3rem .6rem;}
+.small_tt{text-align: center; font-size: .3rem;}
+/***推荐大神***/
+.swiper_container{padding: .5rem 0 .56rem; height: 3.46rem; width:100%; overflow: hidden; position: relative;-webkit-transform: perspective(1000px);-webkit-transform-style: preserve-3d;}
+.recommend_box{ height: 3.46rem; width:5.82rem; margin: 0 auto; position: relative; z-index: 10;}
+.recommend_box ul{ position: absolute; left: 0; top:0;z-index: 10;height: 3.46rem; width: 400%;}
+.recommend_box li{float: left; display: inline-block; width: 5.82rem; height: 100%; }
+.recommend_box li .item{width: 5.32rem;height: 100%;background: #fff; border-radius: 10px; margin: auto;}
+.ask_box{padding: .3rem .26rem 0 1.2rem;position: relative;z-index: 1; height:1.44rem; font-size: .24rem; line-height: 1.5em; overflow: hidden; }
+.askcontent{min-height: .7rem;display: -webkit-box;-webkit-box-align:center;}
+.face{ width: .7rem; height: .7rem; border-radius: 100%; position: absolute;left: .26rem; top:.3rem; z-index: 1;}
+.face img{width: .7rem; height: .7rem; border-radius: 100%; display: block;}
+.authorname{ border-radius: 100%; position: absolute;left: .32rem; margin-top: .82rem;font-size: .2rem;remcolor: #999; text-align: left;}
+.authorbox{padding: .3rem .26rem 0 1.2rem;position: relative;z-index: 1;}
+.authorcontent{ width: 2.9rem; height:.66rem; background: #ff8c8c; border-radius: .66rem .66rem .66rem 0; position: relative;}
+.authorcontent em{display: block; position: absolute; left: .3rem; top: 50%; width:.2rem; height: .3rem; margin-top: -.15rem; background: url(../images/wifiicon.png) no-repeat; background-size:.2rem auto; overflow:hidden; }
+.authorcontent span{ height: 100%; display: -webkit-box;-webkit-box-align:center; font-size: .24rem; color: #fff; position: absolute;top: 0; right: .3rem; }
+.timenum{ position: absolute; top:.3rem; left: 4.3rem;display: -webkit-box;-webkit-box-align:center; height: .66rem;font-size: .24rem; color: #666;}
+.heardnum{margin-top: .14rem; font-size: .2rem; color: #999; text-align: right;}
+.more_dashen{ width: 5.34rem; height: 4.16rem; margin: .36rem auto .6rem; background: url(../images/dashen.png) no-repeat; background-size:5.34rem auto; position: relative;}
+.more_dashen a{display: -webkit-box;-webkit-box-align:center; -webkit-box-pack:center; width: 2.14rem; height: 2.14rem; border-radius: 100%; background: #ffee00; font-size: .36rem; color: #333; font-weight: bold; position: absolute;top: 1rem; left: 1.66rem;}
+.more_dashen a:active{background: #fad000;}
+.dashenface{height: 2.37rem;  margin: .6rem auto .24rem; width: 2.14rem; background: url(../images/ying.png) no-repeat 3px bottom; background-size:2.14rem auto;}
+.dashenface img{width: 2.14rem; height: 2.14rem; display: block; border-radius: 100%; margin: 0 auto;}
+.dasheninfo{ font-size: .3rem; line-height: 1.4em; margin: 0 .42rem .36rem; text-align: center;}
+.askbtn{ display: block; width: 3.92rem; height: .9rem; margin: 0 auto .5rem; background: #ffee00; border-bottom:.06rem solid #fad000; border-radius: 6px; text-align: center; line-height:.96rem; font-size: .36rem; color: #232323; font-weight: bold;}
+.askbtn:active{background: #fad000;}
+.other{padding: .36rem .42rem; text-align: center;background: #d3d3d3; font-size: .24rem; line-height: 1.5em;}

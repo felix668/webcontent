@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>你看书我买单</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/set.js"></script>
+</head>
+<body>
+<img class="banner" src="images/banner.jpg"/>
+<div class="wrap">
+	<div class="content">
+		<div class="headpic">
+			<img src="images/defaultpic.png" id="headpic"/>
+		</div>
+		<div class="unlogin">
+			<strong onclick="javascript:Local.login();">登录查看已消费书币</strong>
+			<p class="tip">每累计购书消费满2500书币，即可兑换500书券，不限次数</p>
+		</div>
+		<div class="logined">
+			<p class="nickname" id="nick"></p>
+			<p>购书消费的书币：<span class="num" id="cosnum"></span></p>
+			<p class="tip">每累计购书消费满2500书币，即可兑换500书券，不限次数</p>
+		</div>
+		<div class="record">
+			<p>已兑换到的书券：<span class="num" id="excnum">0</span></p>
+			<p class="msg">再累计消费<span id="neednum"></span>书币可兑换500书券</p>
+		</div>
+		<a href="javascript:;" class="btn" id="btn">兑换书券</a>
+	</div>
+</div>
+<img class="bg" src="images/bg.png"/>
+<div class="rules">
+	<div class="tit">
+		<strong>活动规则</strong>
+	</div>
+	<div class="details">
+		<p><i>1</i>活动时间：<span>2015年12月31日—2016年1月31日</span></p>
+		<p><i>2</i>活动期间每累计消费满25元即2500书币，即赠价值5元的书券，书券有效期自发放之日起15天内有效</p>
+		<p><i>3</i>活动期间不限参与次数，累计消费越多，送的越多</p>
+		<p><i>4</i>活动金额仅累计计算单章订购或全本购买消费，打赏、购买道具将不予以累计</p>
+		<p>本活动最终解释权归腾讯文学所有。</p>
+	</div>
+</div>
+<div class="mask">
+	<div class="tiparea">
+		<strong>兑换成功</strong>
+		<p>书券已及时到帐，您可以去“我的账户”查看</p>
+		<a href="javascript:;" class="btn">我知道了</a>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+<html>

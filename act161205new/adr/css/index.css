@@ -1,0 +1,103 @@
+body,div,p,h4,ul,li{margin:0;padding:0;}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+em,i{ font-style:normal;}
+body{font-family:"Microsoft YaHei",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none; font-size: .24rem;}
+.wrap{ background: #eee9e1; width: 100%; overflow: hidden;}
+.topbox{ width: 100%; height: 3.8rem; padding-top: 5.36rem; background: url(../images/topbg.jpg) no-repeat; background-size: 100% 100%; position: relative; z-index: 1;}
+.sixyear{ position: absolute; left: .4rem; top: 0; width: .78rem; height: 1.36rem; background: url(../images/icon.png) no-repeat; background-size: .78rem 1.36rem;-webkit-transform:rotate(-90deg);transform:rotate(-90deg); -webkit-animation:rotats 1s linear forwards;transform-origin:0 0;}
+/*===========消息==========*/
+.newsbox{ width: 6.46rem; height: 1.84rem; background: url(../images/infobg.png) no-repeat; background-size: 100% 100%; margin:0 auto .24rem;}
+.newsbox p{font-size: .32rem; color: #947847; line-height: .48rem;padding: 0 .4rem 0 .5rem;}
+.newsbox .tts{ padding-top: .25rem;  font-size: .28rem; color: #634d44; font-weight: bold;line-height: .5rem;}
+.newsbox span{display: inline-block;vertical-align: middle; }
+.newsbox span.username{ max-width: 35%; overflow: hidden; word-break:break-all; height: .5rem; overflow: hidden;}
+.newsbox .hot{ position: relative; z-index: 1; }
+.newsbox .hot i{ display:block;position:absolute; top:-.06rem; right:-.6rem; width: .52rem; height: .52rem; background: url(../images/hotred.png) no-repeat; background-size: 100% 100%;}
+/*===========B线消息==========*/
+.pageB .newsbox{ width: 6.46rem; height: 1.84rem; background: url(../images/infobgB.png) no-repeat; background-size: 100% 100%; margin:0 auto .24rem;}
+.pageB .newsbox p{font-size: .32rem; color: #b09376; line-height: .48rem;padding: 0 .4rem 0 .5rem;}
+.pageB .newsbox .tts{ padding-top: .25rem;  font-size: .28rem; color: #fec753; font-weight: bold;line-height: .5rem;}
+.pageB .newsbox span{display: inline-block;vertical-align: middle; }
+.pageB .newsbox span.username{ max-width: 35%; overflow: hidden; word-break:break-all; height: .5rem; overflow: hidden;}
+.pageB .newsbox .hot{ position: relative; z-index: 1; }
+.pageB .newsbox .hot i{ display:block;position:absolute; top:-.0rem; right:-.6rem; width: .44rem; height: .44rem; background: url(../images/hotredB.png) no-repeat; background-size: 100% 100%;}
+/*===========用户信息==========*/
+.userinfo{ width: 100%; text-align: center;}
+.facebox{ display: inline-block; height: .8rem; line-height: .82rem; font-size: .4rem; color: #634d44; font-weight: bold; position: relative; z-index: 1; padding-right: .3rem;}
+.facebox .face{ display: inline-block; width: 1.16rem; height: 1.06rem; background: url(../images/facebg.png) no-repeat; background-size: 100% 100%;vertical-align:top;}
+.facebox .face img{ width: .72rem ;height: .72rem; margin:.04rem auto 0; display: block; border-radius: 100%;}
+.facebox .votenum{font-size: .52rem; color: #ee6a57;vertical-align: top;}
+.facebox a{ position: absolute; top:.1rem; right:-1.6rem; display: block; color: #999; font-size: .24rem; font-weight: normal; height: .5rem;}
+.userinfo p{color: #ee6a57; font-size: .28rem; line-height: .68rem;}
+/*===========书籍列表==========*/
+.title{color: #b09376; font-size: .28rem; font-weight: bold; height: .62rem; line-height: .62rem; padding-left: 1rem; background: url(../images/ttbg.png) no-repeat .18rem 0; background-size: .72rem .62rem;  margin-top: .1rem;}
+.booklist{ display: -webkit-flex;margin: 0 .24rem .26rem; flex-wrap:wrap}
+.booklist li{ width: 2.22rem; margin: .5rem auto 0;}
+.booklist li .bookface{ width: 2.22rem; height: 2.48rem; padding-bottom: .52rem; background: url(../images/bookbg.png) no-repeat left bottom; background-size: 2.22rem .54rem; margin: 0 auto;}
+.booklist li .bookface img{ width: 1.86rem; height: 2.48rem; display: block; margin: 0 auto;}
+.booklist li p{ font-size: .24rem; color: #777; line-height: .48rem; height: .48rem; width: 1.86rem; margin: 0 auto; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.booklist li p.bookname{ color: #634d44; font-size: .3rem; margin-top: -.4rem;}
+.booklist li .votebtn{ display: block; width: 1.84rem; height: .82rem; background: url(../images/btnbg.png) no-repeat; background-size: 1.84rem .82rem;margin: 0 auto; }
+.booklist li .votebtn span{display: block; width: 1.6rem; height: .62rem; background: #ee8a74; border-radius:.1rem; margin: 0 auto; text-align: center; line-height: .63rem; overflow: hidden; font-size: .28rem; color: #fff;}
+.booklist li .votebtn:active span{background: #ee6a57;}
+.morebook{ margin:0 auto; font-size: .32rem; color: #705655; display:block; text-align: center; height: 1rem; line-height: 1rem;}
+/*===========关于月票==========*/
+.aboutvote img{ width: 5.94rem; height: .74rem; display: block; margin: 0 auto;}
+.aboutvote h4{ text-align: center; font-size: .32rem; font-weight: bold; color: #b09376; line-height: 1rem;}
+.aboutvote p{ padding-left: .28rem; margin: 0 .46rem; font-size: .28rem; color: #666; line-height: .48rem; position: relative; z-index: 1;}
+.aboutvote p span{display: inline-block; position: absolute; left:0; top:0; width: .28rem; line-height: .48rem;}
+.aboutvote a{display:block;padding-left: .28rem; margin: 0 .46rem .6rem; font-size: .28rem; color: #705655; line-height: .48rem}
+/*===========聊天弹框==========*/
+.maskchat{ position: fixed; left: 0; top: 0; z-index: 10000; background: rgba(0,0,0,.62); width: 100%; height: 100%; overflow: hidden;}
+.chatbox{position:absolute;left:50%; top:1rem; bottom:.4rem; width: 6.6rem; margin-left: -3.3rem; background: #eee9e1 url(../images/tkbotbg.png) no-repeat left bottom; background-size: 100% auto; padding: .76rem 0; border-radius: .2rem;}
+.chatbox:after{content: '';position: absolute; left: -.16rem; top: -0.64rem; z-index: 3; width: 6.86rem; height: 1.6rem; background: url(../images/tktopbg.png) no-repeat; background-size: 6.86rem 1.6rem;}
+.chatbox p{font-size: .28rem; line-height: .28rem; color: #634d44; text-align: center;}
+.closechat{ position: absolute; top: .4rem; right: .42rem; z-index: 9; width: .48rem; height: .48rem; background: url(../images/close.png) no-repeat; background-size: 100% 100%;}
+.chatlist{ position: absolute; top: 1.4rem; left: 0; bottom: .76rem; right: 0;}
+.chatlist #scroller{width: 100%; height: 100%; overflow-y:auto; padding-top: .1rem;}
+.chatlist li{ position: relative; z-index: 1; padding: 0rem .25rem 0rem 1.3rem; padding-bottom: .7rem; min-height: 0.7rem; overflow: hidden;display: none; opacity: 0;}
+.chatlist li.animations{-webkit-animation:opacitys .5s linear forwards;}
+@-webkit-keyframes opacitys{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+.chatlist li .face_name{ position: absolute; left: .1rem; top:.04rem; width: 1.2rem; text-align: center; font-size: .24rem; line-height: .48rem; color: #634d44;}
+.chatlist li .face_name img{ display: block; width: .8rem; height: .8rem; margin: 0 auto;}
+.chatinfo{ padding: .2rem; font-size: .28rem; line-height: .4rem; color: #634d44; background: #fec753; position: relative; z-index: 1; border-radius: .2rem; display: inline-block;}
+.chatlist li:nth-child(2n) .chatinfo,.chatlist li:last-child .chatinfo{ background: #b4ce81;}
+.chatinfo:before{content: ''; position: absolute; left: -8px; top: 0.24rem; border-top: 7px solid transparent;border-right: 14px solid #fec753;border-bottom: 7px solid transparent;}
+.chatlist li:nth-child(2n) .chatinfo:before,.chatlist li:last-child .chatinfo:before{content: ''; position: absolute; left:-8px; top: 0.24rem; border-top: 7px solid transparent;border-right: 14px solid #b4ce81;border-bottom: 7px solid transparent;}
+.chatlist li .imgbox{display: -webkit-flex; flex-wrap:nowrap}
+.chatlist li:nth-child(2n+1) .imgbox,.chatlist li:nth-child(2) .imgbox{ display: none;}
+.chatlist li:nth-child(4) .imgbox img,.chatlist li:nth-child(6) .imgbox img{ display: inline-block; width: 2.16rem;height: 3rem; margin: .2rem auto 0;}
+.chatlist li:nth-child(8) .imgbox img,.chatlist li:nth-child(10) .imgbox img{ display: block; width: 2.72rem; height: 3.54rem; margin-top:.2rem;}
+.chatlist .govote{ display: block; width: 3rem; height: 1rem; background: url(../images/tkbtnbg.png) no-repeat; background-size: 3rem 1rem;margin:.3rem auto 0; display: none;}
+.chatlist .govote span{display: block; width: 3rem; height: .8rem; background: #ee8a74; border-radius:.08rem; margin: 0 auto; text-align: center; line-height: .8rem; overflow: hidden; font-size: .28rem; color: #fff;}
+.chatlist .govote:active span{background: #ee6a57;}
+.h7{height: .8rem; overflow: hidden; font-size: 0; line-height: 0; display: none;}
+/*===========tank===============*/
+.mask{position:fixed;top:0;left:0;width: 100%;height: 100%;background:rgba(0,0,0,0.64);-webkit-align-items:center;-webkit-justify-content:center;z-index: 1000;display:-webkit-flex;}
+.tiparea{width: 5.1rem;background: #eee9e1;border-radius: .1rem;position: relative; padding: .4rem;}
+.tiparea h4{font-size: .36rem; color:#333;text-align: center;padding: .2rem 0 .2rem;line-height:.48rem; font-weight: bold;}
+.tiparea p{ font-size: .28rem; line-height: .48rem; padding-bottom:.4rem;color: #666;}
+.tiparea p.bookname{text-align: center;padding-bottom: .1rem;}
+.tiparea p.online{ padding-bottom: .8rem; text-align: center;}
+.tiparea .closbtn{ display: block; margin: 0 auto; background: #ee8a74; width: 3.9rem; height: .8rem; line-height: .8rem; border-radius: .2rem; text-align: center; font-size: .32rem; color: #fff;}
+.tiparea .closbtn:active{background: #ee6a57;}
+.tiparea .closemk{ position: absolute; top:.2rem; right: .2rem; width: .5rem; height: .5rem;background: url(../images/close.png) no-repeat; background-size: 100% 100%;}
+/*========================*/
+.login{ position: absolute;left: 0; top: 0; z-index: 111; width: 100%; height: 100%; background: #badddc url(../images/loginbg.jpg) no-repeat left bottom; background-size:7.5rem 5.97rem; }
+.login .imgbox{ display: block; width:100%; margin: 27% auto .96rem;}
+.loginbtn{display: block; width: 3.8rem; height: 1.2rem; margin: 0 auto; background: url(../images/loginbtnbg.png) no-repeat; background: 100% 100%;}
+.loginbtn span{display: block; width: 100%; height: 1rem; line-height: 1rem; text-align: center; font-size: .4rem; color: #fff; background: #ee8a74; border-radius: .18rem;}
+.loginbtn:active span{background: #ee6a57;}
+.liu{ position: absolute; left: .6rem; top: 0; width: .78rem; height: 1.36rem; background: url(../images/icon.png) no-repeat; background-size: .78rem 1.36rem;-webkit-transform:rotate(-90deg);transform:rotate(-90deg); -webkit-animation:rotats 1s linear forwards;transform-origin:0 0;}
+@-webkit-keyframes rotats{
+	100%{
+		-webkit-transform:rotate(0deg);transform:rotate(0deg);
+	}
+}
+

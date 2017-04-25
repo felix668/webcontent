@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>测试你的阅读心</title>
+<link href="css/topic.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top">
+	<img class="banner" src="images/i-banner.png"/>
+</div>
+<div class="test">
+	<div class="title"></div>
+	<div class="testWrap">
+		<ul class="itemlist" id="itemlist">
+			<li>
+				<img src="images/func1.png" alt="">
+				<p>随大流不是我的style，<br>书山有路，我选我方向</p>
+				<div class="check"><i></i></div>
+			</li>
+			<li>
+				<img src="images/func2.png" alt="">
+				<p>我要遨游书海，不怕读<br>不完，只怕不够看</p>
+				<div class="check"></div>
+			</li>
+			<li>
+				<img src="images/func3.png" alt="">
+				<p>捧起一本书，不追到结<br>局决不罢休</p>
+				<div class="check"></div>
+			</li>
+			<li>
+				<img src="images/func4.png" alt="">
+				<p>追随喜欢的作者，浪迹<br>天涯海角</p>
+				<div class="check"></div>
+			</li>
+		</ul>
+		<div class="testMsg">
+			<a href="javascript:void(0);" class="btn grey"><span>查看结果，开启抽奖</span></a>
+			<p class="prompt">首次测试开启两次抽奖机会</p>
+		</div>
+		<img  class="pbg" src="images/p_bg.png">
+	</div>
+</div>
+<div class="prizes">
+	<div class="title"></div>
+	<div class="plist">
+		<ul>
+			<li>
+				<img src="images/prize1.png">
+				<p>iPhone 6</p>
+			</li>
+			<li>
+				<img src="images/prize2.png">
+				<p>QQ公仔</p>
+			</li>
+			<li>
+				<img src="images/prize3.png">
+				<p>最高100Q币</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<img src="images/prize4.png">
+				<p>订制钱包</p>
+			</li>
+			<li>
+				<img src="images/prize5.png">
+				<p>最高100书券</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="rules">
+	<div class="tit">
+		<strong>活动规则</strong>
+	</div>
+	<div class="details">
+		<p><i>1</i>活动时间：2015年5月29日 10:00——5月31日 10:00</p>
+		<p><i>2</i>首次完成阅读心测试，即可获得2次抽奖机会；同一台手机或同一个账号，至多获得2次抽奖机会。重复测试不可重复获得抽奖机会。</p>
+		<p><i>3</i>书券奖励即时发放至登录账户；实物奖励及Q币奖励，将会在活动结束后7个工作日内统一发出（请您保持QQ阅读正常使用，以便奖品如期送达）</p>
+		<p><i>4</i>获得实物奖励和Q币的用户，需要填写联系方式以便发放奖励，因未填写或填写有误造成奖励无法发放，将不予以补发。</p>
+		<p><i>5</i>iOS用户暂不参加此活动。</p>
+		<p>本活动最终解释权在法律允许范围内归QQ阅读所有</p>
+	</div>
+</div>
+<script type="text/javascript">
+	function init() {
+
+		Local.reqaObj(server() + "sum?act_b=index.html",
+				function(data) {
+					if (!data.isLogin) {
+						$(".btn span").text("登录查看结果，开启抽奖");
+					}
+				}, [], function() {
+					JSToast.showToast("网络不畅，请稍后再试试");
+				}, 1);
+		
+		var checkin;//url参数记录
+		if(lsg("checkin")){
+			$($("#itemlist>li")[(lsg("checkin")||0)]).addClass("cur");
+			$(".testMsg .btn").removeClass("grey");
+			checkin = lsg("checkin");
+		}
+		$("#itemlist>li").on("tap",function(){
+			$(".testMsg .btn").removeClass("grey");
+			$(this).addClass("cur").siblings().removeClass("cur");
+			checkin=$(this).index();	
+			//$(".testMsg .btn").removeClass("grey");	
+			//$(".testMsg .btn").hide();
+			lss("checkin",checkin);
+		})
+		$(".btn").on("tap", function() {
+			if(checkin>=0){
+				Local.reqaObj(server() + "sum?act_b=checkResult&act_f="+(param("act_f")||30000), function(data) {
+					if(data.isLogin){
+						Local.go("result.html?checkin=" + checkin);
+					}else{
+						Local.login();
+					}
+				}, [], function() {
+					JSToast.showToast("网络不畅，请稍后再试试");
+				}, 1);
+			}
+		})
+	}
+</script>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+
+</body>
+</html>

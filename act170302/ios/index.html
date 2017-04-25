@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>女神季</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+
+</script>
+<link href="../adr/dist/bundle.style.css" rel="stylesheet">
+</head>
+<body data-plat="ios"> 
+<div id="root">
+	<mask-load v-if="loading"></mask-load>
+	<container v-if="!loading && !over" :rank="godnessTopList"></container>
+	<mask-over v-if="over"></mask-over>
+</div>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script src="../adr/js/vue.min.js"></script>
+<script src="../adr/dist/bundle.js"></script>
+</body>
+</html>

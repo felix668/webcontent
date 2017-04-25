@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<title>deviceorientation物理方向信息</title>
+	<style type="text/css">
+		body,div{margin:0; padding:0;}
+		html,body{width:100%; height:100%;}
+		.camera{ position:relative;width:100%; height:100%; perspective:800px; overflow:hidden;}
+		.space{ position:absolute; left:0; top: 0; z-index:2;width:100%;height: 100%; background:url(4.jpg) no-repeat; background-size:100% auto; -webkit-transition:all 1s;}
+		.bgleft{background-position:left 0;}
+		.bgright{background-position:right 0;}
+		p{position: absolute; left: 0 ;top: 30%; width:100%; text-algin:center; font-size:20px;}
+	</style>
+</head>
+<body>
+	<div class="camera">
+		<div class="space" id="space"></div>
+		<p></p>
+	</div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+
+   		var winW=document.documentElement.clientWidth || document.body.clientWidth;
+		$('#space').css({"width":winW*3+'px',"transform":'translate('+(-winW)+'px,0px)'});
+    	var shakeThreshold=1000;//定义一个摇动的阀值
+    	var lastUpdate=0;//记录上一次摇动的时间
+    	var x,y,z,lastX,lastY,lastZ;//定义x、y、z记录三个轴的数据及上一次触发的数据
+    	//监听传感器事件
+    	if (window.DeviceMotionEvent) {
+		    window.addEventListener('devicemotion', deviceMotionHandler, false);
+		} else {
+    		$(body).html("您的设备不支持devicemotion事件");
+    	}
+    	// 运动传感器处理
+		function deviceMotionHandler(eventData) {
+		    var acceleration = eventData.accelerationIncludingGravity; // 获取含重力的加速度
+		    var curTime = new Date().getTime();
+		 
+		    // 100毫秒进行一次位置判断
+		    if ((curTime - lastUpdate) > 100) {		 
+		        var diffTime = curTime - lastUpdate;
+		        lastUpdate = curTime;
+		        x = Math.round(acceleration.x);
+		        y = Math.round(acceleration.y);
+		        z = Math.round(acceleration.z);
+		        $('p').text(x+','+y+','+z);
+		 		if(x>0){//right
+					$('#space').css({"transform":'translate('+(-2*winW)+'px,0px)'});
+		        }else if(x<0){
+		        	$('#space').css({"transform":'translate(0px,0px)'});
+		        }else{
+		        	$('#space').css({"transform":'translate('+(-winW)+'px,0px)'});
+		        }
+		        /*if(z>0&y>0){
+		        	$('#space').css("transform","scale(1.5)");
+		        }else{
+		        	$('#space').css("transform","scale(1)");
+		        }*/
+		    }
+		}
+    </script>
+</script>
+</body>
+</html>

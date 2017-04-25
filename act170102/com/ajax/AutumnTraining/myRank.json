@@ -1,0 +1,24 @@
+{
+    "code":0,
+    "msg":"success",
+    "data":{
+        "rank":[{
+            "time":"0",
+            "nickname":"linming"
+        },{
+            "time":0.3652,
+            "nickname":null
+        },{
+            "time":1.132333,
+            "nickname":"xiaoming12"
+        },{
+            "time":1.2365,
+            "nickname":"xiaoming"
+        },{
+            "time":135,
+            "nickname":null
+        }],
+        "myTime":"0",
+        "myRank":"1"
+    }
+}

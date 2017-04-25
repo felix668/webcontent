@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 71
+gulpfile.js
+node_modules
+package.json
+src
+webpack.config.js
+video.html
+
+END

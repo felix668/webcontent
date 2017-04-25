@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>我的奖品</title>
+<link href="css/prizecss.css" rel="stylesheet" type="text/css"/>
+<script>
+  var fontsize=(document.documentElement.clientWidth)/320*100;
+  document.documentElement.style.fontSize = fontsize + 'px';
+</script>
+</head>
+
+<body>
+<div id="content" class="plr14">
+   <p class="topnotice">中实物奖用户务必<a href="javascript:Local.go('http://iyuedu.qq.com/event/actb2/lottery/contact.html');">填写联系方式</a>，方便小编与您联系。</p>
+   <h4>我的奖品</h4>
+   <script id="content_t" type="text/html">
+   {{if isLogin}}
+   <ul class="myprize">
+	{{each my as m i}}
+      <li><div class="prizebox"><img src="images/bimg{{m.prizeId}}.jpg"><p>{{m.prizeName}}</p></div></li>
+	{{/each}}
+   </ul>
+   {{/if}}
+   {{if !isLogin}}	
+   <div class="nocontent"><a href="javascript:Local.login();">登录查看</a>中奖奖品</div>
+   {{/if}}
+
+   {{if isLogin && my.length==0}}
+		<div class="nocontent">还没有中奖</div>
+   {{/if}}
+
+   <h4>中奖名单</h4>
+   {{if rk}}
+   <ul class="praize_info">
+	{{each rk as p i}}
+      <li><span class="times">1月{{p.hitDay}}日</span><span class="user_name">{{p.nick}}</span>{{p.prizeName}}</li>
+	{{/each}}
+   </ul>
+   {{/if}}
+   {{if !rk}} 	
+   <div class="nocontent">中奖名单尚未出炉</div>
+   {{/if}}
+   </script>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="prize.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

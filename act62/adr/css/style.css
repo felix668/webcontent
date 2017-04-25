@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,p,ul,ol,li,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img{margin:0;padding:0;}
+em,i{ font-style:normal;}
+h1,h2,h3,h4,h5,b{ font-weight:normal;}
+body{font-family: "Microsoft YaHei", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;background:#121616;}
+ul,ol,li{list-style:none}
+img{border:0 none;-webkit-touch-callout:none;}
+html,body{-webkit-user-select:none;user-select:none;}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+a{text-decoration:none;color:#2b61c0;-webkit-touch-callout:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;}
+p{ word-break:break-all;}
+cf:before,.cf:after{content:".";display:block;height:0;visibility:hidden;}
+.cf:after{clear:both;}
+.cf{zoom:1; overflow:hidden;}
+
+.banner{ width:100%; overflow:hidden;}
+.banner img{ width:100%; display:block;}
+.box{ width:100%; position:relative;}
+.box img{ width:100%; display:block;}
+.notic{ position:absolute; left:0; top:0; width:100%; text-align:center; line-height:26px; font-size:15px; color:#f1df99;}
+.notic a{ color:#fff8da;}
+.notic span{ color:#ffae3a;}
+.notic em{ font-size:12px;}
+.btn{ display:-webkit-box; position:absolute; left:50%; top:42%; width:189px; height:65px; -webkit-box-align:center; -webkit-box-pack:center; text-align:center; font-size:19px; color:#fff8da; font-weight:bold; margin-left:-94px;background: url(../images/btn_bg.png) no-repeat; background-size:189px auto; box-shadow:inset 5px 5px 5px rgba(31,32,29,0.8),inset -5px -5px 5px rgba(31,32,29,0.8);}
+.btn.bg1{ background-position:0 0;}
+.btn.bg2{ background-position:0 -70px;}
+.btn.bg3{ background-position:0 -140px;}
+.lq_list{ position:absolute; left:14px; right:14px; bottom:10.5%; overflow:hidden; height:20px;}
+.lq_list ul{ display:-webkit-box;-webkit-animation:scroll 160s linear infinite;}
+.lq_list li{font-size:12px; color:#9b9175; line-height:20px; padding:0 10px;}
+@-webkit-keyframes scroll{
+	0%{-webkit-transform:translateX(0px)}
+	100%{-webkit-transform:translateX(-5900px)}
+}
+.tq{ text-align:center; color:#9d9477; font-size:14px; line-height:20px;}
+.tq span{ display:block; font-size:11px;}
+.tq1{position:absolute; left:3%; top:25%; width:47%;}
+.tq2{position:absolute; left:50%; top:25%; width:47%;}
+.tq3{position:absolute; left:3%; top:73%; width:47%;}
+.tq4{position:absolute; left:50%; top:73%; width:47%;}
+.more{ position:absolute; left:0; right:0; bottom:7%; color:#a1a09f; font-size:11px; text-align:center;}
+.trailer{ position:absolute; left:14px; right:14px; top:13%; line-height:24px; font-size:14px; color:#8b846f;}
+.trailer span{ color:#ffae3a;}
+.rule_list{ position:absolute; left:14px; right:14px; top:0%;}
+.rule_list li{ display:-webkit-box;}
+.rule_list li span{ display:block; width:12px; height:12px; line-height:13px; text-align:center; border-radius:6px; background:#8b846f; font-size:12px; color:#101111; margin-right:5px; margin-top:6px; overflow:
+hidden;}
+.rule_list li p{ -webkit-box-flex:1; color:#8b846f; font-size:12px; line-height:24px;}
+.mask{position:fixed; left:0; top:0;width:100%;height:100%;padding:0 50px;background:rgba(0,0,0,.2); z-index:9;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;-webkit-box-sizing:border-box;}
+.tiparea{background:#ffeda4;border-radius:10px;padding:20px 20px 25px;color: #b67828;position: relative;/*width: 100%;-webkit-box-sizing:border-box;margin: 0 auto*/-webkit-box-flex:1;}
+.tiparea strong{font-size: 16px;line-height: 26px;display: block; text-align:center;}
+.tiparea p{line-height: 20px; font-size:12px;text-align:center;}
+.tiparea .knowbtn{margin: 10px auto 0;display: block;height: 42px; width:145px;background:#b90f01;border-radius:2px;}
+.tiparea .knowbtn span{display: block;width: 100%;height: 28px;/*line-height:28px;*/background:#f94f04;text-align: center;padding-top:12px;font-size: 15px;color: #ffeda4;border-radius:2px;}
+.tiparea .closebtn{position: absolute;width:20px;height: 20px;background:#b67828 url(../images/m-close.png) 5px 5px no-repeat;background-size:11px auto;border-radius: 16px;top: 8px;right: 8px}
+
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script src="js/local.js"></script>
+<script src="js/common.js"></script>
+
+
+<script>
+	function serverwx() {
+		return "http://adr.reader.qq.com/5_6";
+	}
+	if (!(param("code")||ckg("code"))) {
+		alert(1);
+		window.location.href = "http://wx.book.qq.com/xlogin?redirect_uri="
+				+ encodeURIComponent(front() + "adr/wxoauth.html")
+				+ "&scope=snsapi_base&state="
+				+ (param("state") ? param("state") : "");
+	} else {
+		// lss("code", param("code"));
+		cks("code", param("code"), 3);
+		alert(2+"="+ckg("code")+"="+param("code"));
+		Local.reqaObjDirectByWeb(serverwx() + "/webpage/myz/wxoauth?code=" + (param("code")||ckg("code")),
+		function(obj) {
+			alert((param("code")||ckg("code"))+JSON.stringify(obj));
+			if (obj.code == 0) {
+				window.location.href = front()
+						+ "adr/index.html?tf=1&id=" + param("state")
+						+ "&u=" + encodeURIComponent(obj.u);
+			} else if (obj.code == 1) {
+				window.location.href = "http://wx.book.qq.com/xlogin?redirect_uri="
+						+ encodeURIComponent(front()
+								+ "adr/wxoauth.html")
+						+ "&scope=snsapi_userinfo&state="
+						+ param("state");
+			}
+		});
+	}
+</script>
+</html>

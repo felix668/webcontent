@@ -1,0 +1,59 @@
+body,div,p,h4,ul,li{margin:0;padding:0;}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+em,i,span{ font-style:normal; font-weight: normal;}
+body{font-family:"Microsoft YaHei",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none; font-size: .24rem; line-height: .24rem; color: #8e826e; background:#1c1622;}
+
+/*===========main==========*/
+.banner{ width: 100%; overflow: hidden;}
+.banner img{ display: block; width: 100%;}
+.mainbox{ width: 100%; height: 10.24rem; padding-top: .2rem; margin: 0 auto; position: relative; z-index: 1; background: url(../images/personbg.jpg) no-repeat; background-size: 100% 10.44rem;}
+.totalnum{margin:0 auto; text-align: center; font-size: 0;}
+.totalnum li{  display: inline-block; width: .53rem; height: .74rem; overflow: hidden; font-size: 0; line-height: 0; margin:0 .07rem 0 0;  background: url(../images/num.png) no-repeat; background-size: .54rem auto;transition: all 1s;}
+.totalnum li:last-child{ margin-right: 0; }
+.totalnum .n0{ background-position: 0 0; }
+.totalnum .n1{ background-position: 0 -.74rem; }
+.totalnum .n2{ background-position: 0 -1.48rem; }
+.totalnum .n3{ background-position: 0 -2.22rem; }
+.totalnum .n4{ background-position: 0 -2.96rem; }
+.totalnum .n5{ background-position: 0 -3.7rem; }
+.totalnum .n6{ background-position: 0 -4.44rem; }
+.totalnum .n7{ background-position: 0 -5.18rem; }
+.totalnum .n8{ background-position: 0 -5.92rem; }
+.totalnum .n9{ background-position: 0 -6.66rem; }
+.totalnum  li.active{-webkit-animation:numscroll 2s .2s;}
+@-webkit-keyframes numscroll{
+	0%{background-position: 0 7.4rem}
+}
+.probox{ text-align: center; color: #9a643c; font-weight: 700; margin-bottom: .8rem;}
+.probox li{height: .6rem; line-height: .6rem;margin: 0 auto .32rem;}
+.probox li.pro0{ height: .7rem; line-height: .7rem; margin: 0 auto .32rem; font-size: .3rem;  }
+.pro1{ font-size: .28rem;}
+.pro2{ font-size: .24rem;}
+.pro3{ font-size: .22rem;}
+.pro4{ font-size: .20rem;}
+.peotry{text-align: center; line-height: .6rem; padding-bottom: 2.6rem; background: url(../images/copyright.jpg) no-repeat center bottom; background-size: 100% auto;}
+.peotry h4{ font-size: .32rem; font-weight: 700; }
+.peotry p.author{ opacity: .5; }
+.peotry img{ display: block; width: 6.7rem; margin:.6rem auto; }
+.sharbtn{ position: fixed; left: 0; bottom: 0; z-index: 100; width: 100%; height: .9rem; padding: 0.2rem 0; background: rgba(14,11,17,.5) }
+.sharbtn a{ display: block; width: 5.54rem; height: .9rem; line-height: .9rem; background: url(../images/btnbg.png) no-repeat; background-size: 100% 100%; margin:0 auto; text-align: center; font-size: .32rem; color: #fff; font-weight: 700; position: relative; z-index: 1;}
+.sharbtn a img{width: .2rem; margin-left: .3rem; display: inline-block;}
+.endtimer{ font-size: .24rem; line-height: .8rem; margin-bottom: 1.3rem; color: #cb995e; text-align: center; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

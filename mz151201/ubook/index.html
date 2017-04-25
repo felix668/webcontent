@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>书券！会员！免费特权！</title>
+<link href="css/stylecss.css" rel="stylesheet" type="text/css"/>
+<script>
+  var fontsize=(document.documentElement.clientWidth)/320*100;
+  document.documentElement.style.fontSize = fontsize + 'px';
+</script>
+</head>
+
+<body>
+<div class="banner"><img src="images/banner.png"></div>
+<div class="title_box">抽奖人人有惊喜</div>
+<div class="zhuanbox">
+  <img src="images/zhuanpan.png">
+  <div class="btn_cj" id="zhuanpan"></div><!----><!--已领过 <div class="btn_cj btn_ylg"></div> -->
+  <div class="cjbtn_txt">抽奖</div>
+</div>
+<div class="praize_info">
+   <h4>他们都中奖啦！</h4>
+   <ul id="winners">
+      <!-- function winners()
+      	Index.shuffle(Index.winners);
+      	for(var i=0;i<Index.winners.length&&i<3;i++){
+      		<li>用户<span>${Index.winners[i].uin}</span>获得${Index.winners[i].prize}</li>
+      	}
+       -->
+   </ul>
+</div>
+<div class="title_box">限免好书马上领</div>
+<ul class="booklist" id="bookList">
+  <!-- function bookList(data)
+  	if(!nl(data.bookList)){
+  		var bookList=data.bookList;
+  		for(var i=0;i<bookList.length;i++){
+  			<li><a href="javascript:Index.goToIntro(${bookList[i].id})"><img src="${bookList[i].cover}"><p>${bookList[i].title}</p></a></li>
+  		}
+  	}
+   -->
+  
+</ul>
+<div class="rulebox">
+  <h4>活动规则</h4>
+  <ul>
+     <li><span>1</span>活动时间：2015年12月24日—2015年12月31日</li>
+     <li><span>2</span>活动期间用户登录活动页即可进行抽奖。</li>
+     <li><span>3</span>活动期间单个设备或用户仅可抽奖一次。</li>
+     <li><span>4</span>活动期间用户可通过魅族浏览器小说频道免费阅读以上小说作品。</li>
+  </ul>
+  <p>本次活动法律范围内最终解释权归阅文集团所有。</p>
+</div>
+<div class="show_mask" style="display:none">
+  <div class="tankuang_box">
+    <img src="">
+    <h4></h4>
+    <p></p>
+    <a href="javascript:void(0);" class="btn_zdl">知道啦</a>
+  </div>
+</div>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="indexx.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+
+</body>
+</html>

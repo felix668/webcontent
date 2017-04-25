@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>排行</title>
+<link href="css/rank.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src='js/set.js'></script>
+</head>
+<body>
+<div class="rankhead"> 
+  <!--未登录样式--> 
+  <span class="rankuser" id="nologin" style="display:none" onclick="javascript:Local.login();"><img src="images/dface.png">登录查看排行</span> 
+  <!--已登录样式--> 
+  <span class="rankuser"  id="logined"><img id="myAvor" src='images/face.jpg'>当前排名：<b id="myRank">-</b></span> </div>
+<div class="ranksAll">
+  <div class="rankList">
+    <p>Top10<span>铃铛值</span></p>
+    <ul id="ranks">
+      
+    </ul>
+  </div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script> 
+<script type="text/javascript" src="rank.js"></script> 
+<script type="text/javascript" src="js/jsbridge.js"></script> 
+<script type="text/javascript" src="js/local.js"></script> 
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>下载有礼</title>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <img class="banner" src="images/banner.png"/>
+    <img class="vip" src="images/svip.png"/>
+    <img class="vip" src="images/qqvip.png"/>
+    <!--touch状态样式为active，已成功领取状态样式为btn2-->
+    <a id="btn1" href="javascript:void(0);" onclick="Index.recieve();" class="btn1"></a>
+    <a id="btn2" href="javascript:void(0);" class="btn2" style="display:none"></a>
+    <div class="rule">
+        <div class="info">
+            <h3>活动说明：</h3>
+            <p class="time"><i>1</i>活动时间：<b>2015年10月23日-31日</b></p>
+            <p><i>2</i>通过QQ会员公众号活动首次下载QQ阅读客户端，超级会员可领取30天包月特权卡，QQ会员可领取15天包月体验卡。</p>
+            <p><i>3</i>领取成功后，可在【我的账户】中查看并激活包月体验卡。包月体验卡月底清零，请及时使用。</p>
+            <p><i>4</i>包月书籍查看路径：发现->包月专区。</p>
+        </div>
+        <p class="law">本活动最终解释权归腾讯文学所有</p>
+    </div>
+    <!-- 显示弹窗加 show -->
+    <div id="tip" class="mask" >
+        <div id="tipContent" class="tiparea">
+        <!--  function tipContent(data)
+        if(data.ret==1){
+        	<strong>领取体验卡失败</strong>
+            <p>微信帐号不能参与活动，退出微信帐号，切换QQ登录，即可参与活动</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();" class="kbtn">知道啦</a>
+        }else if(data.ret==2){
+         	<strong>领取体验卡失败</strong>
+            <p>您的手机设备号异常，不能领取包月体验卡，感谢您对QQ阅读的支持。</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();" class="kbtn">知道啦</a>
+        }else if(data.ret==3){
+         	<strong>领取体验卡失败</strong>
+            <p>您未通过QQ会员公众号下载QQ阅读，不能参与活动，感谢您对QQ阅读的支持。</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();" class="kbtn">知道啦</a>
+        }else if(data.ret==4){
+         	<strong>领取体验卡失败</strong>
+            <p>您不是QQ会员，不能领取包月体验卡，感谢您对QQ阅读的支持。</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();" class="kbtn">知道啦</a>
+        }else if(data.ret==5||data.ret==6){
+         	<strong>领取体验卡失败</strong>
+            <p>您不是首次安装QQ阅读，不能领取包月体验卡，感谢您对QQ阅读的支持。</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();" class="kbtn">知道啦</a>
+        }else if(data.ret==7){
+         	<strong>已领取过体验卡</strong>
+            <p>每台手机只能领取一次哦，体验卡已发至其他QQ号的账户中。
+</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();Index.disableRecieveBtn();" class="kbtn">知道啦</a>
+        }else if(data.ret==8){
+         	<strong>已领取过体验卡</strong>
+            <p>每人只有一次机会哦，体验卡已发到你的账户</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();Index.disableRecieveBtn();" class="kbtn">知道啦</a>
+        }else if(data.ret==0){
+         	<strong>成功领取${data.vipCardCount}天体验卡</strong>
+            <p>您可以去我的账户查看。</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();" class="kbtn">知道啦</a>
+        }else{
+        	<strong>领取体验卡失败</strong>
+            <p>网络链接失败，请稍候再试</p>
+            <a href="javascript:void(0)" onclick="Index.closeTip();" class="kbtn">知道啦</a>
+        }
+ 
+        -->
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="js/zepto-1.1.3.min.js?r=1047"></script>
+<script type="text/javascript" src="js/scroll.js?r=1047"></script>
+<script type="text/javascript" src="index.js?r=1047"></script>
+<script type="text/javascript" src="indexx.js?r=1047"></script>
+<script type="text/javascript" src="js/jsbridge.js?r=1047"></script>
+<script type="text/javascript" src="js/local.js?r=1047"></script>
+<script type="text/javascript" src="js/zbook.js?r=1047"></script>
+<script type="text/javascript" src="js/cfoot.js?r=1047"></script>
+</body>
+</html>

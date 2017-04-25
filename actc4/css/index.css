@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS reset */
+body,div,p,ul,li{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,li{list-style:none}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body{font-family:"Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#fff3d7;font-size:14px}
+.banner img{width:100%;display:block;}
+.title{position: absolute;top:0;left: 0;width: 100%;padding-top: 0.52rem;text-align: center;font-size: 18px;line-height:0.54rem;color: #fff;}
+.title p{color: #fff8e8;line-height: 0.42rem;font-size:12px}
+.title a{color: #ffe011}
+.namelist{color: #333;margin-top: -0.45rem}
+.namelist li{height: 0.78rem;padding: 0.16rem 0 0 0.32rem;margin:0 0.52rem;border-bottom: 1px solid #f4e5c3;display: -webkit-box;}
+.order{width: 1.6rem;line-height: 0.34rem}
+.order span,.other p span{font-size:15px}
+.detail{width: 3.84rem;font-size: 12px}
+.pack img{width:0.42rem;}
+.red{color: #ff2438;}
+.orange{color: #ff8d27;}
+.detail p:first-child{font-size:14px;line-height: 0.32rem;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;}
+.detail p:last-child{color: #716c60}
+.other{margin:0 0.52rem;}
+.other p{padding: 0.16rem 0 0 0.32rem;line-height: 0.5rem;}
+.otherlist li{padding: 0 0.09rem;line-height: 0.64rem;border-bottom: 1px solid #f4e5c3;display: -webkit-box}
+.otherlist span{display:block;width:1.56rem;margin:0 0.23rem;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;}

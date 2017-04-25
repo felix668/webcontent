@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>阅历</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/set.js"></script>
+</head>
+<body>
+<div class="w_screen">
+<!--加载页-->
+<div class="load hide">
+   <div class="loads"><img src="images/loading.png"><div class="percent"><span>0</span>%</div></div>
+   <div class="time_machine"><img src="images/loading_img.png"></div>
+   <div class="load_img"></div>
+</div>
+<!--登录页-->
+<div class="loginDiv hide">
+  <div class="loads"><img src="images/loading.png"></div>
+   <div class="time_machine"><img src="images/loading_img.png"></div>
+   <div class="loginbox"><a href="javascript:Local.login();" class="btnbox"><span></span></a></div>
+</div>
+<!--活跃用户-->
+<div class="active_user hide">
+   <!-- 分屏动画 -->
+   <div class="box">   
+        <!--第一页-->
+        <div class="page page1">
+           <div class="cloud"><img src="images/cloudimg.png"></div>
+           <div class="people"><img src="images/people.png"></div>
+           <!--活跃用户-->
+           <div class="txt_box">
+              <div class="username"><span id="username">小星星</span><img src="images/page1_txt1.png"><div class="bird"></div></div>
+              <div class="ranking"><div class="l_img"><img src="images/page1_txt2.png"></div><div class="read_booknum" id="ranking_num"></div><div class="r_img"><img src="images/page1_txt3.png"></div></div>
+              <div class="first_time">
+                  <span id="first_year">2015</span><div class="year"><img src="images/page1_txt4.png"></div>
+                  <span id="firsr_mon">1</span><div class="monthly"><img src="images/page1_txt5.png"></div>
+                  <span id="first_day">1</span><div class="day"><img src="images/page1_txt6.png"></div>
+                  <div class="mon_calendar"></div>
+              </div>
+              <div class="first_book">《白夜行》</div>  
+           </div>
+        </div>
+        <!--第二页-->
+        <div class="page page2">
+            <div class="lamp"><img src="images/lamp.png"></div>
+            <div class="sofa"><img src="images/page2_img1.png"></div>
+            <div class="books"><img src="images/books.png"><div class="bookanmall"></div></div>
+            <!--活跃用户-->
+            <div class="txt_box">
+                <div class="txt1"><img src="images/page2_txt1.png"></div>
+                <div class="txt2"><div class="l_img"><img src="images/startimg.png"></div><div class="read_booknum" id="read_num"></div><div class="r_img"><img src="images/page2_txt2.png"></div></div>
+                <div class="txt3"><div class="l_img"><img src="images/page2_txt3.png"></div><span class="sq_metre">123平米</span><div class="r_img"><img src="images/page2_txt4.png" class="img2"></div><div class="house"></div></div>
+                <div class="txt4"><div class="l_img"><img src="images/page2_txt5.png"></div><span class="yuan">XX</span><div class="r_img"><img src="images/page2_txt6.png"></div></div>
+            </div>
+        </div>
+        <!--第三页-->
+        <div class="page page3">
+           <div class="affinity_img"><img src="images/affinity.png"><div class="eye"><img src="images/eye.png"></div><div class="eye"><img src="images/eye.png"></div></div>
+           <!--活跃用户-->
+            <div class="txt_box">
+               <div class="kechien_num"><div class="l_img"><img src="images/page3_txt1.png"></div><div class="read_booknum" id="kechien_num"></div><div class="r_img"><img src="images/page3_txt2.png"></div></div>
+               <div class="three_kechien"><img src="images/page3_txt3.png"></div>
+               <div class="author_say"><span class="author_name">叶非夜</span><span class="author_txt">对我说:“QQ阅读是你我相遇的桥梁，愿QQ阅读让你的生命更精彩”</span></div>
+               <div class="glasses"></div>
+            </div>
+        </div>
+        <!--第四页-->
+        <div class="page page4">
+            <div class="ip_txt"><img src="images/page4_txt1.png"></div>
+            <div class="ip_img"><img src="images/ipImg.png"></div>
+            <!--活跃用户-->
+            <div class="txt_box">
+               <div class="friend"><div class="l_img"><img src="images/pge4_txt2.png"></div><div class="read_booknum" id="friend_num"></div><div class="r_img"><img src="images/pge4_txt3.png"></div></div>
+               <div class="three_kechien"><img src="images/pge4_txt4.png"></div>
+               <div class="read_bookname">《盗墓笔记》</div>
+               <div class="population">人数已经快超过<span class="address">新加坡</span>的人口了</div>
+               <div class="book_icon"></div>
+            </div>
+        </div>
+        <!--第五页-->
+        <div class="page page5">
+           <div class="clock"><img src="images/clock.png"><div class="cecond_hand"><img src="images/second.png"></div></div>
+           <!--活跃用户-->
+            <div class="txt_box">
+               <div class="three_kechien"><img src="images/page5_txt1.png"></div>
+               <div class="read_time" id="read_time"><img src="images/time1.png"></div>
+            </div>
+        </div>
+        <!--第六页-->
+        <div class="page page6">
+           <div class="gene_box">
+               <img src="images/gene_bg.png">
+               <div class="userface"><img id="userface" src="images/ueseface.jpg"></div>
+               <div class="zhuan"><img src="images/zhuan.png"></div>
+               <div class="classify class1"><div class="class_txt"><span class="classify_name">传奇</span><br><span class="classify_percentage"></span></div></div>
+               <div class="classify class2"><div class="class_txt"><span class="classify_name">文学</span><br><span class="classify_percentage"></span></div></div>
+               <div class="classify class3"><div class="class_txt"><span class="classify_name">时代</span><br><span class="classify_percentage"></span></div></div>
+               <div class="classify class4"><div class="class_txt"><span class="classify_name">经典</span><br><span class="classify_percentage"></span></div></div>
+               <div class="classify class5"><div class="class_txt"><span class="classify_name">美文</span><br><span class="classify_percentage"></span></div></div>
+               <div class="classify class6"><div class="class_txt"><span class="classify_name">情感</span><br><span class="classify_percentage"></span></div></div>
+               <div class="astronaut"><img src="images/astronaut.png"></div>
+           </div>
+           <!--活跃用户-->
+            <div class="txt_box">
+               <div class="share_box"><a href="javascript:Index.toShare();" class="btnbox"><span></span></a></div><!--分享-->
+               <div class="awaken"><a href="javascript:Index.toReader();" class="btnbox"><span></span></a></div><!--分享后-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--陈旧用户或新用户-->
+<div class="new_user hide">
+   <!-- 分屏动画 -->
+   <div class="box">   
+        <!--第一页-->
+        <div class="page page1">
+           <div class="cloud"><img src="images/cloudimg.png"></div>
+           <div class="people"><img src="images/people.png"></div>
+           <!--陈旧用户或新用户-->
+           <div class="new_box">
+             <img src="images/new1.png">
+           </div>
+        </div>
+        <!--第二页-->
+        <div class="page page4">
+            <div class="ip_txt"><img src="images/page4_txt1.png"></div>
+            <div class="ip_img"><img src="images/ipImg.png"></div>
+            <!--陈旧用户或新用户-->
+            <div class="new_box"><img src="images/new4.png"></div>
+        </div>
+        <!--第三页-->
+        <div class="page page5">
+           <div class="clock"><img src="images/clock.png"><div class="cecond_hand"><img src="images/second.png"></div></div>
+            <!--陈旧用户或新用户-->
+            <div class="new_box"><img src="images/new5.png"></div>
+        </div>
+        <!--第四页-->
+        <div class="page page2">
+            <div class="lamp"><img src="images/lamp.png"></div>
+            <div class="sofa"><img src="images/page2_img1.png"></div>
+            <div class="books"><img src="images/books.png"><div class="bookanmall"><img src="images/bookanimatin.gif"></div></div>
+            <!--陈旧用户或新用户-->
+            <div class="new_box">
+              <img src="images/new2.png">
+            </div>
+        </div>
+        <!--第五页-->
+        <div class="page page3">
+           <div class="affinity_img"><img src="images/affinity.png"><div class="eye"><img src="images/eye.png"></div><div class="eye"><img src="images/eye.png"></div></div>
+            <!--陈旧用户或新用户-->
+            <div class="new_box">
+               <img src="images/new3.png">
+            </div>
+        </div>
+        <!--第六页-->
+        <div class="page page6">
+           <div class="new6"><img src="images/new6_img.png"></div>
+            <!--陈旧用户或新用户-->
+            <div class="new_box">
+               <div class="share_box"><a href="javascript:Index.toShare();" class="btnbox"><span></span></a></div><!--分享-->
+               <div class="awaken"><a href="javascript:Index.toReader();" class="btnbox"><span></span></a></div><!--分享后-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="arrow_up"><img src="images/icon_up.png"></div>
+<div class="bgmusic hide" id="bgmusic"><div class="pause"></div></div>
+<audio id="audio" src="begin.mp3" loop preload="preload"  style="height: 0;"></audio>
+</div>
+<div class="h_screen"><div class="islandscape_img"><img src="images/hping.png"></div></div>
+
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>	
+<script type="text/javascript"
+	src="http://pub.idqqimg.com/qqmobile/qqapi.js?_bid=152"></script>
+<script type="text/javascript" src="index.js"></script>
+<script src="js/wxshare.js"></script>
+<script src="js/appinstalledcheck.js"></script>
+<script src="js/local.js"></script>
+<script src="js/iosscheme.js"></script>
+<script src="js/zbook.js"></script>
+<script src="js/cfoot.js"></script>
+<script src="js/nativeappcheck.js"></script>
+<script src="js/androidScheme.js"></script>
+</body>
+</html>

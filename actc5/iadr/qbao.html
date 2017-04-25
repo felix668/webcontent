@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="author" content="" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="主线" />
+<meta name="format-detection" content="telephone=no">
+<title>拜大年 新春特价专辑</title>
+<link href="css/reds.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript">
+var calculate_size = function() {
+	var BASE_FONT_SIZE = 100;
+	var docEl = document.documentElement,
+		clientWidth = docEl.clientWidth;
+	if (!clientWidth) return;
+	docEl.style.fontSize = BASE_FONT_SIZE * (clientWidth / 720) + 'px';
+};
+
+// Abort if browser does not support addEventListener
+if (document.addEventListener) {
+	var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	window.addEventListener(resizeEvt, calculate_size, false);
+	document.addEventListener('DOMContentLoaded', calculate_size, false);
+	calculate_size();
+}
+</script>
+</head>
+<body>
+<div id="content"></div>
+</body>
+<script src="js/template.js"></script>
+<script src="js/tplhelper.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+</html>

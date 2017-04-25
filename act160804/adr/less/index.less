@@ -1,0 +1,411 @@
+@import (reference) './common.less';
+
+.versionMask {
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 99;
+	overflow: hidden;
+	.mask-panel {
+		overflow: hidden;
+		position: absolute; left: 0; top: 0; bottom: 0; right: 0;
+		width: 5.5rem; height: 3.6rem;
+		margin: auto;
+		border-radius: 0.1rem; background: white;
+		.top {
+			box-sizing: border-box;
+			height: 0.9rem;
+			border-bottom: 1px solid #d8d8d8;
+			font-size: 0.28rem; line-height: 0.9rem; font-weight: bold; text-align: center;
+		}
+		.middle {
+			box-sizing: border-box;
+			height: 1.8rem;
+			border-bottom: 1px solid #d8d8d8;
+			font-size: 0.28rem; line-height: 1.8rem; text-align: center;
+		}
+		.bottom {
+			overflow: hidden;
+			li {
+				float: left;
+				width: 50%; height: 0.9rem; line-height: 0.9rem;
+				font-size: 0.28rem; text-align: center;
+			}
+			.confirm {
+				background: #3d8dcf;
+				color: white;
+			}
+		}
+	}
+}
+
+.maskOver {
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	background: white;
+	z-index: 9999;
+	overflow: hidden;
+}
+
+.mask {
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 99;
+	overflow: hidden;
+	//display: none;
+	.panel {
+		position: relative;
+		box-sizing: border-box;
+		width: 4.76rem;
+		margin: auto; margin-top: 2rem;
+		padding-left: 0.2rem; padding-right: 0.2rem; padding-bottom: 0.44rem; 
+		border-radius: 0.1rem;
+		background: white;
+		//overflow: hidden;
+		.square {
+			overflow: hidden;
+			img {
+				width: 2.08rem;
+				margin: auto; margin-top: 0.5rem;
+			}
+		}
+		.info {
+			width: 100%; 
+			padding-top: 0.3rem; padding-bottom: 0.3rem;
+			margin-bottom: 0.22rem;
+			text-align: center; color: #333333; font-weight: bold; line-height: 0.48rem;
+			font-size: 0.32rem;
+			border-bottom: 1px dashed grey;
+			span {
+				color: #ff7c66;
+			}
+		}
+		.desc {
+			font-size: 0.28rem; color: #666666; line-height: 171%;
+			overflow: hidden;
+			.span {
+				font-size: 0.28rem; color: #666666; line-height: 171%;
+			}
+			.link {
+				color: #5474ff; text-decoration: underline;
+			}
+		}
+		.pinkBtn {
+			height: 0.88rem;
+			margin: 0.44rem auto 0 auto;
+			background: #ff7c66;
+			font-size: 0.3rem; line-height: 0.88rem; color: white; text-align: center;
+			border-radius: 999px;
+		}
+		.gotIt {
+			width: 2.94rem;
+		}
+		.help {
+			width: 4.04rem;
+			.query {
+				display: inline-block; vertical-align: middle;
+				width: 0.42rem;
+			}
+		}
+		.write {
+			width: 3.24rem;
+			.pen {
+				display: inline-block; vertical-align: middle;
+				width: 0.42rem;
+			}
+		}
+		.close {
+			position: absolute; right: -0.2rem; top: -0.2rem;
+			width: 0.52rem;
+		}
+	}
+}
+
+.main {
+	position: relative;
+	width: 100%;
+	background: #aac540;
+	overflow: hidden;
+	.avatar {
+		box-sizing: border-box;
+		position: absolute; left: 2.85rem; top: 3.9rem;
+		width: 1.5rem; height: 1.5rem;
+		border-radius: 5rem;
+		border: 0.08rem solid #eeeeee;
+		overflow: hidden;
+		img {
+			margin-left: -0.08rem; margin-top: -0.08rem;
+			width: 1.5rem; height: 1.5rem;
+		}
+	}
+	.title {
+		width: 100%;
+	}
+
+	.gift1 {
+		width: 100%;
+		.one {
+			margin-bottom: 0;
+			font-size: 0.4rem; text-align: center; font-weight: bold; color: #333333;
+		}
+		.two {
+			margin-bottom: 0.34rem;
+			font-size: 0.28rem; text-align: center; color: #333333;
+		}
+		.oneChance {
+			position: relative;
+			width: 6.6rem; height: 1.34rem;
+			margin: auto; margin-bottom: 0.76rem;
+			.text {
+				position: absolute; left: 1.86rem; top: 0.18rem;
+				width: 2.94rem; height: 0.9rem; line-height: 0.45rem;
+				font-size: 0.28rem; color: white;
+			}
+			.topBtn {
+				position: absolute; right: 0.18rem; top: 0.2rem;
+				width: 1.48rem; height: 0.9rem;
+				border-radius: 0.45rem;
+				background: #ff7c66;
+				font-size: 0.36rem; text-align: center; line-height: 0.9rem;
+				//display: none;
+			}
+			.disabled {
+				background: #CCCCCC!important;
+			}
+			.already {
+				background: #CCCCCC!important;
+			}
+		}
+	}
+
+	.gifts {
+		width: 6.6rem;
+		margin: auto; margin-bottom: 0.6rem;
+		.one {
+			font-size: 0.4rem; text-align: center; font-weight: bold; color: #333333;
+		}
+		.two {
+			margin-bottom: 0.34rem;
+			font-size: 0.28rem; text-align: center; color: #333333;
+		}
+		.coupon {
+			width: 100%;
+			overflow: hidden;
+			.coupon-img {
+				position: relative;
+				width: 100%; height: 1.6rem;
+				.cc {
+					position: absolute; right: 0; top: 0;
+					width: 3rem; height: 0.8rem; line-height: 0.8rem;
+					font-size: 0.24rem; color: #999999; text-align: center;
+					span {
+						color: black;
+					}
+				}
+				.dd {
+					position: absolute; right: 0; bottom: 0;
+					width: 3rem; height: 0.8rem; line-height: 0.8rem;
+					font-size: 0.36rem; color: #333333; text-align: center; font-weight: bold;
+					//display: none;
+				}
+				.getIt {
+					display: none;
+				}
+				.already {
+					color: #aaaaaa!important;
+				}
+				.disabled {
+					color: #aaaaaa!important;
+				}
+			}
+		}
+		.leftCon {
+			height: 0.24rem;
+			margin: 0.08rem 0.18rem 0.18rem 0;
+			text-align: right;
+			font-size: 0.24rem; color: #5d710d;
+		}
+		.gift2 {
+			.aa {
+				position: absolute; left: 0.28rem; top: 0.15rem;
+				font-size: 0.48rem; font-weight: bold; color: #01b3d8;
+				span {
+					color: #00618e;
+				}
+			}
+			.bb {
+				position: absolute; left: 0.28rem; top: 0.74rem;
+				font-size: 0.48rem; font-weight: bold; color: #01b3d8;
+				span {
+					color: #00618e;
+				}
+			}
+		}
+		.gift3 {
+			.aa {
+				position: absolute; left: 0.28rem; top: 0.15rem;
+				font-size: 0.48rem; font-weight: bold; color: #c29200;
+				span {
+					color: #7f5d00;
+				}
+			}
+			.bb {
+				position: absolute; left: 0.28rem; top: 0.74rem;
+				font-size: 0.48rem; font-weight: bold; color: #c29200;
+				span {
+					color: #7f5d00;
+				}
+			}
+		}
+		.gift4 {
+			.aa {
+				position: absolute; left: 0.28rem; top: 0.3rem;
+				font-size: 0.34rem; font-weight: bold; color: #d131df;
+				span {
+					color: #a00bad;
+				}
+			}
+			.bb {
+				position: absolute; left: 0.28rem; top: 0.9rem;
+				font-size: 0.32rem; font-weight: bold; color: #d131df;
+				span {
+					color: #a00bad;
+				}
+			}
+		}
+	}
+	.lottery {
+		position: relative;
+		width: 6.6rem; margin: auto;
+		margin-bottom: 0.54rem;
+		overflow: hidden;
+		.lottery-bg {
+			width: 100%;
+		}
+		.content {
+			box-sizing: border-box;
+			position: absolute; left: 0; top: 0;
+			width: 100%; height: 100%;
+			.toMine {
+				position: absolute; right: 0.12rem; bottom: 0;
+				width: 1.72rem; height: 0.58rem;
+				display: block;
+			}
+			.trophy {
+				position: absolute;
+				width: 2.1rem; height: 2.1rem;
+				border-radius: 0.1rem;
+				overflow: hidden;
+				img {
+					width: 1.98rem; height: 1.98rem;
+					margin-top: 0.06rem; margin-left: 0.06rem;
+				}
+			}
+			.trophy.active {
+				background: url(../img/orange_bg.png) no-repeat;
+				background-size: 100%;
+			}
+			.trophy0 {
+				left: 0.08rem; top: 1.3rem;
+			}
+			.trophy1 {
+				left: 2.24rem; top: 1.3rem;
+			}
+			.trophy2 {
+				left: 4.4rem; top: 1.3rem;
+			}
+
+			.trophy3 {
+				left: 4.4rem; top: 3.42rem;
+			}
+
+			.trophy4 {
+				left: 4.4rem; top: 5.6rem;
+			}
+			.trophy5 {
+				left: 2.24rem; top: 5.6rem;
+			}
+			.trophy6 {
+				left: 0.08rem; top: 5.6rem;
+			}
+
+			.trophy7 {
+				left: 0.08rem; top: 3.42rem;
+			}
+			.btn {
+				position: absolute; left: 2.3rem; top: 3.5rem;
+				width: 1.98rem; height: 1.98rem;
+				font-size: 0.52rem;
+				p {
+					text-align: center; color: #ee5f47;
+				}
+				p:nth-child(1) {
+					margin-top: 0.46rem;
+					font-weight: bold;
+				}
+				p:nth-child(2) {
+					font-size: 0.28rem;
+					.span {
+						font-size: 0.28rem;
+					}
+				}
+			}
+		}
+	}
+
+	.bottom {
+		width: 100%;
+		background: #414547;
+		overflow: hidden;
+		.bottom-top {
+			width: 100%;
+		}
+		.code {
+			width: 3.88rem;
+			margin: auto; margin-bottom: 0.76rem;
+		}
+		.rules {
+			padding: 0 0.3rem 0 0.3rem;
+			background: #414547;
+			overflow: hidden;
+			.title__ {
+				margin-bottom: 0.24rem;
+				overflow: hidden;
+				font-size: 0.34rem;
+				line-height: 130%;
+				color: #999999;
+				span {
+					font-size: 0.34rem;
+					line-height: 130%;
+					color: #999999;
+				}
+			}
+			.rules-text {
+				padding-left: 0.26rem;
+				font-size: 0.24rem; 
+				line-height: 0.4rem; 
+				color: #999999;
+				overflow: hidden;
+			}
+			.rules-text:first-letter {
+				margin-left: -0.26rem;
+			}
+			.toContact {
+				color: #FFE55A;
+				text-decoration: underline;
+			}
+		}
+		.copyright {
+			width: 6.6rem; height: 1.36rem; line-height: 1.36rem;
+			margin: auto;
+			background: #414547;
+			font-size: 0.24rem; color: #666666; text-align: center;
+		}
+	}
+}
+// @media (min-width: 374px) and (max-width: 376px) and (-webkit-min-device-pixel-ratio: 2) {
+// 	.rules-text {
+// 		font-size: 14px!important;
+// 	}
+// }

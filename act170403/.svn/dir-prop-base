@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 75
+gulpfile.js
+node_modules
+package.json
+src
+webpack.config.js
+com
+相关.txt
+
+END

@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>摇一摇</title>
+	<script>
+	    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+	</script>
+	<style type="text/css">
+		html,body,ul,h1,h2,h3,p,input,img,figure{margin: 0;padding: 0;}
+		ul,ol{list-style: none;}
+		html, body{width: 100%;height: 100%;overflow: hidden;-webkit-user-select: none;}
+		body{height: 100%; background: url(img/st1.jpg) no-repeat; background-size: cover; }
+		a{text-decoration:none;-webkit-touch-callout:none;}
+		*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+		.layout{width: 7.2rem; height:12.5rem; margin: 0 auto;}
+		.home_page{ text-align: center; height: 100%; position: relative; z-index: 1;}
+		.home_page img{ width: 100%; display: block; position: absolute;left:0; bottom:.4rem;}
+		.home_page h2{ font-size: .72rem; padding-top: 1.8rem; color: #fffcfd; padding-bottom: 1.7rem;}
+		.home_page h2 span{ font-size: .96rem; margin-right: .4rem;}
+		.mask{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100;-webkit-align-items:center;-webkit-justify-content:center; display: -webkit-flex;}
+		.tipeat{ width: 4.36rem; background: #f1f1f1; border-radius: .1rem; padding: .5rem .3rem; position: relative;}
+		.tipeat img{ width: 2.07rem; height: 1.78rem; margin: 0 auto; display: block;}
+		.tipeat p{  font-size: .32rem; line-height: .48rem;padding: .3rem 0 .24rem; color: #444 ; text-align: center;}
+		.tipeat p.adr{ padding:0 0 .3rem; margin-top: -.3rem;}
+		.tipeat a{ display: block; margin: 0 auto; background: #32b758; width: 3.24rem; height: .9rem; line-height: .9rem; border-radius: .9rem; text-align: center; font-size: .3rem; color: #fff;}
+		.wobble{-webkit-animation: wobble 1s both; transform-origin:50% 100%;}
+		@-webkit-keyframes wobble {
+		    0% {
+		        -webkit-transform: none;
+		        transform: none
+		    }
+
+		    15% {
+		        -webkit-transform:rotate3d(0,0,1,-5deg);
+		    }
+
+		    30% {
+		        -webkit-transform:  rotate3d(0,0,1,3deg);
+		    }
+
+		    45% {
+		        -webkit-transform:  rotate3d(0,0,1,-3deg);
+		    }
+
+		    60% {
+		        -webkit-transform:  rotate3d(0,0,1,2deg);
+		    }
+
+		    75% {
+		        -webkit-transform:  rotate3d(0,0,1,-1deg);
+		    }
+
+		    100% {
+		        -webkit-transform: none;
+		        transform: none
+		    }
+		}
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<div class="home_page">
+			<h2>一起来<span>摇</span>抢红包</h2>
+			<img src="img/st4.png" class="">
+		</div>
+	</div>
+	<div class="mask" style="display:none">
+		<div class="tipeat">
+			<img src="img/prize.png">
+			<p>恭喜你获得推荐票一张！</p>
+			<p class="adr">安卓机体验更好！</p>
+			<a href="javascript:">我知道啦</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+	var u = navigator.userAgent;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+	if(isAndroid){
+		$(".adr").hide();
+	}else if(isiOS){
+		$(".adr").show();
+	}
+		/*摇一摇*/
+	$(document).ready(function() {
+		 
+		 //判断系统是否支持html5摇一摇的相关属性
+		if (window.DeviceMotionEvent){
+			var speed = 25;
+		
+			var x = t = z = lastX = lastY = lastZ = 0;
+			window.addEventListener('devicemotion',
+			function () {
+				var acceleration = event.accelerationIncludingGravity;
+				x = acceleration.x;
+				y = acceleration.y;
+				if (Math.abs(x - lastX) > speed || Math.abs(y - lastY) > speed) {
+					
+					//摇一摇后js代码
+					$('.home_page img').addClass('wobble');
+					
+					 //手机震动1秒
+	                if (navigator.vibrate) {
+	                    navigator.vibrate(1000);//震动1000毫秒
+	                } else if (navigator.webkitVibrate) {
+	                    navigator.webkitVibrate(1000);
+	                }
+					
+					//打开弹窗
+					setTimeout(function(){
+						$('.mask').show();
+						$('.home_page img').removeClass('wobble');
+					}, 1000);
+				};
+				lastX = x;
+				lastY = y;
+			},false);
+		} 
+		else {
+	        alert('not support mobile event');
+	    }
+	});
+	/*关闭弹框*/
+	$(".tipeat  a").on("tap",function(){
+		$('.mask').hide();
+	})
+	function is_weixn(){  
+	    var ua = navigator.userAgent.toLowerCase();  
+	    if(ua.match(/MicroMessenger/i)=="micromessenger") {  
+	        return true;  
+	    } else {  
+	        return false;  
+	    }  
+	}  
+	</script>
+</body>
+</html>

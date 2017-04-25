@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>新春有礼</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" type="text/css" href="./build/index.css"/>
+    <script>
+        function setRem(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        setRem();
+        window.addEventListener('resize',setRem);
+    </script>
+</head>
+<body>
+<div class="wrap" id="app" v-cloak :class="{'hide': showPage}">
+    <img class="banner" src="./img/banner.jpg" />
+    <div class="content">
+        <ul class="first-charge">
+            <li v-for="item in firstChargeList">
+                <a href="javascript:;" @click="doCharge(item.coin, item.mtaId, true)">
+                    <div class="first-charge-desc">
+                        <p class="firchar-title">仅限首次充值用户</p>
+                        <div class="firchar-detail">
+                            <span>{{ item.coin }}</span>阅点 + <span>{{ item.coupon }}</span>阅券
+                        </div>
+                    </div>
+                    <div class="firchar-btn">
+                        <em v-if="item.tagText">推荐</em>
+                        充{{ item.chargeNum }}元领取
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <img class="more-charge-title" src="./img/title-dcdz.png"></img>
+
+        <ul class="more-charge">
+            <li v-for="item in moreChargeList">
+                <a href="javascript:;" @click="doCharge(item.coin, item.mtaId, false)">
+                    <div class="more-charge-desc">
+                        <div class="morechar-desc-box">
+                            <span>{{ item.coin }}</span><br>阅点
+                        </div>
+                        <div class="morechar-desc-box add">
+                            +
+                        </div>
+                        <div class="morechar-desc-box">
+                            <span>{{ item.coupon }}</span><br>阅券
+                        </div>
+                    </div>
+                    <div class="morechar-btn">
+                        <em v-if="item.tagText">推荐</em>
+                        充{{ item.chargeNum }}元领取
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="list">
+            <li v-for="item in mainList">
+                <div class="desc">
+                    <span class="text"><strong>{{ item.coin }}</strong>阅点</span><i class="i-coin"></i>
+                    <span class="symbol">+</span>
+                    <span class="num">{{ item.coupon }}</span><span class="text">阅券</span><i class="i-coupon"></i>
+                </div>
+                <a href="javascript:;" class="btn-charge" @click="doCharge(item.coin, item.mtaId, false)">
+                    <i v-if="item.tagText && item.tagText !== '' ">{{ item.tagText }}</i>
+                    充{{ item.chargeNum }}元领取
+                </a>
+            </li>
+        </ul>
+
+        <div class="rule-box">
+            <img class="rule-hd" src="./img/title-rule.png"/>
+            <table class="rule-bd">
+                <tr v-for="(item, index) in rule">
+                    <td>{{ index+1 }}.</td>
+                    <td>{{ item }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <over v-if="over"></over>
+</div>
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./lib/zepto-1.2.0.min.js"></script>
+<script type="text/javascript" src="./lib/jsbridge.js"></script>
+<script type="text/javascript" src="./lib/charm.js"></script>
+<script type="text/javascript" src="./lib/cfoot.js"></script>
+<script type="text/javascript" src="./lib/local.js"></script>
+
+<script type="text/javascript" src="./build/bundle.js"></script>
+
+<script src="http://pingjs.qq.com/h5/stats.js?v2.0.2" name="MTAH5" sid="500390534" cid="500390540"></script>
+
+</body>
+</html>

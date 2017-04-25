@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>一句顶一万句</title>
+ <script>
+    (function (doc, win) {
+    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+    function recalc() {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        // console.log(clientWidth)
+        clientWidth=clientWidth > 720 ? 720 : clientWidth;
+        docEl.style.fontSize = (clientWidth / 7.2) + 'px';
+    };
+    if(!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="wrap">
+	<div class="top">
+		<img src="images/logo.png" class="logo">
+		<img src="images/banner.jpg" alt="一句句顶万句" class="banner">
+		<div class="qqbtn" @tap="goactpage">
+			<strong>去QQ阅读看原著</strong>
+			<ul class="arrows">
+				<img src="images/arrow.png"><img src="images/arrow.png"><img src="images/arrow.png">
+			</ul>
+		</div>
+	</div>
+	<div class="hot">
+		<div class="headline"></div>
+		<div class="hbook">
+			<div class="bookc">
+				<img :src=book[0].cover alt="">
+			</div>
+			<div class="bookinfo">
+				<h1>{{book[0].title}}</h1>
+				<p class="desc">电影红包最高<strong>10元</strong><br>正版原著限时免费</p>
+				<a href="javascript:;" class="readbtn" @tap="goactpage"><strong>立即享受</strong></a>
+			</div>
+		</div>
+		<div class="space"></div>
+	</div>
+	<div class="more">
+		<div class="headline"></div>
+		<ul class="mbook">
+			<li v-for="item in book.slice(1,4)">
+				<img :src=item.cover alt="{{item.title}}">
+				<p>{{item.title}}</p>
+				<a href="javascript:;" @tap="goreadpage($event)" bid={{item.id}}>阅读</a>
+			</li>
+		</ul>
+		<div class="space"></div>
+	</div>
+</div>
+<div class="mask" :class="{'maskshow':mask}">
+	<div class="tiparea">
+		<h3>下载QQ阅读,畅读海量小说</h3>
+		<p>如果还未安装QQ阅读，你可以：</p>
+		<div class="btns">
+			<span class="cancle" @tap="hidemask">取消</span>
+			<span class="certain" @tap="dload">下载QQ阅读</span>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="share.js"></script>
+<script type="text/javascript" src="http://iyuedu.qq.com/event/common/en.js"></script>
+<script type="text/javascript" data-main="http://iyuedu.qq.com/event/common/ne.js" src="http://iyuedu.qq.com/event/common/require.js"></script>
+</body>
+</html>

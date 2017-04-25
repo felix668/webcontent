@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<title>KFC</title>
+<script type="text/javascript">
+	var win=document.documentElement.clientWidth||document.body.clientWidth;
+	document.documentElement.style.fontSize = 100 * (win / 720) + "px";
+</script>
+<style type="text/css">
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body,div,h1,p{margin:0;padding:0;}
+img{border:0;display:block;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#f0e2c3;font-size:0.24rem;color: #5f443b;}
+.banner{width: 100%;}
+.intro{padding:0.48rem 0;text-align: center;}
+.intro h1{font-weight: normal;font-size: 0.36rem;line-height:0.58rem;}
+.intro span{color: #ba8f5f;line-height: 0.46rem}
+.mesg{width: 6.16rem;height: 2.66rem;background: url(images/bg.png);background-size: 100% auto;margin:0 auto 0.5rem;position: relative;padding:0.32rem;-webkit-box-sizing:border-box;}
+.mesg img{width: 1.34rem;position: absolute;top:0.46rem;right: 0.16rem;}
+.mesg p:nth-child(1){font-size: 0.36rem;line-height:0.4rem;color: #483028}
+.mesg p:nth-child(3){color: #ba8f5f}
+.mesg .num{font-size:0.42rem;line-height:0.5rem;color: #db5947;padding:0.22rem 0 0.68rem}
+.freebtn{display: block;height:1rem;line-height:1.02rem;text-align:center;margin:0 0.52rem 0.2rem;background: #5f443b;border-bottom: 0.06rem solid #d3b089;color: #feca29;font-size: 0.4rem}
+.freebtn:active{color: #e9b401;background: #483028;}
+.more{display:block;color: #5f443b;font-size: 0.4rem;padding: 0.36rem 0;text-align: center;}
+/*弹窗*/
+.mask{position:fixed;width:100%;height:100%;top:0;left:0;z-index:100;background: rgba(0,0,0,.58);-webkit-box-align:center;-webkit-box-pack:center;/*display: -webkit-box;*/display: none;}
+.mask:target{display: none;}
+.tiparea{padding:0.64rem 0 0.42rem;background: #fff8eb;border-radius: 10px;text-align: center;}
+.tiparea img{width: 2.66rem;margin:0 auto;}
+.tiparea strong{font-size: 0.36rem;line-height: 0.42rem;color: #333;display: block;}
+.tiparea span{color:#db5a48}
+.tiparea p{color: #666;line-height: 0.4rem;padding:0.14rem 0.2rem 0.28rem;}
+.tiparea .hide{display:inline-block;width:3.2rem;height:0.8rem;line-height:0.82rem;box-shadow:inset 0 -3px #d44638;-webkit-box-shadow:inset 0 -3px #d44638;font-size:0.36rem;color:#fff;background:#e87262;border-radius:5px}
+.hide:active{color: #fbe5b2;background: #db5a48;box-shadow:inset 0 -3px #c83729;-webkit-box-shadow:inset 0 -3px #c83729;}
+</style>
+</head>
+<body>
+<img src="images/banner.jpg" class="banner"/>
+<div class="intro">
+	<h1>恭喜您获得美式咖啡（中杯）兑换券</h1>
+	<span>凭兑换券可到肯德基门店消费时出示使用</span>
+</div>
+<div class="mesg">
+	<p>兑换码：</p>
+	<p class="num">xxxxxxxx</p>
+	<p class="time">有效期截至2015年4月30日</p>
+	<img src="images/coffee.jpg">
+</div>
+<a href="#" class="freebtn">书中自有咖啡送，告诉朋友</a>
+<a href="#" class="more">查看活动门店&gt;</a>
+<div class="mask" id="mask">
+	<div class="tiparea">
+		<img src="images/pack.jpg" alt="KFC咖啡兑换券">
+		<strong>恭喜您</strong>
+		<strong>获得<span>KFC咖啡兑换券</span></strong>
+		<p>有效期截至2016年4月30日，请尽快使用</p>
+		<a href="#mask" class="hide">知道啦</a>
+	</div>
+</div>
+</body>
+</html>

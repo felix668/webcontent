@@ -1,0 +1,108 @@
+.mask {
+	z-index: 10; display: none;
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	background: rgba(0,0,0,0.5);
+	.mask-panel {
+		overflow: hidden;
+		position: absolute; left: 0; top: 0; bottom: 0; right: 0;
+		width: 5.5rem; height: 3.6rem;
+		margin: auto;
+		border-radius: 0.1rem; background: white;
+		.top {
+			box-sizing: border-box;
+			height: 0.9rem;
+			border-bottom: 1px solid #d8d8d8;
+			font-size: 0.28rem; line-height: 0.9rem; font-weight: bold; text-align: center;
+		}
+		.middle {
+			box-sizing: border-box;
+			height: 1.8rem;
+			border-bottom: 1px solid #d8d8d8;
+			font-size: 0.28rem; line-height: 1.8rem; text-align: center;
+		}
+		.bottom {
+			overflow: hidden;
+			li {
+				float: left;
+				width: 50%; height: 0.9rem; line-height: 0.9rem;
+				font-size: 0.28rem; text-align: center;
+			}
+			.confirm {
+				background: #3d8dcf;
+				color: white;
+			}
+		}
+	}
+}
+
+.main {
+	position: relative; overflow: hidden;
+	width: 100%;
+	.bg {
+		width: 100%;
+	}
+	.main-content {
+		position: absolute; left: 0; top: 0;
+		width: 100%; height: 100%;
+		.chips {
+			position: absolute; left: 0; top: 0;
+			width: 100%;
+			.chip0 {
+				position: absolute; left: 0.68rem; top: 2.78rem;
+			}
+			.chip1 {
+				position: absolute; left: 1.96rem; top: 0.9rem;
+			}
+			.chip2 {
+				position: absolute; left: 2.6rem; top: 3.2rem;
+			}
+			.chip3 {
+				position: absolute; left: 4.58rem; top: 4.48rem;
+			}
+			.chip4 {
+				position: absolute; left: 5.14rem; top: 2.46rem;
+			}
+			.chip5 {
+				position: absolute; left: 5.84rem; top: 1.42rem;
+			}
+			.chip6 {
+				position: absolute; left: 6.24rem; top: 3rem;
+			}
+		}
+
+		.btn {
+			position: relative;
+			width: 5.75rem;
+			margin: auto; margin-top: 7.6rem;
+			.btn-img {
+				width: 100%;
+			}
+			.btn-content {
+				position: absolute; left: 0; top: 0;
+				width: 100%; height: 100%;
+				.logo {
+					position: absolute; left: 0.88rem; top: 0.16rem;
+					width: 3.56rem;
+				}
+				.arrows {
+					position: absolute; left: 4.6rem; top: 0.36rem;
+					overflow: hidden;
+				}
+				.arrow {
+					float: left;
+					width: 0.15rem;
+				}
+			}
+		}
+		.panel {
+			width: 6.58rem;
+			margin: auto; margin-top: 0.44rem;
+		}
+	}
+}
+
+* {
+	// -webkit-touch-callout: none;
+	// user-select: none;
+}

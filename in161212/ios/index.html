@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>精品好书免费读</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<style>
+body,ul,li,p{margin:0;padding: 0;}
+ul,li{list-style:none}
+img{border:none;width:100%;display: block;}
+a{text-decoration:none;-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;-webkit-user-select:none;background: #edecea}
+.banner{width: 100%}
+.tencent{position: absolute;top:3.5rem;left:1.56rem;width:4.36rem;height:5.92rem;}
+.booklist{margin:.54rem .11rem .36rem;font-size: 0}
+.booklist li{width: 2rem;margin:0 .21rem .24rem;display: inline-block;}
+.booklist li a{display: block;height: 2.77rem;background: #fff;padding-top: .05rem}
+.booklist li img{width: 1.9rem;height:2.72rem;margin:0 auto;}
+.booklist li p{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;line-height: .38rem;text-align: center;}
+.booklist li p:nth-of-type(1){font-size: .28rem;color: #343434;margin-top: .12rem}
+.booklist li p:nth-of-type(2){font-size: .26rem;color: #959595}
+</style>
+</head>
+<body>
+	<img src="images/banner.jpg" alt="腾讯传">
+	<a href="javascript:ABook.gotoDetail(432471)" class="tencent"></a>
+	<ul class="booklist">
+		<li>
+			<a href="javascript:ABook.gotoDetail(790470)">
+				<img src="images/b1.jpg" alt="必然">
+			</a>
+			<p>必然（KK三部曲·展望）</p>
+			<p>(美)凯文·凯利</p>
+		</li>
+		<li>
+			<a href="javascript:ABook.gotoDetail(840673)">
+				<img src="images/b2.jpg" alt="鞋狗">
+			</a>
+			<p>鞋狗：耐克创始人菲尔·奈特亲笔自传</p>
+			<p>(美)菲尔·奈特</p>
+		</li>
+		<li>
+			<a href="javascript:ABook.gotoDetail(839326)">
+				<img src="images/b3.jpg" alt="成为乔布斯">
+			</a>
+			<p>成为乔布斯</p>
+			<p>(美)布伦特·施兰德 里克·特策利 </p>
+		</li>
+		<li>
+			<a href="javascript:ABook.gotoDetail(635800)">
+				<img src="images/b4.jpg" alt="人类简史">
+			</a>
+			<p>人类简史：从动物到上帝</p>
+			<p>尤瓦尔·赫拉利 </p>
+		</li>
+		<li>		
+			<a href="javascript:ABook.gotoDetail(675678)">
+				<img src="images/b5.jpg" alt="大秦帝国">
+			</a>
+			<p>大秦帝国（中信全新修订17卷进阶版）</p>
+			<p>孙皓晖</p>
+		</li>
+		<li>
+			<a href="javascript:ABook.gotoDetail(614354)">
+				<img src="images/b6.jpg" alt="岛上书店">
+			</a>
+			<p>岛上书店</p>
+			<p>(美)加布瑞埃拉·泽文</p>
+		</li>
+		<li>
+			<a href="javascript:ABook.gotoDetail(831909)">
+				<img src="images/b7.jpg" alt="绝对小孩">
+			</a>
+			<p>绝对小孩</p>
+			<p>朱德庸</p>
+		</li>
+		<li>
+			<a href="javascript:ABook.gotoDetail(840996)">
+				<img src="images/b8.jpg" alt="好吗好的">
+			</a>
+			<p>好吗好的</p>
+			<p>大冰</p>
+		</li>
+		<li>
+			<a href="javascript:ABook.gotoDetail(841899)">
+				<img src="images/b9.jpg" alt="地狱">
+			</a>
+			<p>地狱（《但丁密码》电影纪念版）</p>
+			<p>(美)丹·布朗</p>
+		</li>
+	</ul>
+	<script type="text/javascript" src="js/jsbridge.js"></script>
+	<script type="text/javascript" src="js/cfoot.js"></script>
+	<script type="text/javascript" src="js/charm.js"></script>
+	<script type="text/javascript" src="js/local.js"></script>
+	<script type="text/javascript" src="js/zbook.js"></script>
+	<script type="text/javascript" src="js/abook.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+const fs = require('fs');
+const path = require('path');
+
+var config = [{
+  name: 'test',
+  platform: 'adr',
+  title: '--',
+  config: '',
+  vendor: 
+    `<script type="text/javascript" src="../adr/vendor/vue.min.js"></script>
+    <script type="text/javascript" src="vendor/com/env.js"></script>
+
+    <script type="text/javascript" src="vendor/com/wxshare.js"></script>
+    <script type="text/javascript" src="vendor/com/qqapi.js"></script>
+    <script type="text/javascript" src="vendor/com/sns-v1.js"></script>
+
+    <script type="text/javascript" src="vendor/com/androidScheme.js"></script>
+    <script type="text/javascript" src="vendor/com/iosscheme.js"></script>
+    <script type="text/javascript" src="vendor/com/native-v1.js"></script>`,
+  bundle: 'test',
+  dest: path.resolve( __dirname,'../../test.html' )
+},{
+  name: 'farm',
+  platform: 'adr',
+  title: '冬牧场',
+  config: '',
+  vendor: 
+    `<script type="text/javascript" src="../adr/vendor/vue.min.js"></script>
+    <script type="text/javascript" src="../adr/vendor/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../adr/vendor/canvas.js"></script>
+    <script type="text/javascript" src="../adr/vendor/turnjs/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../adr/vendor/turnjs/turn.min.js"></script>
+
+    <script type="text/javascript" src="../adr/vendor/adr/jsbridge.js"></script>
+    <script type="text/javascript" src="../adr/vendor/adr/common.js"></script>
+    <script type="text/javascript" src="../adr/vendor/adr/local.js"></script>
+    <script type="text/javascript" src="../adr/vendor/adr/zbook.js"></script>
+    <script type="text/javascript" src="../adr/vendor/adr/abook.js"></script>`,
+  bundle: 'farm',
+  dest: path.resolve( __dirname,'../../farm.html' )
+},{
+  name: 'farm',
+  platform: 'ios',
+  title: '冬牧场',
+  config: 'ios',
+  vendor: 
+    `<script type="text/javascript" src="../adr/vendor/vue.min.js"></script>
+    <script type="text/javascript" src="../adr/vendor/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../adr/vendor/canvas.js"></script>
+    <script type="text/javascript" src="../adr/vendor/turnjs/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../adr/vendor/turnjs/turn.min.js"></script>
+
+    <script type="text/javascript" src="../adr/vendor/ios/charm.js"></script>
+    <script type="text/javascript" src="../adr/vendor/ios/cfoot.js"></script>
+    <script type="text/javascript" src="../adr/vendor/ios/local.js"></script>
+    <script type="text/javascript" src="../adr/vendor/ios/zbook.js"></script>
+    <script type="text/javascript" src="../adr/vendor/ios/abook.js"></script>`,
+  bundle: 'farm',
+  dest: path.resolve( __dirname,'../../../ios/farm.html' )
+},{
+  name: 'share',
+  platform: 'adr',
+  title: '冬牧场',
+  config: 'share',
+  vendor: 
+    `<script type="text/javascript" src="../adr/vendor/vue.min.js"></script>
+    <script type="text/javascript" src="../adr/vendor/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../adr/vendor/canvas.js"></script>
+    <script type="text/javascript" src="../adr/vendor/turnjs/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../adr/vendor/turnjs/turn.min.js"></script>
+
+    <script type="text/javascript" src="vendor/com/env.js"></script>
+
+    <script type="text/javascript" src="vendor/com/wxshare.js"></script>
+    <script type="text/javascript" src="vendor/com/qqapi.js"></script>
+    <script type="text/javascript" src="vendor/com/sns-v1.js"></script>
+
+    <script type="text/javascript" src="vendor/com/androidScheme.js"></script>
+    <script type="text/javascript" src="vendor/com/iosscheme.js"></script>
+    <script type="text/javascript" src="vendor/com/native-v1.js"></script>
+
+    <script type="text/javascript" src="../adr/vendor/adr/jsbridge.js"></script>
+    <script type="text/javascript" src="../adr/vendor/adr/common.js"></script>
+    <script type="text/javascript" src="../adr/vendor/adr/local.js"></script>
+    <script type="text/javascript" src="../adr/vendor/adr/zbook.js"></script>
+    <script type="text/javascript" src="../adr/vendor/adr/abook.js"></script>`,
+  bundle: 'farm',
+  dest: path.resolve( __dirname,'../../share.html' )
+}]
+
+config.forEach(a=>{
+	var tpl =
+`
+<!DOCTYPE html>
+<html name="${a.name}" platform="${a.platform}" config="${a.config}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <title>${a.title}</title>
+  ${process.env.NODE_ENV==='production'?
+  `<link rel="stylesheet" type="text/css" href="../adr/dist/${a.bundle}.style.css">`:``}
+</head>
+
+<body>
+
+  <div id="root">
+  </div>
+
+  <!-- <script type="text/javascript" src="../adr/vendor/debugger.js"></script> -->
+  ${a.vendor}
+
+  ${process.env.NODE_ENV==='production'?
+  `<script type="text/javascript" src="../adr/dist/${a.bundle}.bundle.js"></script>`:
+  `<script type="text/javascript" src="/act170201/adr/dist/${a.bundle}.bundle.js"></script>`}
+  
+  <!-- <script type="text/javascript" src="http://pingjs.qq.com/h5/stats.js" name="MTAH5" sid="500402670" ></script> -->
+
+  <!-- <script type="text/javascript" src="http://pingjs.qq.com/ping.js"></script>
+  <script type="text/javascript">
+    if(typeof(pgvMain) == 'function'){
+      pgvMain();
+    }
+  </script> -->
+  <script>
+      var _mtac = {"senseHash":0,"autoReport":0};
+      (function() {
+        var mta = document.createElement("script");
+        mta.src = "http${a.config==='ios'||a.config==='share'?'s':'s'}://pingjs.qq.com/h5/stats.js?v2.0.2";
+        mta.setAttribute("name", "MTAH5");
+        mta.setAttribute("sid", "500402670");
+        mta.setAttribute("cid", "500402673");
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(mta, s);
+      })();
+  </script>
+
+</body>
+
+</html>
+`;
+	fs.writeFileSync( a.dest,tpl );
+})

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>畅读开学季</title>
+	<script type='text/javascript'>
+		var _vds = _vds || [];
+		window._vds = _vds;
+		(function(){
+			_vds.push(['setAccountId', 'b78cb62e3458aecc']);
+			(function() {
+				var vds = document.createElement('script');
+				vds.type='text/javascript';
+				vds.async = true;
+				vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(vds, s);
+			})();
+		})();;
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+	
+	<div class="maskOver" v-show="over">
+		<img src="img/over.png" width="100%">
+	</div>
+
+	<div class="versionMask" v-show="ver_ok===false">
+		<div class="mask-panel">
+			<p class="top">您的QQ阅读版本过低</p>
+			<p class="middle">请升级后使用</p>
+			<ul class="bottom">
+				<li class="confirm" v-on:click="toUpgrade">升级</li>
+				<li class="cancel" v-on:click="cancle">取消</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="mask" v-show="maskShown">
+		<div class="panel">
+			<div class="square">{{{square}}}</div>
+			<p class="info" v-show="infoShown">{{{info}}}</p>
+			<p class="desc" style="{{centered?'text-align: center;':''}}">
+				<span class="span"></span>{{{desc}}}
+			</p>
+			<div class="pinkBtn gotIt" v-show="pinkBtn==='gotIt'" v-on:click="closeMask">
+				我知道了
+			</div>
+			<div class="pinkBtn help" v-show="pinkBtn==='help'" v-on:click="showMask('how')">
+				{{{help}}}
+			</div>
+			<div class="pinkBtn write" v-show="pinkBtn==='write'" v-on:click="toContact">
+				<img class="pen" src="img/pen.png"/> 填写联系方式
+			</div>
+			<img class="close" src="img/close.png" v-show="closeShown" v-on:click="closeMask"/>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="avatar">
+			<img src="{{myavor}}"/>
+		</div>
+		<img class="title" src="img/title.png"/>
+
+		<div class="gift gift1">
+			<p class="one">每日阅读抽好礼</p>
+			<p class="two">每日阅读时长达45分钟可领取</p>
+			<div class="oneChance" style="background: url(img/one_chance.png); background-size: 100% 100%;">
+				<p class="text">{{{text}}}</p>
+				<div class="topBtn signin" v-show="!isLogin" v-on:click="signin">
+					登录
+				</div>
+				<div class="topBtn already" v-show="isLogin&&gifts[1].acquired">
+					已领取
+				</div>
+				<div class="topBtn disabled" v-show="isLogin&&!gifts[1].acquired&&gifts[1].timeleft>0">
+					领取
+				</div>
+				<div class="topBtn get get1" v-show="isLogin&&!gifts[1].acquired&&gifts[1].timeleft<=0" v-on:click="get(1)">
+					领取
+				</div>
+			</div>
+		</div>
+
+		<div class="gifts">
+			<p class="one">累计时长礼包</p>
+			<p class="two">活动期间累计5、15、30小时可领取</p>
+			<div class="gift coupon gift2">
+				<div class="coupon-img" style="background: url(img/coupon_blue.png); background-size: 100% 100%;">
+					<p class="aa">
+						<span>2</span> 次抽奖
+					</p>
+					<p class="bb">
+						<span>50</span> {{ios?'阅券':'书券'}}
+					</p>
+					<p class="cc" v-show="!isLogin">
+						登录查看阅读时长
+					</p>
+					<p class="cc" v-show="isLogin&&gifts[2].timeleft<=0">
+						阅读时长已满5小时
+					</p>
+					<p class="cc" v-show="isLogin&&gifts[2].timeleft>0">
+						还需阅读 <span>{{hours2}}小时{{minutes2}}分钟</span>
+					</p>
+					<p class="dd signin" v-show="!isLogin" v-on:click="signin">
+						立即登录 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&gifts[2].acquired">
+						已领取 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&!gifts[2].acquired&&gifts[2].left===0">
+						已抢光 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&!gifts[2].acquired&&gifts[2].left>0&&gifts[2].timeleft>0">
+						立即领取 >
+					</p>
+					<p class="dd get get2" v-show="isLogin&&!gifts[2].acquired&&gifts[2].left>0&&gifts[2].timeleft<=0" v-on:click="get(2)">
+						立即领取 >
+					</p>
+				</div>
+				<p class="leftCon">今日还剩{{gifts[2].left}}份</p>
+			</div>
+			<div class="gift coupon gift3">
+				<div class="coupon-img" style="background: url(img/coupon_yellow.png); background-size: 100% 100%;">
+					<p class="aa">
+						<span>3</span> 次抽奖
+					</p>
+					<p class="bb">
+						<span>100</span> {{ios?'阅券':'书券'}}
+					</p>
+					<p class="cc" v-show="!isLogin">
+						登录查看阅读时长
+					</p>
+					<p class="cc" v-show="isLogin&&gifts[3].timeleft<=0">
+						阅读时长已满15小时
+					</p>
+					<p class="cc" v-show="isLogin&&gifts[3].timeleft>0">
+						还需阅读 <span>{{hours3}}小时{{minutes3}}分钟</span>
+					</p>
+					<p class="dd signin" v-show="!isLogin" v-on:click="signin">
+						立即登录 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&gifts[3].acquired">
+						已领取 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&!gifts[3].acquired&&gifts[3].left===0">
+						已抢光 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&!gifts[3].acquired&&gifts[3].left>0&&gifts[3].timeleft>0">
+						立即领取 >
+					</p>
+					<p class="dd get get2" v-show="isLogin&&!gifts[3].acquired&&gifts[3].left>0&&gifts[3].timeleft<=0" v-on:click="get(3)">
+						立即领取 >
+					</p>
+				</div>
+				<p class="leftCon">今日还剩{{gifts[3].left}}份</p>
+			</div>
+			<div class="gift coupon gift4">
+				<div class="coupon-img" style="background: url(img/coupon_purple.png); background-size: 100% 100%;">
+					<p class="aa">
+						<span>4</span> 次抽奖 <span>200</span> {{ios?'阅券':'书券'}}
+					</p>
+					<p class="bb">
+						<span>200</span> 元沪江网校学习卡
+					</p>
+					<p class="cc" v-show="!isLogin">
+						登录查看阅读时长
+					</p>
+					<p class="cc" v-show="isLogin&&gifts[4].timeleft<=0">
+						阅读时长已满30小时
+					</p>
+					<p class="cc" v-show="isLogin&&gifts[4].timeleft>0">
+						还需阅读 <span>{{hours4}}小时{{minutes4}}分钟</span>
+					</p>
+					<p class="dd signin" v-show="!isLogin" v-on:click="signin">
+						立即登录 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&gifts[4].acquired">
+						已领取 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&!gifts[4].acquired&&gifts[4].left===0">
+						已抢光 >
+					</p>
+					<p class="dd disabled" v-show="isLogin&&!gifts[4].acquired&&gifts[4].left>0&&gifts[4].timeleft>0">
+						立即领取 >
+					</p>
+					<p class="dd get get2" v-show="isLogin&&!gifts[4].acquired&&gifts[4].left>0&&gifts[4].timeleft<=0" v-on:click="get(4)">
+						立即领取 >
+					</p>
+				</div>
+				<p class="leftCon">今日还剩{{gifts[4].left}}份</p>
+			</div>
+		</div>
+
+		<div class="lottery">
+			<img class="lottery-bg" src="img/lottery.png"/>
+			<div class="content">
+				<a class="toMine" v-on:click="toMine"></a>
+				<div class="btn" 
+				style="{{pressed?'background:#ffce20;border-radius: 0.1rem;':'background: url(img/btn.png) no-repeat;background-size: 100%;'}}" 
+				v-on:touchstart="drawtouchstart"
+				v-on:touchmove="drawtouchmove"
+				v-on:touchend="drawtouchend"
+				v-on:touchcancel="drawtouchcancel">
+				<p>抽奖</p>
+				<p>(<span class="chance">{{chance||0}}</span>)次机会</p>
+			</div>
+			<div v-for="(i,item) in trophies" class="trophy trophy{{i}} {{i===current?'active':''}}">
+				<img src="img/trophy{{i}}{{ios?'_ios':''}}.png"/>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom">
+		<img class="bottom-top" src="img/bottom_top.png"/>
+		<img class="code" src="img/code.png"/>
+
+		<div class="rules">
+			<p class="title__">
+				活动规则
+			</p>
+			<p class="rules-text">
+				1. 活动时间：2016年9月6日15:00 - 9月19日 0:00
+			</p>
+			<p class="rules-text">
+				2. 活动期间阅读时长达到一定要求时，可以领取对应礼包。
+			</p>
+			<p class="rules-text">
+				3. 每日礼包仅限当日领取，过期无效，同一QQ号，同一设备号单日限领一次。
+			</p>
+			<p class="rules-text">
+				4. 累计礼包活动期间均可领取，活动结束后无效，同一QQ号，同一设备号活动期间限领一次。
+			</p>
+			<p class="rules-text">
+				5. 礼包内包含的抽奖机会活动期间有效，活动结束后无效。
+			</p>
+			<p class="rules-text">
+				6. {{ios?'阅券':'书券'}}(有效期15天){{ios?'':'，成长值'}}和学习卡等奖品及时发放，抽中实物奖品的用户请如实<span class="toContact" v-on:click="toContact">填写联系方式</span>，奖品在活动结束后统一发放。
+			</p>
+		</div>
+
+		<p class="copyright">
+			{{ios?'活动解释权归QQ阅读所有 与苹果公司无关':''}}
+		</p>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/debug.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+
+<script type="text/javascript" src="./dist/bundle.js"></script>
+
+</body>
+
+</html>

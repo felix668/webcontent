@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>抽奖奖品</title>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+<div class="banner">
+	<img src="images/banner.jpg"/>
+</div>
+<div class="giftinfo">
+	<!-- 已登录 -->
+	<p class="tip1" id="logined">我拥有铃铛：<span>9000</span><strong class="add" id="add">+20</strong></p>
+	<!-- 未登录 -->
+	<p class="tip2" id="nologin">我拥有铃铛：<a href="#" class="login">登录查看</a></p>
+	<a class="getbtn" href="#">500书币兑换20个铃铛</a>	
+</div>
+<div class="wrap">
+	<div class="bell">
+		<a class="mygift" href="#">我的奖品&gt;</a>
+		<span>每次抽奖消耗5个铃铛哦</span>
+	</div>
+	<div class="main">
+		<div class="content">
+			<ul>
+				<li class="gift1 act">
+					<img src="images/gift1.png"/>
+					<span>iPad</span>
+				</li>
+				<li class="gift2">
+					<img src="images/gift2.png"/>
+					<span>QQ 公仔</span>
+				</li>
+				<li class="gift3">
+					<img src="images/gift3.png"/>
+					<span>5Q币</span>
+				</li>
+				<li class="gift4">
+					<img src="images/gift4.png"/>
+					<span>谢谢参与</span>
+				</li>
+				<li class="gift5">
+					<img src="images/gift5.png"/>
+					<span>50书券</span>
+				</li>
+				<li class="gift6">
+					<img src="images/gift6.png"/>
+					<span>小米4</span>
+				</li>
+				<li class="gift7">
+					<img src="images/gift7.png"/>
+					<span>1Q币</span>
+				</li>
+				<li class="gift8">
+					<img src="images/gift8.png"/>
+					<span>3天包月体验卡</span>
+				</li>
+			</ul>
+			<div class="lottery">
+				<strong>抽奖</strong> 
+			</div>				
+		</div>
+	</div>
+</div>
+<div class="ways">
+	<p>更多获取铃铛的方式：</p>
+	<div class="enters">
+		<a href="#">
+			<img src="images/enter1.png"/>
+		</a>
+		<a href="#">
+			<img src="images/enter1.png"/>
+		</a>
+	</div>
+</div>
+<img src="images/rule.jpg" class="tree"/>
+<div class="rule">
+	<h4>活动规则：</h4>
+	<p>
+		1、活动时间：2015年12月1日-12月31日；<br>
+		2、活动期间，使用5个铃铛可兑换一次抽奖资格，使用过的铃铛将不计入铃铛排行榜；<br>
+		3、关于奖励发放：获得实物和Q币奖励的用户，务必<a href="#" class="contact">填写联系方式</a>，方便客户人员联系发放实物；Q币奖励将在5个工作日内发放至QQ 帐号，请注意查收。
+	</p>
+</div>
+<!-- 弹窗-->
+<div class="mask">
+	<!-- 领取失败-->
+	<div class="tiparea" id="tiparea1">
+		<h3>真遗憾，没有中奖</h3>
+		<a class="knowbtn" href="#">知道啦</a>
+	</div>
+	<!-- 换铃铛 -->
+	<div class="tiparea" id="tiparea2">
+		<strong>您的铃铛不足5，不能抽奖哦</strong>
+		<p>1.参与每日打卡可得碎片；<br>2.500书币可兑换20铃铛，中奖率也会提高哦</p>
+		<a class="tipbtn" href="#">参与打卡得铃铛</a>
+		<a class="tipbtn" href="#">500书币可兑换20铃铛</a>
+		<a class="closebtn" href="#"></a>
+	</div>
+	<!-- 获得奖品 知道啦 -->
+	<div class="tiparea" id="tiparea3">
+		<div class="showgift">
+			<img src="images/gift8.png" class="giftpic"/>
+		</div>
+		<strong>恭喜您获得<span class="giftname">三天包月体验卡</span></strong>
+		<p id="detail">已开通3天包月会员，10万册包月书可以在线免费看3天</p>
+		<a class="knowbtn" href="#">知道啦</a>
+	</div>
+	<!-- 获得奖品 填写联系方式 -->
+	<div class="tiparea" id="tiparea4">
+		<div class="showgift">
+			<img src="images/gift1.png" class="giftpic"/>
+		</div>
+		<strong>恭喜您获得<span class="giftname">iPad</span></strong>
+		<p>请填写正确的联系方式，方便客服与您联系</p>
+		<a class="tipbtn" href="#">填写联系方式</a>
+		<a class="closebtn" href="#"></a>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

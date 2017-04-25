@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>我的奖品</title>
+
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/mine.css">
+</head>
+
+<body>
+	<div class="mask" v-show="maskShown">
+		<div class="panel">
+			<p class="info">如何使用学习卡？</p>
+			<p class="desc">
+				1、进入优惠券开课页面<br/>
+				<span class="link">http://class.hujiang.com/<br/>coupon/open</span><br/>
+				2、输入优惠券代码，选择课程。<br/>
+				3、确认用户名，开通课程。</p>
+			<div class="pinkBtn gotIt" v-on:click="closeMask">
+				我知道了
+			</div>
+		</div>
+	</div>
+
+	<p class="info" v-show="myPrizes.length===0">您还没有任何奖品！</p>
+	<div class="list">
+		<div class="item" v-for="item in myPrizes">
+			<img class="thumbnail" src="img/square_{{item.no}}{{ios?'_ios':''}}.png"/>
+			<p class="name" v-show="item.no<6">{{item.prizename}}</p>
+			<div class="name2" v-show="item.no>=6">
+				<div class="one">
+					<p class="left">{{item.prizename}}</p>
+					<p class="right" v-on:click="showMask">如何兑换》</p>
+				</div>
+				<div class="two">
+					兑换码：{{item.cardkey}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- <script type="text/javascript" src="js/debug.js"></script> -->
+<script type="text/javascript" src="js/vue.min.js"></script>
+
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+
+<script type="text/javascript" src="./dist/bundle_mine.js"></script>
+
+</body>
+
+</html>

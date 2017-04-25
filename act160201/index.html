@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>时间的朋友</title>
+<link href="css/stylecss.css" rel="stylesheet" type="text/css" />
+<script>
+	var fontsize = (document.documentElement.clientWidth) / 320 * 100;
+	document.documentElement.style.fontSize = fontsize + 'px';
+</script>
+</head>
+
+<body>
+	<div class="banner">
+		<img src="images/topimg.png">
+	</div>
+	<div class="banner">
+		<img src="images/bookface.png">
+	</div>
+	<div class="bookinfo">
+		<div class="txtinfo">
+			<a id="button1" href="javascript:;"
+				onclick="javascript:ABook.gotoDetail(779720);" class="btn">去详情页</a>
+			<a id="button2" href="javascript:;"
+				onclick="javascript:ABook.gotoRead(779720);" class="btn">去阅读</a>
+			<a id="button3" href="javascript:;"  class="btn">去充值</a>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+	<script data-main="index" src="js/require.js"></script>
+</body>
+</html>

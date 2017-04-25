@@ -1,0 +1,391 @@
+<script id="qbag" type="text/html">
+    <div class="head"><img src="images/top.jpg" alt="">
+        <!--有头像时状态-->
+        <!--点击态时加active "goods auto-x active"-->
+        <div class="goods auto-x" id="uct" onclick="javascript:goAccount();"><img id="uicon" src="images/face2.png" alt="">
+            <h3 id="nick">登录QQ查看</h3>
+            <p><span>500</span>红包书券已到账</p>
+            <span class="gpoint"></span>
+        </div>
+    </div>
+    <div id="ccontent" style="display:none;">
+    <!--0.99元专区-->
+    <div class="layout" id="9c">
+        <div class="title auto-x"><span class="discount09 auto-x"></span> <span class="vline auto-x"></span>
+            <p class="limitTime auto-x" id="end9"  style="display:none">结束仅剩<span id="9d"></span>天<span id="9h"></span>小时<span id="9m"></span>分钟</p>
+        </div>
+        {{if books[2319]}}
+        <ul class="booklist">
+            {{each books[2319] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2319] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2319] as value i}}
+            {{if i>=5&&i<=6}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+    <!--5折专区-->
+    <div class="layout5" id="5c">
+        <div class="title auto-x"><span class="discount5 auto-x"></span> <span class="vline auto-x"></span>
+            <p class="limitTime auto-x" id="end5"  style="display:none">结束仅剩<span id="5d"></span>天<span id="5h"></span>小时<span id="5m"></span>分钟</p>
+        </div>
+        {{if iType==2}}
+        <div class="titles">女生专区</div>
+        {{if books[2321]}}
+        <ul class="booklist">
+            {{each books[2321] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2321] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        <div class="titles">男生专区</div>
+        {{if books[2320]}}
+        <ul class="booklist">
+            {{each books[2320] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2320] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        {{else}}
+        <div class="titles">男生专区</div>
+        {{if books[2320]}}
+        <ul class="booklist">
+            {{each books[2320] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2320] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        <div class="titles">女生专区</div>
+        {{if books[2321]}}
+        <ul class="booklist">
+            {{each books[2321] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2321] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        {{/if}}
+    </div>
+    <!--2折专区-->
+    <div class="layout2" id="2c">
+        <div class="title auto-x"><span class="discount2 auto-x"></span> <span class="vline auto-x"></span>
+            <p class="limitTime auto-x" id="end2"  style="display:none">结束仅剩<span id="2d"></span>天<span id="2h"></span>小时<span id="2m"></span>分钟</p>
+        </div>
+        {{if iType==1}}
+        <div class="titles">男生专区</div>
+        {{if books[2322]}}
+        <ul class="booklist">
+            {{each books[2322] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2322] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        <div class="titles">出版专区</div>
+        {{if books[2318]}}
+        <ul class="booklist">
+            {{each books[2318] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        <div class="titles">女生专区</div>
+        {{if books[2323]}}
+        <ul class="booklist">
+            {{each books[2323] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2323] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        {{else if iType==2}}
+        <div class="titles">女生专区</div>
+        {{if books[2323]}}
+        <ul class="booklist">
+            {{each books[2323] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2323] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        <div class="titles">出版专区</div>
+        {{if books[2318]}}
+        <ul class="booklist">
+            {{each books[2318] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        <div class="titles">男生专区</div>
+        {{if books[2322]}}
+        <ul class="booklist">
+            {{each books[2322] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2322] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        {{else}}
+        <div class="titles">出版专区</div>
+        {{if books[2318]}}
+        <ul class="booklist">
+            {{each books[2318] as value i}}
+            {{if i<=2}}
+                <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                    <p class="book_name">{{value.title}}</p>
+                    <p class="priceDel">{{value.price}}</p>
+                    <p class="priceNow">{{value.nowPrice}}</p>
+                </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        <div class="titles">男生专区</div>
+        {{if books[2322]}}
+        <ul class="booklist">
+            {{each books[2322] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2322] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        <div class="titles">女生专区</div>
+        {{if books[2323]}}
+        <ul class="booklist">
+            {{each books[2323] as value i}}
+            {{if i<=2}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul class="sbooklist">
+            {{each books[2323] as value i}}
+            {{if i>=3&&i<=4}}
+            <li onclick="javascript:goBookDetailPage('{{value.bid}}');"><img src={{value.cover}} alt="">
+                <p class="book_name">{{value.title}}</p>
+                <p class="priceDel">{{value.price}}</p>
+                <p class="priceNow">{{value.nowPrice}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{/if}}
+        {{/if}}
+    </div>
+    </div>
+    <!--活动规则-->
+    <div class="rulebox">
+        <h4>活动规则</h4>
+        <ul>
+            <li>活动时间：2016年2月7日-2月16日</li>
+            <li>活动期间页面内书籍，全部特价销售，活动结束后恢复原价</li>
+            <li>书券为购买书籍的道具仅限于书籍订阅，付费时优先扣取</li>
+        </ul>
+        <p class="copyright">此活动解释权归QQ阅读所有</p>
+    </div>
+</script>
+
+
+<script id="over" type="text/html">
+    <div class="head"> <img src="images/top.jpg" alt="">
+        <!--有头像时状态-->
+        <div class="goods auto-x" id="uctover" onclick="javascript:goAccount();"><img id="uiconover" src="images/face2.png" alt="">
+            <h3 id="nickover">登录QQ查看</h3>
+            <p><span>500</span>红包书券已到账</p>
+            <span class="gpoint"></span>
+        </div>
+    </div>
+    <!--活动已结束时-->
+    <div class="cntnone">
+        本活动已结束
+    </div>
+</script>

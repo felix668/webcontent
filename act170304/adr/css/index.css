@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+ul {
+  list-style: none;
+}
+/* Media Queries */
+html {
+  font-size: 100px;
+  font-family: 'Microsoft Yahei';
+}
+.clearfix {
+  clear: both;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+}
+.bar {
+  width: 100%;
+}
+.frame {
+  font-size: 0.3rem;
+}
+.frame .background {
+  width: 100%;
+  display: block;
+}
+.frame .content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.frame .content .veil-left {
+  position: absolute;
+  left: 0;
+  top: 3.2rem;
+  width: 0.9rem;
+  height: 7.2rem;
+  z-index: 100;
+}
+.frame .content .veil-right {
+  position: absolute;
+  right: 0;
+  top: 3.2rem;
+  width: 0.9rem;
+  height: 7.2rem;
+  z-index: 100;
+}
+.frame .content .swiper-container {
+  width: 100%;
+  height: 6.9rem;
+  margin: 3.3rem auto 0 auto;
+  overflow: hidden;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.frame .content .swiper-container .swiper {
+  position: relative;
+  width: 6rem;
+  height: 6.9rem;
+  margin: auto;
+}
+.frame .content .swiper-container .swiper .train {
+  position: absolute;
+  width: 3000%;
+  height: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.frame .content .swiper-container .swiper .train > li {
+  position: relative;
+  width: 6rem;
+  height: 100%;
+  float: left;
+}
+.frame .content .swiper-container .swiper .train > li .card {
+  position: relative;
+  width: 5.4rem;
+  margin: auto;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.frame .content .swiper-container .swiper .train > li .card .card-img {
+  width: 5.4rem;
+  margin: auto;
+  display: block;
+}
+.frame .content .swiper-container .swiper .train > li .card .open_book {
+  position: absolute;
+  right: 1px;
+  bottom: 0.16rem;
+  width: 1.6rem;
+}
+.frame .content .swiper-container .swiper .train > li .card .toDetails {
+  position: absolute;
+  left: 0;
+  top: 4.3rem;
+  width: 5.4rem;
+  height: 2.43rem;
+  z-index: 100;
+}
+.frame .content .swiper-container .swiper .train > li .card .banner {
+  position: absolute;
+  left: 0;
+  top: 4.3rem;
+  width: 0.71rem;
+  z-index: 10;
+}
+.frame .content .swiper-container .swiper .train > li .card .book {
+  position: absolute;
+  left: 0.1rem;
+  top: 4.57rem;
+  width: 1.6rem;
+  display: block;
+}
+.frame .content .swiper-container .swiper .train > li .card .ribbon {
+  position: absolute;
+  left: 1.8rem;
+  top: 4.5rem;
+  width: 3.4rem;
+  height: 2rem;
+  z-index: 10;
+}
+.frame .content .swiper-container .swiper .train > li .card .ribbon .title {
+  margin-bottom: 0.05rem;
+  font-size: 0.34rem;
+  line-height: 0.45rem;
+  color: white;
+  text-align: left;
+}
+.frame .content .swiper-container .swiper .train > li .card .ribbon .title span {
+  font-size: 0.24rem;
+  padding: 0 2px 0 2px;
+  border: 1px solid #95ABD6;
+  border-radius: 3px;
+  vertical-align: top;
+  color: #95ABD6;
+}
+.frame .content .swiper-container .swiper .train > li .card .ribbon .desc {
+  font-size: 0.24rem;
+  line-height: 0.32rem;
+  color: #B9C8E5;
+}
+.frame .content .honeycomb {
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  padding-top: 18px;
+}
+.frame .content .honeycomb .row {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.frame .content .honeycomb .row1 {
+  padding-left: 0.57rem;
+}
+.frame .content .honeycomb .row4 {
+  padding-left: 1.14rem;
+}
+.frame .content .honeycomb .HEXAGON {
+  position: relative;
+  float: left;
+  margin-right: 0.1rem;
+  display: block;
+  width: 1.04rem;
+  height: 0.6rem;
+  background-color: #ffffff;
+  text-align: center;
+  color: #6881B1;
+}
+.frame .content .honeycomb .HEXAGON .one {
+  line-height: 0.6rem;
+  font-size: 0.25rem;
+}
+.frame .content .honeycomb .HEXAGON .two {
+  font-size: 0.25rem;
+  line-height: 0.3rem;
+  display: block;
+}
+.frame .content .honeycomb .HEXAGON.active {
+  background: #6881B1;
+  color: white;
+}
+.frame .content .honeycomb .HEXAGON.active:before {
+  border-bottom-color: #6881B1;
+}
+.frame .content .honeycomb .HEXAGON.active:after {
+  border-top-color: #6881B1;
+}
+.frame .content .honeycomb .HEXAGON:before,
+.frame .content .honeycomb .HEXAGON:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-left: 0.52rem solid transparent;
+  border-right: 0.52rem solid transparent;
+}
+.frame .content .honeycomb .HEXAGON:before {
+  border-bottom: 0.3rem solid #ffffff;
+  top: -0.28rem;
+}
+.frame .content .honeycomb .HEXAGON:after {
+  border-top: 0.3rem solid #ffffff;
+  bottom: -0.28rem;
+}

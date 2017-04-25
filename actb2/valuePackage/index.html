@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="copyright" content="Copyright (c) 1998-2014 Tencent."/>
+    <meta name="description" content="QQ阅读"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>抢购超值礼包</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="js/set.js"></script>
+</head>
+<body id="body">
+<div class="banner">
+    <img src="images/banner.jpg"/>
+</div>
+<!-- 抢购 -->
+<div class="wrap" id="buy">
+    <div class="title">
+        <h1>充值满10元解锁礼包，每人限领1个</h1>
+        <p class="num"></p>
+    </div>
+    <img src="images/pack1.png" class="ticket"/>
+    <p class="tip">活动期间内，一次性充值满10元即可解锁礼包</p>
+    <a href="javascript:Index.doCharge();" class="buybtn">解锁礼包</a>
+    <a href="javascript:Index.goToFeedBackPage();" class="abnormal">充值成功但无法领取礼包？请联系我们</a>
+</div>
+<!-- 抢购成功 -->
+<div class="wrap" id="buyed">
+    <div class="title">
+        <p class="success">已解锁超值包，准时领取哦</p>
+    </div>
+    <img src="images/pack1.png" class="ticket sticket"/>
+    <p class="tip">活动期间内，一次性充值满10元即可解锁礼包</p>
+    <p class="error" style="display: none">出错啦，请稍后重试</p>
+    <a href="javascript:void(0)" class="getbtn">领取铃铛和书券</a>
+</div>
+<!-- 重复抢购-->
+<div class="wrap" id="hasbuy">
+    <div class="title">
+        <h1>充值满10元解锁礼包，每人限领1个</h1>
+        <p class="num"></p>
+    </div>
+    <img src="images/pack1.png" class="ticket"/>
+    <p class="tip">活动期间内，一次性充值满10元即可解锁礼包</p>
+    <p class="repeat">很抱歉，本设备已经抢购过超值礼包<br>不能重复抢购噢</p>
+</div>
+<!-- 状态异常-->
+<div class="wrap" id="error">
+    <div class="title">
+        <h1>充值满10元解锁礼包，每人限领1个</h1>
+        <p class="num"></p>
+    </div>
+    <img src="images/pack1.png" class="ticket sticket"/>
+    <p class="tip">活动期间内，一次性充值满10元即可解锁礼包</p>
+    <a href="javascript:Local.doCharge();" class="buybtn">解锁礼包</a>
+    <a href="#" class="abnormal">充值成功但无法领取礼包？请联系我们</a>
+</div>
+<!-- 领取书券成功 -->
+<div class="wrap" id="pick">
+    <div class="title">
+       <p class="success">已解锁超值包，准时领取噢</p>
+    </div>
+    <img src="images/pack3.png" class="ticket sticket"/>
+    <p class="tip">连续5天，每天可领200书券，准时领取噢</p>
+    <ul class="list">
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+    </ul>
+    <p class="error" style="display: none">出错啦，请稍后重试</p>
+    <a href="javascript:void(0)" class="getbtn">领取今日200书券</a>
+</div>
+
+<!-- 领取书券成功 -->
+<div class="wrap" id="success">
+    <div class="title">
+        <p class="success">已解锁超值包，准时领取哦</p>
+    </div>
+    <img src="images/pack3.png" class="ticket sticket"/>
+
+    <p class="tip">连续5天，每天可领200书券，准时领取噢</p>
+    <ul class="list">
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+        <li>
+            <img src="images/ticket.png">
+            <i class="icon"></i>
+        </li>
+    </ul>
+    <p class="error" style="display: none">出错啦，请稍后重试</p>
+    <a href="javascript:void(0)" class="tipbtn">领取成功，明天再领200书券</a>
+</div>
+
+<div class="ways">
+    <p>圣诞精彩活动 更多玩法：</p>
+    <div class="enters">
+        <a href="javascript:Index.goToLotteryPage();">
+            <img src="images/gift1.png"/>
+        </a>
+        <a href="javascript:Index.goToRankPage();">
+            <img src="images/gift2.png"/>
+        </a>
+    </div>
+</div>
+<dl class="rule">
+    <dt><strong>活动规则</strong></dt>
+    <dd>
+        1. 充值解锁礼包时间：2015年12月8日--12月26日，超过此时间之后，充值满10元将无法获得礼包<br>
+        2. 书券领取截止时间：2015年12月31日，超过此时间之后，未领取的书券将无法领取，请不要忘记领取哦<br>
+        3. 活动期间，一次性充值满10元即可在本活动页面领取圣诞超值礼包：50铃铛+1000书券<br>
+        4. 从领取礼包当日开始，连续5天，每天可在本活动页面领取200书券（当日未领取书券，过后不予以补发）<br>
+        5. 活动期间每位用户仅限领取一次，机不可失抓紧领取<br>
+
+        <p>本活动最终解释权归QQ阅读所有</p>
+    </dd>
+</dl>
+</body>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src='index.js'></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</html>

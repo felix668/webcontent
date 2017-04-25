@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,p,ul,ol,li,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img{margin:0;padding:0;color:#999;font-size:14px;}
+em,i,b{ font-style:normal; font-weight:normal;}
+h1,h2,h3,h4,h5{ font-weight:normal;}
+body{font-family: "Microsoft YaHei",微软雅黑, Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;background:#f9464a;}
+ul,ol,li{list-style:none}
+img{border:0 none;-webkit-touch-callout:none;}
+html,body{-webkit-user-select:none;user-select:none;height:100%;}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.topbar img{ width:100%; display:block;}/****banner****/
+.upgradeinfo{ background:#d82f31; margin:0 18px; padding:22px 9px 4px; border-radius:5px;}/***描述*****/
+.upgradeinfo p{ font-size:14px; color:#fff; line-height:20px; padding-bottom:15px;}
+.down_btn{ margin:18px; display:block;}/***下载按钮*****/
+.down_btn img{ display: block;width: 100%;}

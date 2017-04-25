@@ -1,0 +1,76 @@
+body,div,p,h4,ul,li{margin:0;padding:0;}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+em,i,span{ font-style:normal; font-weight: normal;}
+body{font-family:"Microsoft YaHei",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none; font-size: .24rem; line-height: .24rem; color: #a9a092; background:#15151a;}
+
+/*===========main==========*/
+.bammerbox{ width: 100%; padding-top: 9.4rem; background:url(../images/banner.png) no-repeat; background-size: 100% auto; text-align: center;}
+.tt{ display:inline-block; font-size: .36rem; color: #cfaf80; line-height: .68rem;position: relative; z-index: 1; padding-bottom: .18rem; margin: 0 auto .4rem;}
+.tt:after{content: ''; position: absolute; left: 0; bottom:0; width: 100%; height: .18rem; background: url(../images/bolang.png) repeat-x; background-size: 1.5rem .18rem;}
+.newbook{ margin: 0 .3rem; position: relative; z-index: 1;}
+.bookface{ position: absolute; left: 0; top: 0; width: 2.02rem; height: 2.62rem; background: url(../images/bookface.png) no-repeat; background-size: 100% 100%;}
+.bookinfo{ padding-left: 2.3rem; height: 2.82rem; text-align: left;}
+.bookinfo h4{ font-size:.32rem; line-height: .36rem; margin-bottom: .2rem; padding-top: .15rem;}
+.bookinfo p{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;overflow: hidden; font-size: .28rem; line-height: .42rem;}
+.notice{  font-size: .24rem; line-height: .48rem; margin-left: .48rem; text-align: left;}
+.btnbox{ margin: .24rem .3rem .6rem; height: .94rem; display: -webkit-flex;flex-flow: row;justify-content:center;align-items:center;}
+.btnbox a{ display: block; width:6.7rem;  height: 100%; background: url(../images/btnbg.png) no-repeat; background-size: 6.7rem auto; overflow: hidden; color: #fff; line-height: .94rem; font-size: .32rem; }
+.btnbox a:active{ background-position:0 -1.14rem;}
+.video{ margin: 0 auto .24rem;}
+.videobox{ width: 6.39rem; height:3.62rem; margin: 0 auto; border:2px solid #bd8022; overflow: hidden;}
+.videobox .vvbox{width: 100%; height: 100%;}
+.vvbox iframe{ width: 100%; height: 100%;}
+.videoselect{ margin: .1rem auto .6rem;border:2px solid transparent; width: 6.4rem;-webkit-align-items:left;-webkit-justify-content:left;display:-webkit-flex;}
+.videoselect li{ width: 1.16rem; height: .56rem; line-height: .56rem; text-align: center; border:1px solid #0f0f13; font-size: .24rem; margin-right: .24rem; margin-left: -2px;}
+.videoselect li.active{ color: #bd8022;}
+.videoselect li:last-child{position: relative; z-index: 1;}
+.videoselect li:last-child:after{ content: ''; position: absolute; top: 0; right: 0; width: .24rem; height: .24rem; background: url(../images/yu.png) no-repeat; background-size: 100% 100%;}
+.sharebox{ margin: 0 .3rem;}
+.sharebox p{text-align: center; margin: 0;}
+.sharebtn{ display: block; width: 4.08rem; height: .94rem; margin: 0 auto .4rem;background: url(../images/btnbg.png) no-repeat 0 -2.16rem; background-size: 6.7rem auto;color: #fff; line-height: .94rem; font-size: .32rem;}
+.sharebtn:active{ background-position: 0 -3.3rem;}
+.prizebox{ width: 6.78rem; height: 7.64rem; margin:.6rem auto 0; background: url(../images/prizess.png) no-repeat; background-size: 100% 100%; position: relative; z-index: 1;}
+.prizebox.guest{ background: url(../images/prizessG.png) no-repeat; background-size: 100% 100%;}
+.prizebtn{ position: absolute; z-index: 1; left: 50%; top: 2.06rem; width: 2.76rem; height: 2.76rem; margin-left: -1.38rem; background: url(../images/prizebtn.png) no-repeat;background-size: 100% 100%; -webkit-transition:all 3s ease-in-out; transform-origin:50% 50%;}
+.startprize{position: absolute; z-index: 2; left: 50%; top: 50%; display: block; width: 1.58rem; height: 1.58rem; margin-left:-.77rem; margin-top: -1.19rem; background: url(../images/btnprize.png) no-repeat;background-size: 100% 100%; }
+.rules p{font-size: .36rem;  line-height: .68rem; text-align: center; margin:.2rem 0 .4rem;}
+.rules li{ text-align: left; margin: 0 .3rem .18rem; padding-left: .48rem; position: relative; z-index: 1; font-size: .28rem; line-height: .42rem;}
+.rules li span{position: absolute; left: 0; top: 0; text-align: right; display: block; width: .4rem;}
+.rules p.copyright{ color: rgba(129,129,129,.4); font-size: .24rem;margin:.2rem 0 .6rem;}
+.rules li a{color: #b43838;font-weight: bold;}
+/*==================mask=================*/
+.mask{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.7);-webkit-align-items:center;-webkit-justify-content:center;z-index: 100;display:-webkit-flex;}
+.teaparea{ width: 5.2rem; background: #fcf1fd; border-radius: .2rem;  padding-bottom: .3rem; position: relative; z-index: 1;text-align: center;}
+.closeicon{ position: absolute; top: .2rem; right: .2rem; width: .44rem; height: .44rem; background: url(../images/close.png) no-repeat; background-size: 100% 100%;}
+.prizeicon{ position: absolute; left: 50%; top: -.6rem; width: 2.86rem; height: 1.66rem; margin-left: -1.43rem; background: url(../images/tk_prizeicon.png) no-repeat; background-size: 100% 100%;}
+.btnaction{display: block;  width: 3.3rem; height: .94rem; background: url(../images/tkbtn.png) no-repeat; background-size: 3.3rem auto; overflow: hidden; color: #fff; line-height: .94rem; font-size: .32rem; margin: .3rem auto 0;}
+.btnaction:active{background-position: 0 -1.2rem;}
+.teaparea h4{ font-size: .32rem; line-height: .48rem; color: #333; padding-top: 1.2rem; margin-bottom: .2rem;}
+.teaparea p{ font-size: .28rem; line-height: .48rem; color: #7e797e;}
+.titles{ width: 100%; height: 1.04rem; line-height: 1.04rem; background: #e8775b; border-radius: .2rem .2rem 0 0; font-size: .36rem; color: #fff; text-shadow:1px 1px 2px #d0664c;}
+.prizemask h4{ padding-top: .4rem;}
+.prizemask h4 span{ color: #e8775b;}
+.prizemask p{ text-align: left; margin: .2rem .5rem 0;}
+.prizepic{ display: block; width: 2.16rem; margin: 0 auto;}
+.thanks{ display: block; width: .94rem; height: .94rem; margin: .3rem auto 0; background: url(../images/thanks.png) no-repeat; background-size: 100% 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

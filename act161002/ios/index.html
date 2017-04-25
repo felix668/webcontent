@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>ios</title>
+	<link rel="stylesheet" type="text/css" href="dist/index.style.css">
+</head>
+
+<body>
+
+	<div id="root" v-cloak>
+<!-- 		<debug :state="$data" :logged-in="loggedIn" :picked="picked" :drawn="drawn" :writer-no="writerNo" :coupon-got="couponGot"></debug> -->
+<!-- 		<mask-download :show="download" :act="act"></mask-download> -->
+<!-- 		<mask-loading></mask-loading> -->
+		<mask-over :over="over"></mask-over>
+		<mask-intro :show="show_intro_mask" :writer-no="writerNo" :picked="picked" :act="act"></mask-intro>
+		<mask-prize :show="show_prize_mask" :prize="prize" :act="act" :ios="ios"></mask-prize>
+
+		<img class="bg" src="img/bg2.png"/>
+<!-- 		<fire></fire> -->
+		<img v-if="ios" class="bone_fire" src="img/bone_fire.png"/>
+		<img class="crowd" src="img/crowd.png"/>
+		<img class="ghost_black" src="img/ghost_black.png"/>
+		<img class="bat" src="img/bat.gif"/>
+
+		<focus></focus>
+		
+		<img class="left-pic" :src=" 'img/left-pic'+(ios?'_ios':'')+'.png' "/>
+		<img class="title__" src="img/title__.png"/>
+		<img class="bat_cat" src="img/bat_cat.png"/>
+		<img class="bat_moon" :src=" 'img/black_bat.png' "/>
+
+		<div class="potraits">
+			<li v-for="(a,i) in writers" :class=" a.name ">
+				<div :class=" i<=6?'img':'img__' ">
+					<img class="pt" :src=" 'img/'+(a.name!=='think'?a.name:'think_4')+'.png' "
+					@click=" showIntro(i) "
+					:class=" recalibrating?'recalibrating':'' "
+					:style=" 'transform: rotateX('+rotateX+'deg) rotateY('+rotateY+'deg);-webkit-transform:rotateX('+rotateX+'deg) rotateY('+rotateY+'deg);'  "/>
+				</div>
+				<p><span>{{a.votes||'--'}}</span>票</p>
+				<img class="pick" src="img/pick.png"
+				v-show=" picked<0 "
+				@click="pick(i)"/>
+				<img class="picked" :src=" 'img/'+(a.picked===true?'picked':'pick-disabled')+'.png' "
+				v-show=" picked>=0 "/>
+			</li>
+		</div>
+
+		<lottery 
+		:ios="ios" 
+		:logged-in="loggedIn" 
+		:picked="picked" 
+		:drawn="drawn" 
+		:act="act" 
+		:coupon-got="couponGot" 
+		:coupon-used="couponUsed"
+		:voted="voted_on_other_platform"
+		></lottery>
+
+		<div class="storywriting">
+			<img class="web" src="img/web.png"/>
+			<div class="__content">
+				<img class="write-a" src="img/write-a.png"/>
+				<img class="penguin" :src=" 'img/penguin'+(ios?'_ios':'')+'.png' "/>
+				<img class="write-and" src="img/write-and.png"
+				@click="act({type:'TO_SHUPING'})"/>
+			</div>
+		</div>
+		
+		<img class="rules" src="img/rules_2.png"/>
+
+		<div class="footer">
+			<img src="img/footer.png"/>
+			<p>活动最终解释权归QQ阅读所有</p>
+		</div>
+
+<!-- 		<div class="rules">
+			<img src="img/banner_rules.png"/>
+			<p>1.活动时间：2016年9月29日17点-10月8日0点。</p>
+			<p>2.充值赠送：单次(一次性)充值达到指定额度，则赠送对应额度{{name}}，多充多送！</p>
+			<p>3.活动所赠{{name}}有效期均为15天并且即时到账，可用于直接购买书籍。</p>
+		</div> -->
+
+<!-- 		<div class="copyright">
+			{{ios?'本活动与苹果公司无关，最终解释权归QQ阅读所有':'本活动最终解释权归QQ阅读所有'}}
+		</div> -->
+	</div>
+
+<script type="text/javascript" src="http://pingjs.qq.com/ping.js"></script>
+
+<script type="text/javascript">
+	if(typeof(pgvMain) == 'function'){
+		pgvMain();
+	}
+</script>
+<!-- <script type="text/javascript" src="vendor/debug.js"></script> -->
+<script type="text/javascript" src="vendor/vue.min.js"></script>
+
+<script type="text/javascript" src="vendor/charm.js"></script>
+<script type="text/javascript" src="vendor/cfoot.js"></script>
+<script type="text/javascript" src="vendor/local.js"></script>
+<script type="text/javascript" src="vendor/zbook.js"></script>
+<script type="text/javascript" src="vendor/abook.js"></script>
+<script type="text/javascript" src="./dist/index.bundle.js"></script>
+
+</body>
+
+</html>

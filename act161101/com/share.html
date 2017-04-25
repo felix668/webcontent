@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>QQ阅读双十一</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<link href="css/share.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="sinfo">
+	<div class="avor">
+		<div class="box"><img :src=userinfo.avor></div>
+	</div>
+	<div class="sheme">
+		<strong>{{userinfo.nickName}}</strong>正在参与QQ阅读双十一活动<br v-if="userinfo.nickName.length<8">免费赠送3本书给好友
+	</div>
+</div>
+<div class="pack">
+	<div class="um"></div>
+	<div class="cont">
+		<ul class="booklist">
+			<li v-for="i in 3">
+				<div class="cover" @tap="goactpage">
+					<img :src="'images/'+booklist[i+2].split('_')[2]+'.jpg'">
+				</div>
+				<div class="info">
+					<h3>{{booklist[i+2].split('_')[1]}}</h3>
+					<p class="author">{{booklist[i+2].split('_')[0]}}</p>
+				</div>
+			</li>
+		</ul>
+		<div class="price">
+			<span>原价{{parseInt(booklist[1])}}元</span><strong class="red">免费</strong>
+		</div>
+		<div class="buybox">
+			<p>{{userinfo.nickName}}买了这3本书，可免费赠送给1个朋友</p>
+			<template v-if="over">
+				<strong class="red">活动已结束</strong>
+				<div class="inpbtn" @tap="goactpage">去QQ阅读查看更多精彩活动</div>
+			</template>
+			<template v-else>
+				<strong v-if="!userinfo.hasPicked && !picksuss" class="yellow">先抢先得</strong>
+				<strong v-if="userinfo.hasPicked && !picksuss">已被好友<span class="yellow">{{userinfo.pickNickName}}</span>领取</strong>
+				<div class="inpbtn" v-if="!userinfo.hasPicked && !picksuss"  @tap="getmask" id="inpbtn">输入QQ号领取</div>
+				<div class="getedbtn" v-if="userinfo.hasPicked && !picksuss">已被领取</div>
+				<strong v-if="picksuss" class="yellow">领取成功</strong>
+				<div class="inpbtn" v-if="picksuss" @tap="goshelf">去QQ阅读免费读</div>
+			</template>
+		</div>	
+	</div>
+</div>
+<img src="images/share.jpg" alt="超值包好书不断" v-if="!over" @tap="goactpage">
+<div class="openbtn" @tap="goactpage" id="openbtn">去QQ阅读，6亿用户和你一起狂欢</div>
+<template v-if="mask">
+	<div class="mask">
+		<div class="tiparea" v-if="loadmask">
+			<h3>下载QQ阅读,畅读海量小说</h3>
+			<p>如果还未安装QQ阅读，你可以：</p>
+			<div class="btns">
+				<span class="cancle" @tap="hidemask">取消</span>
+				<span class="certain" @tap="dload">下载QQ阅读</span>
+			</div>
+		</div>
+		<div class="tiparea2" v-else>
+			<h2>领书</h2>
+			<p>用你输入的QQ号码登录QQ阅读即可免费阅读</p>
+			<div class="text">
+				<input type="text" placeholder="输入QQ号码" max-length=15 v-model="qq" @focus="focus">
+				<span v-if="error" class="error">{{error}}</span>
+			</div>
+			<div class="submit" @tap="submit">确认</div>
+			<i class="close" @tap="hidemask"></i>
+		</div>
+	</div>
+</template>
+<script type="text/javascript" src="js/rem.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/v.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="share.js"></script>
+<script type="text/javascript" src="http://iyuedu.qq.com/event/common/en.js"></script>
+<script type="text/javascript" src="http://pingjs.qq.com/ping.js"></script>
+<script type="text/javascript">
+	if(typeof(pgvMain) == 'function'){
+		pgvMain();
+	}
+</script>
+<script type="text/javascript" data-main="http://iyuedu.qq.com/event/common/ne.js" src="http://iyuedu.qq.com/event/common/require.js"></script>
+</body>
+</html>

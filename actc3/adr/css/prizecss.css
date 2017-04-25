@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS reset */
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body,div,p,ul,li,dl,dt,dd,img,i,strong,h1,h4,h5,span,header{ margin:0; padding:0;}
+i{font-style:normal;}
+body{font-family: "Microsoft YaHei",微软雅黑, Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none; background:#f7f7f7;font-size:0.12rem}
+ul,ol,li{list-style:none}
+html,body{-webkit-user-select:none;user-select:none;}
+img { border:0 none;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input{ -webkit-tap-highlight-color:rgba(0,0,0,0);  -webkit-user-modify:read-write-plaintext-only; -webkit-outline:none;-webkit-appearance:none;}
+/**********我的奖品*********/
+.plr14{ padding:0.15rem 0.14rem;}
+.topnotice{ font-size:0.13rem; line-height:0.2rem; color:#4c4c4c;}
+.topnotice a{ font-size:0.15rem; color:#103c7b; font-weight:bold;}
+.plr14 h4{ clear:both; font-size:0.15rem; color:#f79e02; font-weight:bold; margin:0.10rem 0;}
+.myprize li{ float:left; display:inline-block; width:33.33333%; text-align:center;}
+.myprize li .prizebox{ width:0.88rem; height:0.88rem; border-radius:4px; position:relative; margin:0 auto 0.2rem; overflow:hidden;}
+.myprize li .prizebox img{width:0.88rem; height:0.88rem; border-radius:4px; display:block;}
+.myprize li .prizebox p{ position:absolute; left:0; bottom:0; width:100%; height:0.2rem; line-height:0.2rem; text-align:center; background:rgba(16,60,123,0.5); font-size:0.12rem; color:#fff; overflow:hidden;}
+.myprize li:nth-child(3n+1){ clear:both;}
+.praize_info li{line-height:0.22rem;  font-size:0.13rem; overflow:hidden; color:#103c7b; height:0.22rem;}
+.praize_info li span{ margin:0 0.15rem 0 0.03rem;}
+.user_name{ display:inline-block; vertical-align:middle;line-height:0.22rem; height:0.22rem; max-width:1.04rem; overflow:hidden; white-space:nowrap;word-break:break-all; text-overflow:ellipsis;}
+.praize_info li span.times{margin:0 0.15rem 0 0; color:#4c4c4c; font-weight:bold;}
+.nocontent{ clear:both; text-align:center; font-size:0.13rem; color:#808080; height:88px; line-height:88px;}
+.nocontent a{ color:#103c7b; font-size:0.15rem; font-weight:bold;}

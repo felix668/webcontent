@@ -1,0 +1,123 @@
+.MaskLoading[_v-71f79c14] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+}
+.MaskLoading ._text[_v-71f79c14] {
+  padding: 16px 0;
+  font-size: 0.28rem;
+  color: #999;
+  text-align: center;
+}
+.MaskLoading ._text img[_v-71f79c14] {
+  -webkit-animation: rotate 1s linear infinite;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 0 auto .05rem;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.over[_v-acb5f1a8] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1999;
+}
+.over .over-c[_v-acb5f1a8] {
+  height: 4.16rem;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.over .over-c img[_v-acb5f1a8] {
+  width: 2.05rem;
+  height: 2.19rem;
+  margin: 0.32rem auto 0;
+}
+.over p[_v-acb5f1a8] {
+  color: #999;
+  font-size: 0.30rem;
+  line-height: 1;
+}
+.over .over-p1[_v-acb5f1a8] {
+  margin-top: 0.33rem;
+}
+.over .over-p2[_v-acb5f1a8] {
+  margin-top: 0.24rem;
+  margin-bottom: 0.48rem;
+}
+.MaskDownload[_v-84e08e40] {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.MaskDownload .mask-panel[_v-84e08e40] {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5.5rem;
+  height: 3.6rem;
+  margin: auto;
+  border-radius: 0.1rem;
+  background: white;
+}
+.MaskDownload .mask-panel .top[_v-84e08e40] {
+  box-sizing: border-box;
+  height: 0.9rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.3rem;
+  line-height: 0.9rem;
+  font-weight: normal;
+  text-align: center;
+}
+.MaskDownload .mask-panel .middle[_v-84e08e40] {
+  box-sizing: border-box;
+  height: 1.8rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.28rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+.MaskDownload .mask-panel .bottom[_v-84e08e40] {
+  overflow: hidden;
+}
+.MaskDownload .mask-panel .bottom li[_v-84e08e40] {
+  float: left;
+  width: 50%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.28rem;
+  text-align: center;
+}
+.MaskDownload .mask-panel .bottom .confirm[_v-84e08e40] {
+  background: #3d8dcf;
+  color: white;
+}

@@ -1,0 +1,369 @@
+@blue: #2CA0FD;
+@grey: #525155;
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+body::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+html {
+	font-size: 100px;
+}
+
+body {
+	font-family: Microsoft Yahei;
+}
+
+ul {
+	list-style: none;
+}
+
+.mask-landscape {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.8;
+	display: none;
+	z-index: 1000;
+	img {
+		position: absolute;
+		left: 0;top: 0;bottom: 0;right: 0;
+		margin: auto;
+		width: 80%;
+		display: block;
+	}
+}
+
+.cover {
+	position: relative;
+	width: 100%;
+	background: lightgrey;
+	.background {
+		width: 100%;
+		display: block;
+	}
+	.title {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+	.btnStart {
+		position: absolute;
+		left: 10%;
+		top: 8.05rem;
+		width: 80%;
+		overflow: hidden;
+		display: none;
+		.btn-start {
+			width: 200%;
+			display: block;
+		}
+	}
+	.btnOver,.btnPaid {
+		position: absolute;
+		left: 10%;
+		top: 8.05rem;
+		width: 80%;
+		display: none;
+	}
+}
+
+.world {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #E5E5E5;
+	display: none;
+	overflow: hidden;
+	.questionPage {
+		position: relative;
+		width: 100%;
+		height: 2000px;
+		overflow: hidden;
+		display: none;
+		.space {
+			position: relative;
+			width: 90%;
+			margin: 0.48rem auto 0 auto;
+			transform-style: preserve-3d;
+			transform: perspective(1000px);
+			.paper {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				border-radius: 8px;
+				//box-shadow: 0 0 15px grey;
+				//background: whitesmoke;
+				overflow: hidden;
+				z-index:20;
+				.pageimg {
+					width:100%;
+					display: block;
+				}
+				.paper-content {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					.title {
+						width: 80%;
+						margin: 15% auto 8% auto;
+						font-size: 0.3rem;
+					}
+					ul {
+						width: 80%;
+						margin: auto;
+						li {
+							position: relative;
+							margin-bottom: 0.4rem;
+							font-size: 0.26rem;
+							img {
+								width: 100%;
+							}
+							.optionContent {
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								left: 0;
+								top: 0;
+								text-align: center;
+								color: white;
+							}
+						}
+
+					}
+					ul li:hover {
+					}
+				}
+			}
+			.paper:nth-child(1) {
+				position: relative;
+			}
+			.nextPanel {
+				opacity: 0;
+				z-index: 10;
+			}
+		}
+		.count {
+			width: 100%;
+			text-align: center;
+			font-size: 0.28rem;
+			font-weight: bold;
+		}
+	}
+}
+
+.resultPage {
+	width: 100%;
+	height: 100%;
+	display: none;
+	overflow: hidden;
+	.result_frame {
+		position: relative;
+		margin-top: 0.15rem;
+		margin-left: 2%;
+		width: 96%;
+		overflow: hidden;
+		.bg {
+			width: 100%;
+		}
+		.content {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			.badge {
+				width: 90%;
+				display: block;
+				margin: 0.56rem auto 0.54rem auto;
+			}
+			.briefing {
+				margin-bottom: 0.25rem;
+				font-size: 0.31rem;
+				font-weight: bold;
+				color: @grey;
+			}
+			.comment {
+				margin-bottom: 0.66rem;
+				font-size: 0.26rem;
+				color: #999999;
+			}
+			.trophy {
+				margin-bottom: 0.5rem;
+				font-size: 0.3rem;
+				font-weight: bold;
+				color: @grey;
+			}
+			.coupon {
+				height: 0.42rem;
+				display: none;
+				vertical-align: middle;
+			}
+			p {
+				text-align: center;
+			}
+			.getNow {
+				width: 70%;
+				margin: auto;
+				margin-bottom: 0.3rem;
+				display: block;
+			}
+			.couponsTaken {
+				width: 70%;
+				margin: auto;
+				margin-bottom: 0.3rem;
+				display: block;				
+			}
+			.tryAgain {
+				font-size: 0.28rem;
+				font-weight: bold;
+				color: @grey;
+				text-align: center;
+				.arrow {
+					height: 0.28rem;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+.mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	display: none;
+	.bg {
+		width: 100%;
+		height: 100%;
+		background: black;
+		opacity: 0.5;
+	}
+	.confirmPanel {
+		position: absolute;
+		left: 15%;
+		top: 0;
+		width: 70%;
+		margin: 30% auto 0 auto;
+		z-index: 102;
+		.penguin {
+			position: absolute;
+			left: 37.5%;
+			top: -10%;
+			width: 25%;
+		}
+		.checkmark,.cross {
+			position: absolute;
+			left: 42.5%;
+			top: 10%;
+			width: 15%;
+		}
+		.close {
+			position: absolute;
+			top: -0.2rem;
+			right: -0.2rem;
+			width: 0.6rem;
+			z-index: 100;
+		}
+		.bgImg {
+			width: 100%;
+		}
+		.content {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			.status {
+				width: 100%;
+				margin-top: 1.2rem;
+				margin-bottom: 0.4rem;
+				text-align: center;
+				font-size: 0.34rem;
+				font-weight: bold;
+			}
+			.info {
+				margin: auto;
+				margin-bottom: 0.4rem;
+				width: 85%;
+				text-align: center;
+				font-size: 0.27rem;
+			}
+			.goto {
+				position: relative;
+				width: 3.6rem;
+				margin: 0 auto 0 auto;
+				.goto_bg {
+					width: 100%;
+				}
+				.goto_content {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					line-height: 1rem;
+					text-align: center;
+					font-size: 0.34rem;
+					font-weight: bold;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+/* Media Queries */
+@media (orientation: landscape) {
+	.mask-landscape {
+		display: block!important;
+	}
+}
+@media (max-width: 350px) {
+	.space {
+		width: 80%!important;
+		ul li {
+			margin-bottom: 0.15rem!important;
+		}
+	}
+	.resultPage {
+		.badge {
+			margin: 0.28rem auto 0.27rem auto!important;
+		}
+		.briefing {
+			margin-bottom: 0.125rem!important;
+		}
+		.comment {
+			margin-bottom: 0.33rem!important;
+		}
+		.trophy {
+			margin-bottom: 0.25rem!important;
+		}
+
+		.getNow {
+			margin-bottom: 0.15rem!important;
+		}
+		.couponsTaken {
+			margin-bottom: 0.15rem!important;			
+		}
+	}
+}
+// @media (min-width: 1200px) {
+// 	.mask-landscape {
+// 		display: block!important;
+// 	}
+// }

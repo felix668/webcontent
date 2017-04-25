@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试环境部署</title>
+	<style>
+	body,h2,p{margin:0;padding:0;color: #333;font-family: microsoft yahei}
+	.wrap{padding:0 40px;}
+	h2{font-size: 20px;margin:20px 0;}
+	p{font-size: 14px;line-height: 20px;color: #000}
+	img{margin-top: 10px}
+	.login{margin-top: 12px;line-height: 18px;font-size: 12px}
+	.login strong{display: block;margin:10px 0 5px;}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<h2>一、创建</h2>
+	<p>测试环境shell脚本发布svn地址：http://bj-scm.tencent.com/mqq/mqq_book_rep/book_proj/trunk/src/BookEventFront/tools</p>
+	<p> 1、新建一个和webContent里同名的项目目录<br>
+		2、拷贝一份publish.sh   publish_test.sh 前者是正式环境配置 后者是测试环境配置  具体可参看其他文件夹<br>
+		3、修改.sh文件里的目录  subpath 替换为当前文件夹目录<br>
+		4、打开tools目录下的publish.sh    publish_no_sync_test.sh添加配置<br>
+        比如：sh act160902/adr/publish_test.sh
+    </p>
+    <h2>二、发布测试服务器</h2>
+	<p>测试环境发布地址：http://dist.wsd.com/web/dist/other_dist.jsp?module=book/src/BookEventFront&type=test</p>
+	<img src="images/tip.png" alt="">
+	<h2>三、访问测试环境</h2>
+	<p>安卓试环境访问地址：http://solomotest4.3g.qq.com/book_res/event/+文件夹名称+文件目录</p>
+	<p>ios测试环境访问地址：https://ptsolomo.reader.qq.com/book_res/event/+文件夹名称+文件目录</p>
+	<p class="login">
+		<strong>安卓测试环境pc端登录模拟:</strong>
+	 	使用ubook登录后在cookie里获取skey   timi是qq号码<br>
+		http://solomotest4.3g.qq.com/book_res/event/act160902/adr/index.html?tf=1&skey=@VcnluTVWo&timi=1922481934<br>
+
+		<strong>ios测试环境pc端登录模拟:</strong> 
+		使用ubook登录后在cookie里获取skey   uin是qq号码<br>
+		https://ptsolomo.reader.qq.com/book_res/event/act160902/ios/index.html?tf=1&skey=@zB0qHfnGp&uin=1922481934
+	</p>
+	<h2>四、访问正式环境</h2>
+	<p>安卓正式环境访问地址：http://iyuedu.qq.com/event/+文件夹名称+文件目录</p>
+	<p>ios正式环境访问地： https://yuedu.reader.qq.com/event/+文件夹名称+文件目录</p>
+</div>
+</body>
+</html>

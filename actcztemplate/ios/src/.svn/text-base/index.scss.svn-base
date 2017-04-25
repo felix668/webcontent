@@ -1,0 +1,21 @@
+@import "common";
+
+[v-cloak] {
+  display: none;
+}
+.hide{
+    display: none;
+}
+.wrap{
+    overflow: hidden;
+    width: 100%;
+}
+.banner{
+    width: 100%;
+    height: auto;
+}
+.content{
+    overflow: hidden;
+    padding: 0 0.36rem;
+    box-sizing: border-box;
+}

@@ -1,0 +1,158 @@
+1：页面渲染时的数据结构
+
+{
+    "code":0,
+    "msg":"success",
+    "data":{
+        //platform，这个是我们判断平台的，这个地方，看你们是否需要了
+        "platform":5,
+
+        /*
+        * 活动的状态：
+        * 0 ： 活动正在进行
+        * 1 ： 活动未开始
+        * 2 ： 活动已结束
+        */
+        "activityStatus":2,
+        "gameInfo":{
+            //历史最好分数
+            "score":"350",
+
+            //最后的一次得分
+            "lastScore":"220",
+
+            //通关时间的最优时间
+            "time":1,
+
+            //最后一次游戏的时间
+            "lastTime":3,
+
+            //当前生命数，即，还可以玩几次
+            "life":"4",
+
+            //是否已经下载过了APP，这个我们貌似没有用到
+            "isDownload":1,
+
+            //领取通关奖励的按钮状态
+            /*
+            * 0 : 已领取
+            * 1 : 有领取资格，但还未领取
+            * 2 : 还没有通关，没有领取资格
+            */
+            "getReward":"0",
+
+            //通关的礼品码，getReward = 0时，需要
+            "rewardCode" : "aaa"
+        },
+        "userInfo" : {
+            "nickName" : "微信昵称"
+        }
+    }
+}
+
+
+2：getMoreLife，获取更多的可玩次数
+
+requestData
+
+{
+    shareType : "share/down" //微信分享，和下载APP
+}
+
+response数据
+
+{
+    "code":0, //code=0;添加成功，code!=0表示失败
+    "msg":"success",
+    "data":{
+        //当前的生命值次数
+        "life":"13"
+    }
+}
+
+
+
+
+3：gameOver请求，当玩完一局游戏，有成绩的时候，
+请求的数据：
+{
+    type : fail,  //type取值为：success(表示通关了),fail（表示没有通关）
+    score : 23 ,  //本局的得分
+    time : 6      //本局花费的时间
+}
+
+response数据：
+{
+    "code":0, //0表示成功，其他表示各种失败原因
+    "msg":"success",
+    "data":{
+        //当前剩余的生命值
+        "life":"4",
+
+        //最后一次得分
+        "lastScore":"221",
+
+        //最优得分
+        "bestScore":"350",
+
+        //最后领取通关奖励的按钮的状态，与getReward中的状态码一致
+        "rewardState":"0"
+    }
+}
+
+
+4：getGift，通关大礼包的领取
+
+没有请求数据，我们这边是使用cookie在记录用户信息的。
+
+response数据：
+
+{
+    {
+        "code":"0",
+        "msg":"success",
+        "data":{
+            //最后领取通关奖励的按钮的状态，与getReward中的状态码一致
+            "rewardState":"0",
+
+            //礼品码
+            "code":"XXXXXXXXXXX"
+        }
+    }
+}
+
+5：myRank，获取排行榜
+
+没有请求数据，用户信息使用cooike就的
+
+{
+    "code":0,
+    "msg":"success",
+    "data":{
+        //前几名的排行榜
+        "rank":[{
+            //通关时间
+            "time":"0",
+            //昵称
+            "nickname":"linming"
+        },{
+            "time":0.3652,
+            "nickname":null
+        },{
+            "time":1.132333,
+            "nickname":"xiaoming12"
+        },{
+            "time":1.2365,
+            "nickname":"xiaoming"
+        },{
+            "time":135,
+            "nickname":null
+        }],
+
+        //我的通关时间
+        "myTime":"0",
+
+        //我的排名
+        "myRank":"1"
+    }
+}

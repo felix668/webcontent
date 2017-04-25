@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>时间的朋友</title>
+<link href="css/stylecss.css" rel="stylesheet" type="text/css"/>
+<script>
+  var fontsize=(document.documentElement.clientWidth)/320*100;
+  document.documentElement.style.fontSize = fontsize + 'px';
+  
+  (function wxCheck(){
+	  function f() {
+		if (window.location.hostname == "iyuedu.qq.com")
+			return "http://iyuedu.qq.com/event/actc1/";
+		else
+			return "http://solomotest4.3g.qq.com/book_res/event/actc1/";
+	  }
+	  var i = location.href.indexOf('?', 0);
+	  var p;
+	  if (i > 0) {
+		var str1 = location.href.substring(i + 1, location.href.length
+					- location.hash.length);
+		if (str1.length > 0)
+			p = JSON.parse('{"' + str1.replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
+	  }
+	  if (navigator.userAgent.match(/MicroMessenger\/([\d\.]+)/) && p && !p["u"]) {
+	      window.location.href = f() + "adr/wxoauth.html?state=" + (p["id"] ? p["id"] : "");
+	  }
+  })();
+	
+</script>
+</head>
+
+<body>
+<div class="banner"><img src="images/topimg.png"></div>
+<div class="banner"><img src="images/bookface.png?v=1"></div>
+<div class="bookinfo">
+  <div class="txtinfo">
+    <p><span id="desc"></span><span id="price">9.9</span>元</p>
+    <div class="countdown">离预售结束还剩<span id="dl">0</span>天<span id="hl">0</span>时<span id="ml">0</span>分</div>
+    <a id="button" href="javascript:void(0);" class="btn">立即预订购买</a>
+    <!--点击态<a href="#" class="btn active">立即预订</a>-->
+    <!--不可点<a href="#" class="btn nopoint">已成功预订</a>-->
+  </div>
+</div>
+<div class="bgbox">
+  <div class="authorinfo">
+      <p>罗振宇，国内最知名的自媒体人，《罗辑思维》脱口秀主持人。</p>
+      <p>2015年12月31日在水立方，一场长达4小时的跨年演讲，带你看懂个人崛起的时代。</p>
+      <p>集百位高人之智，带你拨开迷雾，看清当下和未来商业的底牌。</p>
+      <p>电子书（演讲全文+独家未披露内容）全网首发，火热预订中。</p>
+  </div>
+  <div class="rulebox">
+     <h4>活动规则</h4>
+     <p>① 活动时间：12月28日-12月31日</p>
+     <p>② VIP包月会员更可享受专属折扣</p>
+     <p>③ 12月31日24时，电子书全文上架，您可以在书架下载更新</p>
+     <p class="copyright">本活动最终解释权归QQ阅读所有</p>
+  </div>
+</div>
+<div class="show_mask" style="display:none">
+  <!--预定成功-->
+  <div id="succeeded" class="tankuang_box">
+     <h4>预订成功，书已加入书架</h4>
+     <a href="javascript:void(0);" class="btn_zdl">我知道啦</a>
+  </div>
+  <div id="already" class="tankuang_box">
+     <h4>已预订过</h4>
+     <a href="javascript:void(0);" class="btn_zdl">我知道啦</a>
+  </div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</body>
+</html>

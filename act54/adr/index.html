@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>包月</title>
+<link href="css/month4.css" rel="stylesheet" type="text/css"/>
+<body>
+<div class="banner">
+	<img src="images/banner.jpg"/>
+</div>
+<div class="wrap">
+	<div class="giftinfo">
+		<p>免费赠送<span>3次抽奖</span>机会</p>
+		<!-- 按下的时候添加样式active -->
+		<a href="javascript:Index.pick();" class="getbtn cl_sum" cld="pick"><span>立即领取</span></a>	
+		<!-- 已领取 
+			<a href="javascript:void(0);" class="getbtn geted"><span>已领取成功</span></a>
+		-->
+	</div>
+	<div class="main">
+		<div class="content">
+			<ul>
+				<li class="gift1 act">
+					<img src="images/gift1.png"/>
+					<span>iWatch</span>
+				</li>
+				<li class="gift2">
+					<img src="images/gift2.png"/>
+					<span>100 成长值</span>
+				</li>
+				<li class="gift3">
+					<img src="images/gift3.png"/>
+					<span>PlayStation4</span>
+				</li>
+				<li class="gift4">
+					<img src="images/gift4.png"/>
+					<span>谢谢参与</span>
+				</li>
+				<li class="gift5">
+					<img src="images/gift5.png"/>
+					<span>QQ 公仔</span>
+				</li>
+				<li class="gift6">
+					<img src="images/gift6.png"/>
+					<span>SONY微单</span>
+				</li>
+				<li class="gift7">
+					<img src="images/gift7.png"/>
+					<span>200 书券</span>
+				</li>
+				<li class="gift8">
+					<img src="images/gift8.png"/>
+					<span>10 Q币</span>
+				</li>
+			</ul>
+			<!-- 按下的时候添加样式active -->
+			<div class="lottery haslottery click cl_sum"  cld="lottery" onclick="javascript:Index.startScratch();" style="display: none">
+				<span>还有<b>0</b>次<br/>抽奖机会</span> 
+				<strong>抽奖</strong>
+			</div>
+			<!--没有抽奖机会时-->	
+			<div id="usedAll" class="lottery nolottery" style="display: none">
+				<span>机会已用完<br/>敬请期待<br/>下次活动</span> 
+			</div>
+			<div class="lottery nolottery">
+				<strong>抽奖</strong> 
+			</div>		
+		</div>
+	</div>
+	<a href="javascript:Local.go('myprize.html');" class="mygift">
+		<span>我的奖品&gt;</span>
+	</a>
+</div>
+<div class="rule">
+	<h4>活动规则：</h4>
+	<p>
+		1. 活动对象：包月续费用户（不包括体验卡开通）<br/>
+		2. 短信开通、微信用户不能参与活动<br/>
+		3. 续费成功即可获得3次抽奖机会，多次续费不累积赠送<br/>
+		4. Q币以及实物中奖用户，会在中奖后10个工作日内发放奖品，请留意QQ及邮箱通知。逾期未有反馈则视为自动放弃奖项。
+	</p>
+	<span>本活动最终解释权归腾讯文学所有</span>
+</div>
+<!-- 弹窗 领取失败 -->
+<div class="mask">
+	<div class="tiparea">
+		<h5>领取失败</h5>
+		<p>本活动仅限包月快到期用户参加，<br/>敬请期待下期活动</p>
+		<!-- 按钮按下添加样式on -->
+		<a class="knowbtn" href="javascript:void(0);">知道啦</a>
+	</div>
+</div>
+<!-- 弹窗 领取失败 -->
+<div class="mask">
+	<div class="tiparea">
+		<h5>领取失败</h5>
+		<p>非常抱歉，无法连接网络，<br/>请稍后再来领取</p>
+		<div class="tip_btn">
+			<!-- 按钮按下添加样式on -->
+			<a class="knowbtn" href="javascript:void(0);">知道啦</a>
+		</div>
+	</div>
+</div>
+<!-- 弹窗 领取失败 -->
+<div class="mask" id="mask1">
+	<div class="tiparea">
+		<h5>领取失败</h5>
+		<p>您已领取过包月会员，把机会<br/>让给其他的小伙伴吧</p>
+		<div class="tip_btn">
+			<!-- 按钮按下添加样式on -->
+			<a class="knowbtn" href="javascript:void(0);">知道啦</a>
+		</div>
+	</div>
+</div>
+<!-- 弹窗 领取成功 -->
+<div class="mask" id="mask2">
+	<div class="tiparea">
+		<h5>领取成功</h5>
+		<p>恭喜您成功领取<span class="red">3次抽奖</span>机会,<br/>赶紧去抽奖吧</p>
+		<div class="tip_btn">
+			<a class="knowbtn" href="javascript:void(0);">知道啦</a>
+		</div>
+	</div>
+</div>
+<!-- 弹窗 谢谢参与 -->
+<div class="mask" id="mask3">
+	<div class="tiparea">
+		<h5>谢谢参与</h5>
+		<p>很遗憾，没有中奖，大奖就在后面</p>
+		<div class="tip_btn">
+			<a class="knowbtn" href="javascript:void(0);">好吧</a>
+		</div>
+	</div>
+</div>
+<!-- 弹窗 开通领取 -->
+<div class="mask" id="mask4">
+	<div class="tiparea">
+		<span class="kttip">需开通包月后才能领取</span>
+		<p class="msg">（短信开通、微信用户不能参加）</p>
+		<div class="tip_btn">
+			<a class="knowbtn cl_sum" cld="wd_open" href="javascript:Index.openVIP(true);">确认开通</a>
+		</div>
+		<a href="javascript:void(0);" class="closebtn"></a>
+	</div>
+</div>
+<!-- 弹窗 即刻续费 -->
+<div class="mask">
+	<div class="tiparea tiparea2" id="mask5">
+		<img src="images/mpic1.png" class="mpic1"/>
+		<img src="images/mpic2.png" class="mpic2"/> 
+		<div class="tip_btn">
+			<a class="knowbtn" href="javascript:void(0);">领取免费抽奖机会</a>
+		</div>
+		<img src="images/mpic3.png" class="mpic3"/> 
+		<a href="javascript:void(0);" class="closebtn"></a>
+	</div>
+</div>
+<!-- 弹窗 获得奖品 -->
+<div class="mask" id="mask6">
+	<div class="tiparea">
+		<div class="showgift">
+			<img src=""/>
+		</div>
+		<p class="cong"></p>
+		<div class="tip_btn">
+			<a class="knowbtn" href="javascript:void(0);">关闭</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+</body>
+</html>

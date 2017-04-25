@@ -1,0 +1,19 @@
+测试链接
+安卓
+http://solomotest4.3g.qq.com/book_res/event/act170403/adr/index.html?act_f=170403
+ios
+https://ptsolomo.reader.qq.com/book_res/event/act170403/ios/index.html?act_f=170403
+
+正式ios
+https://yuedu.reader.qq.com/event/act170403/ios/index.html?act_f=170403
+正式安卓
+http://iyuedu.qq.com/event/act170403/adr/index.html?act_f=170403
+总结
+由于ios帮助中心跳转链接暂时跳转不了，ios帮助中心入口关闭
+原创风云榜跳转
+adr
+window.location.href='uniteqqreader://nativepage/rank/list?actionId='+self.columnId;
+ios
+window.location.href='uniteqqreader://nativepage/discover/rank/list?rankId='+ self.columnId+'&rankTitle='+'原创风云榜';
+
+ios游客无法头月票，给游客身份，弹框提示去切换账号

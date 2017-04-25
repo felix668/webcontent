@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* :focus {
+  outline: none;
+}
+html {
+  font-size: 100px;
+  font-family: 'Microsoft Yahei';
+}
+ul,
+li {
+  list-style: none;
+}
+img,
+input {
+  display: block;
+}
+[v-cloak] {
+  display: none;
+}
+.clearfix {
+  clear: both;
+}
+/* Media Queries */
+@media (max-width: 350px) {
+  .desc {
+    font-size: 0.18rem!important;
+  }
+  .rules p {
+    font-size: 0.16rem!important;
+  }
+}
+.books-title {
+  width: 100%;
+}
+.block {
+  float: left;
+  width: 2.39rem;
+}
+.block .container__ {
+  width: 1.72rem;
+  margin: auto;
+  margin-bottom: 0.68rem;
+}
+.block .container__ .cover {
+  width: 1.68rem;
+  margin: auto;
+  margin-bottom: 0.3rem;
+}
+.block .container__ .bookname {
+  font-size: 0.24rem;
+  color: #fba377;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.block .container__ .author {
+  padding: 0.1rem 0;
+  font-size: 0.24rem;
+  color: #9d635a;
+}
+.block .container__ .pick {
+  width: 1.72rem;
+}
+.copyright {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #4e4273;
+  clear: both;
+}
+.mask-download[_v-656d1870] {
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.mask-download .mask-panel[_v-656d1870] {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5.5rem;
+  height: 3.6rem;
+  margin: auto;
+  border-radius: 0.1rem;
+  background: white;
+}
+.mask-download .mask-panel .top[_v-656d1870] {
+  box-sizing: border-box;
+  height: 0.9rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.28rem;
+  line-height: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+.mask-download .mask-panel .middle[_v-656d1870] {
+  box-sizing: border-box;
+  height: 2.7rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.28rem;
+  line-height: 2.7rem;
+  text-align: center;
+}
+.mask-download .mask-panel .bottom[_v-656d1870] {
+  overflow: hidden;
+}
+.mask-download .mask-panel .bottom li[_v-656d1870] {
+  float: left;
+  width: 50%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.28rem;
+  text-align: center;
+}
+.mask-download .mask-panel .bottom .confirm[_v-656d1870] {
+  background: #3d8dcf;
+  color: white;
+}

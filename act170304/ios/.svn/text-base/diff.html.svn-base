@@ -1,0 +1,13 @@
+<script type="text/javascript" src="./js/jsbridge.js"></script>
+<script type="text/javascript" src="./js/local.js"></script>
+
+<script type="text/javascript" src="js/abook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+
+
+
+<script type="text/javascript">
+	Local.init();
+
+	ABook.gotoDetail( arr[i].bid );
+</script>

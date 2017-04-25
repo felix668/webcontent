@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>读书运动会</title>
+
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/keyframes.css">
+</head>
+
+<body>
+<!-- 	<canvas id="snow" style="position:fixed;left:0;top:0;width:100%;z-index:9999;"></canvas>
+	<canvas id="snow-top" style="position:fixed;left:0;top:0;width:100%;z-index:9999;"></canvas>
+	<canvas id="snow-blur" style="position:fixed;left:0;top:0;width:100%;z-index:9999;"></canvas> -->
+	<div class="CONTAINER">
+		<div class="nav">
+			<img src="img/nav.png"/>
+			<p class="nav-text">点击查看前10名榜单</p>
+		</div>
+
+		<div class="mask" style="background: url(img/result_repeat.png); background-size: 1.98rem;">
+			<div class="PADDING"></div>
+			<img class="mask_bg" src="img/mask_bg.png"/>
+			<div class="content">
+				<img class="colors" src="img/colors.png"/>
+				<img class="bugle-left" src="img/bugle_left.png"/>
+				<img class="bugle-right" src="img/bugle_right.png"/>
+				<img class="pDown" src="img/p_down.png"/>
+				<div class="envelope"/>
+					<img class="envelope-back" src="img/envelope_back.png"/>
+					<img class="paper" src="img/paper.png"/>
+					<img class="envelope-front" src="img/envelope_front.png"/>
+					<img class="button" src="img/button.png"/>
+					<img class="hand" src="img/hand.png"/>
+				</div>
+				<img class="cloud" src="img/cloud_2.png"/>
+		<!-- 		<img class="star star1" src="img/star.png"/>
+				<img class="star star2" src="img/star.png"/>
+				<img class="star star3" src="img/star.png"/>
+				<img class="star star4" src="img/star.png"/>
+				<img class="star star5" src="img/star.png"/>
+				<img class="star star6" src="img/star.png"/>
+				<img class="star star7" src="img/star.png"/>
+				<img class="star star8" src="img/star.png"/> -->
+			</div>
+		</div>
+
+		<div class="myResult">
+			<div class="backg">
+				<img class="bg" src="img/my_result_2.png" style="background: url(img/result_repeat.png); background-size: 1.98rem;"/>
+			</div>
+			<div class="shadow"></div>
+			<div class="content">
+				<p class="congratulations">恭喜您</p>
+				<p class="__name">用户名</p>
+				<p class="inThis">在本届读书运动会中赢得</p>
+				<div class="banner">
+					<img src="img/red_banner.png"/>
+					<p class="__ranking">第--名</p>
+				</div>
+				<img class="rPrize"/>
+				<p class="acquire">获得</p>
+
+				<p class="myPrize">--</p>
+				<div class="toContact">填写联系方式</div>
+				<p class="please">请填写正确的联系方式，方便客服与您联系</p>
+<!-- 				<p class="toTop10">点击查看前10名榜单</p> -->
+			</div>
+		</div>
+
+		<div class="result">
+			<img class="bg" src="img/result_bg_1.png" style="background: url(img/result_repeat.png); background-size: 1.98rem;"/>
+			<div class="shadow"></div>
+			<div class="content">
+				<div class="list list-1"></div>
+				<div class="list list-2"></div>
+				<div class="list list-3"></div>
+				<div class="list list-4"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="title">
+			<img src="img/title_1.png"/>
+			<div class="countdown">
+				<span class="days">--</span>天：<span class="hours">--</span>时：<span class="minutes">--</span>分
+			</div>
+			<div class="swiper">
+				<div class="swiper-body">
+					<ul class="train">
+						<li class="item"><img src="img/prize1.png"></li>
+						<li class="item"><img src="img/prize2.png"></li>
+						<li class="item"><img src="img/prize3.png"></li>
+						<li class="item"><img src="img/prize4.png"></li>
+					</ul>
+				</div>
+				<p class="prizeNumber">[ 第--名 ]</p>
+				<p class="desc">
+					--
+				</p>
+			</div>
+		</div>
+
+		<div class="con2">
+			<div class="panel">
+				<img class="banner" src="img/banner.png"/>
+				<div class="signin">
+					<img class="signinBg" src="img/signin.png"/>
+				</div>
+				<div class="mine">
+					<img class="streak" src="img/streak.png"/>
+					<div class="mineTop">
+						<div class="left">
+							<div class="myAvatarCtn">
+								<img class="myAvatar"/>
+							</div>
+							<p class="text">
+								<span class="myName">--</span><br/>
+								<span class="coin">消耗书币：</span><span class="coinNumber">--</span>
+							</p>
+						</div>
+						<div class="right">
+							<p class="currentRanking">当前排名</p>
+							<p class="myRanking">--</p>
+						</div>
+					</div>
+					<p class="line">
+						购买及打赏作品消耗书币助你上榜！<a class="toBookshelf">去看更多></a>
+					</p>
+				</div>
+				
+				<ul class="header">
+					<li class="rank">排名</li>
+					<li class="nickname">昵称</li>
+					<li class="coin">活动期间消耗书币</li>
+				</ul>
+				<ul class="list">
+
+				</ul>
+				<div class="bottom">
+					<a class="more">查看更多排名</a>
+					<img class="triangle" src="img/triangle.png"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="rules-con">
+			<img class="rules" src="img/rules_1.png"/>
+		</div>
+		<div class="rules-content">
+			<div class="p-top">1、活动时间：2016年8月12日16:00-9月5日23:59。</div>
+			<div class="p-two">2、活动期间，通过累计消耗书币进行冲榜，活动结束后榜单前十用户予以实物奖励。</div>
+			<div class="p-two">3、榜单内金额包含安卓客户端、电脑创世及触屏书城的单章订购或全本购买消费、打赏。</div>
+			<div class="p-two">4、所有书券消耗，书币开通包月或超值包和签到补签，将不计入消费排行。</div>
+			<div class="p-two">5、中奖名单将在活动结束后公布，并联系用户发放奖励。</div>
+			<div class="p-bottom">6、当书币消耗数量一致时，按照消耗时间先后顺序排名，越早收集排名越靠前。</div>
+		</div>
+	</div>
+
+<!-- <script type="text/javascript" src="js/debug.js"></script> -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<!--script type="text/javascript" src="js/tools/debug_tool.js"></script-->
+
+<script type="text/javascript" src="./dist/bundle.js"></script>
+<!-- <script type="text/javascript" src="./lib/snowfall.js"></script> -->
+
+</body>
+
+</html>

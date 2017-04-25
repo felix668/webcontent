@@ -1,0 +1,116 @@
+@charset "utf-8";
+body,p,ul,li,h3{margin:0;padding:0;}
+ul,li{list-style:none}
+img{border:none;-webkit-touch-callout:none;width: 100%}
+a{text-decoration:none;-webkit-touch-callout:none;color: #000}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;-webkit-user-select:none;background:url(../images/bg.jpg) repeat;background-size:100% auto;font-size: .26rem;color: #92bdcc}
+.center{position: absolute;top:6.72rem;left: 0}
+.wrap{position: relative;margin: -.32rem .32rem 0;overflow: hidden;}
+/*下载1*/
+.blist{display: -webkit-box;-webkit-box-pack:justify;display:box;box-pack:justify;position: relative;}
+.blist li{width:1.76rem;margin-left: .08rem}
+.blist li img{width:1.68rem;}
+.blist li p{line-height: .36rem;margin-top:.28rem;}
+.blist li span{color: #2bbf9e;line-height: .62rem;display: block;margin-bottom: .1rem}
+.blist li strong{font-size: .32rem;color: #89d36f}
+.blist li a,.blist2 li a{display: inline-block;width: 1.56rem;height: .48rem;line-height:.46rem;text-align:center;color:#2bbf9e;background: url(../images/btn.png) no-repeat;background-size: 100% auto;}
+.active{background-position: 0 -.56rem!important;color: #1c7662!important}
+/*抽奖*/
+.cont{margin-top: 3.06rem;position: relative;}
+.ltip p{margin-left:2.2rem;line-height:.38rem;}
+.ltip a{color: #2bbf9e;float: right;margin-top:-.35rem;}
+.lottery{width:6.76rem;height: 6.46rem;margin:.18rem 0 0 -.11rem;background: url(../images/cj.png);background-size: 100% auto;position: relative;}
+.lottery ul{font-size: 0;position: relative;top: .3rem;left: .32rem;}
+.lottery li{width: 1.9rem;height: 2.02rem;margin-right:.22rem;display: inline-block;vertical-align: top;position: relative;}
+.lottery li:nth-child(4){margin-right: 2.34rem}
+.lottery li img{margin:-.16rem 0 .14rem .1rem;opacity: .6}
+.lottery li p{line-height:.3rem;font-size: .26rem}
+.lottery p{text-shadow:0 0 2px #162034;text-align: center;}
+.lottery .qm{margin-left: -.22rem;width: 2.4rem}
+.lottery .cur::after{opacity: 1;-webkit-transition:opacity .6s;transition:opacity .6s;}
+.lottery li::after{content: "";position: absolute;top: 0;left: -0.04rem;width:2.04rem;height: 1.9rem;background: url(../images/light.png);background-size: 100% auto;opacity: 0}
+/*抽奖按钮*/
+.cjbtn{position: absolute;top: 2.28rem;left: 2.44rem;width: 1.9rem;height: 2.02rem;}
+.cjbtn img{width: 1.48rem;margin:.06rem 0 0 .24rem;}
+.cjbtn p{margin-top: .16rem;color:#8dd26d}
+.status{position: absolute;top:0;left:0;width: 1.46rem;height: 1.14rem;background: url(../images/status.png) 0 -1.14rem;background-size: 100% auto}
+.nologin .status{background-position: 0 0}
+.nologin p{display: none;}
+.ani img{-webkit-animation:rotateIn 1s linear infinite;animation:rotateIn 1s linear infinite;}
+@-webkit-keyframes rotateIn{	
+	0%{-webkit-transform:rotate(0);}
+	100%{-webkit-transform:rotate(360deg);}
+}
+@keyframes rotateIn{	
+	0%{transform:rotate(0);}
+	100%{transform:rotate(360deg);}
+}
+/*下载2*/
+.download{margin:1.04rem 0 .92rem;position: relative;}
+.blist2 li{height:1.7rem;margin-top: .56rem;display: inline-block;vertical-align: top;position: relative;}
+.download .blist2 li:nth-child(even){margin-left: .88rem}
+.blist2 img{width: 1.1rem;position: absolute;top: 0;left: 0}
+.blist2 .info{width: 1.36rem;margin-left: 1.44rem;}
+.info p{line-height: .36rem;margin:.05rem 0;}
+.blist2 a{position: absolute;left: 1.5rem}
+.download .blist2 a{width:1.32rem;bottom:-.02rem;left:1.44rem;background-size: 1.32rem 1rem}
+.discount{width: .76rem;height: .32rem;background:#89d36f;color: #07263f;line-height: .34rem;display: block;text-align: center;}
+/*英文购买*/
+.en{position: absolute;bottom: 0;right: 0;width: 2.4rem;height: 1.32rem;padding:.4rem 0 0 .42rem;background: url(../images/bor.png) no-repeat;background-size:cover;color: #2bbf9e;font-size: .36rem;line-height: .5rem}
+.en p{font-size: .3rem;}
+/*规则*/
+.detail{margin: .26rem .32rem 0}
+.detail p{color: #2bbf9e;line-height: .5rem;margin-bottom: .46rem;padding-left: .46rem;position: relative;}
+.detail span{position: absolute;top: 0;left: .1rem}
+.detail a{color: #89d36f}
+.interp{height: .86rem;background: #051527;line-height: .88rem;text-align: center;margin-bottom: .14rem}
+.copyright{font-size: .22rem;line-height:.46rem;color: #92bdcc;text-align: center;padding:.04rem 0 .24rem;opacity: .21}
+/*飞鸟*/
+.bird{position: absolute;top:-2.9rem;right:0;z-index: 10;width:2.14rem;height:2rem;background:url(../images/bird.png) 0 0;background-size:100% auto;-webkit-animation:bird step-start .8s infinite;animation:bird step-start .8s infinite}
+@-webkit-keyframes bird{	
+	0%{background-position: 0 0;}
+	33%{background-position: 0 0;}
+	66%{background-position: 0 -2rem;}
+	100%{background-position: 0 -4rem;}
+}
+@keyframes bird{	
+	0%{background-position: 0 0;}
+	33%{background-position: 0 0;}
+	66%{background-position: 0 -2rem;}
+	100%{background-position: 0 -4rem;}
+}
+/*英文版*/
+.enlist{margin: .12rem 0 .68rem}
+.enlist .info{width: auto;margin-left: 1.6rem}
+.enlist .blist2 li{margin:.48rem .32rem 0;padding-bottom:.48rem;border-bottom: 1px solid #1e456d;display: block;}
+.enlist .blist2 li:last-child{border: none;}
+.enlist .blist2 a{bottom: .44rem;color: #8bd56d;}
+/*弹窗*/
+.mask{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index:100;background: rgba(0,0,0,.69);display: none;}
+.show{display: -webkit-box;-webkit-box-align:center;display:box;box-align:center;}
+.tiparea{width:5.36rem;height: 5.52rem;margin: 0 auto;background: url(../images/tipbg.png);background-size: 100% auto;text-align: center;position: relative;display: none}
+.tiparea h3{font-size: .34rem;color: #2bbf9e;line-height: .44rem;margin:0 0 .1rem}
+.tiparea p{font-size: .28rem;color: #5c7c8c;line-height: .44rem}
+.tiparea a{display: none;position: absolute;left:.4rem;bottom:.25rem;width:4.52rem;height:.66rem;background: url(../images/knowbtn.png);background-size: 100% auto;}
+.tiparea .ico{position: absolute;left:-.5rem;bottom:-.5rem;width:1.96rem}
+.tiparea .pack{width:2.8rem;}
+.tiparea .close{position: absolute;top: -.2rem;right: 0;width:.92rem;height:.86rem;background: url(../images/close.png);background-size: 100% auto}
+.tiparea .linkbtn{background-image: url(../images/linkbtn.png)}
+#tiparea1{background-image: url(../images/failbg.png)}
+#tiparea1 .knowbtn{display:block;}
+#tiparea1 h3{padding: 2.53rem 0 .1rem}
+/*我的奖品*/
+.giftwrap{padding-top: .84rem;}
+.giftwrap .giftlist{margin: .4rem .3rem;}
+.giftwrap .giftlist li{width:6.58rem;height:1.52rem;margin-bottom: .34rem;background: url(../images/boxbg.png);background-size: 6.58rem auto}
+.giftwrap .giftlist img{width:1.5rem;vertical-align:-.5rem;margin-left: .1rem}
+.giftwrap .giftlist span{margin-left: .56rem}
+.giftwrap .tip{line-height: .36rem;text-align: center;font-size: .28rem}
+.nogift{padding-top: .84rem;text-align: center;}
+.nogift img{width:2.42rem}
+.nogift p{font-size: .36rem;color:#9bbcca;line-height: .44rem;margin-top: .4rem}
+.loading_div{text-align: center;line-height: .4rem}
+/*活动已结束*/
+.over{position: fixed;top:0;left:0;width: 100%;height: 100%;background: #fff;display: none;}
+.over img{width: 4.374rem;margin:1rem auto;display: block;}

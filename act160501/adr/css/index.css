@@ -1,0 +1,34 @@
+body,div,p,ul,h4,h2{margin:0;padding:0;}
+img{border:0 none;vertical-align:middle;}
+em,h4{ font-style:normal; font-weight:normal;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none;background:url(../images/bgimg.jpg) repeat-y; background-size:100% auto;font-size: 0.32rem}
+.hide{ display:none;}
+/*******/
+img.imgBox{ width:100%; display:block;}
+.box{ position: relative; margin-top: .35rem;}
+.box h4{ width: 1.5rem; height: .54rem; background: url(../images/title.png) no-repeat; background-size: 2.48rem auto; margin: 0.28rem auto 0.26rem; text-indent: -3rem; overflow: hidden;}
+.box img{ width: 100%; display: block;}
+.box p.more{text-align: center;font-size: .3rem; color: #2e242d; position: absolute; left: 0; width: 100%; bottom: .2rem;}
+.box a{position: absolute; display: block;}
+.box a.pai{top: 2.6rem; left: 1.75rem; width: 3.6rem; height: 1.04rem;}
+.box a.guyanfeng,.box a.shennaodong{top: 0.6rem; right: 0.46rem; width: 3.14rem; height: 0.7rem;}
+.box a.shennaodong{ top: 0.33rem;}
+.box h4.jielongtt{width: 2rem; background-position: 0 -0.6rem;margin: 0.96rem auto 0.45rem;}
+.box a.jielong{bottom: 0rem; left: 1.75rem; width: 3.6rem; height: 1.04rem;}
+.box h4.dianping{width: 2.48rem; background-position: 0 -1.2rem; margin: 1rem auto 0.2rem;}
+.box p{text-align: center;font-size: .24rem; color: #000;}
+.box ul{display: -webkit-box;-webkit-box-align:center;}
+.box ul li{-webkit-box-flex:1; margin-top: 0.46rem; width: 100%;}
+.box li img{width: 1.44rem; height: 1.44rem; margin: 0 auto 0.4rem;}
+.box li p{font-size: 0.24rem; color: #2e242d;}
+.rules{ margin:0.9rem 0.32rem;}
+.rules h4{width: 1.5rem; height: 0.4rem; margin-bottom: 0.1rem; background: url(../images/title.png) no-repeat 0 -1.8rem; background-size: 2.48rem auto; text-indent: -4rem; overflow:hidden;}
+.rules p{line-height: 0.5rem; font-size: 0.24rem; color: #2e242d; position: relative; padding-left: 0.2rem;}
+.rules p span{position: absolute;left: 0;top: 0;display: block; line-height: 0.5rem;}
+.copyright{font-size: 0.22rem; text-align: center;color: #2e242d;margin-bottom: 0.9rem;}
+.mask{position:fixed; left:0; top:0;width:100%;height:100%;background:rgba(0,0,0,.85); z-index:100;-webkit-box-align:center;-webkit-box-pack:center; display:none;}
+.activity_end{ width:4.9rem; margin:0 auto;}
+.activity_end img{ width:100%; display:block;}

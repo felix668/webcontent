@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html name='main' platform="ios">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-dns-prefetch-control" content="off">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>共读中国梦</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<script src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.2.4/vue.min.js"></script>
+<link href="../adr/public/css/index.css" rel="stylesheet" type="text/css">
+<link href="../adr/public/css/index.style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="root"></div>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script type="text/javascript" src="../adr/dest/main.js"></script>
+
+</body>
+</html>

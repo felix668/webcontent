@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="author" content="" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<title>10月充赠-国庆狂欢季</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="banner"><img src="images/banner.jpg"></div>
+<div class="onebox">
+    <div class="title tt_one"></div>
+    <div class="imgbox"><img src="images/img1.jpg"></div>
+    <a id='rchg_one' onclick="javascript:rechargeOn('rchg_one');return false;" class="btn_cz" style="display:none;">马上充值</a>
+    <!--点击态--<a href="#" class="btn_cz active">马上充值</a>-->
+    <!--不可点击--<a href="#" class="btn_cz noclick">马上充值</a>-->
+</div>
+<div class="twobox">
+   <div class="title tt_two"></div>
+   <div class="frist_charge"><img src="images/img2.jpg"></div>
+   <a  id="rchg_two" onclick="javascript:rechargeOn('rchg_two');return false;" class="btn_cz"  style="display:none;">马上充值</a>
+   <!--点击态--<a href="#" class="btn_cz active">马上充值</a>-->
+   <!--不可点击--<a href="#" class="btn_cz noclick">马上充值</a>-->
+   <!-- <li><em style="display:block;"></em><span>签</span></li>-->
+   <!--  <li><em></em><span style="display:block;">签</span></li>-->
+   <div class="package">
+       <div class="sign_box">
+         <ul id=u0 style="display:none;">
+             <li id=l0>首充</li>
+             <li id=l1><em id = e1></em><span id = s1>签</span></li> 
+             <li id=l2><em id = e2></em><span id = s2>签</span></li>
+             <li id=l3><em id = e3></em><span id = s3 >签</span></li> 
+             <li id=l4><em id = e4></em><span id = s4>签</span></li>
+             <li id=l5><em id = e5></em><span id = s5>签</span></li>
+         </ul>
+       </div>
+       <a id ="gPrt" onclick="javascript:getPresent('getPre');return false;" class="btn_cz "  style="display:none;">领取礼包</a>
+       <!--点击态--<a href="#" class="btn_cz active">领取礼包</a>-->
+       <!--不可点击--<a href="#" class="btn_cz noclick">领取礼包</a>-->
+       <!--明日签到领礼包--<a href="#" class="btn_cz tomorrow">明日签到领礼包</a>-->
+   </div>
+   <div class="sign_notic">
+      <h4><span>如何签到？</span></h4>
+      <div class="swipebox">
+			<div class="picbox" id="picbox">
+				<ul class="piclist" id="piclist">
+					<li>
+						<img src="images/pic1.jpg">
+					</li>
+					<li>
+						<img src="images/pic2.jpg">
+					</li>
+					<li>
+						<img src="images/pic3.jpg">
+					</li>
+				</ul>
+			</div>
+			<ol class="num" id="num">
+				<li class="cur"></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+   </div>
+</div>
+<div class="rule_box">
+   <div class="title tt_three"></div>
+   <div class="rules">
+       <ul>
+         <li><span>1</span><b>活动时间：</b>2015年10月1日15:00-10月6日15:00</li>
+         <li><span>2</span><b>活动规则：</b><br><p>1. 充值满赠</p><p>满50元，送250书币；</p><p>满100元，送800书币；</p><p>满200元，送2000书币；</p><p>2. 首充大礼包</p><p>1）首次充值满10元，即赠新手大礼包：500书券＋30成长值</p><p>2）签到大礼包 用户首充次日起参加签到活动每天可再领取100书券，发放5天，共计500书券！</p></li>
+       </ul>
+       <p class="nitic">此福利仅限安卓客户端5.0及以上版本参加，小伙伴们快去升级客户端吧！</p>
+       <p class="nitic">iOS及微信登录用户暂不参与本活动。</p>
+       <a href="rules.html">更多详细规则 >></a>
+       <p>本活动最终解释权由QQ阅读所有</p>
+   </div>
+</div>
+<!--弹框-->
+<div id="pop" class="mask" style="display:none;">
+  <!--快去签到领取礼包!-->
+  <div class="tank">
+    <p id="pText">快去签到领取礼包!</p>
+    <span id ="sText" style="display:none;">iOS及微信登录用户暂不参与本活动</span>
+    <a id ="aTest" href="javascript:close();" class="btn_zd"></a>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="copyright" content="Copyright (c) 1998-2011 Tencent." />
+<meta name="description" content="android书城" />
+<meta name="format-detection" content="telephone=no">
+<title>充值满赠，首充有礼</title>
+<style>
+body, div, p, ul,li { margin:0; padding:0; font-size:14px; color:#989898; list-style:none;}
+body {font-family:"微软雅黑", Helvetica, STHeiTi, sans-serif; -webkit-text-size-adjust:none; background:#307dcc url(images/bg1.jpg) no-repeat center top; background-size:320px auto; padding-bottom:50px;}
+img { border:0;}
+a, img { -webkit-touch-callout:none; }
+html, body { -webkit-user-select:none; user-select:none;}
+a {text-decoration:none; -webkit-tap-highlight-color:rgba(0,0,0,0.5); -webkit-user-select:none; }
+a {-webkit-touch-callout:none; }
+*{-webkit-tap-highlight-color:rgba(0,0,0,0.5)}
+.cnt{width:320px; margin:0 auto;}
+
+.date{text-align:center; line-height:28px; height:28px; padding:190px 10px 0;}
+.date font{float:left; color:#fff; font-size:12px;}
+.date a{float:right; display:block; font-size:14px; color:#fff; padding-right:10px; position:relative;}
+.date a:after{content: ' '; position: absolute; top:12px; right:2px; width:6px; height:6px; border:#fff solid; border-width: 1px 1px 0 0;-webkit-transform: rotate(45deg);}
+.pay{text-align:center; background:#013356; padding:4px 0; margin:0 10px;}
+.pay a{display:inline-block; width:142px; height:35px; line-height:35px; text-align:center; color:#fff; -webkit-box-sizing:border-box; margin:0 1px; font-size:18px; background:url(images/btn.png) no-repeat; background-size:142px 35px; position:relative;}
+.pay a:after{content: ' '; position: absolute; top:12px; right:24px; width:8px; height:8px; border:#fff solid; border-width: 1px 1px 0 0;-webkit-transform: rotate(45deg);}
+.wall{height:25px; padding-top:10px; background:url(images/wall.png) no-repeat center top; background-size:320px 35px; margin-top:20px; position:relative;}
+.gift_title{background:url(images/gift_title.png) no-repeat; background-size:80px 54px; width:80px; height:18px; margin:0 auto;}
+.gift_title2{background-position:0 -18px;}
+.gift_title3{background-position:0 -36px;}
+.gift{position:absolute; background:url(images/gift.png) no-repeat; background-size:80px auto; width:80px; height:62px; top:-15px; left:23px;}
+.gift2{background-position:0 -62px;}
+.gift3{background-position:0 -124px;}
+.content{background:#013356; padding:0 10px; zoom:1; overflow:hidden; padding-bottom:14px;}
+.pay_notice{line-height:32px; padding-top:18px; text-align:center; font-size:12px; color:#6f98b8;}
+.pay_notice font,.pay_notice3 font{color:#ca1a1d;}
+.pay_notice2{line-height:35px; padding-top:9px; text-align:center; font-size:12px; color:#6f98b8;}
+.pay_notice3{line-height:16px; padding-top:25px;}
+.pay_notice3 p{font-size:12px; color:#6f98b8; padding-bottom:5px;}
+.pay_notice3 p:last-child{padding-bottom:10px;}
+.gift_ul li{float:left; width:33%; text-align:center;}
+.gift_ul li div{height:80px; width:80px; margin:0 auto; background:#0c5baa; border:1px solid #61aefc;}
+.gift_ul li div img{width:80px; height:80px;}
+.gift_ul li:last-child{margin-right:0; float:right;}
+.gift_ul li span{display:block; color:#99c5e7; line-height:16px; padding:7px 0; font-size:12px;}
+.get{clear:both;}
+.get a{display:block; background:url(images/get.png) no-repeat center; width:104px; height:40px; background-size:auto 40px; margin:0 auto;}
+.mycnt{line-height:32px; padding-top:18px; text-align:center;}
+.mycnt a{display:inline-block; color:#fff;}
+.sc_bg{background:url(images/sc_bg.png) no-repeat; background-size:203px auto; width:203px; height:104px; padding-top:12px; margin:0 auto;}
+.sc_cnt{position:relative;}
+.sc_cnt2{width:173px; height:75px; background:#f4e5a5; margin:0 auto; padding:5px; line-height:20px; text-align:center;}
+.sc_cnt2 .w{font-size:12px; color:#013356; padding-bottom:5px;}
+.sc_cnt2 a{width:85px; height:25px; line-height:25px; border-radius:5px; border-bottom:2px solid #9d0a00; background:#ca1a1d; display:block; color:#fff; font-size:14px; text-align:center; margin:0 auto;}
+.scratch_area{position:absolute; top:0; left:0;}
+.rew_cnt{background:#094a77; border:1px solid #43b0f5; border-radius:5px; zoom:1; overflow:hidden; margin-bottom:10px; padding-bottom:5px;}
+.rew_cnt li{float:left; background:url(images/reward.png) no-repeat; background-size:128px auto; width:128px; height:59px; margin:6px 10px;}
+.rew_cnt li div{float:left; text-align:center; padding-top:15px; padding-left:7px;}
+.rew_cnt li div strong{color:#ca1a1d; font-size:12px;line-height:14px;}
+.rew_cnt li div span{display:block; font-size:12px; color:#b77e01;line-height:14px;}
+.rew_cnt li em{float:left; line-height:32px; padding-top:15px; color:#012a47; font-size:12px; padding-left:5px; width:66px; text-align:center;}
+.rew_cnt li:last-child{background:url(images/reward2.png) no-repeat; width:194px; height:55px; background-size:194px 55px; margin-left:50px;}
+.rew_cnt li:last-child div{padding-top:18px;}
+.rew_cnt li:last-child em{width:130px;}
+.intro{line-height:35px; padding-top:18px; color:#013356; text-align:center; font-size:14px;}
+.intro_cnt{border:1px solid #43b0f5; border-radius:5px; background:#094a77; padding:10px; line-height:20px; color:#759ebf; font-size:12px; box-shadow:0 1px 0 #000;}
+
+.mask{background:#000;filter:alpha(opacity=75);opacity:0.75; position:absolute; top:0; left:0; bottom:0; width:100%; z-index:10; display:none;}
+.pop_cnt{width:260px; height:145px; left:50%; top:50%; margin-left:-130px; margin-top:-72px; background:#ff9900; position:fixed; z-index:11; display:none;}
+.pop_cnt .close{padding:4px 10px; float:right;}
+.pop_cnt b{display:inline-block; width:15px; height:2px; background:#ffe9c7; font-size:0; line-height:0;vertical-align:middle;-webkit-transform: rotate(45deg);}
+.pop_cnt b:after { content:'.'; display:block; width:15px; height:2px; background:#ffe9c7;-webkit-transform: rotate(-90deg);}
+.pop_cnt .pop_title{background:url(images/right.png) no-repeat left center; width:80px; margin:0 auto; padding-left:30px; color:#fff; font-size:16px; line-height:22px; padding-left:30px; margin-top:35px;}
+.pop_cnt .w{line-height:24px; color:#fde4bf; width:230px; margin:8px auto;}
+</style>
+</head>
+<body>
+<div class="cnt">
+
+    <div class="mask"></div>
+    <div class="pop_cnt">
+    <div class="close"><b></b></div>
+    <div class="pop_title"></div>
+    <div class="w"></div>
+    </div>
+
+
+
+
+	<div class="date">
+		<font>活动时间:7月16日—7月21日</font>
+		<a href="javascript:Local.go('rules.html');">活动规则</a>
+	</div>
+  <div class="pay">
+  <a id="chargeAID" href="javascript:Local.doCharge();">马上充值</a>
+  <a href="http://feiji.qq.com/web201404/play.html?from=wenxue">开始游戏</a>
+  </div>
+	<div class="wall">
+		<div class="gift_title"></div>
+		<div class="gift"></div>
+	</div>	
+	<div class="content">
+		<div class="pay_notice">充50元　赠送总价值<font>62元</font>《全民飞机大战》<font>豪华大礼包</font></div>
+		<ul class="gift_ul">
+			<li><div><img src="images/img1.png"></div><span>888积分( 9元）</span></li>
+		 	<li><div><img src="images/img2.png"></div><span>1张超级经验卡<br>
+	 	    （4元）</span></li>
+			<li><div><img src="images/img3.png"></div><span>1个1月1级极品<br>宠物雪宝（49元）</span></li>
+		</ul>	
+		<div class="get">
+			<a href="javascript:LotteryIndex.getFiftyGift();"></a>
+		</div>
+	</div>
+
+	<div class="wall">
+		<div class="gift_title gift_title2"></div>
+		<div class="gift gift2"></div>
+	</div>	
+	<div class="content">
+		<div class="mycnt">
+	    <a href="javascript:Local.go('mycard.html');">我的刮刮卡</a></div>
+		<div class="sc_bg">				
+			<div class="sc_cnt">
+				<div class="sc_cnt2">
+					<div class="w">
+						充值满100元，送刮刮卡一张！
+				  </div>
+				  <a href="javascript:LotteryIndex.startScratch();">开始刮奖</a>
+			  </div> 
+			  <div class="scratch_area" id="wScratchPad"></div>
+			</div>
+		</div>
+		<div class="pay_notice2">刮刮卡奖项设置</div>	
+		<div class="rew_cnt">
+			<ul>
+				<li><div><strong>一等奖</strong></div><em>Ｑ币1000个</em></li>
+				<li><div><strong>二等奖</strong></div><em>Ｑ币500个</em></li>
+				<li><div><strong>三等奖</strong></div><em>Ｑ币100个</em></li>
+				<li><div><strong>四等奖</strong></div><em>Ｑ币50个</em></li>
+				<li><div><strong>五等奖</strong></div><em>Ｑ币5个</em></li>
+			</ul>
+		
+		</div>
+	</div>	
+	
+	<div class="wall">
+		<div class="gift_title gift_title3"></div>
+		<div class="gift gift3"></div>
+	</div>	
+	<div class="content">
+	  <div class="pay_notice3">
+		  <p>从未在腾讯文学充值过书币的新充值用户，活动期间，<br>
+		  充值满５元，即可获赠总价值<font>12元</font>《全民飞机大战》<font>豪华见面礼</font>。</p>
+		  <p>每个新用户只有一次获得大礼包的机会</p>
+	  </div>
+		<ul class="gift_ul">
+			<li><div><img src="images/img1.png"></div><span>500积分(5元）</span></li>
+		 	<li><div><img src="images/img2.png"></div>
+		 	  <span>1张高级经验卡<br>
+		 	  （2元）</span></li>
+			<li><div><img src="images/img4.png"></div><span>宠物水小象<br>
+		    （5元）</span></li>
+		</ul>	
+		<div class="get">
+			<a href="javascript:LotteryIndex.getFirstGift();"></a>
+		</div>&nbsp;
+	</div>
+	<div class="intro">全民飞机大战简介</div>
+	<div class="intro_cnt">第一飞行射击手游《全民飞机大战》，玩法多样，关卡丰富，画面清新明快。超流畅的手感、超华丽的弹幕、超爽快的升级，都将带给玩家最佳游体验！独创合体玩法、宠物系统广受玩家好评。长期占据各大排行榜前位，是当今中国手游界最受欢迎游戏之一。
+</div>	
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/wScratchPad.js"></script>
+
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+
+<script type="text/javascript">
+/*$(document).ready(function(){
+	$("#wScratchPad").wScratchPad({
+		color: '#c5c5c6',
+		image: 'images/a1.png'
+	});	
+});*/	
+function startScratch(){
+	$(".sc_cnt2").hide();
+	$(".scratch_area").show();
+	
+}
+</script>
+</html>

@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 57
+node_modules
+package.json
+src
+webpack.config.js
+.babelrc
+
+END

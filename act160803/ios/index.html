@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>哈利波特魔法</title>
+<script>
+    // var scale = 1 / devicePixelRatio;
+    // document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="content">
+    <img src="images/top.jpg" class="top" alt="哈利波特魔法转转赚">
+    <img src="images/center.jpg" class="center">
+    <div class="wrap">
+        <ul class="blist" id="blist">
+            <li bid="834566">
+                <img src="images/t1.jpg" alt="哈利·波特与被诅咒的孩子">
+                <p>哈利·波特与被诅咒的孩子</p>
+                <span><strong>最新</strong>/英文版</span>
+                <a href="javascript:ABook.gotoDetail(834566);">下载</a>
+            </li>
+            <li bid="834083">
+                <img src="images/t2.jpg" alt="哈利·波特全集（1-7中文版）">
+                <p>哈利·波特全集（1-7中文版）</p>
+                <span>抽奖<strong>7</strong>次</span>
+                <a href="javascript:ABook.gotoDetail(834083);">下载</a>
+            </li>
+            <li bid="834436">
+                <img src="images/t3.jpg" alt="哈利·波特全集（1-7英文版）">
+                <p>哈利·波特全集（1-7英文版）</p>
+                <span>抽奖<strong>7</strong>次</span>
+                <a href="javascript:ABook.gotoDetail(834436);">下载</a>
+            </li>
+        </ul>
+        <div class="cont">
+            <div class="bird"></div>
+            <div class="ltip">
+                <p>下载几部《哈利·波特》<br>即可获得几次抽奖机会</p>
+                <a href="javascript:Local.openInside(location.href.replace(/index/, 'prize'));">我的奖品&gt;</a>
+            </div>
+            <div class="lottery">
+                <ul id="lottery">
+                    <li class="gift1">
+                        <img src="images/gift1.png">
+                        <p>正版魔法杖</p>
+                    </li>
+                    <li class="gift2">
+                        <img src="images/gift2.png">
+                        <p class="qm">J.K.罗琳亲笔签名书</p>
+                    </li>
+                    <li class="gift3">
+                        <img src="images/gift3.png">
+                        <p>系列T恤</p>
+                    </li>
+                    <li class="gift8">
+                        <img src="images/gift4.png">
+                        <p>围巾</p>
+                    </li>
+                    <li class="gift4">
+                        <img src="images/gift5.png">
+                        <p>50阅券</p>
+                    </li>
+                    <li class="gift7">
+                        <img src="images/gift6.png">
+                        <p>笔记本</p> 
+                    </li>
+                    <li class="gift6">
+                        <img src="images/gift7.png">
+                        <p>500阅券</p>
+                    </li>
+                    <li class="gift5">
+                        <img src="images/gift8.png">
+                        <p>一本正版纸书</p>
+                    </li>
+                </ul>
+                <div class="cjbtn" id="cjbtn">
+                    <img src="images/circle.png">
+                    <div class="status"></div>
+                    <p>（<span id="num"></span>次机会）</p>
+                </div>
+            </div>
+        </div>
+        <div class="download">
+            <img src="images/loadmore.png" alt="下载多部哈利波特，获得更多抽奖机会">
+            <ul class="blist2" id="blist2">
+                <li bid="834076">
+                    <img src="images/b1.jpg">
+                    <div class="info">
+                        <p>哈利·波特与魔法石</p>
+                        <strong class="discount">特价</strong>
+                        <a href="javascript:ABook.gotoDetail(834076);">下载</a>
+                    </div>
+                </li>
+                <li bid="834077">
+                    <img src="images/b2.jpg">
+                    <div class="info">
+                        <p>哈利·波特与密室</p>
+                        <a href="javascript:ABook.gotoDetail(834077);">下载</a>
+                    </div>
+                </li>
+                <li bid="834078">
+                    <img src="images/b3.jpg">
+                    <div class="info">
+                        <p>哈利·波特与阿兹卡班的囚徒</p>
+                        <a href="javascript:ABook.gotoDetail(834078);">下载</a>
+                    </div>
+                </li>
+                <li bid="834079">
+                    <img src="images/b4.jpg">
+                    <div class="info">
+                        <p>哈利·波特与火焰杯</p>
+                        <a href="javascript:ABook.gotoDetail(834079);">下载</a>
+                    </div>
+                </li>
+                <li bid="834080">
+                    <img src="images/b5.jpg">
+                    <div class="info">
+                        <p>哈利·波特与凤凰社</p>
+                        <a href="javascript:ABook.gotoDetail(834080);">下载</a>
+                    </div>
+                </li>
+                <li bid="834081">
+                    <img src="images/b6.jpg">
+                    <div class="info">
+                        <p>哈利·波特与“混血王子”</p>
+                        <a href="javascript:ABook.gotoDetail(834081);">下载</a>
+                    </div>
+                </li>
+                <li bid="834082">
+                    <img src="images/b7.jpg">
+                    <div class="info">
+                        <p>哈利·波特与死亡圣器</p>
+                        <a href="javascript:ABook.gotoDetail(834082);">下载</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="javascript:Local.go('enPage.html');" class="en">
+                英文版
+                <p>点此购买&gt;&gt;</p>
+            </a>
+        </div>
+    </div>
+    <div class="rule">
+        <img src="images/rule.png" alt="活动规则">
+        <div class="detail">
+            <p><span>1.</span>活动时间：2016.8.25-8.27</p>
+            <p><span>2.</span>凡购买任意一部正版哈利·波特即可获得1次抽奖机会，多买多抽，抽奖机会请在活动期间抽取完毕；</p>
+            <p><span>3.</span>奖品中实物奖品需用户填写正确的<a href="javascript:Local.openInside(location.href.replace(/index/, 'contact'));">联系方式</a>，工作人员会在活动结束后5天内联系并寄送；</p>
+            <p><span>4.</span>奖品中阅券将即时到账 ，请及时查看！阅券有效期为15天，请尽快使用。</p>
+        </div>
+        <p class="interp">活动最终解释权归QQ阅读所有</p>
+        <div class="copyright">
+            <p>封面 &copy; JKR/Pottermore/HPTP. TM Warner Bros.</p>
+            <p>插图 &copy; Bloomsbury Publishing Plc 2014</p>
+        </div>
+    </div>
+</div>
+<!-- 弹窗 -->
+<div class="mask" id="mask">
+    <div class="tiparea" id="tiparea1">
+        <h3>抽奖失败</h3>
+        <p>购买1册《哈利·波特》，<br>即可获得1次抽奖机会，<br>买的越多，抽奖机会也会越多</p>
+        <a href="javascript:;" class="knowbtn"></a>
+    </div>
+    <div class="tiparea" id="tiparea2">
+        <img src="images/gift5.png" class="pack" id="pack">
+        <h3>恭喜你<br>获得<span id="text">50阅券</span></h3>
+        <p id="msg">务必填写正确的联系方式，<br>方便客服与你联系</p>
+        <a href="javascript:;" class="knowbtn" id="knowbtn"></a>
+        <a href="javascript:Local.openInside(location.href.replace(/index/, 'contact'));" class="linkbtn" id="linkbtn"></a>
+        <i class="close"></i>
+        <img src="images/pic.png" class="ico">
+    </div>
+</div>
+<div class="over" id="over">
+    <img src="images/over.png" alt="本期活动已结束">
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS reset */
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body,div,p,img,i,strong,dl,dd,dt,span{margin:0;padding:0;}
+ul,li{list-style:none;}
+i{font-style: normal;}
+img{border:0 none; vertical-align:middle;display:block;width: 100%;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;}
+html{font-size: 100px}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;font-size: 0.14rem;background: #ff9c00}
+*{-webkit-animation-fill-mode:both!important;}
+.wrap{position:absolute;left:0;right:0;margin:auto;top:2.2rem;width:2.82rem;height:0.61rem;padding:0.07rem 0.05rem;background:url(../images/getbg.png);background-size: 100% auto;}
+.leftb{width: 2.03rem;height:0.61rem;background:#ffe9b5;border-radius:14px;float: left;}
+.btn{float:right;width: 0.61rem;height: 0.61rem;line-height:0.62rem;text-align:center;background:#277fe3;border-radius:14px;font-size: 0.18rem;color: #fff;font-weight:bold;-webkit-box-shadow:inset 0 -0.04rem #064790;}
+.btn.on{background: #ea022e;-webkit-box-shadow:inset 0 -0.04rem #a3011b;}
+.geted,.none{display: none;}
+.geted .tip{font-size: 0.13rem;line-height:0.23rem;color: #333;padding: 0.04rem 0 0 0.05rem}
+.geted .yhm{margin:0 0.05rem;height: 0.25rem;line-height: 0.27rem;padding-left:0.05rem;background: #fff;border-radius:2px;font-size:0.14rem;}
+.geted .btn,.none .btn{background: #b3b3b3;-webkit-box-shadow:inset 0 -0.04rem #666;}
+.rule{background: #ffa800 url(../images/line.png) 0 0.1rem no-repeat;background-size:100% auto;padding: 0.28rem 0.14rem 0;color: #fff}
+.rule dt{line-height: 0.2rem;font-weight: bold;font-size: 0.14rem}
+.rule p{font-size: 0.12rem;line-height: 0.22rem;margin-top: 0.04rem;position: relative;padding-left: 0.18rem;}
+.rule .cpright{padding: 0.23rem 0 0.36rem;text-align: center;color: #cc1533;font-size: 0.1rem}
+.rule i{position: absolute;left:0;top:0.05rem;width: 0.12rem;height: 0.12rem;line-height: 0.12rem;text-align:center;font-size: 0.1rem;color:#ffb200;background: #fff;border-radius:24px;}
+/*弹窗*/
+.mask{position:fixed;width:100%;height:100%;top:0;left:0;z-index:100;background: rgba(0,0,0,.58);-webkit-box-align:center;-webkit-box-pack:center;display:none}
+.tiparea{position:relative;width: 2.1rem;height: 1.54rem;background: url(../images/mask.png) 0 0 no-repeat;background-size:cover;border-radius: 10px;overflow: hidden;text-align: center;display: none;}
+.tiparea strong{font-size: 0.16rem;color: #e5e4e4;line-height: 0.24rem;display: block;padding:0.4rem 0.1rem 0}
+.tiparea .hide{display:block;margin:0 0.34rem;height: 0.37rem;line-height: 0.38rem;margin-top:0.11rem;background:#ffc621;border-radius:20px;font-size: 0.16rem;color: #833f0c;font-weight:bold;-webkit-box-shadow:inset 0 -0.03rem #9c6000;}
+.tiparea p{color:#f4f4f4;font-size: 0.12rem;line-height: 0.18rem;margin-top: 0.03rem;padding: 0 0.05rem}
+.hide.on{background:#ff9c00;-webkit-box-shadow:inset 0 -0.03rem #855302;}
+#tiparea2 strong{padding-top:0.25rem}
+.closebtn{position: absolute;top:4px;right:4px;width:0.2rem;height:0.2rem;background: #b9b9b9 url(../images/close.png) center no-repeat;background-size: 0.11rem auto;border-radius: 20px;z-index: 100}

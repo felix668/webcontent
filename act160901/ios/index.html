@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>畅读国庆七天ios</title>
+	<link rel="stylesheet" type="text/css" href="./dist/common.css">
+	<link rel="stylesheet" type="text/css" href="./dist/index.css">
+</head>
+
+<body>
+	<div class="maskOver" v-show="over">
+		<img src="img/over.png" width="100%">
+	</div>
+
+	<div class="mask" v-show="maskShow">
+		加载中...
+	</div>
+
+	<div class="wrapper">
+		<img class="title" src="img/title{{ios?'-ios':''}}.png"/>
+		
+		<div class="main" v-if="!ios">
+			<block-panel
+				money="10"
+				coins="1000"
+				banner="hot"
+			></block-panel>
+			<block-panel
+				money="20"
+				coins="2000"
+				banner="hot"
+			></block-panel>
+			<block-panel 
+				money="500"
+				coins="50000"
+				banner="super"
+			></block-panel>
+			<block-panel 
+				money="50"
+				coins="5000"
+			></block-panel>
+			<block-panel 
+				money="100"
+				coins="10000"
+			></block-panel>
+			<block-panel 
+				money="200"
+				coins="20000"
+			></block-panel>
+		</div>
+		<div class="main" v-if="ios">
+			<block-panel 
+				money="12"
+				banner="hot"
+			></block-panel>
+			<block-panel 
+				money="98"
+				banner="super"
+			></block-panel>
+			<block-panel 
+				money="30"
+			></block-panel>
+			<block-panel 
+				money="618"
+			></block-panel>
+		</div>
+		
+		<div class="rules">
+			<img src="img/banner_rules.png"/>
+			<p><span>1.活动时间：2016年9月29日17点-10月8日0点。</span></p>
+			<p><span>2.充值赠送：单次(一次性)充值达到指定额度，则赠送对应额度{{name}}，多充多送！</span></p>
+			<p><span>3.活动仅限QQ、微信登录用户参加。游客用户无法参加。</span></p>
+			<p><span>4.活动所赠{{name}}有效期均为15天并且即时到账，可用于直接购买书籍。</span></p>
+		</div>
+
+		<div class="copyright">
+			{{ios?'本活动与苹果公司无关，最终解释权归QQ阅读所有':'本活动最终解释权归QQ阅读所有'}}
+		</div>
+	</div>
+
+<script type="text/javascript" src="http://pingjs.qq.com/ping.js"></script>
+
+<script type="text/javascript">
+	if(typeof(pgvMain) == 'function'){
+		pgvMain();
+	}
+</script>
+<script type="text/javascript" src="vendor/rem.js"></script>
+<script type="text/javascript" src="vendor/vue.min.js"></script>
+
+<script type="text/javascript" src="vendor/charm.js"></script>
+<script type="text/javascript" src="vendor/cfoot.js"></script>
+<script type="text/javascript" src="vendor/local.js"></script>
+
+<script type="text/javascript" src="./dist/bundle.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<title>0元抽奖</title>
+<link href="css/stylecss.css" rel="stylesheet" type="text/css"/>
+<script>
+  var fontsize=(document.documentElement.clientWidth)/320*100;
+  document.documentElement.style.fontSize = fontsize + 'px';
+</script>
+</head>
+
+<body>
+   <div class="xingg"><img src="images/xinguang.png"></div>
+   <div class="timebox">活动时间：1月8号-1月31号</div>
+   <a href="javascript:Local.go('myprize.html');" class="btn_goprize">中奖名单 &gt;</a>
+   <!--进行中-->
+   <div class="bigbox" id="today">
+	 <script id="today_t" type="text/html">
+     <div class="contenbox">
+         <div class="title">
+           <h4 class="underway">进行中：</h4>
+           <p>1月{{n}}日开始，仅剩<span id="hl">0</span>时<span id="ml">0</span>分</p>
+         </div>
+         <div class="bgbox">
+           <img src="images/bimg{{t[0]}}.jpg">
+           <div class="r_prizeinfo">
+               <h4>{{t[1]}}</h4>
+               <p>2份{{t[1]}}免费送</p>
+               <p class="price">￥<span>0</span><em>&nbsp;￥{{t[2]}}&nbsp;</em></p>
+			   {{if p_qimei||p_qq}}	
+               <a href="javascript:;" class="btn_draw nopoint" id="btn">已抽过奖</a>
+			   {{/if}}
+			   {{if !p_qimei&&!p_qq}}
+			   <a href="javascript:;" onclick="javascript:Index.pick(this,{{n}},{{t[0]}});" class="btn_draw" id="btn">试试手气</a>	
+			   {{/if}}				
+           </div>
+         </div>
+     </div>
+   	</script>
+   </div>
+   <!--即将开始-->
+   <div class="bigbox" id="tomorrow">
+    <script id="today_tm1" type="text/html">
+     <div class="contenbox">
+         <div class="title">
+           <h4>即将开始：</h4>
+           <p>1月{{n+1}}日00:00开始</p>
+         </div>
+         <div class="bgbox">
+           <img src="images/bimg{{tm1[0]}}.jpg">
+           <div class="r_prizeinfo">
+               <h4>{{tm1[1]}}</h4>
+               <p>2份{{tm1[1]}}免费送</p>
+               <p class="price">￥<span>0</span><em>&nbsp;￥{{tm1[2]}}&nbsp;</em></p>
+               <a href="javascript:void(0);" class="btn_draw nopoint">等待开始</a>
+           </div>
+         </div>
+     </div>
+     </script>
+     <script id="today_tm2" type="text/html">
+     <div class="contenbox">
+         <div class="title">
+           <p>1月{{n+2}}日00:00开始</p>
+         </div>
+         <div class="bgbox">
+           <img src="images/bimg{{tm2[0]}}.jpg">
+           <div class="r_prizeinfo">
+               <h4>{{tm2[1]}}</h4>
+               <p>2份{{tm2[1]}}免费送</p>
+               <p class="price">￥<span>0</span><em>&nbsp;￥{{tm2[2]}}&nbsp;</em></p>
+               <a href="javascript:void(0);" class="btn_draw nopoint">等待开始</a>
+           </div>
+         </div>
+     </div>
+     </script>
+   </div>
+   <!--已结束-->
+   <div class="endtt"><span>已结束</span></div>
+   <div class="bigbox endbox" id="yesterday">
+   	   <script id="yesterday_tm" type="text/html">
+       <div class="contenbox">
+             <div class="title">
+               <p>1月{{n-1}}日 24:00已结束</p>
+             </div>
+             <div class="bgbox">
+               <img src="images/bimg{{y[0]}}.jpg">
+               <div class="r_prizeinfo">
+                   <h4>{{y[1]}}</h4>
+               	   <p>2份{{y[1]}}免费送</p>
+                   <p class="price">￥<span>0</span><em>&nbsp;￥{{y[2]}}&nbsp;</em></p>
+                   <a href="javascript:void(0);" class="btn_draw nopoint">已结束</a>
+               </div>
+             </div>
+         </div>
+         </script>  
+   </div> 
+   <div class="rulebox">
+      <h4>活动规则</h4>
+      <ul>
+         <li><span>1</span>活动时间：2016年1月8日-1月31日。</li>
+         <li><span>2</span>活动期间每台设备、每个帐号每天只有一次抽奖机会</li>
+         <li><span>3</span>获得奖品的用户请仔细填写个人信息，活动结束后，工作人员统一发放奖品</li>
+      </ul>
+      <p>本次活动法律范围内最终解释权归阅文集团所有。</p>
+   </div>
+   <div class="show_mask" style="display:none">    
+      <div class="tankuang_box">
+        <div class="imgbox"><img src=""></div>
+        <h4>恭喜您获得小米路由器</h4>
+        <p>请填写正确的联系方式，方便客服与您联系</p>
+        <a href="javascript:void(0);" class="btn_go">填写联系方式</a>
+        <a href="javascript:void(0);" class="btn_close"></a>
+      </div>
+      
+</div> 
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

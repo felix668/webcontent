@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读"/>
+<title>海量原著免费送</title>
+<script>
+    var winW=document.documentElement.clientWidth;
+    document.documentElement.style.fontSize=(winW/720)*100+"px";
+</script>
+<style type="text/css">
+body,div,p,ul,li,h1,h2,h3{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,li{list-style:none;}
+img{border:0 none;vertical-align: top;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background: #fff;text-align: center;}
+.banner{width: 100%;}
+/*送书数据*/
+.msg{margin:0.22rem 0 0.16rem;color: #373331;font-size: 0}
+.msg h1{display:inline-block;vertical-align:top;height:.62rem;line-height:.62rem;font-size: .36rem;position: relative;}
+.msg .popular{margin-right: .12rem;font-weight: normal;}
+.msg h1::before,.msg h1::after{content:"";position: absolute;width: .18rem;height: .3rem;}
+.msg h1::before{left:-.36rem;bottom:0;border-bottom:2px solid #e2e2e2;border-left:2px solid #e2e2e2;}
+.msg h1::after{right:-.36rem;top:0;border-top:2px solid #e2e2e2;border-right:2px solid #e2e2e2;}
+.send{font-size: .32rem;margin-top: .12rem}
+.send span{width: .44rem;height: .56rem;line-height: .6rem;background:#e9e9e9;border-bottom:1px solid #d1d1d1;display: inline-block;vertical-align: middle;margin-right:1px;color: #7babff;font-size: .48rem}
+.send span:first-child{margin-left: 2px}
+.send span:last-child{margin-right: 2px}
+/*胡歌推荐书单*/
+.box{padding: 0.2rem 0 .16rem}
+.wrap>.box{padding-bottom: .64rem}
+.htitle{width:5.74rem;margin-bottom: .28rem}
+.box{font-size: 0;position: relative;}
+.box li{display: inline-block;margin:0 .32rem .5rem;width: 1.7rem;}
+.list1 img,.scrollist img{width: 1.7rem;height: 2.1rem;margin-bottom: 0.12rem}
+.box li p,.scrollist li p{font-size: .24rem;color: #777;line-height: .38rem;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;text-align: left}
+.box li p:nth-of-type(1),.scrollist li p:nth-of-type(1){font-size: .3rem;color: #333;}
+.btn{display:block;width: 1.56rem;height: .58rem;line-height: .6rem;margin:.04rem;text-align: center;font-size: .28rem;color: #7aabff;border:1px solid #7aabff;position: relative;z-index: 10}
+.seled{border-color: #777;color: #777}
+.list2{margin-top:.04rem}
+.list2 li{background: #f1f1f1;width: 3.1rem;height:1.46rem;margin:0 .08rem .16rem;padding:.1rem;box-sizing:border-box;-webkit-box-sizing:border-box;position: relative;}
+.list2 li img{width: 1rem;height:1.26rem;position: absolute;top: .1rem;left: .1rem;}
+.list2 .binfo{margin: 0 .1rem 0 1.22rem}
+.list2 li p:nth-of-type(1){font-size: .28rem}
+.list2 .btn{margin: 0 .04rem 0;height: .5rem;line-height: .52rem}
+.box::after{content: "";position:absolute;bottom:-1px;left:0;width: 100%;height: .12rem;background: url(images/bg.png) no-repeat;background-size:100% auto}
+/*更多免费书单*/
+.content{background: #e2e2e2}
+.ftitle{width: 4.92rem;margin: .44rem auto .4rem}
+/*琅琊榜*/
+.list3 li{display:-webkit-box;display: box;display: -webkit-flex;display: flex;-webkit-box-align:center;box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;text-align: left;margin-bottom:.5rem}
+.list3 img{width:1.8rem;margin-right: .26rem}
+.list3 p{font-size: .24rem;line-height:.44rem;}
+.list3 p:nth-child(1){font-size: .3rem;color: #333;line-height: .5rem;margin-top: }
+.list3 h2{color: #7aabff;font-size: .24rem;line-height: .56rem;}
+.title{width: 3.82rem;height: .4rem;background: url(images/title.png) no-repeat;background-size: 100% auto;margin:.2rem auto 0.38rem;}
+.title2{background-position: 0 -1rem}
+.title3{background-position: 0 -2rem}
+.title4{background-position: 0 -3rem}
+.title5{background-position: 0 -4rem}
+.freebox .box:nth-child(odd){background: #fff}
+.freebox .box:nth-child(odd)::after,.wrap>.box::after{-webkit-transform:rotateX(180deg);transform:rotateX(180deg);}
+/*永久免费*/
+.tips{font-size:.24rem;line-height:.26rem;color: #7babff;position: relative}
+.tips span{display: inline-block;padding:0 .12rem;background: #e2e2e2;position: relative;z-index: 10}
+.tips::after{content: "";position: absolute;top:.12rem;left: .42rem;right: .42rem;height: 1px;background: #7babff;-webkit-transform:scaleY(.5);transform:scaleY(.5);}
+/*活动规则*/
+.rules{background: #e2e2e2;padding:.6rem .32rem 1.74rem;}
+.rules h3{font-size:.36rem;color:#7aabff;line-height: .36rem;margin-bottom: .5rem}
+.rules p{font-size:.3rem;line-height:.48rem;color:#333;position: relative;text-align: left;padding-left: .3rem}
+.rules i{position: absolute;top:0;left:0;font-style: normal;}
+.rules span{padding-left: .4rem;display: block;position: relative;}
+.rules span::before{content:"";width: .08rem;height:.08rem;position:absolute;top:.19rem;left:.12rem;background: #333;border-radius: 50%;}
+.rules p:last-child{font-size: .24rem;margin-top: .16rem;text-align: center;}
+/*悬浮*/
+.fixtip{position:fixed;bottom:0;left:0;width: 100%;height: 1.14rem;line-height:1.14rem;background-color: #dd7e0d;background-image:-webkit-linear-gradient(top,#eb8e0a,#dd7e0d);background-image:linear-gradient(top,#eb8e0a,#dd7e0d);font-size: .36rem;color: #fff;display: none;z-index: 90}
+/*弹窗*/
+.mask{position:fixed;width: 100%;height: 100%;background: rgba(0,0,0,.7);top: 0;left: 0;-webkit-box-align:center;box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;display: none;z-index: 99}
+.tiparea{width: 4.78rem;background: #f1f1f1;border-radius: .2rem;position: relative;}
+.tiparea strong{display: block;line-height: .66rem;font-size: .34rem;color: #333;padding-top:.64rem;}
+.tiparea p{font-size: .28rem;color: #666;line-height: .44rem;margin-bottom: .26rem}
+.tiparea a{display: block;width: 3.3rem;height: .8rem;margin:0 auto .46rem;line-height: .8rem;text-align: center;color: #fff;font-size: .36rem;background: #7babff;box-shadow: inset 0 -3px 0 0 #5082f1;-webkit-box-shadow: inset 0 -3px 0 0 #5082f1;border-radius: .1rem;}
+.tiparea a:active{background: #bc0807;box-shadow: inset 0 -3px 0 0 #ae0303;-webkit-box-shadow: inset 0 -3px 0 0 #ae0303;}
+.close{position: absolute;top:.1rem;right:.2rem;width:.6rem;height:.6rem;background:url(images/close.png);background-size: 100% auto;}
+.show{display:-webkit-box;display: box;display: -webkit-flex;display: flex;}
+/*活动已过期*/
+.overtip{width: 3.26rem;height: .6rem;background: #e9f1fe;border-radius: .1rem;text-align: center;line-height: .6rem;color: #373331;font-size: .36rem;margin: .56rem auto .44rem;display: none;}
+.over .overtip{display: block;}
+.over .btn,.over .fixtip{display: none;}
+.over .list2 .binfo{margin-top: .3rem;}
+</style>
+</head>
+<body>
+<img src="images/banner.jpg" class="banner"/>
+<div class="msg">
+	<h1><span class="popular">最受欢迎50本书</span>任选10本免费读</h1>
+	<div class="send" id="send">已免费送出<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>本好书</div>
+</div>
+<div class="overtip">活动已过期</div>
+<div class="wrap" id="wrap">
+	<div class="box">
+		<img src="images/huge.png" alt="胡歌推荐书单，永久免费" class="htitle">
+		<ul class="list1">
+			<li onclick="javascript:ABook.gotoDetail(449752);">
+				<img src="images/book1.jpg"/>
+				<p>解忧杂货店</p>
+				<p>东野圭吾著,李盈春译</p>
+				<span class="btn">选它</span>
+			</li>
+			<li onclick="javascript:ABook.gotoDetail(184073);">
+				<img src="images/book2.jpg"/>
+				<p>西方哲学简史</p>
+				<p>罗素</p>
+				<span class="btn">选它</span>
+			</li>
+			<li onclick="javascript:ABook.gotoDetail(816844);">
+				<img src="images/book3.jpg"/>
+				<p>孤独小说家</p>
+				<p>[日]石田衣良</p>
+				<span class="btn">选它</span>
+			</li>
+			<li onclick="javascript:ABook.gotoDetail(609288);">
+				<img src="images/book4.jpg"/>
+				<p>菊与刀：揭示日本文化最隐秘污点的经典日本学著作</p>
+				<p>本尼迪克特</p>
+				<span class="btn">选它</span>
+			</li>
+			<li onclick="javascript:ABook.gotoDetail(151288);">
+				<img src="images/book5.jpg"/>
+				<p>纳兰词全编笺注</p>
+				<p>纳兰容若</p>
+				<span class="btn">选它</span>
+			</li>
+			<li onclick="javascript:ABook.gotoDetail(318162);">
+				<img src="images/book6.jpg"/>
+				<p>瓦尔登湖</p>
+				<p>梭罗</p>
+				<span class="btn">选它</span>
+			</li>
+		</ul>
+		<ul class="list2">
+			<li onclick="javascript:ABook.gotoDetail(634968);">
+				<img src="images/book7.jpg"/>
+				<div class="binfo">
+					<p>小王子</p>
+					<p>安托万·德·圣·埃克苏佩里</p>
+					<span class="btn">选它</span>
+				</div>	
+			</li>	
+			<li onclick="javascript:ABook.gotoDetail(651979);">
+				<img src="images/book8.jpg"/>
+				<div class="binfo">
+					<p>乌合之众</p>
+					<p>古斯塔夫·勒庞</p>
+					<span class="btn">选它</span>
+				</div>	
+			</li>
+			<li onclick="javascript:ABook.gotoDetail(609071);">
+				<img src="images/book9.jpg"/>
+				<div class="binfo">
+					<p>新月·飞鸟-泰戈尔诗选</p>
+					<p>泰戈尔</p>
+					<span class="btn">选它</span>
+				</div>	
+			</li>
+			<li onclick="javascript:ABook.gotoDetail(172293);">
+				<img src="images/book10.jpg"/>
+				<div class="binfo">
+					<p>爱你就像爱生命</p>
+					<p>王小波</p>
+					<span class="btn">选它</span>
+				</div>	
+			</li>				
+		</ul>
+	</div>
+	<div class="content">
+		<img src="images/free.png" alt="更多书籍免费看" class="ftitle">
+		<ul class="list3">
+			<li onclick="javascript:ABook.gotoDetail(464654);">
+				<img src="images/book11.png"/>
+				<div class="binfo">
+					<p>琅琊榜</p>
+					<p>海晏</p>
+					<h2>免费畅读30天</h2>
+					<span class="btn">选它</span>
+				</div>	
+			</li>	
+		</ul>
+		<div class="freebox">
+			<div class="tips">
+				<span>以下书籍永久免费</span>
+			</div>
+			<div class="box">
+				<h3 class="title"></h3>
+				<ul class="list1">
+					<li onclick="javascript:ABook.gotoDetail(812249);">
+						<img src="images/book12.jpg"/>
+						<p>北京遇上西雅图2</p>
+						<p>薛晓路,焦华静</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(129806);">
+						<img src="images/book13.jpg"/>
+						<p>藏地密码1</p>
+						<p>何马</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(447016);">
+						<img src="images/book14.jpg"/>
+						<p>狼图腾</p>
+						<p>姜戎</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(134066);">
+						<img src="images/book15.jpg"/>
+						<p>后宫甄嬛传1（修订典藏版）</p>
+						<p>流潋紫</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(726271);">
+						<img src="images/book16.jpg"/>
+						<p>芈月传（合集）</p>
+						<p>蒋胜男</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(642218);">
+						<img src="images/book17.jpg"/>
+						<p>无心法师</p>
+						<p>尼罗</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(438182);">
+						<img src="images/book18.jpg"/>
+						<p>仙剑奇侠传1</p>
+						<p>管潮平</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(804421);">
+						<img src="images/book19.jpg"/>
+						<p>麻雀</p>
+						<p>海飞</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(807290);">
+						<img src="images/book20.jpg"/>
+						<p>青丘狐传说</p>
+						<p>多多改编</p>
+						<span class="btn">选它</span>
+					</li>
+				</ul>
+			</div>
+			<div class="box">
+				<h3 class="title title2"></h3>
+				<ul class="list1">
+					<li onclick="javascript:ABook.gotoDetail(244786);">
+						<img src="images/book21.jpg"/>
+						<p>从你的全世界路过</p>
+						<p>张嘉佳</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(620610);">
+						<img src="images/book22.jpg"/>
+						<p>尘埃落定</p>
+						<p>阿来</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(236487);">
+						<img src="images/book23.jpg"/>
+						<p>最好的我们</p>
+						<p>八月长安</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(174117);">
+						<img src="images/book24.jpg"/>
+						<p>明朝那些事1</p>
+						<p>当年明月</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(566431);">
+						<img src="images/book25.jpg"/>
+						<p>从0到1：开启商业与未来的秘密</p>
+						<p>[美]蒂尔,马斯特斯</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(660048);">
+						<img src="images/book26.jpg"/>
+						<p>无声告白</p>
+						<p>(美)伍绮诗</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(182571);">
+						<img src="images/book27.jpg"/>
+						<p>悟空传</p>
+						<p>今何在</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(636025);">
+						<img src="images/book28.jpg"/>
+						<p>爱在黎明破晓前&爱在日落黄昏时</p>
+						<p>理查德·林克莱特,金·克里桑</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(438097);">
+						<img src="images/book29.jpg"/>
+						<p>那些回不去的年少时光</p>
+						<p>桐华</p>
+						<span class="btn">选它</span>
+					</li>
+				</ul>
+			</div>
+			<div class="box">
+				<h3 class="title title3"></h3>
+				<ul class="list1">
+					<li onclick="javascript:ABook.gotoDetail(447025);">
+						<img src="images/book30.jpg"/>
+						<p>日子里的中国</p>
+						<p>袁岳，张军</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(130885);">
+						<img src="images/book31.jpg"/>
+						<p>一生</p>
+						<p>莫泊桑</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(241458);">
+						<img src="images/book32.jpg"/>
+						<p>沉思录</p>
+						<p>奥列留</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(130312);">
+						<img src="images/book33.jpg"/>
+						<p>契诃夫短篇小说选</p>
+						<p>契诃夫</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(623406);">
+						<img src="images/book34.jpg"/>
+						<p>我们台湾这些年</p>
+						<p>廖信忠</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(151313);">
+						<img src="images/book35.jpg"/>
+						<p>呼兰河传</p>
+						<p>萧红</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(128038);">
+						<img src="images/book36.jpg"/>
+						<p>人性的弱点</p>
+						<p>戴尔·卡耐基</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(227862);">
+						<img src="images/book37.jpg"/>
+						<p>正能量</p>
+						<p>理查德·怀斯曼民</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(623400);">
+						<img src="images/book38.jpg"/>
+						<p>理性的陨落——在课堂上被歪曲的尼采和叔本华</p>
+						<p>林欣浩</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(130888);">
+						<img src="images/book39.jpg"/>
+						<p>野性的呼唤</p>
+						<p>杰克·伦敦</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(568790);">
+						<img src="images/book40.jpg"/>
+						<p>夜莺与玫瑰</p>
+						<p>王尔德</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(227950);">
+						<img src="images/book41.jpg"/>
+						<p>不抱怨的世界</p>
+						<p>（美）威尔·鲍温</p>
+						<span class="btn">选它</span>
+					</li>
+				</ul>
+			</div>
+			<div class="box">
+				<h3 class="title title4"></h3>
+				<ul class="list1">
+					<li onclick="javascript:ABook.gotoDetail(818306);">
+						<img src="images/book42.jpg"/>
+						<p>罗密欧与朱丽叶：英汉对照（莎士比亚悲剧系列）</p>
+						<p>莎士比亚</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(803897);">
+						<img src="images/book43.jpg"/>
+						<p>了不起的盖茨比</p>
+						<p>菲茨杰拉德</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(130859);">
+						<img src="images/book44.jpg"/>
+						<p>飘（上）</p>
+						<p>玛格丽特·米切尔</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(130860);">
+						<img src="images/book45.jpg"/>
+						<p>飘（下）</p>
+						<p>玛格丽特·米切尔</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(758864);">
+						<img src="images/book46.jpg"/>
+						<p>老人与海</p>
+						<p>海明威</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(130855);">
+						<img src="images/book47.jpg"/>
+						<p>名利场</p>
+						<p>萨克雷</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(425259);">
+						<img src="images/book48.jpg"/>
+						<p>安娜.卡列尼娜</p>
+						<p>托尔斯泰</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(699586);">
+						<img src="images/book49.jpg"/>
+						<p>红与黑</p>
+						<p>司汤达</p>
+						<span class="btn">选它</span>
+					</li>
+					<li onclick="javascript:ABook.gotoDetail(130880);">
+						<img src="images/book50.jpg"/>
+						<p>呼啸山庄</p>
+						<p>艾米莉·勃郎特</p>
+						<span class="btn">选它</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="rules">
+	<h3>－活动规则－</h3>
+	<p>
+		<i>1.</i>活动时间6月22日-6月24日
+	</p>
+	<p>
+		<i>2.</i>活动期间在本页面任选最多10本正版好书，将为你自动加入书架（iOS游客用户可获得免费权限，但需手动加入书架）
+		<span>除《琅琊榜》外，其他书籍选中并在活动期间下载可在QQ阅读享受永久免费</span>
+		<span>《琅琊榜》自选择成功起，可免费在QQ阅读在线阅读30自然日，免费期间不支持下载阅读</span>
+	</p>
+	<p>
+		<i>3.</i>每位用户仅限参与一次，10部作品需要一次性选择完成，不可累计选择；同设备、账号视为同一用户
+	</p>
+	<p>
+		<i>4.</i>此活动仅限QQ阅读客户端参与
+	</p>
+	<p>本活动最终解释权归QQ阅读所有</p>
+</div>
+<div class="fixtip" id="fixtip">
+	<p>加入书架免费读（已选<span id="selnum">0</span>本）</p>
+</div>
+<!-- 弹窗 -->
+<div class="mask">
+	<div class="tiparea" id="tiparea">
+		<strong></strong>
+		<p></p>
+		<a href="javascript:;" id="knowbtn">我知道啦</a>
+		<i class="close" id="close"></i>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/charm.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>胡歌微电影独家放送</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = clientWidth / 7.5 + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+	<img src="images/bg.jpg" class="bg">
+	<div class="booklist">
+		<img src="images/books/1.png">
+		<img src="images/books/2.png">
+		<img src="images/books/3.png">
+		<img src="images/books/4.png">
+		<img src="images/books/5.png" id="ani">
+		<img src="images/books/6.png">
+		<img src="images/books/7.png">
+		<img src="images/books/8.png">
+		<img src="images/books/9.png">
+		<img src="images/books/10.png">
+		<img src="images/books/11.png">
+		<img src="images/books/12.png">
+		<img src="images/books/1.png">
+		<img src="images/books/7.png">
+		<img src="images/books/11.png">
+		<img src="images/books/13.png">
+		<img src="images/books/14.png">
+		<img src="images/books/13.png">
+	</div>
+	<div class="wrap" id="wrap">
+		<img src="images/logo.png" class="logo">
+		<div class="vbox">
+			<img src="images/video.png" alt="阅读自由主义">
+			<div class="playv" id="playv"></div>
+		</div>
+		<div class="poster">
+			<img src="images/poster.png" alt="我在QQ阅读遇到了胡馆长">
+			<div class="swiper-small" id="swiper-small">
+			  <div class="swiper-wrapper" id="small-wrapper">
+			    <div class="swiper-slide">
+			    	<img src="images/poster/p1.jpg">
+			    </div>
+			    <div class="swiper-slide">
+			    	<img src="images/poster/p2.jpg">
+			    </div>
+			   <div class="swiper-slide">
+			    	<img src="images/poster/p3.jpg">
+			    </div>
+			    <div class="swiper-slide">
+			    	<img src="images/poster/p4.jpg">
+			    </div>
+			    <div class="swiper-slide">
+			    	<img src="images/poster/p5.jpg">
+			    </div>
+			    <div class="swiper-slide">
+			    	<img src="images/poster/p6.jpg">
+			    </div>
+			    <div class="swiper-slide">
+			    	<img src="images/poster/p7.jpg">
+			    </div>
+			  </div>
+			</div>
+			<div class="swiper-big" id="swiper-big">
+				<div class="swiper-wrapper">
+				    <div class="swiper-slide">
+				    	<img src="images/poster/p1.jpg">
+				    </div>
+				    <div class="swiper-slide">
+				    	<img src="images/poster/p2.jpg">
+				    </div>
+				   <div class="swiper-slide">
+				    	<img src="images/poster/p3.jpg">
+				    </div>
+				    <div class="swiper-slide">
+				    	<img src="images/poster/p4.jpg">
+				    </div>
+				    <div class="swiper-slide">
+				    	<img src="images/poster/p5.jpg">
+				    </div>
+				     <div class="swiper-slide">
+				    	<img src="images/poster/p6.jpg">
+				    </div>
+				    <div class="swiper-slide">
+				    	<img src="images/poster/p7.jpg">
+				    </div>
+			 	</div>
+			 	<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="share" id="share">
+			<img src="images/sharebtn.png">
+			<div class="tag">
+				<img src="images/rotate.png">
+			</div>
+		</div>
+	</div>
+	<div class="loadmask" id="loadmask">
+		<div class="tiparea">
+				<h3>下载QQ阅读</h3>
+				<p>下载QQ阅读，去胡歌的阅读<br>自由主义</p>
+				<div class="btns">
+					<span class="certain" id="certain"></span>
+					<span class="cancle" id="cancle"></span>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="wbmask" id="wbmask">
+		<img src="images/browers.png" />
+	</div>
+<script src="js/common.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="https://yuedu.reader.qq.com/event/common/en.js"></script>
+<script src="js/share.js"></script>
+<script type="text/javascript" data-main="https://yuedu.reader.qq.com/event/common/ne.js" src="https://yuedu.reader.qq.com/event/common/require.js"></script>
+</body>
+</html>

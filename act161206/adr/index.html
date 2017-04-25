@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>史上最不正经榜单</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	         //alert(docEl.clientHeight)
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+
+</script>
+<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<div class="loadpage">
+	<p class="headline">
+		QQ阅读<br>出版书籍年度盛典
+	</p>
+	<div class="loading">
+		<span id="loadani"></span>
+	</div>
+	<p>loading...</p>
+</div>
+<section id="page" class="page">
+	<div class="arrowl" :class="{'bottom':seeall || ipage==3}" v-show="ipage==2 && iNow>0">
+		<i></i><i></i>
+	</div>
+	<div class="arrowr" :class="{'bottom':seeall || ipage==3}" v-show="ipage<3">
+		<i></i><i></i>
+	</div>
+	<div class="pagelist">		
+		<div class="p1">									
+			<img src="images/s1-1.png" class="elem1">
+			<img src="images/s1-2.png" class="elem2">		
+			<img src="images/s1-3.png" class="elem3">
+			<p class="elem4">［QQ阅读出版频道 出品］</p>
+		</div>
+		<div class="p2">
+			<div class="icos">
+				<img :src="'images/s2-'+(n+1)+'.png'" v-for="n in 9" @click="showbd(n)">
+			</div>
+		</div>
+		<div class="p3">			
+			<div class="blists" id="blists">
+			 	<div class="btop" id="btop">
+			 		<div class="bdtit">
+			 			<strong>{{iNow+1}}.{{bdtitle[iNow]?bdtitle[iNow].title:bdtitle[0].title}}</strong>
+			 			<p>{{bdtitle[iNow]?bdtitle[iNow].desc:bdtitle[0].desc}}</p>
+			 		</div>
+			 		<img src="images/title-red.png" class="title" id="title">
+			 	</div>
+			 	<!-- 立方体 -->
+				  <div id="box" class="box">
+				  	<div class="top"></div>
+				    <div class="front">
+				    	<ul>
+				    		<li>
+				    			<strong>NO.1</strong>
+				    			<div class="cover" @click="goDetail(cur[0].bid)">
+				    				<img :src="'images/books/'+cur[0].cover+'.jpg'">
+				    			</div>
+				    			<p class="bname">{{cur[0].name}}</p>
+				    			<p class="tag">{{cur[0].tag}}</p>
+				    		</li>
+				    		<li>
+				    			<strong>NO.3</strong>
+				    			<div class="cover" @click="goDetail(cur[2].bid)">
+				    				<img :src="'images/books/'+cur[2].cover+'.jpg'">
+				    			</div>
+				    			<p class="bname">{{cur[2].name}}</p>
+				    			<p class="tag">{{cur[2].tag}}</p>
+				    		</li>
+				    	</ul>
+				    </div>
+				    <div class="right">
+				    	<ul>
+				    		<li>
+				    			<strong>NO.2</strong>
+				    			<div class="cover" @click="goDetail(cur[1].bid)">
+				    				<img :src="'images/books/'+cur[1].cover+'.jpg'">
+				    			</div>
+				    			<p class="bname">{{cur[1].name}}</p>
+				    			<p class="tag">{{cur[1].tag}}</p>
+				    		</li>
+				    		<li>
+				    			<strong>NO.4</strong>
+				    			<div class="cover" @click="goDetail(cur[3].bid)">
+				    				<img :src="'images/books/'+cur[3].cover+'.jpg'">
+				    			</div>
+				    			<p class="bname">{{cur[3].name}}</p>
+				    			<p class="tag">{{cur[3].tag}}</p>
+				    		</li>
+				    	</ul>
+				    </div>
+				   <div class="back">
+				    	<ul>
+				    		<li>
+				    			<strong>NO.1</strong>
+				    			<div class="cover" @click="goDetail(next[0].bid)">
+				    				<img :src="'images/books/'+next[0].cover+'.jpg'">
+				    			</div>
+				    			<p class="bname">{{next[0].name}}</p>
+				    			<p class="tag">{{next[0].tag}}</p>
+				    		</li>
+				    		<li>
+				    			<strong>NO.3</strong>
+				    			<div class="cover" @click="goDetail(next[2].bid)">
+				    				<img :src="'images/books/'+next[2].cover+'.jpg'">
+				    			</div>
+				    			<p class="bname">{{next[2].name}}</p>
+				    			<p class="tag">{{next[2].tag}}</p>
+				    		</li>
+				    	</ul>
+				    </div>
+				    <div class="left">
+				    	<ul>
+				    		<li>
+				    			<strong>NO.2</strong>
+				    			<div class="cover" @click="goDetail(next[1].bid)">
+				    				<img :src="'images/books/'+next[1].cover+'.jpg'">
+				    			</div>
+				    			<p class="bname">{{next[1].name}}</p>
+				    			<p class="tag">{{next[1].tag}}</p>
+				    		</li>
+				    		<li>
+				    			<strong>NO.4</strong>
+				    			<div class="cover" @click="goDetail(next[3].bid)">
+				    				<img :src="'images/books/'+next[3].cover+'.jpg'">
+				    			</div>
+				    			<p class="bname">{{next[3].name}}</p>
+				    			<p class="tag">{{next[3].tag}}</p>
+				    		</li>
+				    	</ul>
+				    </div>    
+				    <div class="bottom"></div>
+				  </div>
+			 </div>
+			 <img src="images/bg-3.png" class="bg3">
+			 <div class="seeall" @click="all">
+			 	查看此榜全部
+			 </div>
+			 <div class="mask" v-show="seeall">
+			 	 <div class="allbd">
+			 	 	<h1>- {{bdtitle[iNow]?bdtitle[iNow].title:bdtitle[0].title}} -</h1>
+			 	 	<span class="close" @touchend="hideall"></span>
+				 	<div class="iscroll" id="wrapper">
+				 		<ul>
+					 		<li v-for="book in books[iNow]">
+					 			<div class="acover" @click="goDetail(book.bid)">
+					 				<img :src="'images/books/'+book.cover+'.jpg'">
+					 			</div>
+					 			<div class="ainfo">
+					 				<p class="aname"><i>{{$index+1}}.</i>{{book.name}}</p>
+					 				<p class="intro">{{book.intro}}</p>
+					 			</div>
+					 		</li>					 		
+					 	</ul>
+				 	</div>		 	
+				 </div>
+			 </div>
+		</div>
+		<div class="p4">
+			<div class="udbox" id="udbox">
+				<div>
+					<div class="shareagain" @click="sharepage" v-show="user.hasFree"></div>
+					<img src="images/s4-1.png" class="elem1">
+					<template v-if="!user.hasFree">
+						<p class="elem2">只有不到1%的人坚持到了这里，还差1步……</p>
+						<div class="sharetip">
+							<div class="btn" @click="sharepage">立即分享</div>
+							<a href="javascript:;" class="refresh" @click="reloadpage" v-show="reload">刷新</a>
+						</div>
+					</template>
+					<template v-if="user.hasFree && !user.shelf">				
+						<p class="elem2">恭喜您，书已解锁</p>
+						<div class="btn" @click="addshelf">全部加入书架</div>
+					</template>	
+					<template v-if="user.hasFree && user.shelf">
+						<p class="elem2">恭喜您获得六本限免一个月的书籍</p>
+						<div class="btn grey">已全部加入书架</div>
+					</template>			
+					<div class="sbooks">
+						<ul>
+							<li v-for="n in 3">
+								<div class="scover" @click="goDetail(sharelist[n].bid)">
+									<img :src="'images/books/'+sharelist[n].cover+'.jpg'">
+								</div>
+								<p>{{sharelist[n].name}}</p>
+								<p>{{sharelist[n].price}}元／本</p>
+							</li>
+						</ul>
+						<p class="seemsg" v-if="!user.hasFree">－剩余三本分享后告诉你－</p>
+						<ul v-if="user.hasFree">
+							<li v-for="n in 3">
+								<div class="scover" @click="goDetail(sharelist[n+3].bid)">
+									<img :src="'images/books/'+sharelist[n+3].cover+'.jpg'">
+								</div>
+								<p>{{sharelist[n+3].name}}</p>
+								<p>{{sharelist[n+3].price}}元／本</p>
+							</li>
+						</ul>
+						<ul class="secret" v-else>
+							<li>
+								<div class="scover sred"></div>
+								<p>5.99元／本</p>
+							</li>
+							<li>
+								<div class="scover syellow"></div>
+								<p>4.99元／本</p>
+							</li>
+							<li>
+								<div class="scover sgreen"></div>
+								<p>8.99元／本</p>
+							</li>
+						</ul>
+					</div>
+					<div class="rule">
+						<dt>－活动规则－</dt>
+						<dd>
+							<p>
+								<span>1.</span>活动时间：1月11日11:00~1月17日15:00；
+							</p>
+							<p>
+								<span>2.</span>分享本页，就可自动获得6本榜单好书的“30天免费福利”（仅限QQ阅读客户端内）；新用户可在“发现-包月专区”处参与活动；
+							</p>
+							<p>
+								<span>3.</span>本活动最终解释权归QQ阅读所有。
+							</p>
+						</dd>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bgelem" v-show="ipage<3">
+		<img src="images/bg-5.png" class="bg5">							
+		<img src="images/bg-4.png" class="bg4" v-show="ipage!==0">
+		<img src="images/bg-2.png" class="bg2">	
+		<img src="images/bg-3.png" class="bg3">			
+	</div>
+</section>
+<div class="over" :class="{'overMask':over}">
+   <div class="over-c">
+        <img src="images/i-over.png" alt="本期活动已结束">
+        <p class="over-p1">本期活动已结束</p>
+        <p class="over-p2">敬请期待下一波活动</p>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/vue.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/abook.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

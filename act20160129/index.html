@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<title>拿红包迎猴年</title>
+<script type="text/javascript">
+	var win=document.documentElement.clientWidth||document.body.clientWidth;
+	document.documentElement.style.fontSize = 100 * (win / 640) + "px";
+</script>
+<style type="text/css">
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body,div,p,ul,li{margin:0;padding:0;}
+ul,li{list-style:none;}
+img{border:0; vertical-align:middle;display:block;width: 100%;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#e5503c;font-size:0.24rem}
+.detail{font-size: 0.26rem;color: #ffe5b8;line-height: 0.4rem;padding: 0 0.46rem 0.28rem 0.48rem}
+.part1,.part2,.pic{background-repeat:no-repeat;background-size: 100% auto}
+.part1{background-image:url(images/part1.png);padding-top: 0.78rem}
+.part2{background-image:url(images/part2.png);padding-top: 0.6rem}
+.pic{width:97px;height:127px;margin:0 auto 0.24rem;background-image:url(images/author.png);-webkit-animation:author 1s step-start infinite;transform:translateZ(0);-webkit-transform:translateZ(0);}
+@-webkit-keyframes author{
+	0%{background-position: 0 0}
+	25%{background-position: 0 0}
+	50%{background-position: 0 -127px}
+	75%{background-position: 0 -254px}
+	100%{background-position: 0 -381px}
+}
+.btn{display:block;width: 3.6rem;height: 0.8rem;background:#ffbb2a;-webkit-box-shadow:inset 0 -3px #e88300;border-radius: 0.36rem;text-align:center;line-height:0.82rem;color:#d31c29;margin:0 auto 0.48rem;}
+.btn strong{position: relative;}
+.btn strong::before,.btn strong::after{content:"";position: absolute;top:0.12rem;width:3px;height: 3px;border-radius:3px;background: #d31c29}
+.btn strong::before{left:-6px}
+.btn strong::after{right:-6px}
+.cont{margin:0 auto 0.12rem;width: 4.54rem;position: relative;}
+.part2 .detail,.part3 .detail{padding-bottom: 0.1rem}
+.part3 .btn{margin-bottom: 0.6rem}
+.btn:active{background-image:-webkit-linear-gradient(top,rgba(0,0,0,.1),rgba(0,0,0,.1))}
+.packs{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.packs li{position: absolute;height:0.98rem;background: url(images/packs.png) no-repeat;background-size: 4.8rem auto;white-space: nowrap;}
+.packs li:nth-child(1){width:1rem;right: 0.12rem;bottom: 0.22rem;-webkit-animation:up1 1s linear infinite alternate;}
+.packs li:nth-child(2){width:0.86rem;left:-0.24rem;top: 0.18rem;background-position: -1.04rem 0;-webkit-animation:up2 1s ease-in-out 0.6s infinite alternate;}
+.packs li:nth-child(3){width:0.86rem;left:-0.02rem;top: 1.82rem;background-position: -1.98rem 0;-webkit-animation:up2 1s ease-in 2s infinite alternate;}
+.packs li:nth-child(4){width:0.7rem;right:-0.32rem;top: 1.24rem;background-position: -2.96rem 0;-webkit-animation:up3 1s linear 1s infinite alternate;}
+.packs li:nth-child(5){width:0.56rem;left:-0.82rem;top: 1.54rem;background-position: -3.74rem 0;-webkit-animation:up1 1s ease-in-out 2.1s infinite alternate;}
+.packs li:nth-child(6){width:0.44rem;right:-0.68rem;top: 2.04rem;background-position: -4.36rem 0;-webkit-animation:up1 1s ease-out 2.6s infinite alternate;}
+@-webkit-keyframes up1{
+	0%{-webkit-transform:translate3d(0,0,0);}
+	100%{-webkit-transform:translate3d(0,4px,0);}
+}
+@-webkit-keyframes up2{
+	0%{-webkit-transform: translate3d(0,0,0);}
+	100%{-webkit-transform: translate3d(-1px,-2px,0);}
+}
+@-webkit-keyframes up3{
+	0%{-webkit-transform: translate3d(0,0,0);}
+	100%{-webkit-transform: translate3d(2px,2px,0);}
+}
+.author{position: relative;}
+.items{width: 100%;height: 100%;position: absolute;top: 0;left: 0}
+.items li{position: absolute;height:0.42rem;line-height: 0.44rem;border-radius: 0.42rem;font-size: 0.2rem;padding: 0 0.16rem;opacity: 0;}
+.items .l1,.items .l4{background: #efa84e;color: #ec2232}
+.items .l1{left: 0.16rem;top: 0;}
+.items li::after{content:"";width:0;height: 0;border:0.1rem solid transparent;border-bottom: 0.1rem solid #efa84e;position: absolute;bottom: -0.08rem;left: 10%;-webkit-transform:rotate(-35deg);}
+.items .l2,.items .l3{background: #f7c789;color: #ff6c00;}
+.items .l2{top: 1.48rem;left: 0.5rem;}
+.items .l2::after{border-bottom-color: #f7c789;}
+.items .l3{top: -0.24rem;right:0.3rem;}
+.items .l3::after{border-bottom-color: #f7c789;right:10%;left:auto;-webkit-transform:rotate(35deg);}
+.items .l4{bottom:0.2em;right:0.2rem;}
+.items .l4::after{right:10%;left:auto;-webkit-transform:rotate(35deg);}
+.show li{transform:translateZ(0);-webkit-transform:translateZ(0);-webkit-animation:pop 2.4s;}
+.show li:nth-child(2){-webkit-animation-delay:1s;}
+.show li:nth-child(3){-webkit-animation-delay:2s;}
+.show li:nth-child(4){-webkit-animation-delay:3s;}
+.show li:nth-child(5){-webkit-animation-delay:4s;}
+.show li:nth-child(6){-webkit-animation-delay:5s;}
+.show li:nth-child(7){-webkit-animation-delay:6s;}
+.show li:nth-child(8){-webkit-animation-delay:7s;}
+.show li:nth-child(9){-webkit-animation-delay:8s;}
+.show li:nth-child(10){-webkit-animation-delay:9s;}
+.show li:nth-child(11){-webkit-animation-delay:10s;}
+.show li:nth-child(12){-webkit-animation-delay:11s;}
+.show li:nth-child(13){-webkit-animation-delay:12s;}
+.show li:nth-child(14){-webkit-animation-delay:13s;}
+.show li:nth-child(15){-webkit-animation-delay:14s;}
+.show li:nth-child(16){-webkit-animation-delay:15s;}
+.show li:nth-child(17){-webkit-animation-delay:16s;}
+.show li:nth-child(18){-webkit-animation-delay:17s;}
+.show li:nth-child(19){-webkit-animation-delay:18s;}
+.show li:nth-child(20){-webkit-animation-delay:19s;}
+.show li:nth-child(21){-webkit-animation-delay:20s;}
+@-webkit-keyframes pop{
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+  }
+  20% {
+    -webkit-transform: scale(1);
+  }
+  40% {
+  	opacity: 1;
+    -webkit-transform: scale(.9);
+  }
+  60% {   
+    -webkit-transform: scale(1.03);
+  }
+  80% {
+  	opacity: 1;
+    -webkit-transform: scale(.97);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1);
+  }
+}
+</style>
+</head>
+<body>
+<img src="images/banner.png" class="banner"/>
+<div class="part1">
+	<div class="author">
+		<div class="pic"></div>
+		<ul class="items show" id="items">
+			<li class="l1">猫猫你太胖了，该减肥了</li>
+			<li class="l2">猴年想和作者大大生猴子</li>
+  			<li class="l3">作者大大帅的我膝盖都合不拢了</li>
+			<li class="l4">前面的站住，明明是合不拢腿</li>
+			<li class="l3">希望作者大大爆发洪荒之力，更新不停歇</li>
+			<li class="l2">身上不长膘，人前你最俏，手头有钞票，梦里都在笑</li>
+ 			<li class="l4">天啦撸，作者大大快包养我吧</li>
+			<li class="l1">为我家作者来一发</li>
+			<li class="l3">表白表白，我已经变粉了</li>
+			<li class="l4">啊啊啊啊前排</li>
+ 			<li class="l2">女神女神我爱你</li>
+			<li class="l1">看见我家作者大大我就进来了</li>
+			<li class="l3">我家作者大大明明可以靠颜值，偏偏要靠才华</li>
+			<li class="l2">o(≧v≦)o~~好棒</li>
+ 			<li class="l4">作者大大威武新年快乐，爱你爱你爱你"</li>
+ 			<li class="l3">"说！给作者大大包多大的红包，才能得到男主</li>
+			<li class="l1">我要当女主，该怎么成为女主？在线等，挺急的！</li>
+			<li class="l4">作者大大一生推</li>
+			<li class="l2">作者是我的，情敌们 拔剑吧！</li>
+ 			<li class="l3">作者大大威武</li> 
+		</ul>
+	</div>
+	<p class="detail">
+		都说读者和作者绝对是真爱。叫嚣着要给作者大大生猴子的小读者们，都忍不住冒泡给作者表白送祝福啦！你也快来，放肆说出爱！
+	</p>
+	<a href="javascript:gotoTopic();" class="btn"><strong>我要表白</strong></a>
+</div>
+<div class="part2">
+	<div class="cont">
+		<img src="images/book.png">
+		<ul class="packs">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<p class="detail">
+		还在为口袋瘪瘪没钱充值书币发愁么？别急，春节给你发红包！！！书评区直接回复抢楼，超值红包等着你！据说春节当天<span>0点回复抢楼</span>有大惊喜哦！
+	</p>
+	<a href="javascript:gotoComment(1, 4, '928a763e8757ffe0e1b9955621c13e');" class="btn"><strong>回复抢楼</strong></a>
+</div>
+<div class="part3">
+	<img src="images/part3.png"/>
+	<p class="detail">
+		听说春节和对联更配哦，你们家的春联是什么？你知道什么有趣的对子？快来和大家分享吧！
+	</p>
+	<a href="javascript:gotoComment(3, 4, '418a773e9843ffe0e08339443252e8');" class="btn"><strong>马上参与</strong></a>
+</div>
+<script>
+setInterval(function(argument) {
+	document.querySelector("#items").className="items";
+	setTimeout(function() {
+		document.querySelector("#items").className="items show";
+	},100)
+},20000)	
+</script>
+</body>
+<script src="index.js"></script>
+<script src="js/jsbridge.js"></script>
+<script src="js/local.js"></script>
+<script src="js/zbook.js"></script>
+<script src="js/cfoot.js"></script>
+</html>

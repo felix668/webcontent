@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>胡歌微电影独家放送</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = clientWidth / 7.5 + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+	<img :src="'images/bg.jpg'" class="bg">
+	<div class="booklist">
+		<img v-for="n in picArr" :src="'images/books/'+n+'.png' ">
+	</div>
+	<div class="wrap" id="wrap">
+		<div class="vbox">
+			<img src="images/video.png" alt="阅读自由主义">
+			<div class="playv" id="playv" @click="playV"></div>
+			<div class="vmask" ref="vmask">
+				<div class="close" @click="closeV"></div>
+				<div class="varea">
+					<img src="images/loading.gif" id="loading" class="loading">
+					<video src="media/v.mp4" controls="false" preload id="voice"></video>
+				</div>
+			</div>
+		</div>
+		<div class="poster">
+			<img src="images/poster.png" alt="我在QQ阅读遇到了胡馆长">
+			<div class="swiper-small" id="swiper-small">
+			  <div class="swiper-wrapper" id="small-wrapper">
+			    <div class="swiper-slide" v-for="n in 7">
+				    <img :src="'images/poster/hg'+n+'.jpg' ">
+				</div>	
+			  </div>
+			</div>
+		</div>
+		<img src="images/sharebtn.png" class="share" ref="share">
+		<div class="college" @click="showForm">
+			大学生入口
+		</div>
+	</div>
+	<div class="swiper-big" id="swiper-big">
+		<div class="swiper-wrapper">
+		    <div class="swiper-slide" v-for="n in 7">
+		    	<img :src="'images/poster/hg'+n+'.jpg' ">
+		    </div>		
+	 	</div>
+	 	<div class="swiper-pagination"></div>
+	</div>
+	<div id="maskForm" class="maskForm" :class="{'showForm':mask}">
+		<transition name="slide-up">	
+			<div class="mask-panel" v-show="mask">
+				<img class="close" src="images/close.png" @click="hideForm"/>
+				<div class="title">
+					亲爱的同学，和胡歌一起自由阅读并分享到朋友圈提升中奖概率哦
+				</div>
+				<div class="info">
+					<span class="left_">{{error?'信息未填写或格式有误':''}}</span>
+					<span class="right_">(所有项均为必填项)</span>
+				</div>
+				<div class="before" v-show="done===false">
+					<input name="city" placeholder="城市" type="text" 
+					:class=" form.city.state "
+					v-model=" form.city.val "
+					@blur=" check('city') "/>
+					<input name="school" placeholder="学校" type="text"
+					:class=" form.school.state "
+					v-model=" form.school.val "
+					@blur=" check('school') "/>
+					<input name="name" placeholder="姓名" type="text"
+					:class=" form.name.state "
+					v-model=" form.name.val "
+					@blur=" check('name') "/>
+					<input name="qq" placeholder="QQ号" type="text"
+					:class=" form.qq.state "
+					v-model=" form.qq.val "
+					@blur=" checkQQ() "/>
+					<input name="mobile" placeholder="手机" type="text"
+					:class=" form.mobile.state "
+					v-model=" form.mobile.val "
+					@blur=" checkMobile() "/>
+					<div class="submit" @click="submit">提 交</div>
+				</div>
+				<div class="after" v-show="done===true">
+					<div class="field">
+						<span class="key_part">城市：</span>{{form.city.val}}
+					</div>
+					<div class="field">
+						<span class="key_part">学校：</span>{{form.school.val}}
+					</div>
+					<div class="field">
+						<span class="key_part">姓名：</span>{{form.name.val}}
+					</div>
+					<div class="field">
+						<span class="key_part">QQ号：</span>{{form.qq.val}}
+					</div>
+					<div class="field">
+						<span class="key_part">手机：</span>{{form.mobile.val}}
+					</div>
+					<div class="edit" @click="edit">修 改</div>
+				</div>
+			</div>
+		</transition>
+	</div>	 
+</div>
+<script type="text/javascript" src="js/common.js"></script>	
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

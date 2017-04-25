@@ -1,0 +1,61 @@
+body,div,p,h4,ul,li{margin:0;padding:0;}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+em,i,span{ font-style:normal; font-weight: normal;}
+body{font-family:"Microsoft YaHei",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none; font-size: .28rem; line-height: .28rem; color: #999; background:#090f14;}
+.hide{display: none;}
+/*===========main==========*/
+.wrap{ width: 100%; padding-top: 4.84rem; background: url(../images/topbg.jpg) no-repeat; background-size: 100% auto; }
+.tabdiff{ height: 1rem; padding:0 .4rem; overflow: hidden;}
+.tablist .swiper-wrapper{-webkit-align-items:center;-webkit-justify-content:center;display:-webkit-flex;}
+.tabdiff li{ width: 2.09rem; height: 1rem; line-height: .8rem;}
+.tabdiff li span{ display: block; width: 2.03rem; height:100%; text-align: center; font-size: .32rem; color: #4a250b; background: url(../images/tabbg.png) no-repeat; background-size: 4.16rem auto;}
+.tabdiff li.active span{ background-position: -2.1rem 0;}
+/*========================*/
+.tabcon{width: 6.7rem; margin:0 auto; overflow: hidden;}
+.tabcon img{ width: 100%; display: block;}
+.box{ background: #fcf7d8; border-radius: 0 0 .28rem .28rem; width: 100%; padding-bottom: .32rem; margin-bottom: .03rem;}
+.freetime{ margin:0 .3rem;  height: .8rem; line-height: .8rem; position: relative; z-index: 1; text-align: center; }
+.freetime:before{content: ''; position: absolute; left: 0; top: 50%; height: 1px; width: 1.24rem; background: #e0d9b0;}
+.freetime:after{content: ''; position: absolute; right: 0; top: 50%; height: 1px; width: 1.24rem; background: #e0d9b0;}
+.bookbox{margin:0 .3rem; position: relative; z-index: 1; height: 2.32rem; padding-top: .4rem;}
+.book {position: absolute; left: 0; top: .46rem; z-index:1;width: 1.63rem; height: 2.3rem;perspective: 10rem; background: url(../images/book.png) no-repeat; background-size: 100% 100%;}
+.book .cover {position: absolute; left: 0.19rem; top: 0;width: 1.7rem; height: 2.11rem;-webkit-transform-origin: 0% 50%;-webkit-transform: rotateY(34deg);}
+.bookinfo{ padding-left: 1.84rem; font-size: .32rem; color: #333; line-height: .48rem;} 
+.bookinfo p{display: -webkit-box; -webkit-line-clamp:2; color: #999; line-height: .36rem; font-size: .28rem;  overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; margin-bottom: .15rem;} 
+.bookinfo a{ display: block; width: 1.4rem; border-radius: 3px; height: .48rem; line-height: .48rem; text-align: center; font-size: .24rem; color: #333; background: #f2d275; } 
+.nobookface{ margin:0 .3rem .3rem; } 
+.nobookface p{ line-height: .42rem; }
+.bookinfo p.freet{ font-size: .24rem; line-height: .32rem;}
+.nobookface p.tt{ color: #333; line-height: .48rem; font-size: .32rem; }
+.addshelf{ display: block; margin:0 auto; width: 5.4rem; height: .76rem; line-height: .76rem; text-align: center; font-size: .32rem; color: #b39353; background: url(../images/addbtn.png) no-repeat; background-size: 100% 100%;}
+.sherebtn{ width: 6.7rem; height: 1.04rem; line-height: 1.04rem; padding-top: .9rem; margin: 0 auto; background: url(../images/sharebtn.png) no-repeat; background-size:100% 100%; text-align: center; font-size: .36rem; color: #d9b063; overflow: hidden;}
+.sherebtn img{ margin-left:.2rem; width: .16rem; display: inline-block; vertical-align: top; position: relative; top:.34rem;}
+.gototal{display: block; width: 6.7rem; margin:.6rem auto;}
+.pt3{padding-top:.3rem;}
+.mt4{margin:-.4rem .3rem 0;}
+/*===========规则==========*/
+.rules{ width: 100%; overflow: hidden;}
+.rules h4{ text-align: center; font-size: .36rem; font-weight: bold; color: #d9b064; line-height: 1rem;}
+.rules p{ padding-left: .38rem; margin: 0 .46rem; font-size: .28rem; color: #6e614a; line-height: .48rem; position: relative; z-index: 1;}
+.rules p span{display: inline-block; position: absolute; left:0; top:0; width: .28rem; line-height: .48rem;}
+.rules a{display:block;padding-left: .28rem; margin: 0 .46rem 0; font-size: .28rem; color: #8a5c30; line-height: .48rem}
+.copyright{ width: 100%; display:block; margin-top: -.7rem; position: relative; z-index: -1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

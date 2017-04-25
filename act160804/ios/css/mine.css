@@ -1,0 +1,112 @@
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+.mask .panel {
+  position: relative;
+  box-sizing: border-box;
+  width: 4.76rem;
+  margin: auto;
+  margin-top: 2rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-bottom: 0.44rem;
+  border-radius: 0.1rem;
+  background: white;
+}
+.mask .panel .info {
+  width: 100%;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.22rem;
+  text-align: center;
+  color: #333333;
+  font-weight: bold;
+  line-height: 0.48rem;
+  font-size: 0.32rem;
+  border-bottom: 1px dashed grey;
+}
+.mask .panel .info span {
+  color: #ff7c66;
+}
+.mask .panel .desc {
+  font-size: 0.28rem;
+  color: #666666;
+  line-height: 0.48rem;
+}
+.mask .panel .desc .link {
+  color: #5474ff;
+  text-decoration: underline;
+}
+.mask .panel .pinkBtn {
+  height: 0.88rem;
+  margin: 0.44rem auto 0 auto;
+  background: #ff7c66;
+  font-size: 0.3rem;
+  line-height: 0.88rem;
+  color: white;
+  text-align: center;
+  border-radius: 999px;
+}
+.mask .panel .gotIt {
+  width: 2.94rem;
+}
+.info {
+  padding: 0.15rem 0 0.15rem 0;
+  font-size: 0.28rem;
+  text-align: center;
+  color: #999999;
+}
+.list {
+  width: 100%;
+}
+.list .item {
+  width: 6.6rem;
+  margin: auto;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #d8d8d8;
+  overflow: hidden;
+}
+.list .item .thumbnail {
+  float: left;
+  height: 1.3rem;
+}
+.list .item .name {
+  float: left;
+  line-height: 1.3rem;
+  margin-left: 0.3rem;
+  font-size: 0.28rem;
+  font-weight: bold;
+}
+.list .item .name2 {
+  float: left;
+  margin-left: 0.3rem;
+  font-size: 0.28rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+.list .item .name2 .one {
+  width: 4.6rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  overflow: hidden;
+}
+.list .item .name2 .one .left {
+  float: left;
+}
+.list .item .name2 .one .right {
+  float: right;
+  font-weight: normal;
+  color: #ff7c66;
+}
+.list .item .name2 .two {
+  font-size: 0.28rem;
+  color: #999999;
+  font-weight: normal;
+}

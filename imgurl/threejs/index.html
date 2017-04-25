@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>从A2029星系到阅闻</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta  http-equiv="cache-control" content="no-cache,must-revalidate">
+    <meta  http-equiv="expires" content="0">
+    <script src="js/config.js"></script>
+    <script src="js/h6app_userInfo.min.js"></script>
+    <style>
+        html, body, div, canvas{
+            padding:0;
+            margin: 0;
+            overflow: hidden;
+            background-color: #000000;
+        }
+        .video{
+            position: absolute;
+            top:0px;
+            left:0px;
+            right:0px;
+            bottom:0px;
+           /* width:100%;
+            min-height: 1008px;*/
+        }
+        .play_video{
+            display: none;
+            position: absolute;
+            width:100%;
+            height:100%;
+            z-index: 1000;
+            top:0px;
+            left:0px;
+        }
+        .voice,.voice_close{
+            position: absolute;
+            width:43px;
+            height:39px;
+            right:15px;
+            top:15px;
+        }
+        .voice{
+            z-index: 998;
+            background: url('images/voice.png') no-repeat left center;
+        }
+        .voice_close{
+            z-index: 999;
+            background: url('images/voice_close.png') no-repeat left center;
+        }
+    </style>
+</head>
+
+<body>
+<!--分享预置图片-->
+<img src="images/fenmian.png" style="width:0px;height:0px;position: fixed;z-index:100">
+<audio style="display: none;" class="audio" src="source/feichuan.mp3" preload="preload" loop="loop">
+</audio>
+<div class="voice"></div>
+<div class="voice_close" style="display: none"></div>
+
+<div class="play_video">
+    <video class="video"  playsinline  webkit-playsinline controls="controls" preload="auto" height="100%" width="100%">
+        <source src="source/feichuan010.mp4" type="video/mp4" />
+    </video>
+</div>
+</body>
+<!--系统脚本-->
+<script type="text/javascript" src="http://td.h5pop.com/open/js/tippingdata-0.1.0.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/orienter.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/Detector.js"></script>
+<!--系统脚本-->
+
+<!--自定义脚本-->
+<script src="js/appInfo.js"></script>
+<script src="js/picData.js"></script>
+<script>
+    console.log('找到低调的我们并不难：cherhom@h6app.com ');
+    var userinfo='';
+    tippingData.config(userinfo, {
+        debug: false,   // 选填，debug模式：值为true开启，默认关闭
+        tid: 165,   // 必填，监测系统分配给此次监测活动的id
+        token:'d33192f5f624b72d83d54e582b073167'  // 必填，监测系统分配给此次监测活动的token
+    });
+
+
+    //查询接口注入权限验证配置信息
+    var proveUrl = "js/getSignPackage";
+    function getConfig(canMethod){
+        var url = encodeURIComponent(window.location.href);
+        var sct = document.createElement("script");
+        sct.setAttribute("id","dataProxy");
+        sct.src = proveUrl+'?url='+url+'&callback='+canMethod+'';
+        document.getElementsByTagName("body")[0].appendChild(sct);
+
+    }
+
+    function setConfig(result){
+        wx.config(result.data);
+        setShareData();
+    }
+
+    window.setConfig = setConfig ;
+    getConfig("setConfig");
+</script>
+<script src="js/webgl.js"></script>
+<script src="js/index.js"></script>
+<span style="display: none"><script src="https://s95.cnzz.com/z_stat.php?id=1260800058&web_id=1260800058" language="JavaScript"></script></span>
+<!--自定义脚本-->
+</html>

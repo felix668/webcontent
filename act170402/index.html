@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>超值折扣</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	         //alert(docEl.clientHeight)
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = clientWidth / 7.5 + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+
+</script>
+<link href="dist/bundle.style.css" rel="stylesheet">
+</head>
+<body>
+<div id="root" ref="root">
+	<mask-load v-if="loading"></mask-load>
+	<template v-if="!loading && !over">
+		<div class="top">
+			<img src="images/top.jpg" id="banner">
+		</div>
+		<time-tab :timelist="page.timeTable" :flog="flog" :canpick="canpick"></time-tab>
+		<div class="wrap">
+			<flash-package :pkdata="booklist.flashSaleBook" :pknum="page.flashNumber" :isbuy="page.userHasFlashSuccessed" :canpick="canpick" @buy="buy"></flash-package>			
+			<batch-package :pkdata="booklist.batchSaleBook" :pknum="page.batchNumber" :isbuy="page.userHasBoughtPackageId" :canpick="canpick" @buy="buy"></batch-package>
+			<choose-package :pkdata="booklist.chooseSaleBook" :pknum="page.choiceNumber" :isbuy="page.userHasChoicePackageId" :canpick="canpick" @buy="buy"></choose-package>
+		</div>
+		<div class="sharebtn" @click="sharePage">
+			<div class="arrows"><i></i><i></i><i></i></div>
+		</div>
+		<img src="images/link.png" class="link" @click="goLink">
+		<rule :plat="plat"></rule>
+	</template>	
+	<mask-buy v-if="mask" :buyinfo="buyinfo" :money="page.money" :zmoney="page.z_money" :plat="plat" :idx="page.index"></mask-buy>
+	<mask-over v-if="over"></mask-over>
+</div>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/fastclick.min.js"></script>
+<script src="dist/bundle.js"></script>
+</body>
+</html>

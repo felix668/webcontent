@@ -1,0 +1,14 @@
+测试链接
+安卓
+http://solomotest4.3g.qq.com/book_res/event/act170407/adr/index.html?act_f=170407
+ios
+https://ptsolomo.reader.qq.com/book_res/event/act170407/ios/index.html?act_f=170407
+
+
+//链接判断
+<html name='main' platform="com">
+let el = document.querySelector('html');
+self.urlis = el.getAttribute('platform');
+if(self.urlis=='adr'){
+   Local.init();
+}

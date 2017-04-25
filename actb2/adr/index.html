@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>京东图书</title>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<img src="images/banner.png" class="banner"/>
+<div class="wrap">
+	<div class="get">
+	<div class="leftb">
+		<img src="images/ticket.png" class="jd"/>
+	</div>
+	<a href="javascript:;" class="btn" id="btn">领取</a>
+	</div>
+	<div class="geted">
+		<div class="leftb">
+			<p class="tip">优惠券代码：</p>
+			<p class="yhm" id="yhm"></p>
+		</div>
+		<a href="javascript:;" class="btn">已领取</a>
+	</div>
+	<div class="none">
+		<div class="leftb">
+			<img src="images/ticket.png" class="jd"/>
+		</div>
+		<a href="javascript:;" class="btn">抢光啦</a>
+	</div>
+</div>
+<dl class="rule">
+	<dt>活动规则</dt>
+	<dd>
+		<p>
+			<i>1</i>活动时间：2015.12.1 15:00——2015.12.7 15:00
+		</p>
+		<p>
+			<i>2</i>领取规则：包月用户（不包含短信和体验卡开通用户）可在活动期间免费领取京东图书满减优惠券，每位用户仅限一次！
+		</p>	
+		<p>
+			<i>3</i>活动期间领取到的优惠券代码请及时绑定京东图书卡密。
+		</p>
+		<p><i>4</i>京东图书满减优惠券使用注意事项：</p>
+		<p>1）使用期限2015.12.30之前，卡密使用后30天内有效。</p>
+		<p>2）优惠券限购买京东自营图书类下8位编码商品。</p>
+		<p>3）单张订单仅只能使用一次，且不能与其他优惠券叠加使用。</p>
+		<p>4）如下单成功后取消订单或后期退换货，优惠券概不返还，不再享受本次活动优惠。</p>
+		<p>5）输入兑换码时，系统识别可能会有延迟，请您耐心等待。</p>
+		<p id="DEBUG">6）订单结算时，如订单金额大于等于指定金额，直接输入兑换码，即可减免。</p>
+		<p class="cpright">此活动解释权归QQ阅读所有</p>
+	</dd>
+</dl>
+<div class="mask">
+	<div class="tiparea" id="tiparea1">
+		<strong id="msg">领福利的小伙伴太多啦<br>请稍后再试</strong>
+		<a href="javascript:;" class="hide">知道啦</a>
+	</div>
+	<div class="tiparea" id="tiparea2">
+		<strong>开通包月才能领取优惠券</strong>
+		<p>（通过短信、体验卡开通的用户不能参加此次活动）</p>
+		<a href="javascript:Local.openVip(true);" class="hide">开通包月</a>
+	</div>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

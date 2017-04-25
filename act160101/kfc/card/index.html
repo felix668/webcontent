@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<title>KFC</title>
+<script type="text/javascript">
+	var win=document.documentElement.clientWidth||document.body.clientWidth;
+	document.documentElement.style.fontSize = 100 * (win / 720) + "px";
+</script>
+<style type="text/css">
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body,div,p,ul,li,dl,dt,dd,h1{margin:0;padding:0;}
+ul,li{list-style:none;}
+img{border:0;display: block;width:100%;}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#f0e2c3;font-size:0.3rem;color: #5f443b;}
+/*活动主页*/
+.tipbox{width:6.16rem;margin:0.98rem auto 0.6rem;text-align: center;}
+.title{padding: 0.94rem 0 0.36rem;font-size: 0.36rem;line-height:0.5rem;color: #ba8f5f;}
+h1{font-weight: normal;font-size: 0.36rem;}
+.freebtn{display: block;height:1rem;line-height:1.02rem;text-align:center;background: #5f443b;border-bottom: 0.06rem solid #d3b089;color: #feca29;font-size: 0.4rem}
+.freebtn:active{color: #e9b401;background: #483028;}
+.detail{margin:0 0.52rem}
+.detail dt{position: relative;text-align: center;margin-bottom: 0.14rem}
+.detail dt strong{display:inline-block;font-size:0.4rem;padding: 0 0.2rem;background: #f0e2c3;position: relative;z-index: 10}
+.detail dt::after{content:"";width: 100%;height: 1px;background: #dec299;position: absolute;top:0.18rem;left: 0}
+.detail dd{font-size: 0.26rem;line-height: 0.4rem}
+.detail .cp{color: #c7a573;line-height: 0.28rem;padding: 0.3rem 0 0.38rem;text-align: center;}
+/*包月会员卡*/
+.cardbox{margin:0.7rem 0.52rem 0.6rem;text-align: center;display: none;}
+.cardbox>div{display: none;}
+.cardbox img{width: 4.16rem;margin:0 auto;}
+.scard{margin-top: 0.68rem}
+.cardbox strong{font-size: 0.36rem;line-height: 0.44rem;display: block;}
+.cardbox .name{color: #e87262}
+.cardbox .red{color: #db5a48}
+.cardbox .ad{line-height: 0.38rem;color: #ba8f5f;margin:0.7rem 0 0.46rem;}
+.tag{position: absolute;top: -1.9rem;right: 0.5rem;width:2.12rem;height: 1.62rem;background: url(images/used.png);background-size: 2.12rem auto}
+.ucard{margin-top: 0.66rem;position: relative;}
+.fcard{margin-top: 0.48rem}
+.fcard .ad{margin:0.14rem 0 0.22rem;}
+.qqinfo{-webkit-appearance:none;display:block;width:6.16rem;padding:0 0.2rem;text-align:center;margin-bottom:0.14rem;height: 0.8rem;line-height:0.82rem;font-size:0.3rem;/*color:#db5a48;*/background:#fff;-webkit-box-sizing:border-box;border: 1px solid #dec299}
+.qqinfo::-webkit-outer-spin-button,
+.qqinfo::-webkit-inner-spin-button {
+    -webkit-appearance: none!important;margin:0;
+}
+.qqinfo:focus{border: 1px solid #e87262;outline: none;color: #000;font-size:0.34rem;}
+.ucard .get{color: #483028;line-height: 0.38rem;margin: 0.7rem 0 0.46rem}
+</style>
+</head>
+<body>
+<img src="images/banner.jpg"/>
+<!-- 限领提示 -->
+<div class="tipbox">
+	<img src="images/tip.jpg"/>
+	<div class="title">
+		<h1>去QQ阅读看原著</h1>
+		百万册精品书新用户免费读
+	</div>
+	<a href="#" class="freebtn">下载QQ阅读</a>	
+</div>
+<div class="cardbox">
+	<img src="images/month.jpg">
+	<!-- 在qq阅读中打开 -->
+	<div class="scard">
+		<strong>您已成功领取<span class="name">14天包月会员卡</span></strong>
+		<div class="ad">
+			<p>10万册包月书都免费</p>
+			<p>原创好书出版精品畅快读</p>
+		</div>
+		<a href="#" class="freebtn">告诉好友来参加</a>
+	</div>	
+	<!-- 会员卡已使用 -->
+	<div class="ucard">
+		<i class="tag"></i>
+		<strong>该会员卡已使用</strong>
+		<div class="ad">
+			<p>10万册包月书都免费</p>
+			<p>原创好书出版精品畅快读</p>
+		</div>
+		<a href="#" class="freebtn">下载QQ阅读</a>
+	</div>	
+	<!-- 提交qq号 -->
+	<div class="fcard">
+		<strong>恭喜您获赠QQ阅读<span class="name">14天包月会员卡</span></strong>
+		<div class="ad">
+			<p>10万册包月书都免费</p>
+			<p>原创好书出版精品畅快读</p>
+		</div>
+		<input type="number" placeholder="输入QQ号，领取免费书" class="qqinfo">
+		<a href="#" class="freebtn">提交</a>
+	</div>
+	<!-- 账号提交成功 -->
+	<div class="ucard">
+		<strong>您已成功获赠<span class="red">14天包月会员卡</span></strong>
+		<p class="get">请在24小时内使用账户：<span class="red">LEESA</span>登录<br>QQ阅读领取，逾期失效</p>
+		<a href="#" class="freebtn">登录QQ阅读，领取会员卡</a>
+	</div>
+</div>
+<div class="detail">
+	<dl>
+		<dt>
+			<strong>更多惊喜</strong>
+		</dt>
+		<dd>
+			<p>
+				<strong>活动时间：</strong>2016年3月1-3月31日
+			</p>
+			<p>
+				<strong>精彩活动：</strong><br>
+				【活动一】2016年3月1日-3月31日  每天9:30-23:00 ，在北京地区KFC指定餐厅“买任意现磨咖啡（中）送QQ阅读14天会员卡一张；共30万张，先到先得，送完为止；<br>
+				活动期间，每个账号、每台设备可有三次会员体验卡权益。<br>
+				【活动二】2016年3月1日-3月14日  ，在北京地区KFC指定餐厅，关注肯德基官方微信，即可免费活动“QQ阅读”指定图书一本;<br>
+				活动期间，每个账号每台设备只可领取一次免费书籍;<br>
+			</p>
+			<p>
+				<strong>特别惊喜：</strong><br>
+				1、活动期间，参与活动一或活动二，还有机会参与QQ阅读抽奖活动。17000杯肯德基美式咖啡（热）（中）等你来赢！<br>
+				2、获得特别惊喜的用户，需在24小时内登录QQ阅读App，奖品才可领取成功。超过时间则自动失效。<br>
+				3、美式咖啡（热）（中）券兑奖时间截止到2016年4月30日23:00前。<br>
+				4、活动说明：请将客户端升级至5.3版本以上以免影响本活动显示。
+			</p>
+		</dd>
+	</dl>
+	<p class="cp">本活动最终解释权归QQ阅读所有</p>
+</div>
+</body>
+</html>

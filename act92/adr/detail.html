@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>不开心，打BOSS</title>
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="game">
+	<div class="guide">
+		<div class="gesture">
+			<img src="images/hand.png" class="hand"/>
+			<img src="images/line.png"/>
+		</div>
+		<div class="count"><i id="num"></i></div>
+	</div>
+	<div class="tipInfo">
+		<div class="clock">
+			<span id="timetxt">7.0”</span>
+			<div class="probar"><i id="progress"></i></div>
+		</div>
+		<div class="total" id="total">0</div>
+	</div>	
+	<div class="wrap" id="wrap">
+		<div class="person">
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/star.png" class="star"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/coupon.png" class="coupon"/>
+			<img src="images/add1.png" class="add"/>
+			<img src="images/add2.png" class="add"/>
+			<img src="images/add3.png" class="add"/>
+			<img src="images/add4.png" class="add"/>
+			<img src="images/add3.png" class="add"/>
+			<img src="images/add2.png" class="add"/>
+			<img src="images/add1.png" class="add"/>
+			<img src="images/add4.png" class="add"/>
+			<img src="images/add1.png" class="add"/>
+			<img src="images/add2.png" class="add"/>
+			<img src="images/add3.png" class="add"/>
+			<img src="images/add4.png" class="add"/>
+		</div>
+		<div class="balloons" id="balloons"></div>
+	</div>
+</div>
+<div class="result" id="result">
+	<div class="headpic">
+		<img src="" id="headpic">
+	</div>
+	<div class="desc">
+		<strong class="level">BOSS送你<span class="bookt" id="bookt">0</span>书券求饶</strong>
+		<p class="score">求饶金纪录：<span id="points">0</span>书券</p>
+	</div>
+	<div class="rBtns">
+		<a href="javascript:Detail.pick();" class="getBtn" id="getBtn">领取求饶金</a>
+		<a href="javascript:Detail.replay();" class="agBtn" id="agBtn">再打一次</a>
+	</div>
+</div>
+
+<!-- 弹窗 -->
+<!-- 显示mask加样式pop-->
+<div class="mask">
+	<!-- 开通包月 -->
+	<div class="kt-month notice" id="ktMonth">
+		<h2>开通/续费包月领取<br>求饶金</h2>
+		<p class="msg">（通过体验卡和短信开通的用户<br>不能参加此次活动）</p>
+		<a href="javascript:openVIP();" class="kbtn">立即开通</a>
+		<a href="javascript:void(0);" class="close hide"></a>
+	</div>
+	<!-- QQ登录 -->
+	<div class="qqLogin notice" id="qqLogin">
+		<h2>QQ登录才能领求饶金哦~</h2>
+		<p class="msg">（微信用户需退出后重新QQ登录才<br>能参加活动）</p>
+		<a href="javascript:void(0);" class="kbtn hide">知道啦</a>
+	</div>
+	<!-- 成功领取 -->
+	<div class="sucsTake notice" id="sucsTake">
+		<h2>成功领取<span class="bookt" id="booktn">0</span>书券<br>求饶金！</h2>
+		<a href="javascript:Local.go('index.html');" class="kbtn">返回活动首页</a>
+	</div>
+	<!-- 领取失败 -->
+	<div class="sucsTake notice" id="pickFail">
+		<h2>求饶金领取失败请稍后<br>再试</h2>
+		<a href="javascript:Local.go('index.html');" class="kbtn">返回活动首页</a>
+	</div>
+	<!-- 无法联网 -->
+	<div class="sucsTake notice" id="failKnown">
+		<h2>非常抱歉，无法连接网络<br>请稍后再试</h2>
+		<a href="javascript:void(0);" class="kbtn hide">知道啦</a>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="detail.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+</body>
+</html>

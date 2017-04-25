@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="copyright" content="Copyright (c) 1998-2011 Tencent." />
+<meta name="description" content="android书城" />
+<meta name="format-detection" content="telephone=no">
+<title>包月活动</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="top"><img src="images/top.jpg"></div>
+<div class="cnt monthbtn">
+  <p>开通包月会员，领取刮刮卡</p>
+  <p class="smal">会员特权：万册图书免费看、点亮图标，等级加速...</p>
+      <div class="pay"><a id="index_open" class="openVIP cl_sum" href="javascript:Index.openVIP(false);">马上开通</a></div>
+  <div class="guabg">
+    <div class="sc_cnt">
+       <div class="sc_cnt2">
+		  <a id="scratch" class="cl_sum" href="javascript:Index.startScratch();">开始刮奖</a>
+	   </div>
+	   <div class="scratch_area" id="wScratchPad"></div>
+    </div>
+    <div class="guanone">
+    已用<em id="used">0</em>张刮刮卡，还有<em id="left">0</em>张刮刮卡<span onclick="javascript:Local.go('myPrize.html');">我的奖品</span>
+    </div>
+    </div>
+    <div class="zhong_tz">
+      <div class="notice">中奖用户</div>
+      <div class="scrollbox">
+         <ul id="data_prized">
+         </ul>
+      </div>
+    </div>
+</div>
+<div class="cnt jiangp_box">
+   <div class="title">活动奖品</div>
+   <ul class="jiangp_list">
+     <li><div><img src="images/g1.jpg" alt=""><p>三星galaxy</p></div></li>
+     <li><div><img src="images/g2.jpg" alt=""><p>卡通存钱罐</p></div></li>
+     <li><div><img src="images/g3.jpg" alt=""><p>100Q币</p></div></li>
+   </ul>
+   <ul class="jiangp_list">
+     <li><div><img src="images/g4.jpg" alt=""><p>卡通存钱罐</p></div></li>
+     <li><div><img src="images/g5.jpg" alt=""><p>实体书</p></div></li>
+     <li><div><img src="images/g6.jpg" alt=""><p>卡通存钱罐</p></div></li>
+   </ul>
+   <ul class="jiangp_list">
+     <li><div><img src="images/g7.jpg" alt=""><p>5Q币</p></div></li>
+     <li><div><img src="images/g8.jpg" alt=""><p>卡通存钱罐</p></div></li>
+     <li><div><img src="images/g9.jpg" alt=""><p>书券</p></div></li>
+   </ul>
+</div>
+
+<div class="step3">
+    <div class="title">活动规则</div>
+    <p class="col1">活动时间：2015年3月23日15:00-3月30日15:00</p>
+    <p class="col2">活动规则</p>
+    <ul>
+        <li><span class="num">1</span>活动期间开通或续费包月,即送刮刮卡！</br>
+        
+刮开有惊喜，奖品包含</br>
+            （1）价值3672元三星galaxy s5 G9008v 4G手机x1部</br>
+（2）限量版定制卡通存钱罐x16个</br>
+（3）实体书x30本</br>
+（4）价值15000元Q币</br>
+（5）书券若干</li>
+        <li><span class="num">2</span>
+            <b>每成功开通一次包月，可获1张抽奖机会。（按开通次数赠送，而非开通时长，即1次开通12个月包月，刮刮卡获得1张；开通12次1个月包月，刮刮卡获得12张）</b></li>
+        <li><span class="num">3</span>刮刮卡活动期间可累积使用，活动结束后，未使用的刮刮卡将作废。</li>
+        <li><span class="num">4</span>中奖的书券，即刻自动到账，您可在“我的账户”中查询；中奖的Q币和实物奖，将于活动结束后15个工作日内发出。</li>
+        <li><span class="num">5</span>请认真填写你的邮寄地址，以保证实物奖的寄达；对未填写邮寄信息的实物奖中奖用户，我们将于活动结束后5个工作日内通过QQ邮箱发起地址询问，若逾期未有回复，将视为自动放弃奖品。
+本活动最终解释权归腾讯文学所有。</li>
+    </ul>
+</div>
+<div class="mask" style="display:none"></div>
+<div class="mask_on" style="display:none">
+  <div class="zt-tip" id="tip">
+        
+         <!--开通包月会员，领取刮刮卡 -->
+        <div id="nomore" class="zt-tiparea" style="display:none">
+            <p>没有刮刮卡了，开通包月即获1张</p>
+            <div class="btn"><a id="wd_open" class="openVIP cl_sum" href="javascript:Index.openVIP(false);">马上开通</a>
+            </div>
+            <span class="close"></span>
+        </div>
+        <!--成功开通包月！ -->
+        <div class="zt-tiparea" style="display:none">
+            <p>成功开通包月！</p>
+            <div class="chishu"><span>+1</span></div>
+            <span class="close"></span>
+        </div>
+        <!--成功开通包月！ -->
+        <div id="tipMsg" class="zt-tiparea" style="display:none">
+            <p>你的抽奖机会已用完！</p>
+            <span class="close"></span>
+        </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/wScratchPad.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+</body>
+</html>
