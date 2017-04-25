@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>新春送礼，天天有奖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-touch-fullscreen" content="yes">
+<link rel="stylesheet" type="text/css" href="css/newyear.css" />
+</head>
+<script type="text/javascript">
+//弹框居中
+  function ztTip(){
+	var oTip=document.getElementById('tip');
+	var aTipClass=oTip.getElementsByTagName('div');
+	var i=0;
+	
+		for(i=0;i<aTipClass.length;i++)
+		{
+			if(aTipClass[i].className=='zt-tiparea')
+			{
+				aTipClass[i].style.top=(document.documentElement.clientHeight-aTipClass[i].offsetHeight)/2+'px'; 
+			}
+		}
+	}
+</script>
+<body>
+<div class="content" id="content">
+    <div class="bg">
+        <img src="images/top.png">
+    </div>
+    <div class="head">
+        <div class="logo"><img src="images/logo.png"></div>
+        <div class="Slogan"><img src="images/head.png"></div>
+        <div class="prizes"><img src="images/tops.png"></div>
+        <div class="headInfo">包月会员，即刻享受二重大礼，快来参与吧！</div>
+        <div class="btn totop"><a class="openVIP" href="javascript:Index.openVIP(false);">马上成为包月会员</a>
+        </div>
+        <div class="headInfo2">包月特权：免费畅读万本书，点亮图标，成长加速等<a href="javascript:Local.openPage('privilege.html');">更多特权>></a>
+        </div>
+    </div>
+</div>
+<div class="step1">
+    <div class="title"><span class="num1">重礼</span><span>开通包月就送书券</span></div>
+    <div class="title2">(不包含短信指令开通)</div>
+    <div class="quan">
+        <div class="quanss quan200">
+            <img src="images/quan200.png"></div>
+        <div class="quanw"></div>
+        <div class="star" onclick="Index.pick();"><img src="images/star.png" id="imgLogo"></div>
+    </div>
+    <div class="btn1"><a href="javascript:Index.pick();">马上领取</a>
+    </div>
+</div>
+<div class="step2">
+    <div class="title"><span class="num2">重礼</span><span>每天一部iPhone6等你拿</span></div>
+    <div class="scrollbox">
+        <ul id="data_prized">
+        </ul>
+    </div>
+    <div class="rewardInfo">我的今日抽奖机会<span id="left">？</span>次 <a href="javascript:Local.go('myPrize.html');">我的奖品>></a>
+    </div>
+    <!-- 转盘，点击时添加样式turn，暂停时添加paused-->
+    <div class="rewardarea paused">
+        <div class="reward" style="-webkit-transform: rotate(0deg)" onclick="Index.doLottery();">
+            <!-- 控制旋转角度，控制奖品-->
+            <img src="images/price.jpg">
+        </div>
+        <div class="point" onclick="Index.doLottery();">
+        </div>
+    </div>
+    <div class="how">
+        <h2>如何获得抽奖机会</h2>
+        1、包月用户每日1次<br>
+        2、当日开通包月（不包含短信开通）可获1次 </div>
+</div>
+
+<div class="step3">
+    <h3>活动规则</h3>
+    <ul>
+        <li><span class="num">1</span>活动时间：2015.2.9 15：00-2015.2.15 15：00</li>
+        <li><span class="num">2</span>活动对象：包月会员专享</li>
+        <li><span class="num">3</span>领红包规则：</br>
+（1）活动期间开通或续费包月会员(不含短信指令开通)，可领取200书券。每人只能领一次。</br>
+（2）红包需主动领取。</li>
+        <li><span class="num">4</span>抽奖规则：</br>
+（1）包月会员每人每天一次抽奖机会，当日有效，不做次日累加。</br>
+（2）当天开通或者续费会员（不含短信指令开通），额外获得一次抽奖机会，当日有效，不做次日累加。</li>
+<li><span class="num">5</span>100%中奖，奖项设置： </br>
+一等奖：iphone6 x7</br>
+二等奖：福禄寿公仔盒装x7</br>
+三等奖：45cm财神公仔 x10</br>
+四等奖：QQ萌羊公仔 x20</br>
+五等奖：100书券x 70000</br>
+阳光普照奖：成长值 </li>
+<li><span class="num">6</span>实物奖项将在节后发出，请中奖用户及时填写通讯信息并留意邮件通知，逾期则视为自动放弃奖品。</li>
+<li><span class="num">7</span>腾讯文学拥有对活动的最终解释权。</li>
+    </ul>
+</div>
+
+<div class="mask" style="display:none"></div>
+<div class="mask_on" style="display:none">
+    <div class="zt-tip" id="tip">
+        
+        <!--每人只能领取一次-->
+        <div id="picked" class="zt-tiparea" style="display:none">
+            <p>每人只能领取一次。快去抽奖吧！ </p>
+            <span class="close"></span>
+        </div>
+        
+        <!--包月会员专享-->
+        <div id="noright" class="zt-tiparea" style="display:none">
+            <p>活动期间开通包月<span>（不含短信指令开通）</span>即可领取</p>
+            <div class="btn btn0"><a class="openVIP" href="javascript:Index.openVIP(false);">马上开通</a>
+        	</div>
+        	<span class="close"></span>
+        </div>
+        
+        <!--亲，网速不给力呢，刷新一下吧。-->
+        <div id="error" class="zt-tiparea" style="display:none">
+            <p>亲，网速不给力呢，刷新一下吧。</p>
+            <span class="close"></span>
+        </div>
+        
+        <!--恭喜您！领取了200书券！快去抽奖吧！-->
+        <div id="picksuc" class="zt-tiparea" style="display:none">
+            <p>恭喜您！领取了200书券！快去抽奖吧！</p>
+            <span class="close"></span>
+        </div>
+        
+        
+        
+
+        <!--包月会员专享-->
+        <div id="noChance" class="zt-tiparea" style="display:none">
+            <p>开通包月，获得抽奖资格。</p>
+            <div class="btn btn0"><a class="openVIP" href="javascript:Index.openVIP(false);">马上开通</a>
+        	</div>
+        	<span class="close"></span>
+        </div>
+        <!--已是包月提示续费包月-->
+        <div id="oneChanceLeft" class="zt-tiparea" style="display:none">
+            <h4>您已是包月会员</h4>
+            <p>当日续费，额外获得一次抽奖机会</p>
+            <div class="btn btn0"><a class="openVIP" href="javascript:Index.openVIP(false);">续费包月</a>
+        	</div>
+        	<span class="close"></span>
+        </div>
+        
+        <!--今天抽奖机会用完了，明天再来吧~-->
+        <div id="noMoreChance" class="zt-tiparea" style="display:none">
+            <p>今天抽奖机会用完了，明天再来吧~</p>
+            <span class="close"></span>
+        </div>
+        
+        <!--恭喜您！抽中了 抽奖机会+1 -->
+        <div id="hitMore" class="zt-tiparea" style="display:none">
+            <h4>恭喜您！抽中了六等奖</h4>
+            <h5>100成长值</h5>
+            <p>当日续费，额外获得一次抽奖机会</p>
+            <div class="btn btn0"><a class="openVIP" href="javascript:Index.openVIP(false);">抽奖机会+1</a>
+        	</div>
+         	<span class="close"></span>
+        </div>
+        
+        <!--恭喜您！抽中了-->
+        <div id="hit" class="zt-tiparea" style="display:none">
+            <h4>恭喜您！抽中了六等奖</h4>
+            <h5>100成长值</h5>
+            <div class="btn btn0"><a href="javascript:void(0);">知道了</a>
+       		</div>
+         	<span class="close"></span>
+        </div>
+        
+    </div>
+</div>
+
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="js/jsbridge.js"></script>
+	<script type="text/javascript" src="js/local.js"></script>
+	<script type="text/javascript" src="js/zbook.js"></script>
+	<script type="text/javascript" src="js/cfoot.js"></script>
+
+</body>
+</html>

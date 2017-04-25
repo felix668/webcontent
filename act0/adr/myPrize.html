@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>新春包月-我的奖品</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-touch-fullscreen" content="yes">
+<link rel="stylesheet" type="text/css" href="css/newyear.css" />
+</head>
+<script type="text/javascript">
+//弹框居中
+  function ztTip(){
+	var oTip=document.getElementById('tip');
+	var aTipClass=oTip.getElementsByTagName('div');
+	var i=0;
+	
+		for(i=0;i<aTipClass.length;i++)
+		{
+			if(aTipClass[i].className=='zt-tiparea')
+			{
+				aTipClass[i].style.top=(document.documentElement.clientHeight-aTipClass[i].offsetHeight)/2+'px'; 
+			}
+		}
+	}
+</script>
+<body class="prize">
+<h1>我的奖品</h1>
+<table class="prizelist">
+<thead>
+ <tr>
+        <th>奖项</th>
+        <th>奖品</th>
+        <th>中奖时间</th>
+    </tr>
+    </thead>
+   <tbody>
+   </tbody>
+</table>
+<div class="adress" style="display:none">
+<h2>请您填写收货地址，活动结束后我们将为您寄出奖品。</h2>
+<ul class="infoList">
+		<li><div class="infoName"><span>*</span>姓名：</div><div class="infoarea">
+			<input id="name" type="text" value="" placeholder="请输入姓名" class="w100s">
+		</div></li>
+		<li><div class="infoName"><span>*</span>地址：</div><div class="infoarea">
+			<input id="address" type="text" value="" placeholder="请输入地址" class="w100s">
+		</div></li>
+		<li><div class="infoName"><span>*</span>手机：</div><div class="infoarea">
+			<input id="contact" type="text" value="" placeholder="请输入手机号" class="w100s">
+		</div></li>
+        </ul>
+		<div class="btn btn2"><a href="javascript:MyPrize.subAddess();">提交</a>
+        </div>
+</div>
+
+<div class="mask" style="display:none"></div>
+<div class="mask_on" style="display:none">
+    <div class="tip" id="tip">
+        <!--亲，网速不给力呢，刷新一下吧。-->
+        <div id="info" class="zt-tiparea" style="display:none">
+            <p></p>
+            <span class="close"></span>
+        </div>
+     </div>
+</div>
+
+	<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="myPrize.js?v=201501281912112"></script>
+	<script type="text/javascript" src="../js/jsbridge.js?v=201501281912"></script>
+	<script type="text/javascript" src="../js/local.js?v=201501281912"></script>
+	<script type="text/javascript" src="../js/zbook.js?v=201501281912"></script>
+	<script type="text/javascript" src="../js/cfoot.js?v=201501281912"></script>
+</body>
+</html>
