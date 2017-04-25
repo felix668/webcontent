@@ -1,0 +1,65 @@
+@charset "utf-8";
+body,p,ul,li,h2,h3{margin:0;padding:0;}
+ul,li{list-style:none}
+img{border:none;-webkit-touch-callout:none;}
+a{text-decoration:none;-webkit-touch-callout:none;color: #000}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+i{font-style: normal;}
+.greybg{background: #f2f2f2}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;-webkit-user-select:none;background:#fff;font-size: .32rem;}
+/*======我的账户======*/
+/*头像*/
+.headpic{height: 3.02rem;background: #75baff;border-bottom: 0.01rem solid #e3e4e6;overflow: hidden;text-align: center;}
+.myInfo{width: 1.36rem;height: 1.36rem;margin:.22rem auto 0;border:.06rem solid #9eceff;border-radius: 50%;position: relative;}
+.myInfo img{width: 100%;height: 100%;border-radius: 50%}
+.nick{color: #fff;font-size: .36rem;line-height: .36rem;margin: .16rem 0 .2rem}
+.tags{font-size:0}
+.tags i{display: inline-block;margin:0 0.04rem;vertical-align: middle;}
+.nomonth,.hasmonth{width:.42rem;height: .36rem;background: url(../images/month.png) 0 -.36rem no-repeat;background-size: 100% auto}
+.hasmonth{background-position: 0 0}
+.vip,.lv{width: .8rem;height:.32rem;line-height: .34rem;text-align: center;font-size: .24rem;border-radius: .32rem;box-shadow: 0 0.02rem 0.04rem rgba(0,0,0,.5);color: #fff}
+.vip{background: #ff5959}
+.lv{background: #57d982}
+/*list*/
+.my-account li,.quanList li{position:relative;padding:0 .32rem;line-height:.98rem;color:#000;border-bottom: 0.01rem solid #f2f2f2;background:#fff;}
+.my-account li:last-child{border:none;}
+.quan{display: block;height: 100%}
+.quan::after{content:"";position: absolute;top:.38rem;right:.32rem;width: .14rem;height: .14rem;border-right: .02rem solid #ccc;border-bottom: .02rem solid #ccc;-webkit-transform:rotate(-45deg);}
+.red{color: #996648}
+.my-account .tip{margin-left: .2rem;}
+.space{width: 100%;height: .38rem;border-top: 0.01rem solid #e3e4e6;border-bottom: 0.01rem solid #e3e4e6;background: #f2f2f2}
+.mVip .red{margin-left: .12rem}
+/*======*阅券======*/
+.quanarea{text-align: center;padding:.74rem 0 .56rem;background: #fff;}
+.ticket{width: 1.3rem;margin:0 auto .5rem;display: block;}
+.balance{line-height: .4rem;margin-bottom: .18rem}
+.balance .red{font-size: .4rem}
+.tip{color:#999;font-size: .24rem;line-height: .24rem;}
+/*有券*/
+.quanList span{float: right;}
+/*无券*/
+.noquan{border-top:0.01rem solid #e3e4e6;padding-top:.62rem;text-align: center;display: none;}
+.noquan h2{font-weight: normal;font-size:.32rem;line-height: .44rem;margin-bottom: .18rem;color: #a4a4a4}
+.greybg .noquan{display: block;}
+.greybg .hasquan{display: none;}
+/*退出提示弹窗*/
+.mask{position:fixed;top:0;left:0;width: 100%;height: 100%;background:rgba(0,0,0,0.7);/*display:box;-webkit-box-align:center;-webkit-box-pack:center;*/-webkit-align-items:center;-webkit-justify-content:center;z-index: 100;display:none;}
+.show{display: -webkit-flex;}
+.tiparea{width:6.4rem;height:4.06rem;background: #fff;border:0.01rem solid #e3e4e6;border-radius:0.04rem;text-align: center;color: #141414;line-height:.4rem;position: relative;}
+.tiparea h3{font-size: .36rem;font-weight: normal;margin:.58rem auto .86rem;}
+.btns{display: -webkit-flex;-webkit-flex:1;border-top: 0.01rem solid #e3e4e6;position: absolute;bottom: 0;left: 0;width: 100%}
+.btns span{color: #3399ff;height: 1rem;display: block;width: 100%;line-height: 1rem;}
+.btns .cancle{border-right:0.02rem solid #f2f2f3}
+.btns span:active{background:#f2f2f2;}
+/*======ios======*/
+.ios .myInfo{margin:.44rem auto 0;}
+.ios .nomonth,.ios .hasmonth{position: absolute;top:1.08rem;right:-0.06rem;}
+.ios .nick{margin: .24rem 0 0 0}
+.ios .ticket{width: 2.02rem;margin:0 auto .36rem;}
+/*登录*/
+.login .logo{width: 1.86rem;display: block;margin: .86rem auto .98rem}
+.qqlogin,.wxlogin{display: block;margin:0 .6rem;height: 1rem;line-height: 1.02rem;font-size:.36rem;color: #fff;border-radius: 0.04rem;text-align: center;}
+.qqlogin{background: #3399ff;margin-bottom: .4rem}
+.wxlogin{background: #57d981}
+/*平台*/
+.ios,.adr,.login{display: none;}

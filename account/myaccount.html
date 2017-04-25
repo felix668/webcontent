@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="description" content="QQ阅读微信公众号" />
+<meta name="format-detection" content="telephone=no,email=no">
+<title>我的账户</title>
+<script>
+    var scale = 1 / devicePixelRatio;
+    //document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<link href="css/account.css" rel="stylesheet" type="text/css">
+</head>
+<body class="greybg">
+<div class="adr">
+    <div class="headpic">
+        <div class="myInfo">
+            <img class="avor" src="images/default.jpg">
+        </div>
+        <p class="nick">昵称</p>
+        <div class="tags">
+            <i class="nomonth"></i>
+            <i id="vip" class="vip"></i>
+            <i id="lv" class="lv"></i>
+        </div>
+    </div>
+    <ul class="my-account">
+        <li id="balance1"></li>
+        <li><a href="javascript:go('quaned.html');" class="quan">书券：<span class="bookTicket red"></span><span class="tip">(付费时优先扣取)</span> </a></li>
+    </ul>
+    <div class="space"></div>
+    <ul class="my-account">
+        <li class="noMvip">包月特权：<span class="red">未开通</span></li>
+        <li class="mVip">包月特权：已开通<span class="vipEnd red"></span></li>
+        <li>包月体验卡：<span class="red" id="cardCnt"></span>张</li>
+    </ul>
+    <div class="space"></div>
+    <ul class="my-account">
+        <li>推荐票：<span class="red" id="leftTicket"></span>张<span class="tip">(每日清零)</span></li>
+        <li>月票：<span class="red" id="leftMTicket"></span>张<span class="tip">(月底清零)</span></li>
+    </ul>
+    <!-- 退出登录 显示show-->
+    <div class="mask">
+        <div class="tiparea">
+            <h3>退出登录？</h3>
+            <p>退出登录后，将收不到任何账户提醒消息</p>
+            <div class="btns">
+                <span class="cancle">取消</span>
+                <span class="certain">确定</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ios">
+    <div class="headpic">
+        <div class="myInfo">
+            <img class="avor" src="images/default.jpg">
+            <i class="nomonth"></i>
+        </div>
+        <p class="nick">昵称</p>
+    </div>
+    <ul class="my-account">
+        <li id="balance2"></li>
+        <li><a href="javascript:go('quaned.html');" class="quan">阅券：<span class="bookTicket red"></span><span class="tip">(付费时优先扣取)</span> </a></li>
+    </ul>
+    <div class="space"></div>
+    <ul class="my-account">
+        <li class="noMvip">包月特权：<span class="red">未开通</span></li>
+        <li class="mVip">包月特权：已开通<span class="vipEnd red"></span></li>
+    </ul>
+    <!-- 退出登录 show-->
+    <div class="mask">
+        <div class="tiparea">
+            <h3>退出登录？</h3>
+            <p>退出登录后，将收不到任何账户提醒消息</p>
+            <div class="btns">
+                <span class="cancle">取消</span>
+                <span class="certain">确定</span>
+            </div>
+        </div>
+    </div>
+</div>  
+<div class="login">
+    <img src="images/logo.png" alt="海量原著，想读就读" class="logo">
+    <a href="javascript:MyAccount.loginQQ();" class="qqlogin">QQ登录</a>
+    <a href="javascript:MyAccount.loginWX();" class="wxlogin">微信登录</a>
+</div>
+<script type="text/javascript" src="http://solomotest4.3g.qq.com/book_res/event/common/en.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="myaccount.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript"
+		src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://midas.gtimg.cn/h5pay/js/api/midas.js"></script>		
+</body>
+</html>

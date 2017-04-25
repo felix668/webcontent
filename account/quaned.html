@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="description" content="QQ阅读微信公众号" />
+<meta name="format-detection" content="telephone=no,email=no">
+<title>到期明细</title>
+<script>
+    //var scale = 1 / devicePixelRatio;
+    //document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<link href="css/account.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="quanarea">
+	<img src="images/ticket.png" class="ticket">
+	<div class="balance">余额：<span class="red" id="balance">0</span></div>
+	<p class="tip" id="tip"></p>
+</div>
+<div class="hasquan" id="hasquan">
+	<div class="space"></div>
+	<ul class="quanList" id="quanList">
+	</ul>
+</div>
+<div class="noquan" id="noquan">
+</div>
+<script type="text/javascript" src="http://solomotest4.3g.qq.com/book_res/event/common/en.js"></script>
+<script type="text/javascript" src="quaned.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript"
+		src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</body>
+</html>
