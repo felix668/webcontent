@@ -1,0 +1,142 @@
+
+.MaskLoading[data-v-7c0516f0] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+}
+.MaskLoading ._text[data-v-7c0516f0] {
+  padding: 16px 0;
+  font-size: 0.28rem;
+  color: #999;
+  text-align: center;
+}
+.MaskLoading ._text img[data-v-7c0516f0] {
+  -webkit-animation: rotate 1s linear infinite;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 0 auto .05rem;
+}
+@-webkit-keyframes rotate {
+0% {
+    -webkit-transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(360deg);
+}
+}
+
+.over[data-v-2b0e4c60] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1999;
+}
+.over .over-c[data-v-2b0e4c60] {
+  height: 4.16rem;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.over .over-c img[data-v-2b0e4c60] {
+  width: 2.05rem;
+  height: 2.19rem;
+  margin: 0.32rem auto 0;
+}
+.over p[data-v-2b0e4c60] {
+  color: #999;
+  font-size: 0.30rem;
+  line-height: 1;
+}
+.over .over-p1[data-v-2b0e4c60] {
+  margin-top: 0.33rem;
+}
+.over .over-p2[data-v-2b0e4c60] {
+  margin-top: 0.24rem;
+  margin-bottom: 0.48rem;
+}
+
+.MaskDownload[data-v-159cccf8] {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 1s;
+}
+.MaskDownload .mask-panel[data-v-159cccf8] {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5.5rem;
+  height: 3.6rem;
+  margin: auto;
+  border-radius: 0.1rem;
+  background: white;
+}
+.MaskDownload .mask-panel .top[data-v-159cccf8] {
+  box-sizing: border-box;
+  height: 0.9rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.3rem;
+  line-height: 0.9rem;
+  font-weight: normal;
+  text-align: center;
+}
+.MaskDownload .mask-panel .middle[data-v-159cccf8] {
+  box-sizing: border-box;
+  height: 1.8rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.28rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+.MaskDownload .mask-panel .bottom[data-v-159cccf8] {
+  overflow: hidden;
+}
+.MaskDownload .mask-panel .bottom li[data-v-159cccf8] {
+  float: left;
+  width: 50%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.28rem;
+  text-align: center;
+}
+.MaskDownload .mask-panel .bottom .confirm[data-v-159cccf8] {
+  background: #3d8dcf;
+  color: white;
+}
+
+.maskbrow[data-v-e56b363c] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+.maskbrow img[data-v-e56b363c] {
+  display: block;
+  width: 5.58rem;
+  height: 3.28rem;
+  float: right;
+  margin: .2rem .4rem;
+}
