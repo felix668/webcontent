@@ -1,0 +1,5 @@
+:root{
+	--fontsize:12px;
+	--basecolor:'#ccc';
+}
+p{font-size: var(--fontsize);color: var(--basecolor); }

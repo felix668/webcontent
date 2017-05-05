@@ -1,0 +1,11 @@
+{
+  "name": "act170301",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "node build/build.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
