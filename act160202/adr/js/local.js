@@ -1,4 +1,4 @@
-//与终端本地js调用相关的都放在这里
+you//与终端本地js调用相关的都放在这里
 var Local = {};
 
 Local.callbacks = [];

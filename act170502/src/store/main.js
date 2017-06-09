@@ -46,7 +46,7 @@ const mutators = {
         state.page = 'ready';
       }else{
         Local.forceLog( common.param('act_f'),`two_enter_gender${state.gender}` );
-        Local.reqaObj( common.server()+`pkg170501/batchInit?topic=${state.conf.topic}`, function(data) {
+        Local.reqaObj( common.server()+`pkg170501/batchInit?tpc=${state.conf.topic}`, function(data) {
           console.log(data);
 
           if( data.code===-4 ){
@@ -91,7 +91,7 @@ const mutators = {
         state.page = 'ready';
       }else{
         Local.forceLog( common.param('act_f'),`five_enter_topic${state.conf.topic}` );
-        Local.reqaObj( common.server()+`pkg170501/buyInit?topic=${state.conf.topic}`, function(data) {
+        Local.reqaObj( common.server()+`pkg170501/buyInit?tpc=${state.conf.topic}`, function(data) {
           console.log(data);
 
           if( data.code===-4 ){
@@ -104,8 +104,8 @@ const mutators = {
               state.priceOriginal = Number(data.data.oriPrice);
               state.price = Number(data.data.currPrice);
 
-              state.bills = Number(data.data.bookCoin);
-              state.coins = Number(data.data.bookTicket);
+              state.bills = Number(data.data.bookTicket);
+              state.coins = Number(data.data.bookCoin);
               if (data.data.isBuy===1) {
                 state.deal.bought = true;
               }
@@ -114,14 +114,16 @@ const mutators = {
               state.book_five.title = data.data.title;
               state.book_five.author = data.data.author;
               state.book_five.intro = data.data.content;
+
+              state.page = 'ready';
             }else {
+              state.page = 'unloggedin';
               dispatch({
                 type: 'TO_LOGIN'
               })
             }
           }
 
-          state.page = 'ready';
         }, [], function() {
           Local.showToast("网络异常，请稍候重试");
         }, 1);
@@ -183,7 +185,7 @@ const mutators = {
           state.deal.inProcessing = true;
 
           if(state.conf.type==='two') {
-            Local.reqaObj( common.server()+`pkg170501/batchBuy?pickId=0&topic=${state.conf.topic}`, function(data) {
+            Local.reqaObj( common.server()+`pkg170501/batchBuy?pickId=0&tpc=${state.conf.topic}`, function(data) {
               console.log(data);
               if (data.code===1) {
                 state.deal.bought = true;
@@ -193,12 +195,13 @@ const mutators = {
                 })
                 Local.forceLog( common.param('act_f'),`two_success_gender${state.gender}` );
               } else {
+                Local.showToast(data.msg);
               }
             }, [], function() {
               Local.showToast("网络异常，请稍候重试");
             }, 1);
           }else {
-            Local.reqaObj( common.server()+`pkg170501/buy?topic=${state.conf.topic}`, function(data) {
+            Local.reqaObj( common.server()+`pkg170501/buy?tpc=${state.conf.topic}`, function(data) {
               console.log(data);
               if (data.code===1) {
                 state.deal.bought = true;
@@ -208,6 +211,7 @@ const mutators = {
                 })
                 Local.forceLog( common.param('act_f'),`five_success_topic${state.conf.topic}` );
               } else {
+                Local.showToast(data.msg);
               }
             }, [], function() {
               Local.showToast("网络异常，请稍候重试");

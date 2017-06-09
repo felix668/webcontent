@@ -1,5 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/mqq/mqq_book_rep/!svn/ver/295460/book_proj/trunk/src/BookEventFront/WebContent/act170503
+/mqq/mqq_book_rep/!svn/ver/297878/book_proj/trunk/src/BookEventFront/WebContent/act170503
+END
+share.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/mqq/mqq_book_rep/!svn/ver/296812/book_proj/trunk/src/BookEventFront/WebContent/act170503/share.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/mqq/mqq_book_rep/!svn/ver/297774/book_proj/trunk/src/BookEventFront/WebContent/act170503/index.html
 END

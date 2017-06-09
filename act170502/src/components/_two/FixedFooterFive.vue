@@ -14,8 +14,8 @@
 
 <style lang="less" scoped>
 	.FooterFixed {
-		width: 100%; height: 0;
-		// background: #251e2b;
+		width: 100%; height: 1.3rem;
+		background: #28202e;
 		// overflow: hidden;
 		.fixed {
 			position: fixed; left: 0; bottom: 0;

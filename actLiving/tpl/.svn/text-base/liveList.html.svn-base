@@ -1,0 +1,16 @@
+<!--首页4广告位模块：支持配置1个或多个类似模块-->
+<script id="t2" type="text/html">
+	<div class="liveList">
+		<ul>
+			{{if recommendList && recommendList.length>0}}
+			{each recommendList as value i}}
+			<li onclick="javascript:goPastFilmTop('{{value.ImgHref}}');">
+				<img src="" {{value.ImgUrl}} "">
+				<p class="limitTime">{{value.title}}</p>
+				<p class="liveNum">{{value.allLookNum}}</p>
+			</li>
+			{{/each}}
+			{/if}}
+		</ul>
+	</div>
+</script>

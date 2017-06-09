@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="description" content="主线" />
+<meta name="format-detection" content="telephone=no">
+<title>直播聚合页</title>
+		<title></title>
+		<link rel="stylesheet" href='css/live.css'>
+		<link rel="stylesheet" href='css/swiper.min.css'>
+		    <!--<style>
+    	.swiper-container{height: 2.78rem; overflow: hidden;}
+    </style>-->
+		<script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+    </script>
+	</head>
+	<body class="iOS">
+<!--轮播模块样式-->
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide"><img src='images/banner1080x418.png'></div>
+		<div class="swiper-slide"><img src='images/banner1080x418.png'></div>
+	</div>
+	<!-- Add Pagination -->
+	<div class="swiper-pagination"></div>
+</div>
+
+<!--中间大广告位-->
+<div class="main"><img src="images/main656x656.png">
+<!--直播中-->
+<div class="living">直播中</div>
+<div class="mask"></div>
+<p class="lookNum">27.8万</p>
+</div>
+<!--首页4广告位-->
+<div class="listSection">
+	<div class="weCanTitle">
+		<p>大神驾到</p>
+	</div>
+	<div class="liveList">
+		<ul>
+		<li>
+			<img src="images/listPic.png">
+			<p class="limitTime">2小时03分</p>
+			<p class="liveNum">7.2万</p>
+		</li>
+		<li>
+			<img src="images/list1.png">
+			<p class="limitTime">2小时03分</p>
+			<p class="liveNum">7.2万</p>
+		</li>
+		<li>
+			<img src="images/list1.png">
+			<p class="limitTime">2小时03分</p>
+			<p class="liveNum">7.2万</p>
+		</li>
+		<li>
+			<img src="images/listPic.png">
+			<p class="limitTime">2小时03分</p>
+			<p class="liveNum">7.2万</p>
+		</li>
+		</ul>
+	</div>
+	<a href="#" class="btn_all">查看更多</a>
+</div>
+<!--首页4广告位-->
+<div class="listSection">
+	<div class="weCanTitle">
+		<p>星闻联播</p>
+	</div>
+	<div class="liveList">
+		<ul>
+		<li>
+			<img src="images/listPic.png">
+			<p class="limitTime">2小时03分</p>
+			<p class="liveNum">7.2万</p>
+		</li>
+		<li>
+			<img src="images/list1.png">
+			<p class="limitTime">2小时03分</p>
+			<p class="liveNum">7.2万</p>
+		</li>
+		<li>
+			<img src="images/listPic.png">
+			<p class="limitTime">2小时03分</p>
+			<p class="liveNum">7.2万</p>
+		</li>
+		<li>
+			<img src="images/list1.png">
+			<p class="limitTime">2小时03分</p>
+			<p class="liveNum">7.2万</p>
+		</li>
+		</ul>
+	</div>
+	<a href="#" class="btn_all">查看更多</a>
+</div>
+
+<!--满屏居中load-->
+<div class="loadingTop loading"><span class="loadtc"><span class="loads">
+<svg width="24" height="23" viewBox="0 0 48 46" xmlns="http://www.w3.org/2000/svg"><path d="M47.43 24C47.43 11.06 36.94.57 24 .57S.57 11.06.57 24c0 9.27 5.434 17.55 13.72 21.328 1.006.458 2.192.015 2.65-.99.46-1.005.015-2.192-.99-2.65C9.076 38.555 4.57 31.688 4.57 24c0-10.73 8.7-19.43 19.43-19.43S43.43 13.27 43.43 24c0 7.66-4.473 14.505-11.307 17.655-1.004.462-1.442 1.65-.98 2.653.463 1.004 1.65 1.442 2.654.98C42.037 41.49 47.43 33.234 47.43 24z" class="cls-default" /></svg></span>加载中...</span></div>
+<!--已显示全部-->
+<div class="loadingTop"><span class="loadall">已显示全部</span></div>
+
+
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		spaceBetween: 0,
+		centeredSlides: true,
+		autoplay: 2500,
+		autoplayDisableOnInteraction: false
+	});
+</script>
+
+	</body>
+</html>

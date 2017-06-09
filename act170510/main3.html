@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>onload之后自动播放</title>
+<link href="dist/bundle.style.css" rel="stylesheet">
+</head>
+<body>
+<div class="videobox active">
+	<video id="video1" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" preload="auto">
+		<source src="media/new.mp4" type="video/mp4"></source>
+	</video>
+</div>
+<script>
+	// document.querySelector("#video1").addEventListener("canplaythrough",function() {
+	// 	document.querySelector("#video1").play();
+	// })
+	// document.body.addEventListener("touchend",function() {
+	// 	document.querySelector("#video1").play();
+	// })
+	window.onload=function(){
+		document.querySelector("#video1").play();
+	}
+	document.querySelector("#video1").addEventListener("ended",function() {
+		window.location.href="uniteqqreader://nativepage/discover/limittimediscountbuy";
+	})
+</script>
+</body>
+</html>

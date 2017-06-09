@@ -1,0 +1,37 @@
+测试链接
+安卓
+http://solomotest4.3g.qq.com/book_res/event/act170506/adr/index.html?act_f=170506
+
+正式安卓
+http://iyuedu.qq.com/event/act170506/adr/index.html?act_f=170506
+
+1、cdn静态资源库
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.2.4/vue.min.js"></script>
+2、平台判断
+<html name='main' platform="ios">
+let el = document.querySelector('html');
+self.urlis = el.getAttribute('platform');
+
+3、去掉了加书架
+			<a class="addshelf" @click="addshelf(bookinfo.qcbook)">一键加入书架</a>
+			addshelf:function(bkbid){
+				let self=this;
+				if(self.urlis=='com'){
+					self.gotoapp();
+				}else if(self.urlis=='ios'){
+					Local.addToShelfBooks(JSON.stringify(bkbid));
+				}
+			}
+4、跳专题
+if( state.meta.platform==='adr' ){
+        Local.openPage( `http://iyuedu.qq.com/android/5_3/topicV2.html?tid=${action.zid.adr}` );
+      }else{
+        Local.openInside( `https://yuedu.reader.qq.com/common/common/topicV2.html?tid=${action.zid.ios}` );
+      }
+5、活动页面间跳转，toast出错了，目前解决办法是关闭了埋点forceLog的出错toast
+
+常用客户端接口
+
+增加登录按钮，这个广告是针对qq号下发，一般情况应该是登录状态才能看到。但是防止广告缓存问题，未登录的时候先显示登录引导吧

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta name="description" content="主线" />
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<title></title>
+		<link rel="stylesheet" href='css/live.css'>
+		<style>
+			html,body{height: 100%;overflow: hidden;-webkit-user-select: none; }
+		</style>
+		<script>
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+		</script>
+	</head>
+	<body id="videoPlay">
+	<div class="video-wrap" id='#video-wrap'>
+		<video id="video" poster='images/none.png' src=" " webkit-playsinline>
+			<source type="video/mp4" />
+		</video>
+		<div class="startBtn">
+			<div class="startBtnMask"></div>
+			<!--直播封面-->
+			<div class="btnPlay videobtn0"><img src="images/play.png"></div>
+			<!--播放按钮-->
+		</div>
+		<div class="videoControl">
+			<div class="btnPlay videobtn"><img src="images/play.png"></div>
+			<div class="btnPause videobtn"><img src="images/pause.png"></div>
+			<div class="bottomControl">
+				<div class="current"></div>
+				<div class="progress">
+					<span class="bufferBar"></span>
+					<span class="timeBar"></span>
+					<span class="currentPlay"></span>
+				</div>
+				<div class="duration"></div>
+			</div>
+		</div>
+		<div class="videoloading" style="display: none;">
+			<div class="startBtnMask"></div>
+			<div class="btnPlay videoloadingBtn"><img src="images/buffer.png"></div>
+		</div>
+		
+		<script src="js/template.js"></script>
+		<script src="js/tplhelper.js"></script>
+		<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+		<script src="js/androidNative.js"></script>
+		<script src="js/iosNative.js"></script>
+		<script src='js/local.js'></script>
+		<script src="videoPlay.js"></script>
+		<script src="js/jsbridge.js"></script>
+		<script src="js/iosscheme.js"></script>
+		<script src="js/adbox.js"></script>
+		<script src="js/zbook.js"></script>
+		<script src="js/cfoot.js"></script>
+	</body>
+
+</html>

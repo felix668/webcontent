@@ -1,0 +1,15 @@
+{
+  "name": "act170301",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "node build/build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "file-loader": "^0.11.1"
+  }
+}

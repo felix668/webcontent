@@ -1,0 +1,22 @@
+<!--首页4广告位模块：支持配置1个或多个类似模块-->
+<script id="t2" type="text/html">
+ <div class="listSection">
+		<div class="weCanTitle">
+			<p name='{{name}}'>{{name}}</p>
+		</div>
+		<div class="liveList">
+			<ul>
+				{{if videos && videos.length > 0}}
+				{{each videos as el ext i}}
+				<li  name='{{el.roomid}}' lihref='{{el.href}}'>
+				<img src="{{el.img}}">
+				<p class="limitTime">{{el.duration}}</p>
+				<p class="liveNum">{{el.watchcount}}</p>
+				</li>
+				{{/each}}
+				{{/if}}
+			</ul>
+		</div>
+	</div>
+	<div class="loadingTop"><span class="loadall">已显示全部</span></div>
+</script>

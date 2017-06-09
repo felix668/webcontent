@@ -43,6 +43,8 @@
       </div>
 
       <img class="bg_bottom" :src=" img+'/main/bg_bottom.png' "/>
+
+      <rules-plain></rules-plain>
 			<fixed-footer></fixed-footer>
 		</div>
 
@@ -160,6 +162,8 @@
 			FixedFooter: require('components/_two/FixedFooter.vue'),
       MaskConfirm: require('components/_two/MaskConfirm.vue'),
 			MaskPrize: require('components/_two/MaskPrize.vue'),
+
+      RulesPlain: require('components/_two/RulesPlain.vue')
 		},
 		data: function(){
 			return {};

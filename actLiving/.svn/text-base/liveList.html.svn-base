@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="主线" />
+	<meta name="format-detection" content="telephone=no">
+	<title></title>
+	<link rel="stylesheet" href='css/live.css'>
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+	</script>
+</head>
+<body>
+	<div id="livelist">
+	</div>
+</body>
+<script src="js/template.js"></script>
+<script src="js/tplhelper.js"></script>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script src="js/androidNative.js"></script>
+<script src="js/iosNative.js"></script>
+<script src='js/local.js'></script>
+<script src="liveList.js"></script>
+<script src="js/jsbridge.js"></script>
+<script src="js/iosscheme.js"></script>
+<script src="js/adbox.js"></script>
+<script src="js/zbook.js"></script>
+<script src="js/cfoot.js"></script>
+</html>

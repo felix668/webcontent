@@ -24,7 +24,7 @@ const state = {
     act_f: '170502',
     share_title: '423全民阅读，邀你益起阅读！',
     share_desc: '“你读我捐”，与QQ阅读合力为农家书屋捐书',
-    topic: common.param('topic')||'302720,302720,302720,302720'
+    topic: common.param('tpc')||'302720,302720,302720,302720'
   },
 
   user: {

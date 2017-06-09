@@ -1,0 +1,63 @@
+<script id="t0" type="text/html">
+<!--轮播模块样式-->
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		{{if banners && banners.length > 0}}
+            {{each banners as el ext i}}
+            {{if el.href && el.linktype==7 || el.linktype==3}}
+            <div class="swiper-slide"><img src="{{el.img}}" onclick='javascript:window.location.href="{{el.href}}"'></div>
+            {{else}}
+            <div class="swiper-slide"><img src="{{el.img}}" onclick="gotoInfos({{el.href}});" name="{{el.href}}"></div>
+            {{/if}}
+            {{/each}}
+            {{/if}}
+	</div>
+	<!-- Add Pagination -->
+	<div class="swiper-pagination"></div>
+</div>
+</script>
+
+<script id="t1" type="text/html">
+	{{if mainlive}}
+	<!--中间大广告位-->
+	<div class="main"><img src="{{mainlive.img}}" onclick="javascript:goLiveroom('{{mainlive.href}}')" >
+		<!--直播中-->
+		{{if mainlive.livenow==true}}
+		<div class="living">直播中</div>
+		<div class="mask"></div>
+		<p class="lookNum">{{mainlive.watchcount}}</p>
+		{{else}}
+		<div class="living">预约中</div>
+		{{/if}}
+	</div>
+	{{/if}}
+</script>
+<!--首页4广告位模块：支持配置1个或多个类似模块-->
+<script id="t2" type="text/html">
+	{{if allvideos && allvideos.length > 0}}
+         {{each allvideos as el ext i}}
+          <div class="listSection">
+		<div class="weCanTitle">
+			<p name='{{el.name}}'>{{el.name}}</p>
+		</div>
+		<div class="liveList">
+			<ul>
+				{{if el.videos && el.videos.length > 0}}
+				{{each el.videos as value i}}
+				<li name='{{value.roomid}}' lihref='{{value.href}}'>
+				<img src="{{value.img}}">
+				<p class="limitTime">{{value.duration}}</p>
+				<p class="liveNum">{{value.watchcount}}</p>
+				</li>
+				{{/each}}
+				{{/if}}
+			</ul>
+		</div> 
+		{{if el.videos.length == 4}}
+		<a class="btn_all" onclick="javascript:goLiveList({{el.id}})"  name="{{el.id}}">查看更多</a>
+		{{/if}}
+	</div>
+         {{/each}}
+    {{/if}}
+	
+</script>

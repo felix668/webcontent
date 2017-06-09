@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta name="description" content="主线" />
+		<meta name="format-detection" content="telephone=no">
+		<title>直播播放页</title>
+		<title></title>
+		<link rel="stylesheet" href='css/live.css'>
+		<script>
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+		</script>
+	</head>
+
+<body id="videoPlay">
+	<div class="video-wrap" id='#video-wrap'>
+		<video id="video" poster='images/none.png' src="https://1252317822.vod2.myqcloud.com/de825e20vodgzp1252317822/db3f91ac9031868222944641396/f0.mp4" webkit-playsinline="true">
+			<source type="video/mp4" />
+		</video>
+		<div class="startBtn">
+			<div class="startBtnMask"></div>
+			<!--直播封面-->
+			<div class="btnPlay videobtn0"><img src="images/play.png"></div>
+			<!--播放按钮-->
+		</div>
+		<div class="videoControl">
+			<div class="btnPlay videobtn"><img src="images/play.png"></div>
+			<div class="btnPause videobtn"><img src="images/pause.png"></div>
+			<div class="bottomControl">
+				<div class="current"></div>
+				<div class="progress">
+					<span class="bufferBar"></span>
+					<span class="timeBar"></span>
+					<span class="currentPlay"></span>
+				</div>
+				<div class="duration"></div>
+			</div>
+		</div>
+		<div class="videoloading" style="display: none;"><img src="images/buffer.png"></div>
+		<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+		<script src="videoPlay0.js"></script>
+</body>
+
+</html>

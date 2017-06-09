@@ -1,0 +1,23 @@
+测试链接
+安卓
+http://solomotest4.3g.qq.com/book_res/event/TemplateOfAnswerByMonthlyVIP/adr/index.html?act_f=170518&tpc=302738
+ios
+https://ptsolomo.reader.qq.com/book_res/event/TemplateOfAnswerByMonthlyVIP/ios/index.html?act_f=170518&tpc=302738
+
+正式ios
+https://yuedu.reader.qq.com/event/TemplateOfAnswerByMonthlyVIP/ios/index.html?act_f=170518&tpc=327406
+正式安卓
+http://iyuedu.qq.com/event/TemplateOfAnswerByMonthlyVIP/adr/index.html?act_f=170518&tpc=327406
+
+1、cdn静态资源库
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.2.4/vue.min.js"></script>
+2、平台判断
+<html name='main' platform="ios">
+let el = document.querySelector('html');
+self.urlis = el.getAttribute('platform');
+
+3、ios开通包月返回不能刷新页面，用弹框来重发请求
+4、ios h5内跳阅读页是跳动第一章，去不到阅读记录
+5、起点账号无法开通包月

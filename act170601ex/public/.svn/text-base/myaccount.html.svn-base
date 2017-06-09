@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="description" content="QQ阅读微信公众号" />
+<meta name="format-detection" content="telephone=no,email=no">
+<title>我的账户</title>
+<script>
+    var scale = 1 / devicePixelRatio;
+    //document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<link href="css/account.css" rel="stylesheet" type="text/css">
+</head>
+<body class="greybg">
+<div class="login">
+    <img src="img/logo.png" alt="海量原著，想读就读" class="logo">
+    <a href="javascript:MyAccount.loginQQ();" class="qqlogin">QQ登录</a>
+    <!--<a href="javascript:MyAccount.loginWX();" class="wxlogin">微信登录</a>-->
+</div>
+<script type="text/javascript" src="http://solomotest4.3g.qq.com/book_res/event/common/en.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="myaccount.js"></script>
+<script type="text/javascript" src="js/cfoot.js"></script>
+<script type="text/javascript" src="js/zbook.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript"
+		src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://midas.gtimg.cn/h5pay/js/api/midas.js"></script>		
+</body>
+</html>

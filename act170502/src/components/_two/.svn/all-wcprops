@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 109
-/mqq/mqq_book_rep/!svn/ver/295608/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two
+/mqq/mqq_book_rep/!svn/ver/297056/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two
 END
 ButtonRaised.vue
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/mqq/mqq_book_rep/!svn/ver/295407/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two/ButtonRaised.vue
+/mqq/mqq_book_rep/!svn/ver/296379/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two/ButtonRaised.vue
 END
 MaskPrize.vue
 K 25
@@ -25,17 +25,23 @@ FixedFooterFive.vue
 K 25
 svn:wc:ra_dav:version-url
 V 129
-/mqq/mqq_book_rep/!svn/ver/295608/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two/FixedFooterFive.vue
+/mqq/mqq_book_rep/!svn/ver/297056/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two/FixedFooterFive.vue
 END
 MaskConfirm.vue
 K 25
 svn:wc:ra_dav:version-url
 V 125
-/mqq/mqq_book_rep/!svn/ver/295475/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two/MaskConfirm.vue
+/mqq/mqq_book_rep/!svn/ver/296379/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two/MaskConfirm.vue
 END
 FixedFooter.vue
 K 25
 svn:wc:ra_dav:version-url
 V 125
 /mqq/mqq_book_rep/!svn/ver/295128/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two/FixedFooter.vue
+END
+RulesPlain.vue
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/mqq/mqq_book_rep/!svn/ver/297056/book_proj/trunk/src/BookEventFront/WebContent/act170502/src/components/_two/RulesPlain.vue
 END

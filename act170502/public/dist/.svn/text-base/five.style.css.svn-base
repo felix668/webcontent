@@ -608,20 +608,12 @@ img, input {
   line-height: 0.94rem;
   border-radius: 0.08rem;
   cursor: pointer;
-  -webkit-transition-property: -webkit-transform box-shadow;
-  transition-property: -webkit-transform box-shadow;
-  transition-property: transform box-shadow;
-  transition-property: transform box-shadow, -webkit-transform box-shadow;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
   background: #3fbc82;
   box-shadow: 0 0.04rem 0 #31a06c;
 }
 .ButtonRaisedFive[data-v-2de87212]:active {
   background: #31a06c;
-  box-shadow: 0 0 0 #31a06c;
-  -webkit-transform: translate3d(0, 0.04rem, 0);
-          transform: translate3d(0, 0.04rem, 0);
+  box-shadow: 0 0.04rem 0 #31a06c;
 }
 
 .MaskPrize[data-v-4691a638] {
@@ -722,20 +714,62 @@ img, input {
   line-height: 0.94rem;
   border-radius: 0.08rem;
   cursor: pointer;
-  -webkit-transition-property: -webkit-transform box-shadow;
-  transition-property: -webkit-transform box-shadow;
-  transition-property: transform box-shadow;
-  transition-property: transform box-shadow, -webkit-transform box-shadow;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
   background: #3fbc82;
   box-shadow: 0 0.04rem 0 #31a06c;
 }
 .ButtonRaised[data-v-71db7edc]:active {
   background: #31a06c;
-  box-shadow: 0 0 0 #31a06c;
-  -webkit-transform: translate3d(0, 0.04rem, 0);
-          transform: translate3d(0, 0.04rem, 0);
+  box-shadow: 0 0.04rem 0 #31a06c;
+}
+
+.Rules[data-v-42479fb6] {
+  width: 100%;
+  background: #28202e;
+  overflow: hidden;
+}
+.Rules .rContent[data-v-42479fb6] {
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.Rules .rContent .title[data-v-42479fb6] {
+  margin-top: 0.78rem;
+  margin-bottom: 0.34rem;
+  font-size: 0.32rem;
+  font-weight: 600;
+  text-align: center;
+  color: #815e55;
+}
+.Rules .rContent .text[data-v-42479fb6] {
+  width: 100%;
+  overflow: hidden;
+}
+.Rules .rContent .text p[data-v-42479fb6] {
+  position: relative;
+  padding-left: 0.76rem;
+  padding-right: 0.36rem;
+  font-size: 0.24rem;
+  line-height: 0.4rem;
+  color: #815e55;
+  overflow: hidden;
+}
+.Rules .rContent .text p .no_[data-v-42479fb6] {
+  position: absolute;
+  left: 0.36rem;
+  top: 0rem;
+  font-size: 0.24rem;
+  line-height: 0.4rem;
+  text-align: center;
+  color: #815e55;
+}
+.Rules .rContent .text p a[data-v-42479fb6] {
+  color: #cfb268;
+}
+.Rules .rContent .copyright[data-v-42479fb6] {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #815e55;
 }
 
 #root[data-v-06472bea] {
@@ -748,33 +782,47 @@ img, input {
   width: 100%;
   overflow: hidden;
 }
+#root .main .btn_to_login[data-v-06472bea] {
+  position: relative;
+  width: 6.3rem;
+  height: 0.92rem;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 0.1rem;
+  background: #67c890;
+  font-size: 0.32rem;
+  font-weight: 600;
+  color: white;
+  line-height: 0.92rem;
+  text-align: center;
+}
 #root .main .bbody[data-v-06472bea] {
   position: relative;
   width: 100%;
-  height: 13.34rem;
+  height: 11.85rem;
   overflow: hidden;
 }
 #root .main .bbody .block[data-v-06472bea] {
   position: relative;
-  margin-top: 4.23rem;
+  margin-top: 4rem;
   width: 100%;
   height: 7.08rem;
 }
 #root .main .bbody .block .cover[data-v-06472bea] {
-  width: 2.56rem;
-  height: 3.4rem;
+  width: 2rem;
+  height: 2.67rem;
   margin: auto;
-  margin-bottom: 0.34rem;
+  margin-bottom: 0.25rem;
   box-shadow: 0 0.04rem 0.4rem #a99f95;
 }
 #root .main .bbody .block .title[data-v-06472bea] {
   margin-bottom: 0.12rem;
   text-align: center;
-  font-size: 0.32rem;
+  font-size: 0.36rem;
 }
 #root .main .bbody .block .author[data-v-06472bea] {
-  margin-bottom: 0.28rem;
-  font-size: 0.26rem;
+  margin-bottom: 0.36rem;
+  font-size: 0.3rem;
   text-align: center;
 }
 #root .main .bbody .block .intro[data-v-06472bea] {
@@ -786,32 +834,41 @@ img, input {
 #root .main .bbody .block .intro .cell[data-v-06472bea] {
   display: table-cell;
   width: 100%;
-  height: 1.6rem;
+  /* height: 1.6rem;*/
   text-align: center;
   vertical-align: middle;
-  font-size: 0.24rem;
-  line-height: 0.4rem;
+  font-size: 0.3rem;
+  line-height: 0.34rem;
+  color: #666666;
 }
-#root .main .rounded[data-v-06472bea] {
+#root .main .bbody .block .rounded[data-v-06472bea] {
   display: table;
+  text-align: center;
   height: 0.46rem;
   line-height: 0.46rem;
   margin: auto;
-  padding: 0 0.36rem;
-  background: #c08f63;
+  margin-top: 0.2rem;
+  margin-bottom: 0.45rem;
   border-radius: 0.23rem;
   font-size: 0.3rem;
+  overflow: hidden;
 }
-#root .main .rounded .span0[data-v-06472bea] {
+#root .main .bbody .block .rounded .span0[data-v-06472bea] {
+  float: left;
+  font-size: 0.32rem;
+  margin-right: 0.18rem;
   text-decoration: line-through;
 }
-#root .main .rounded .span1[data-v-06472bea] {
-  color: #bf3117;
+#root .main .bbody .block .rounded .span1[data-v-06472bea] {
+  float: left;
+  font-size: 0.36rem;
+  color: #fa554e;
 }
 
 .FooterFixed[data-v-c1569042] {
   width: 100%;
-  height: 0;
+  height: 1.3rem;
+  background: #28202e;
 }
 .FooterFixed .fixed[data-v-c1569042] {
   position: fixed;

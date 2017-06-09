@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>领QQ阅读红包</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+</script>
+<style type="text/css">
+	body,p,ul,li{margin:0;padding:0;}
+	img{border:none;}
+	ul,li{list-style:none;}
+	a{text-decoration:none;-webkit-touch-callout:none;}
+	body{background: #1e1b20;font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;-webkit-user-select:none;text-align: center;}
+	.share img{width: 100%;display: block;}
+	.share p{color: #797987;font-size: .26rem}
+	.btn{display: block;width: 5.52rem;height: 1.16rem;background:url(images/loadbtn.png) no-repeat;background-size:100% auto;margin:0 auto;-webkit-animation:pop 1s infinite alternate;animation:pop 1s infinite alternate;}
+	.sharetit{position: absolute;top:2.5rem;left:0;}
+	.gifts{position: absolute;top:5.2rem;left:0;width:100%;display: -webkit-flex;display:flex;-webkit-align-items:center;-webkit-justify-content:center;align-items:center;justify-content:center;}
+	.gifts li{margin:0 .1rem;}
+	.gifts p{font-size: .24rem;color: #949494}
+	.gifts img{width: 1.88rem}
+	@-webkit-keyframes pop{
+		0%{-webkit-transform:scale(1);opacity: .8}
+		100%{-webkit-transform:scale(1.06);opacity: 1}
+	}
+	@keyframes pop{
+		0%{-webkit-transform:scale(1);opacity: .8}
+		100%{-webkit-transform:scale(1.06);opacity: 1}
+	}
+	/*弹窗*/
+	.mask{position:fixed;top:0;left:0;width: 100%;height: 100%;background:rgba(0,0,0,0.7);-webkit-align-items:center;-webkit-justify-content:center;align-items:center;justify-content:center;z-index: 100;display:none;}
+	.show{display: -webkit-flex;display:flex;}
+	.tiparea{width:6.4rem;background: #fff;border-radius:0.04rem;text-align: center;color: #444;font-size: .28rem;line-height:.4rem;position: relative;}
+	.tiparea h3{font-weight: normal;padding:.26rem 0;border-bottom: 1px solid #e3e4e6;font-size: .28rem}
+	.tiparea p{padding: 0.64rem 0}
+	.btns{display: -webkit-flex;-webkit-flex:1;display: flex;flex:1;width: 100%}
+	.btns span{height: 1rem;display: block;width: 100%;line-height: 1rem;-webkit-box-sizing:border-box;box-sizing:border-box;}
+	.btns .certain{background: #3d8dcf;color: #fff;}
+	.btns .cancle{color: #444;border-top: 0.01rem solid #e3e4e6;}
+</style>
+</head>
+<body>
+<div class="share">
+	<img src="images/sharepic.jpg" alt="领QQ阅读红包">
+	<img src="images/t2.png" class="sharetit">
+	<ul class="gifts">
+		<li>
+			<img src="images/gift2.png" alt="《爵迹》电影票">
+			<p>《爵迹》电影票</p>
+		</li>
+		<li>
+			<img src="images/gift1.png" alt="《爵迹》签名照">
+			<p>《爵迹》签名照</p>
+		</li>
+		<li>
+			<img src="images/gift0.png" alt="200阅券" id="ticket">
+			<p id="txt">200阅券</p>
+		</li>
+	</ul>
+	<a href="javascript:" class="btn" id="btn"></a>
+	<p>活动规则请参考具体活动页面</p>
+</div>
+<div class="mask">
+	<div class="tiparea">
+		<h3>下载QQ阅读,畅读海量小说</h3>
+		<p>如果还未安装QQ阅读，你可以：</p>
+		<div class="btns">
+			<span class="cancle">取消</span>
+			<span class="certain">下载QQ阅读</span>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="welcome.js"></script>
+<script type="text/javascript" src="http://iyuedu.qq.com/event/common/en.js"></script>
+<script type="text/javascript" data-main="http://iyuedu.qq.com/event/common/ne.js" src="http://iyuedu.qq.com/event/common/require.js"></script>
+
+
+</body>
+</html>

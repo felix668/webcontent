@@ -720,20 +720,12 @@ img, input {
   line-height: 0.94rem;
   border-radius: 0.08rem;
   cursor: pointer;
-  -webkit-transition-property: -webkit-transform box-shadow;
-  transition-property: -webkit-transform box-shadow;
-  transition-property: transform box-shadow;
-  transition-property: transform box-shadow, -webkit-transform box-shadow;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
   background: #3fbc82;
   box-shadow: 0 0.04rem 0 #31a06c;
 }
 .ButtonRaisedFive[data-v-2de87212]:active {
   background: #31a06c;
-  box-shadow: 0 0 0 #31a06c;
-  -webkit-transform: translate3d(0, 0.04rem, 0);
-          transform: translate3d(0, 0.04rem, 0);
+  box-shadow: 0 0.04rem 0 #31a06c;
 }
 
 .MaskPrize[data-v-4691a638] {
@@ -834,18 +826,60 @@ img, input {
   line-height: 0.94rem;
   border-radius: 0.08rem;
   cursor: pointer;
-  -webkit-transition-property: -webkit-transform box-shadow;
-  transition-property: -webkit-transform box-shadow;
-  transition-property: transform box-shadow;
-  transition-property: transform box-shadow, -webkit-transform box-shadow;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
   background: #3fbc82;
   box-shadow: 0 0.04rem 0 #31a06c;
 }
 .ButtonRaised[data-v-71db7edc]:active {
   background: #31a06c;
-  box-shadow: 0 0 0 #31a06c;
-  -webkit-transform: translate3d(0, 0.04rem, 0);
-          transform: translate3d(0, 0.04rem, 0);
+  box-shadow: 0 0.04rem 0 #31a06c;
+}
+
+.Rules[data-v-42479fb6] {
+  width: 100%;
+  background: #28202e;
+  overflow: hidden;
+}
+.Rules .rContent[data-v-42479fb6] {
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.Rules .rContent .title[data-v-42479fb6] {
+  margin-top: 0.78rem;
+  margin-bottom: 0.34rem;
+  font-size: 0.32rem;
+  font-weight: 600;
+  text-align: center;
+  color: #815e55;
+}
+.Rules .rContent .text[data-v-42479fb6] {
+  width: 100%;
+  overflow: hidden;
+}
+.Rules .rContent .text p[data-v-42479fb6] {
+  position: relative;
+  padding-left: 0.76rem;
+  padding-right: 0.36rem;
+  font-size: 0.24rem;
+  line-height: 0.4rem;
+  color: #815e55;
+  overflow: hidden;
+}
+.Rules .rContent .text p .no_[data-v-42479fb6] {
+  position: absolute;
+  left: 0.36rem;
+  top: 0rem;
+  font-size: 0.24rem;
+  line-height: 0.4rem;
+  text-align: center;
+  color: #815e55;
+}
+.Rules .rContent .text p a[data-v-42479fb6] {
+  color: #cfb268;
+}
+.Rules .rContent .copyright[data-v-42479fb6] {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #815e55;
 }

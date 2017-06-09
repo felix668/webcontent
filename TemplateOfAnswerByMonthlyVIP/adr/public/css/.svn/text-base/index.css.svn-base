@@ -1,0 +1,64 @@
+body,div,p,h4,ul,li{margin:0;padding:0;}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+em,i,span{ font-style:normal; font-weight: normal;}
+body{font-family:"Microsoft YaHei",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none; font-size: .24rem;background-repeat: repeat-y;  color: #8a5519;}
+/*===========main==========*/
+.banner{ display: block; width: 100%;}
+.btnbox{ position: relative; z-index: 1;  margin: .6rem auto .54rem; }
+.btn{ width: 5.98rem; height: 1.1rem;font-size: .36rem; text-align: center; line-height: 1rem; background-repeat: no-repeat; background-size: 100% auto; margin: 0 auto;}
+.notice{ position: absolute; left: 0 ;bottom:-.4rem; right: 0; font-size: .2rem; text-align: center; line-height: .4rem; color: #fc7258;}
+.rulebox{width: 6.34rem; padding: .28rem .28rem .4rem; margin: 0 auto;background: url(../images/card_bg.png) repeat-y; background: 100% auto; border-radius: .1rem; }
+.rule .rule_tt{ width: 2.87rem; height: .36rem; display: block; margin:.22rem auto .4rem;}
+.rule li{ font-size: .28rem; line-height:.48rem; position: relative; z-index: 1; padding-left: .48rem;  margin-bottom: .08rem}
+.rule li span{ position: absolute; left: 0; top: .09rem; width: .3rem; height: .3rem; text-align: center; line-height: .3rem; font-size: .24rem; border-radius: 100%; background: #6b4316; color: #fff;}
+.logo{ width: 2.3rem; height: .86rem; margin: .28rem auto; display: block;}
+.vip_privilege h4{ font-size: .28rem; margin:.22rem auto .4rem;}
+.vip_privilege img{ display: block; width: 6rem; margin: 0 auto .3rem;}
+.vip_privilege li{ font-size: .28rem; line-height: .48rem; margin: 0 0 .06rem;}
+/*===============answerbox===============*/
+.answerbox li{ background-image: url(../images/card_bg.png); }
+/*============result============*/
+.resultpage{position: fixed; z-index: 11; left: 0; top: 0; width: 100%; height: 100%;}
+.resultbox{position: absolute; z-index: 1; left: .3rem; top: 1rem; right: .3rem; bottom:.7rem;border-radius: .1rem; background-image: url(../images/card_bg.png);}
+.resultbox img{  width: 2.12rem; display: block; margin: .6rem auto .3rem;}
+.resultbox h4{ text-align: center; font-size: .32rem; line-height: .48rem; color: #fc7258;}
+.answerok p{ font-size: .2rem;text-align: center; color: #9b6221;}
+.answerno{text-align: center; font-size: .32rem; line-height: .48rem; padding: 0 .34rem; color: #a9977c;}
+.quersour{ margin-top: .8rem; width: 6.32rem; height: .68rem; line-height: .6rem; font-size: .28rem; padding-left: .3rem; background-size: 100% 100%; background-repeat: no-repeat; margin-bottom: .6rem; background-image: url(../images/resulttt.png); color: #fcefd4;}
+.Resbooklist{ padding: 0 .6rem; display: -webkit-flex;-webkit-align-items:center;-webkit-justify-content:center; }
+.Resbooklist li{ text-align: center;flex-grow:1; margin-right: 1.1rem;}
+.Resbooklist li:last-child{margin-right: 0;}
+.Resbooklist li img{width: 1.68rem; height: 2.24rem; display: block; margin: 0 auto .14rem; box-shadow: 0 1px 10px rgba(0,0,0,.2)}
+.Resbooklist li p{font-size: .24rem; line-height:.36rem; width: 1.68rem; margin: 0 auto;display: -webkit-box;-webkit-line-clamp: 1;overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical; text-align: left; color: #786e5d;}
+.Resbooklist li p.bookname{color: #000;}
+.hua{ position: absolute; left: .24rem; top: 0;right:.24rem; height: .74rem; background: url(../images/huawen.png) no-repeat; background-size:1.14rem auto;}
+.hua:after{content: ''; position: absolute; top: 0; right: 0; width: 1.14rem; height: .74rem;background: url(../images/huawen.png) no-repeat; background-size:1.14rem auto; -webkit-transform:rotateY(180deg);}
+/*===========tank===============*/
+.mask{position:fixed;top:0;left:0;width: 100%;height: 100%;background:rgba(0,0,0,0.64);-webkit-align-items:center;-webkit-justify-content:center;z-index: 1000;display:-webkit-flex;}
+.tiparea{width: 5.2rem;background: url(../images/card_bg.png) repeat-y;background-size: 100% auto; border-radius: .1rem;position: relative; padding: 1.1rem 0 .2rem;}
+.gifticon{ position: absolute; left: 50%; top: -.66rem; width: 2.86rem; height: 1.72rem; margin-left: -1.43rem; background: url(../images/tk_prizeicon.png) no-repeat; background-size: 100% 100%; }
+.tiparea p{ font-size: .28rem; line-height: .48rem; margin:.1rem .3rem .34rem;color: #6b4316; text-align: center;}
+.tiparea .closbtn{ display: block; margin: 0 auto; background:url(../images/btnclose.png) no-repeat; background-size: 100% 100%; width: 3.28rem; height: .96rem; line-height: .96rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

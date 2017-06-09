@@ -1,0 +1,1823 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  scopeId,
+  cssModules
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  // inject cssModules
+  if (cssModules) {
+    var computed = Object.create(options.computed || null)
+    Object.keys(cssModules).forEach(function (key) {
+      var module = cssModules[key]
+      computed[key] = function () { return module }
+    })
+    options.computed = computed
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+    function recalc() {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        // console.log(clientWidth)
+        clientWidth = clientWidth > 750 ? 750 : clientWidth;
+        docEl.style.fontSize = clientWidth / 7.5 + 'px';
+    };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(10),
+  /* template */
+  __webpack_require__(21),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/lichunxia/Desktop/activity/BookEventFront/WebContent/act170602/src/app.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] app.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-05615a09", Component.options)
+  } else {
+    hotAPI.reload("data-v-05615a09", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(1);
+
+var _index = __webpack_require__(2);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+Vue.component('app', __webpack_require__(3));
+var root = new Vue({
+	el: '#root',
+	template: '<app></app>'
+});
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+  data: function data() {
+    return {};
+  },
+  methods: {
+    closemask: function closemask() {
+      this.$parent.showbrowers = false;
+    }
+  }
+};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+	data: function data() {
+		return {};
+	},
+	props: ['show'],
+	mounted: function mounted() {},
+	methods: {
+		closemask: function closemask() {
+			this.show = false;
+			console.log(self.show);
+		},
+		downapp: function downapp() {
+			N.downLoad(null, '10026762');
+			this.show = false;
+		}
+	}
+};
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	data: function data() {
+		return {};
+	},
+	mounted: function mounted() {}
+};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	props: ['show', 'type', 'prizety', 'pname', 'pinfo', 'pimg', 'shareinfo', 'sharherf', 'plag'],
+	data: function data() {
+		return {};
+	},
+	methods: {
+		closemask: function closemask() {
+			this.$parent.showprize = false;
+		},
+		share: function share() {
+			var self = this;
+			this.$parent.showprize = false;
+			console.log(self.type);
+			if (self.type == -2) {
+				Local.shareTopic(self.shareinfo.url, self.shareinfo.cover, self.shareinfo.title, self.shareinfo.desc, 1);
+			}
+		},
+		goadress: function goadress() {
+			var self = this;
+			this.$parent.showprize = false;
+			if (self.plag == 'adr') {
+				Local.go('http://iyuedu.qq.com/event/act161002/adr/contact.html');
+			} else {
+				Local.openInside('https://yuedu.reader.qq.com/event/act161002/ios/contact.html');
+			}
+		}
+	}
+
+};
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	props: ['show', 'retype', 'quannum', 'book', 'plag', 'isshelf', 'cid'],
+	data: function data() {
+		return {};
+	},
+	methods: {
+		goread: function goread(bid, cid) {
+			var self = this;
+			self.closemask();
+			if (self.isshelf) {
+				Local.goRead(bid, cid);
+				//self.$parent.read=true;
+				//ABook.gotoRead(bid);
+			} else {
+				console.log(bid);
+				Local.reqaObj(server() + "pkg170602/addshelf", function (data) {
+					console.log(data);
+					if (self.plag == "adr") {
+						Local.addToShelf(bid);
+						self.$parent.inshelf = true;
+						Local.goRead(bid, cid);
+					} else {
+						//后台提供给你个接口，回调里再执行这个操作吧我提供给你个接口，回调里再执行这个操作吧
+						Local.addToShelfBooks(JSON.stringify(self.book));
+						self.$parent.inshelf = true;
+						Local.goRead(bid, cid);
+					}
+				}, [], function () {
+					Local.showToast("网络异常，请稍候重试");
+				}, 1);
+			}
+			forceLog(param("act_f"), "FLTX_goread");
+		},
+		yilingqu: function yilingqu() {
+			var self = this;
+			self.$parent.tokenpicked = 1;
+			self.$parent.showrecevie = false;
+		},
+		closemask: function closemask() {
+			var self = this;
+			self.$parent.showrecevie = false;
+		}
+	}
+
+};
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	components: {
+		maskLoading: __webpack_require__(17),
+		maskOver: __webpack_require__(18),
+		maskRecevie: __webpack_require__(20),
+		maskPrize: __webpack_require__(19),
+		maskDownload: __webpack_require__(16),
+		maskBrowes: __webpack_require__(15)
+	},
+	data: function data() {
+		return {
+			loading: false,
+			over: false, //活动结束
+			isLogin: false, //登录
+			isVip: false,
+			urlis: 'adr',
+			inshelf: false, //是否加书架addshelf
+			bookinfo: [{
+				author: "风凌天下",
+				title: "我是至尊",
+				intro: "药不成丹只是毒；人不成神终成空！天道有缺，人间不平；红尘世外，魍魉横行；哀尔不幸，恨而不争；规则之外，吾来执行。",
+				bid: "15986994"
+			}],
+			read: false, //是否阅读到第三章
+			cid: 1, //阅读章节数
+			showrecevie: false, //领取弹框
+			tokenpicked: 0, //领取弹框类型-3未加书架并阅读至第三章，－1已抢光，－2同一设备或同一账号只能领取一次，0未领取
+			recevieNum: 0, //领取书币或阅点数
+			showprize: false, //抽奖弹框
+			masktype: 0, //
+			draw: true,
+			shared: false, //分享过
+			lotterypicked: false, //抽过奖
+			prizeNum: 0, //奖品
+			prizename: ['1000', '实体出版书', '20成长值', '《傲世九重天》', 'QQ阅读公仔', '《异世邪君》'], //名称
+			prizeinfo: '', //使用规则
+			prizeimg: ['../adr/public/images/quan.png', '../adr/public/images/book1.png', '../adr/public/images/chengzhangzhi.png', '../adr/public/images/book2.png', '../adr/public/images/gongzai.png', '../adr/public/images/book3.png'], //奖品图片
+			shareObj: {
+				url: "",
+				cover: "",
+				title: "玄幻宗师风凌天下",
+				desc: "新书送好礼，百万书币/阅点等你拿！"
+			},
+			state: 'paused',
+			loaded: false,
+			ticked: '',
+			isguest: false, //是否游客
+			evnios: false,
+			showbrowers: false,
+			downshow: false,
+			freebook: []
+		};
+	},
+	watch: {
+		state: function state(_state) {
+			var _this = this;
+
+			var self = this;
+			switch (_state) {
+				case 'loading':
+					this.$refs.video.load();
+					this.$refs.video.addEventListener('pause', function () {
+						if (_this.state === 'playing') {
+							_this.state = 'paused';
+						}
+					});
+
+					this.$refs.video.addEventListener('loadeddata', function () {
+						self.loaded = true;
+					});
+					break;
+				case 'ready':
+					if (this.loaded) {
+						this.$refs.video.pause();
+						this.$refs.video.currentTime = 0;
+					};
+					break;
+				case 'playing':
+					self.$refs.video.play();
+					break;
+				case 'paused':
+					this.$refs.video.pause();
+					break;
+			}
+		}
+	},
+	methods: {
+		initpage: function initpage() {
+			var self = this;
+			var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+			if (isAndroid) {
+				self.evnios = false;
+			} else {
+				self.evnios = true;
+			};
+			self.urlis = document.querySelector('html').getAttribute('platform');
+			if (self.urlis == 'adr') {
+				Local.init();
+				self.shareObj.desc = "新书送好礼，百万书币等你拿！";
+			} else {
+				self.shareObj.desc = "新书送好礼，百万阅点等你拿！";
+			}
+			self.shareObj.url = front() + "act170602/com/index.html?tf=1&act_f=170609";
+			self.shareObj.cover = front() + "act170602/adr/public/images/cover.jpg";
+			if (self.urlis == 'ios') console.log(self.shareObj.desc);
+			Local.reqaObj(server() + "pkg170602/init", function (data) {
+				console.log(data);
+				self.loading = false;
+				if (data.code == -4) {
+					self.over = true;
+				}
+				self.isLogin = data.isLogin;
+				self.inshelf = data.inshelf;
+				self.read = data.read;
+				self.cid = data.cid;
+				self.tokenpicked = data.tokenpicked;
+				self.lotterypicked = data.lotterypicked;
+				self.shared = data.shared;
+				self.isguest = data.isguest;
+			}, [], function () {
+				Local.showToast("网络异常，请稍候重试");
+			}, 1);
+			forceLog(param("act_f"), "FLTXindex");
+		},
+		godetail: function godetail(bid) {
+			var self = this;
+			if (self.urlis == "com") {
+				self.gotoapp();
+			} else {
+				ABook.gotoDetail(bid);
+				forceLog(param("act_f"), "FLTX_godetail");
+			}
+		},
+		gotoread: function gotoread(bid, cid) {
+			var self = this;
+			if (self.urlis == "com") {
+				self.gotoapp();
+			} else {
+				if (self.isLogin) {
+					if (self.isguest) {
+						self.showrecevie = true;
+						self.recevietype = -4;
+					} else {
+						forceLog(param("act_f"), "FLTX_goread");
+						if (self.inshelf) {
+							Local.goRead(bid, cid);
+						} else {
+							console.log(bid);
+							Local.reqaObj(server() + "pkg170602/addshelf", function (data) {
+								console.log(data);
+								if (self.urlis == "adr") {
+									Local.addToShelf(self.bookinfo[0].bid);
+									Local.goRead(bid, cid);
+									self.inshelf = true;
+								} else {
+									//后台提供给你个接口，回调里再执行这个操作吧我提供给你个接口，回调里再执行这个操作吧
+									Local.addToShelfBooks(JSON.stringify(self.bookinfo));
+									Local.goRead(bid, cid);
+									self.inshelf = true;
+								}
+							}, [], function () {
+								Local.showToast("网络异常，请稍候重试");
+							}, 1);
+						}
+					}
+				} else {
+					Local.login();
+				}
+			}
+		},
+		receviedQuan: function receviedQuan() {
+			var self = this;
+			if (self.urlis == "com") {
+				self.gotoapp();
+			} else {
+				if (self.isLogin) {
+					if (self.isguest) {
+						self.showrecevie = true;
+						self.recevietype = -4;
+					} else {
+						if (self.tokenpicked == 0) {
+							Local.reqaObj(server() + "pkg170602/pick", function (data) {
+								console.log(data);
+								self.cid = data.cid;
+								if (data.code == -9) {
+									self.showrecevie = true;
+									self.recevietype = -1;
+									self.tokenpicked = -1;
+								} else if (data.code == -11) {
+									self.showrecevie = true;
+									self.recevietype = -3;
+								} else if (data.code == -10) {
+									self.showrecevie = true;
+									self.recevietype = -2;
+									self.tokenpicked = -2;
+								} else if (data.code == 0) {
+									self.showrecevie = true;
+									self.recevietype = 0;
+									self.tokenpicked = data.number;
+									self.recevieNum = data.number;
+								}
+							}, [], function () {
+								Local.showToast("网络异常，请稍候重试");
+							}, 1);
+						} else if (self.tokenpicked == -1 || self.tokenpicked == -2) {
+							self.showrecevie = true;
+							self.recevietype = self.tokenpicked;
+						}
+					}
+				} else {
+					Local.login();
+				}
+			}
+		},
+		gocontact: function gocontact() {
+			var self = this;
+			if (self.isLogin) {
+				if (self.isguest) {
+					self.showrecevie = true;
+					self.recevietype = -4;
+				} else {
+					if (self.urlis == 'adr') {
+						Local.go('http://iyuedu.qq.com/event/act161002/adr/contact.html');
+					} else {
+						Local.openInside('https://yuedu.reader.qq.com/event/act161002/ios/contact.html');
+					}
+				}
+			} else {
+				Local.login();
+			}
+		},
+		zhuan: function zhuan(obj, num) {
+			obj.css('-webkit-transform', 'rotate(' + parseInt(1830 + num * 60) + 'deg)');
+		},
+		prizedraw: function prizedraw(e) {
+			//
+			var $cur = $(e.currentTarget);
+			var self = this;
+			var timer = null;
+			if (self.urlis == "com") {
+				self.gotoapp();
+			} else {
+				if (self.isLogin) {
+					if (self.isguest) {
+						self.showrecevie = true;
+						self.recevietype = -4;
+					} else {
+						if (self.shared) {
+							//分享过
+							if (self.lotterypicked) {
+								//领过奖
+								self.masktype = -1;
+								self.showprize = true;
+							} else {
+								//未领奖，请求奖品类型
+								if (self.draw) {
+									self.draw = false;
+									Local.reqaObj(server() + "pkg170602/lottery", function (data) {
+										console.log(data);
+										if (data.code < 0) {
+											Local.showToast(data.msg);
+										} else {
+											self.draw = false;
+											self.prizeNum = data.prizeid;
+											self.masktype = 0;
+											self.zhuan($('.prizebtn'), self.prizeNum);
+											timer = setTimeout(function () {
+												self.showprize = true;
+												self.lotterypicked = true;
+												self.draw = true;
+												Local.reqaObj(server() + "pkg170602/addshelf", function (data) {
+													console.log(data);
+													if (self.urlis == "adr") {
+														Local.addToShelf(self.freebook[0].bid);
+														Local.goRead(self.freebook[0].bid, cid);
+													} else {
+														//后台提供给你个接口，回调里再执行这个操作吧我提供给你个接口，回调里再执行这个操作吧
+														Local.addToShelfBooks(JSON.stringify(self.freebook));
+														Local.goRead(self.freebook[0].bid, cid);
+													}
+												}, [], function () {
+													Local.showToast("网络异常，请稍候重试");
+												}, 1);
+												//Local.addToShelfBooks((0, _stringify2.default)(self.freebook));
+												timer = null;
+											}, 4000);
+											if (self.prizeNum == 1 || self.prizeNum == 4) {
+												self.prizeinfo = "";
+											}
+											if (self.prizeNum == 0) {
+												self.prizeinfo = "";
+											}
+											if (self.prizeNum == 2) {
+												self.prizeinfo = "可以去我的等级查看";
+											}
+											if (self.prizeNum == 3 || self.prizeNum == 5) {
+												self.prizeinfo = "限免两天，书已自动加入书架";
+												if (self.prizeNum == 3) {
+													self.freebook = [{
+														author: "风凌天下",
+														title: "傲世九重天",
+														intro: "傲世九重天",
+														bid: "462524"
+													}];
+												} else if (self.prizeNum == 5) {
+													self.freebook = [{
+														author: "异世邪君",
+														title: "异世邪君",
+														intro: "异世邪君",
+														bid: "472518"
+													}];
+												}
+											}
+										}
+									}, [], function () {
+										Local.showToast("网络异常，请稍候重试");
+									}, 1);
+									// forceLog(param('act_f'),'choujiang');
+								}
+							}
+						} else {
+							//未分享
+							self.masktype = -2;
+							self.showprize = true;
+						}
+					}
+				} else {
+					Local.login();
+				}
+			}
+		},
+		PLAY: function PLAY(e) {
+			forceLog(param("act_f"), "FLTX_video");
+			e.stopPropagation();
+			var self = this;
+			if (this.state === 'paused') {
+				self.state = 'playing';
+				this.$refs.video.play();
+			}
+		},
+		PAUSE: function PAUSE() {
+			if (this.$refs.video.ended) {
+				this.$refs.video.play();
+			} else {
+				this.state = 'paused';
+			};
+		},
+		onPlayerEnded: function onPlayerEnded() {
+			this.state = 'paused';
+		},
+		sharefn: function sharefn(e) {
+			var self = this;
+			//let $cur = $(e.currentTarget);
+			if (self.urlis == "com") {
+				self.gotoapp();
+			} else {
+				if (self.isLogin) {
+					//
+					if (self.isguest) {
+						self.showrecevie = true;
+						self.recevietype = -4;
+					} else {
+						Local.shareTopic(self.shareObj.url, self.shareObj.cover, self.shareObj.title, self.shareObj.desc, 1);
+					}
+				} else {
+					Local.login();
+				}
+				//forceLog(param('act_f'),'fenxiangbtn');
+			}
+		},
+		gotoapp: function gotoapp() {
+			var self = this;
+			S.open(function (installStat, plat) {
+				if (env.vw == 'wb') {
+					self.showbrowers = true;
+				} else {
+					if (installStat) {
+						if (env.pt == "adr") {
+							N.openPage(front() + "act170602/adr/index.html?act_f=170609");
+						} else if (env.vw == "wx" && env.pt == "ios") {
+							N.openPage(front() + "act170602/ios/index.html?act_f=170609");
+							// setTimeout(function(){
+							// 	self.downshow=true;
+							// }, 2000);
+							// setTimeout(function(){
+							// 	self.downshow=false;
+							// }, 5000);
+						} else {
+							N.openPage(front() + "act170602/ios/index.html?act_f=170609");
+						}
+					} else {
+						self.downshow = true; //显示下载弹窗
+					}
+				}
+				//forceLog(param("act_f"),"170409_openBtn"+env.pt);
+			});
+		}
+	},
+	created: function created() {
+		//页面初始化
+		var self = this;
+		self.initpage();
+		if (self.urlis != "com") {
+			window.afterShare = function () {
+				Local.reqaObj(server() + "pkg170602/share", function (data) {
+					self.shared = true;
+				}, [], function () {
+					Local.showToast("网络异常，请稍候重试");
+				}, 1);
+			};
+		};
+	}
+};
+
+
+window.initSNS = function () {
+	var text = env.pt == "ios" ? "新书送好礼，百万阅点等你拿！" : "新书送好礼，百万书币等你拿！";
+	var shareobj = {
+		cover: front() + "act170602/adr/public/images/cover.jpg",
+		url: window.location.href,
+		title: "玄幻宗师风凌天下",
+		desc: text
+	};
+	S.share(shareobj);
+};
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(13)
+
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(5),
+  /* template */
+  __webpack_require__(25),
+  /* scopeId */
+  "data-v-5a5a46ea",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/lichunxia/Desktop/activity/BookEventFront/WebContent/act170602/src/MaskBrowers.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] MaskBrowers.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5a5a46ea", Component.options)
+  } else {
+    hotAPI.reload("data-v-5a5a46ea", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(14)
+
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(6),
+  /* template */
+  __webpack_require__(26),
+  /* scopeId */
+  "data-v-6bc40f08",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/lichunxia/Desktop/activity/BookEventFront/WebContent/act170602/src/MaskDownload.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] MaskDownload.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6bc40f08", Component.options)
+  } else {
+    hotAPI.reload("data-v-6bc40f08", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(12)
+
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(7),
+  /* template */
+  __webpack_require__(23),
+  /* scopeId */
+  "data-v-4914f8f8",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/lichunxia/Desktop/activity/BookEventFront/WebContent/act170602/src/MaskLoading.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] MaskLoading.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4914f8f8", Component.options)
+  } else {
+    hotAPI.reload("data-v-4914f8f8", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(11)
+
+var Component = __webpack_require__(0)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(22),
+  /* scopeId */
+  "data-v-189b74c8",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/lichunxia/Desktop/activity/BookEventFront/WebContent/act170602/src/MaskOver.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] MaskOver.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-189b74c8", Component.options)
+  } else {
+    hotAPI.reload("data-v-189b74c8", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(8),
+  /* template */
+  __webpack_require__(24),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/lichunxia/Desktop/activity/BookEventFront/WebContent/act170602/src/MaskPrize.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] MaskPrize.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-588e2c64", Component.options)
+  } else {
+    hotAPI.reload("data-v-588e2c64", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(9),
+  /* template */
+  __webpack_require__(27),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/lichunxia/Desktop/activity/BookEventFront/WebContent/act170602/src/MaskRecevie.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] MaskRecevie.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-73096159", Component.options)
+  } else {
+    hotAPI.reload("data-v-73096159", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    attrs: {
+      "id": "root"
+    }
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (!_vm.showjutou),
+      expression: "!showjutou"
+    }],
+    staticClass: "wrap"
+  }, [_c('div', {
+    staticClass: "bammerbox"
+  }, [_c('div', {
+    staticClass: "tt"
+  }, [_vm._v("// 看新书 领" + _vm._s(_vm.evnios || _vm.urlis == 'ios' ? "阅点" : "书币") + " //")]), _c('div', {
+    staticClass: "newbook"
+  }, [_c('div', {
+    staticClass: "bookface",
+    on: {
+      "click": function($event) {
+        _vm.godetail(_vm.bookinfo[0].bid)
+      }
+    }
+  }), _vm._m(0)]), _c('a', {
+    staticClass: "addbtn",
+    on: {
+      "click": function($event) {
+        _vm.gotoread(_vm.bookinfo[0].bid, _vm.cid)
+      }
+    }
+  }, [_vm._v(_vm._s(_vm.inshelf ? '阅 读' : _vm.urlis == 'com' ? '去QQ阅读看书' : '加入书架去阅读'))]), _c('p', {
+    staticClass: "recevieNotice"
+  }, [_vm._v("将《我是至尊》加入书架并阅读至第三章 "), _c('br'), _vm._v("即可随机领取最高50" + _vm._s(_vm.evnios || _vm.urlis == 'ios' ? "阅点" : "书币") + "奖励")]), _c('a', {
+    staticClass: "recevied",
+    class: {
+      nodisabel: _vm.tokenpicked == -1 || _vm.tokenpicked > 0
+    },
+    on: {
+      "click": _vm.receviedQuan
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": '../adr/public/images/icon_quan.png'
+    }
+  }), _vm._v(_vm._s(_vm.tokenpicked > 0 ? '已领取' : _vm.tokenpicked == -1 ? '已抢光' : '立即领取'))]), _c('div', {
+    staticClass: "tt"
+  }, [_vm._v("// 风凌天下说新书 //")]), _c('div', {
+    staticClass: "videobox"
+  }, [_c('div', {
+    staticClass: "vvbox"
+  }, [_c('img', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.state === 'paused'),
+      expression: " state==='paused' "
+    }],
+    attrs: {
+      "src": '../adr/public/images/vidwoimg.jpg'
+    },
+    on: {
+      "click": function($event) {
+        _vm.PLAY($event)
+      }
+    }
+  }), _c('video', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.state === 'playing'),
+      expression: " state==='playing'"
+    }],
+    ref: "video",
+    attrs: {
+      "src": "../adr/public/images/2.mp4",
+      "preload": "metadata"
+    }
+  }, [_c('source', {
+    attrs: {
+      "type": "video/mp4"
+    }
+  })]), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.state === 'playing' || _vm.state === 'paused'),
+      expression: " state==='playing'||state==='paused' "
+    }],
+    staticClass: "glass",
+    on: {
+      "click": function($event) {
+        _vm.PAUSE()
+      },
+      "ended": _vm.onPlayerEnded
+    }
+  })])]), _c('div', {
+    staticClass: "tt"
+  }, [_vm._v("// 分享活动赢好礼 //")]), _c('p', {
+    staticClass: "shareNotice"
+  }, [_vm._v("首次分享活动可获一次抽奖机会")]), _c('div', {
+    staticClass: "sharebox"
+  }, [_c('a', {
+    staticClass: "sharebtn",
+    on: {
+      "click": function($event) {
+        _vm.sharefn($event)
+      }
+    }
+  }, [_vm._v(_vm._s(_vm.urlis == 'com' ? '去QQ阅读赢好礼' : '分享给好友'))]), _c('p', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.urlis != 'com'),
+      expression: "urlis!='com'"
+    }],
+    staticClass: "notice"
+  }, [_vm._v("分享成功后点击“返回QQ阅读”可获得抽奖机会")])]), _c('div', {
+    staticClass: "prizebox",
+    class: {
+      iosprize: _vm.evnios || _vm.urlis == 'ios'
+    }
+  }, [_c('div', {
+    staticClass: "prizebtn"
+  }), _c('a', {
+    staticClass: "startprize",
+    on: {
+      "click": function($event) {
+        _vm.prizedraw($event)
+      }
+    }
+  })]), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.urlis != 'com'),
+      expression: "urlis!='com'"
+    }],
+    staticClass: "rules"
+  }, [_c('p', [_vm._v("－活动规则－")]), _c('ul', [_vm._m(1), _c('li', [_c('span', [_vm._v("2.")]), _vm._v("将《我是至尊》加入书架、阅读至第3章，即可在活动页面领取随机数值" + _vm._s(_vm.evnios || _vm.urlis == 'ios' ? "阅点" : "书币") + "；数量有限，先到先得，同一账号及设备仅限领取一次；")]), _vm._m(2), _vm._m(3), _vm._m(4), _c('li', [_c('span', [_vm._v("6.")]), _vm._v("获得实物奖励将在30个工作日内寄出，请认真"), _c('a', {
+    on: {
+      "click": _vm.gocontact
+    }
+  }, [_vm._v("填写地址")]), _vm._v("。")])])]), _c('p', {
+    staticClass: "copyright"
+  }, [_c('img', {
+    attrs: {
+      "src": '../adr/public/images/logo.png'
+    }
+  })])])]), _c('mask-loading', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.loading),
+      expression: "loading"
+    }]
+  }), _c('mask-over', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.over),
+      expression: "over"
+    }]
+  }), _c('mask-prize', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showprize),
+      expression: "showprize"
+    }],
+    attrs: {
+      "show": _vm.showprize,
+      "type": _vm.masktype,
+      "prizety": _vm.prizeNum,
+      "pname": _vm.prizename,
+      "pinfo": _vm.prizeinfo,
+      "pimg": _vm.prizeimg,
+      "shareinfo": _vm.shareObj,
+      "plag": _vm.urlis
+    }
+  }), _c('mask-recevie', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showrecevie),
+      expression: "showrecevie"
+    }],
+    attrs: {
+      "show": _vm.showrecevie,
+      "isshelf": _vm.inshelf,
+      "retype": _vm.recevietype,
+      "quannum": _vm.recevieNum,
+      "book": _vm.bookinfo,
+      "plag": _vm.urlis,
+      "cid": _vm.cid
+    }
+  }), _c('mask-browes', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showbrowers),
+      expression: "showbrowers"
+    }]
+  }), _c('mask-download', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.downshow),
+      expression: "downshow"
+    }],
+    attrs: {
+      "show": _vm.downshow
+    },
+    on: {
+      "update:show": function($event) {
+        _vm.downshow = $event
+      }
+    }
+  })], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "bookinfo"
+  }, [_c('h4', [_vm._v("我是至尊")]), _c('p', [_vm._v("药不成丹只是毒；人不成神终成空！"), _c('br'), _vm._v("天道有缺，人间不平；红尘世外，魍魉横行；哀尔不幸，恨而不争；规则之外，吾来执行。")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('span', [_vm._v("1.")]), _vm._v("活动时间：2017年6月9日-6月12日；")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('span', [_vm._v("3.")]), _vm._v("活动期间，分享活动页面，可获得一次抽奖机会；用户可多次分享，但仅限首次分享成功账户获得一次抽奖机会；")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('span', [_vm._v("4.")]), _vm._v("一个用户最多获得1次抽奖机会，同设备、账号计为同一用户；")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('span', [_vm._v("5.")]), _vm._v("请从QQ阅读客户端内发起分享获得限免，其他平台二次分享暂不能获得抽奖机会；")])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-05615a09", module.exports)
+  }
+}
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "over"
+  }, [_c('div', {
+    staticClass: "over-c"
+  }, [_c('img', {
+    attrs: {
+      "src": '../adr/public/images/over.png',
+      "alt": "本期活动已结束"
+    }
+  }), _c('p', {
+    staticClass: "over-p1"
+  }, [_vm._v("本期活动已结束")]), _c('p', {
+    staticClass: "over-p2"
+  }, [_vm._v("敬请期待下一波活动")])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-189b74c8", module.exports)
+  }
+}
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "MaskLoading"
+  }, [_c('p', {
+    staticClass: "_text"
+  }, [_c('img', {
+    attrs: {
+      "src": '../adr/public/images/loading.png'
+    }
+  }), _vm._v("正在加载...")])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-4914f8f8", module.exports)
+  }
+}
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "mask"
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.type == -2 || _vm.type == -1),
+      expression: "type==-2 || type==-1"
+    }],
+    staticClass: "teaparea"
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.type == -2),
+      expression: "type==-2"
+    }],
+    staticClass: "closeicon",
+    on: {
+      "click": function($event) {
+        _vm.closemask()
+      }
+    }
+  }), _c('div', {
+    staticClass: "prizeicon"
+  }), (_vm.type == -2) ? _c('h4', [_vm._v("分享抽好礼 100%中奖")]) : _c('h4', [_vm._v("同一设备或同一账号"), _c('br'), _vm._v("只能抽一次奖哦～")]), _c('p', [_vm._v(_vm._s(_vm.type == -2 ? "分享后返回QQ阅读即可抽取好礼" : ""))]), _c('a', {
+    staticClass: "btnaction",
+    on: {
+      "click": function($event) {
+        _vm.share()
+      }
+    }
+  }, [_vm._v(_vm._s(_vm.type == -2 ? "分享抽奖" : "知道啦"))])]), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.type == 0),
+      expression: "type==0"
+    }],
+    staticClass: "teaparea prizemask"
+  }, [_vm._m(0), _c('img', {
+    staticClass: "prizepic",
+    attrs: {
+      "src": _vm.pimg[_vm.prizety]
+    }
+  }), _c('h4', [_vm._v("获得"), _c('span', [_vm._v(_vm._s(_vm.pname[_vm.prizety]))]), _c('em', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.prizety == 0),
+      expression: "prizety==0"
+    }]
+  }, [_vm._v(_vm._s(_vm.plag == "adr" ? "书币" : "阅点"))]), _c('em', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.prizety == 3 || _vm.prizety == 5),
+      expression: "prizety==3 || prizety==5"
+    }]
+  }, [_vm._v("限时免费读")])]), _c('p', [_vm._v(_vm._s(_vm.pinfo))]), _c('a', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.prizety == 0 || _vm.prizety == 2 || _vm.prizety == 3 || _vm.prizety == 5),
+      expression: "prizety==0 || prizety==2 || prizety==3 || prizety==5 "
+    }],
+    staticClass: "btnaction",
+    on: {
+      "click": function($event) {
+        _vm.closemask()
+      }
+    }
+  }, [_vm._v("知道啦")]), _c('a', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.prizety == 1 || _vm.prizety == 4),
+      expression: "prizety==1 || prizety==4 "
+    }],
+    staticClass: "btnaction",
+    on: {
+      "click": function($event) {
+        _vm.goadress()
+      }
+    }
+  }, [_vm._v("填写奖品收获地址")])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "titles"
+  }, [_c('span', [_vm._v("恭喜你")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-588e2c64", module.exports)
+  }
+}
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "maskbrow",
+    on: {
+      "click": function($event) {
+        _vm.closemask()
+      }
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": '../adr/public/images/browers.png'
+    }
+  })])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-5a5a46ea", module.exports)
+  }
+}
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "MaskDownload"
+  }, [_c('div', {
+    staticClass: "mask-panel"
+  }, [_c('div', {
+    staticClass: "top"
+  }, [_vm._v("下载QQ阅读，畅读海量小说")]), _c('p', {
+    staticClass: "middle"
+  }, [_vm._v("如果还未安装QQ阅读，你可以：")]), _c('ul', {
+    staticClass: "bottom"
+  }, [_c('li', {
+    staticClass: "confirm",
+    on: {
+      "click": _vm.downapp
+    }
+  }, [_vm._v("下载QQ阅读")]), _c('li', {
+    staticClass: "cancel",
+    on: {
+      "click": _vm.closemask
+    }
+  }, [_vm._v("取消")])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6bc40f08", module.exports)
+  }
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "mask"
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.retype == -4),
+      expression: "retype==-4"
+    }],
+    staticClass: "teaparea recevietk"
+  }, [_vm._m(0), _c('a', {
+    staticClass: "btnaction",
+    on: {
+      "click": _vm.closemask
+    }
+  }, [_vm._v("知道啦")])]), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.retype == -3),
+      expression: "retype==-3"
+    }],
+    staticClass: "teaparea recevietk"
+  }, [_c('div', {
+    staticClass: "closeicon",
+    on: {
+      "click": function($event) {
+        _vm.closemask()
+      }
+    }
+  }), _c('p', [_vm._v("将《我是至尊》加书架并阅读至"), _c('br'), _vm._v("第三章才可参与领" + _vm._s(_vm.plag == "adr" ? "书币" : "阅点") + "活动哦")]), _c('a', {
+    staticClass: "btnaction",
+    on: {
+      "click": function($event) {
+        _vm.goread(_vm.book[0].bid, _vm.cid)
+      }
+    }
+  }, [_vm._v("去阅读")])]), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.retype == -1),
+      expression: "retype==-1"
+    }],
+    staticClass: "teaparea recevietk"
+  }, [_c('p', [_vm._v(_vm._s(_vm.plag == "adr" ? "书币" : "阅点") + "已被抢光，"), _c('br'), _vm._v("下次要加速哦！")]), _c('a', {
+    staticClass: "btnaction",
+    on: {
+      "click": _vm.closemask
+    }
+  }, [_vm._v("好的")])]), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.retype == -2),
+      expression: "retype==-2"
+    }],
+    staticClass: "teaparea recevietk"
+  }, [_vm._m(1), _c('a', {
+    staticClass: "btnaction",
+    on: {
+      "click": _vm.yilingqu
+    }
+  }, [_vm._v("好的")])]), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.retype == 0),
+      expression: "retype==0"
+    }],
+    staticClass: "teaparea recevietk"
+  }, [_c('div', {
+    staticClass: "prizeicon"
+  }), _c('p', {
+    staticClass: "recevieQuan"
+  }, [_vm._v("恭喜获得" + _vm._s(_vm.quannum) + _vm._s(_vm.plag == "adr" ? "书币" : "阅点") + "!")]), _c('a', {
+    staticClass: "btnaction",
+    on: {
+      "click": _vm.closemask
+    }
+  }, [_vm._v("好的")])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', [_vm._v("ios游客登录用户"), _c('br'), _vm._v("暂不支持参加本次活动")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', [_vm._v("同一设备或同一账号"), _c('br'), _vm._v("只能领取一次哦～")])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-73096159", module.exports)
+  }
+}
+
+/***/ })
+/******/ ]);

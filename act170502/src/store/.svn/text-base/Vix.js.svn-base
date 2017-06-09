@@ -16,6 +16,7 @@ function install(Vue){
     } else if (options.parent && options.parent.$store) {
       this.$store = options.parent.$store
     }
+    // console.log(options)
     _init.call(this, options)
   }
 }
@@ -105,15 +106,32 @@ function createStore( modules ){
 
 }
 
-function mapState(arr) {
-  return arr.map(a=>{
-    return function(){
-      return store.state[a];
+function computed(options) {
+  var obj = {};
+  if(options.state) {
+    options.state.forEach(a=>{
+      obj[a] = function(){
+        return this.$store.state[a];
+      }
+    })
+  }
+  if(options.getters) {
+    options.getters.forEach(a=>{
+      obj[a] = function(){
+        return this.$store.getters[a];
+      }
+    })
+  }
+  if(options.computed) {
+    for(let key in options.computed) {
+      obj[key] = options.computed[key];
     }
-  })
+  }
+  return obj;
 }
 
 Vix.install = install;
 Vix.createStore = createStore;
+Vix.computed = computed;
 // console.log(Vix)
 export default Vix;

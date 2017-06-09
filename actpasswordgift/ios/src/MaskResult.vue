@@ -53,14 +53,12 @@
 				forceLog(param('act_f'),'goLucydraw');
 			},
 			goreadbook:function(onebbid){
-				Local.addToShelfBooks(JSON.stringify(onebbid));
 				ABook.gotoRead(onebbid.bid);
 				//ABook.gotoRead
 				this.closemask();
 				forceLog(param('act_f'),'goRead');
 			},
 			goshelf:function(bookbid){
-				Local.addToShelfBooks(JSON.stringify(bookbid));
 				Local.goShelf();
 				this.closemask();
 				forceLog(param('act_f'),'goShelf');

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>动画完毕视频播放</title>
+<link href="dist/bundle.style.css" rel="stylesheet">
+<style>
+	.ani{-webkit-animation:ani1 1s 3 alternate linear;margin:100px auto 0;width: 130px;}
+	@-webkit-keyframes ani1{
+		to{-webkit-transform:translate3d(0,10px,0);}
+	}
+</style>
+</head>
+<body>
+<div class="page1 active">
+	<img src="images/cover.jpg" class="ani" id="ani">
+</div>
+<div class="videobox" id="videobox">
+	<video id="video1" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" preload="auto">
+		<source src="media/new.mp4" type="video/mp4"></source>
+	</video>
+</div>
+<script>
+	// document.querySelector("#video1").addEventListener("canplaythrough",function() {
+	// 	document.querySelector("#video1").play();
+	// })
+	// document.body.addEventListener("touchend",function() {
+	// 	document.querySelector("#video1").play();
+	// })
+	document.querySelector("#ani").addEventListener("webkitAnimationEnd",function() {
+		document.querySelector("#videobox").className="videobox active";
+		document.querySelector("#video1").play();
+	})
+	document.querySelector("#video1").addEventListener("ended",function() {
+		window.location.href="uniteqqreader://nativepage/discover/limittimediscountbuy";
+	})
+</script>
+</body>
+</html>

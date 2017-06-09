@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 105
-/mqq/mqq_book_rep/!svn/ver/295682/book_proj/trunk/src/BookEventFront/WebContent/act170502/public/img/main
+/mqq/mqq_book_rep/!svn/ver/296220/book_proj/trunk/src/BookEventFront/WebContent/act170502/public/img/main
 END
 bg_bottom.png
 K 25
@@ -20,6 +20,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 118
 /mqq/mqq_book_rep/!svn/ver/295454/book_proj/trunk/src/BookEventFront/WebContent/act170502/public/img/main/test_btn.png
+END
+bg_five_2.png
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/mqq/mqq_book_rep/!svn/ver/296220/book_proj/trunk/src/BookEventFront/WebContent/act170502/public/img/main/bg_five_2.png
 END
 header.jpg
 K 25

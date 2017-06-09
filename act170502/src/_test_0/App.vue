@@ -94,7 +94,7 @@
 		},
 		methods: {
       to_page() {
-        location.href = this.$store.getters.href_test_1;
+        location.href = location.href.replace(/test_0/,'test_1');
         // this.$store.dispatch({
         //   type: 'TO_PAGE',
         //   href: this.$store.getters.href_test_1

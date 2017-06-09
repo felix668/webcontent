@@ -638,20 +638,12 @@ img, input {
   line-height: 0.94rem;
   border-radius: 0.08rem;
   cursor: pointer;
-  -webkit-transition-property: -webkit-transform box-shadow;
-  transition-property: -webkit-transform box-shadow;
-  transition-property: transform box-shadow;
-  transition-property: transform box-shadow, -webkit-transform box-shadow;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
   background: #3fbc82;
   box-shadow: 0 0.04rem 0 #31a06c;
 }
 .ButtonRaisedFive[data-v-2de87212]:active {
   background: #31a06c;
-  box-shadow: 0 0 0 #31a06c;
-  -webkit-transform: translate3d(0, 0.04rem, 0);
-          transform: translate3d(0, 0.04rem, 0);
+  box-shadow: 0 0.04rem 0 #31a06c;
 }
 
 .MaskPrize[data-v-4691a638] {
@@ -752,20 +744,12 @@ img, input {
   line-height: 0.94rem;
   border-radius: 0.08rem;
   cursor: pointer;
-  -webkit-transition-property: -webkit-transform box-shadow;
-  transition-property: -webkit-transform box-shadow;
-  transition-property: transform box-shadow;
-  transition-property: transform box-shadow, -webkit-transform box-shadow;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
   background: #3fbc82;
   box-shadow: 0 0.04rem 0 #31a06c;
 }
 .ButtonRaised[data-v-71db7edc]:active {
   background: #31a06c;
-  box-shadow: 0 0 0 #31a06c;
-  -webkit-transform: translate3d(0, 0.04rem, 0);
-          transform: translate3d(0, 0.04rem, 0);
+  box-shadow: 0 0.04rem 0 #31a06c;
 }
 
 #root[data-v-2286347b] {

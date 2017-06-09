@@ -1,1 +1,574 @@
-!function(t){function s(i){if(e[i])return e[i].exports;var o=e[i]={exports:{},id:i,loaded:!1};return t[i].call(o.exports,o,o.exports,s),o.loaded=!0,o.exports}var e={};return s.m=t,s.c=e,s.p="",s(0)}([function(t,s,e){"use strict";e(1),Vue.component("app",e(2));new Vue({el:"#root",template:"<app></app>"})},function(t,s){"use strict";!function(t,s){function e(){var t=i.clientWidth;t&&(t=t>750?750:t,i.style.fontSize=t/7.5+"px")}var i=t.documentElement,o="orientationchange"in window?"orientationchange":"resize";t.addEventListener&&(s.addEventListener(o,e,!1),t.addEventListener("DOMContentLoaded",e,!1))}(document,window)},function(t,s,e){var i,o,a={};i=e(3),o=e(20),t.exports=i||{},t.exports.__esModule&&(t.exports=t.exports.default);var n="function"==typeof t.exports?t.exports.options||(t.exports.options={}):t.exports;o&&(n.template=o),n.computed||(n.computed={}),Object.keys(a).forEach(function(t){var s=a[t];n.computed[t]=function(){return s}})},function(t,s,e){"use strict";Object.defineProperty(s,"__esModule",{value:!0}),s.default={components:{maskLoading:e(4),maskFuwuhao:e(11),maskResult:e(14)},data:function(){return{loading:!0,open:!1,login:!0,showmask:!1,intok:!1,holder:"",showfwh:!1,config:[{platform:"",title:"去微信关注QQ阅读公众号获口令",startTime:"1489654414",endTime:"1489654414",timers:"",skipValue:"http://www.baidu.com",skipType:2,skipDesc:"如何关注",actid:"",subAct:[{toolNum:"100",toolType:0,prize:"",pic:"./images/prizeimg.png",pickedNumber:"1000",desc:"去QQ阅读公众号《xxx》书中找口令"}]}],passgift:{code:-109,errcode:0,type:"",amount:"100",gigttt:"",pic:"./images/prizeimg.png",expireTime:"1489654414",ptxt:"",bookinfos:[],url:""}}},methods:{initpage:function(){var t=this;Local.init(),Local.reqaObj(server()+"template/passwordgift/init?qimei=12351235",function(s){t.loading=!1,t.login=s.isLogin,t.config=s.acts;for(var e=0;e<t.config.length;e++){var i=t.config[e].startTime,o=t.config[e].endTime;t.config[e].timers=t.getTime(i,o)}},[],function(){Local.showToast("网络异常，请稍候重试")},1),forceLog(param("act_f"))},getTime:function(t,s){var e=new Date(t),i=new Date(s),o=e.getFullYear()+"-"+parseInt(e.getMonth()+1)+"-"+e.getDate()+" "+e.getHours()+"点 ~ "+i.getFullYear()+"-"+parseInt(i.getMonth()+1)+"-"+i.getDate()+" "+i.getHours()+"点";return o},gogurl:function(t,s,e,i){var o=($(i.currentTarget),this);3==s&&Local.go(t),2==s&&(o.showfwh=!0),forceLog(param("act_f"),"goUrl"+e)},intblur:function(t){var s=this,e=s.holder.length;e>0&&13==t.keyCode&&(s.showtank(s.holder),$("input").blur(),forceLog(param("act_f"),"keyNum"))},actions:function(t,s){var e=($(s.currentTarget),this);e.login?(e.holder.length>0&&e.showtank(t),forceLog(param("act_f"),"btnNum")):Local.login()},showtank:function(t){var s=this;Local.init(),Local.reqaObj(server()+"template/passwordgift/pick?password="+encodeURI(t),function(t){s.passgift=t;if(s.showmask=!0,s.passgift.code==-108){var e=-Math.floor(3*Math.random());s.passgift.errcode=e,console.info(s.passgift.errcode)}if(0==s.passgift.code){$(".chaibag").addClass("chaianim"),$(".tiparea").addClass("anmat");var i=new Date(s.passgift.expireTime),o=i.getFullYear()+"年"+parseInt(i.getMonth()+1)+"月"+i.getDate()+"日";0==s.passgift.type&&(s.passgift.gigttt="限时免费读",s.passgift.ptxt="免费读至"+o),20==s.passgift.type&&(s.passgift.gigttt="书包限时免费读",s.passgift.ptxt="免费读至"+o),1==s.passgift.type&&(s.passgift.gigttt=s.passgift.amount+"书券",s.passgift.ptxt="有效期至"+o),3==s.passgift.type&&(s.passgift.gigttt=s.passgift.amount+"成长值",s.passgift.ptxt="加速升级，更多福利"),4==s.passgift.type&&(s.passgift.gigttt=s.passgift.amount+"天包月体验卡",s.passgift.ptxt="有效期至"+o+"，赶紧使用吧"),5==s.passgift.type&&(s.passgift.gigttt=s.passgift.amount+"书币"),6==s.passgift.type&&(s.passgift.gigttt=s.passgift.amount+"次抽奖机会")}},[],function(){Local.showToast("网络异常，请稍候重试")},1)}},watch:{holder:{handler:function(t,s){t.length>0?$("#btnok").removeClass("disabled"):$("#btnok").addClass("disabled")},deep:!0}},created:function(){this.initpage()}}},function(t,s,e){var i,o,a={};e(5),i=e(9),o=e(10),t.exports=i||{},t.exports.__esModule&&(t.exports=t.exports.default);var n="function"==typeof t.exports?t.exports.options||(t.exports.options={}):t.exports;o&&(n.template=o),n.computed||(n.computed={}),Object.keys(a).forEach(function(t){var s=a[t];n.computed[t]=function(){return s}})},function(t,s){},,,,function(t,s){"use strict";t.exports={data:function(){return{}},mounted:function(){}}},function(t,s){t.exports=' <div class=MaskLoading _v-68b1f9a5=""> <p class=_text _v-68b1f9a5=""><img :src="\'images/loading.png\'" _v-68b1f9a5="">正在加载...</p> </div> '},function(t,s,e){var i,o,a={};i=e(12),o=e(13),t.exports=i||{},t.exports.__esModule&&(t.exports=t.exports.default);var n="function"==typeof t.exports?t.exports.options||(t.exports.options={}):t.exports;o&&(n.template=o),n.computed||(n.computed={}),Object.keys(a).forEach(function(t){var s=a[t];n.computed[t]=function(){return s}})},function(t,s){"use strict";t.exports={data:function(){return{}},methods:{closetk:function(){this.$parent.showfwh=!1}}}},function(t,s){t.exports=" <div class=fwhmask> <div class=fwhtip> <p>打开微信</p> <ul> <li><span>1.</span>打开微信</li> <li><span>2.</span>搜索“QQ阅读服务号”，点击进入 <img :src=\"'images/fwhimgs.jpg'\"/> </li> <li><span>3.</span>关注服务号，在历史推送文章中寻找当期口令</li> </ul> <div class=btn_close @click=closetk>我知道啦</div> </div> </div> "},function(t,s,e){var i,o,a={};i=e(15),o=e(19),t.exports=i||{},t.exports.__esModule&&(t.exports=t.exports.default);var n="function"==typeof t.exports?t.exports.options||(t.exports.options={}):t.exports;o&&(n.template=o),n.computed||(n.computed={}),Object.keys(a).forEach(function(t){var s=a[t];n.computed[t]=function(){return s}})},function(t,s,e){"use strict";function i(t){return t&&t.__esModule?t:{default:t}}var o=e(16),a=i(o);t.exports={props:["show","tktype","hold","chai","errstat","prizeco","prrzeinfo"],data:function(){return{}},methods:{closemask:function(){this.$parent.showmask=!1,$("#btnok").addClass("disabled"),$(".chaibag").removeClass("chaianim"),$(".tiparea").removeClass("anmat"),this.$parent.holder=""},goviparea:function(){Local.goMontharea(),this.closemask(),forceLog(param("act_f"),"goMontharea")},godraw:function(t){Local.go(t),this.closemask(),forceLog(param("act_f"),"goLucydraw")},goreadbook:function(t){Local.addToShelfBooks((0,a.default)(t)),ABook.gotoRead(t.bid),this.closemask(),forceLog(param("act_f"),"goRead")},goshelf:function(t){Local.addToShelfBooks((0,a.default)(t)),Local.goShelf(),this.closemask(),forceLog(param("act_f"),"goShelf")}}}},function(t,s,e){"use strict";t.exports={default:e(17),__esModule:!0}},function(t,s,e){"use strict";var i=e(18),o=i.JSON||(i.JSON={stringify:JSON.stringify});t.exports=function(t){return o.stringify.apply(o,arguments)}},function(t,s){"use strict";var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,s){t.exports=' <div class=mask> <div class=flash v-show="tktype==0"><img :src="\'images/flash.png\'"/></div> <div class=tiparea v-show="tktype==-105 || tktype==-109"> <img :src="\'images/dclq.png\'" class=dclq /> <p v-show="tktype==-109">不要贪心哦，同一个口令只能领取一次礼包</p> <p v-show="tktype==-105">本礼包为限量领取，已领罄<br>少侠，下回请早点来</p> <div class=btn_close @click=closemask>我知道啦</div> </div> <div class=tiparea v-show="tktype==-108"> <div class=icon_close @click=closemask></div> <img :src="errstat==-1?\'images/errimg3.png\':errstat==-2?\'images/errimg1.png\':\'images/errimg2.png\'" class=errimg /> <p class=errtxt>很遗憾，您的口令没有对应的礼包<br>{{errstat==-1?\'需要下凡历个劫\':errstat==-2?\'三思而行哦\':\'遇到挫折要不放弃，不抛弃\'}}</p> </div> <div class=tiparea v-show="tktype==0"> <div class=icon_close v-show="prizeco==0 || prizeco==4 || prizeco==6 || prizeco==20" @click=closemask></div> <p class=prizett>恭喜获得{{ prrzeinfo.gigttt }}</p> <div class=prizimg> <img :src=" prrzeinfo.pic " class=errimg /> </div> <p class=errtxt>{{ prrzeinfo.ptxt }}</p> <div class=btn_close v-show="prizeco==1 || prizeco==3 || prizeco==5" @click=closemask>我知道啦</div> <div class=btn_close v-show="prizeco==4" @click=goviparea>去包月专区享特权</div> <div class=btn_close v-show="prizeco==6" @click=godraw(prrzeinfo.url)>去抽奖</div> <div class=btn_close v-show="prizeco==0" @click=goreadbook(prrzeinfo.bookinfos)>去阅读</div> <div class=btn_close v-show="prizeco==20" @click=goshelf(prrzeinfo.bookinfos)>去书架阅读</div> </div> </div> '},function(t,s){t.exports=' <div id=root> <div class=wrap> <div class=banner> <div class=chaibag></div> <div class=redbag> <p class=logintxt v-show=!login>登录输入口令，领红包</p> <div v-show=login> <input type=text class=kouling placeholder=输入口令，100%领红包 v-model=holder @keyup=intblur($event) ref=inptxt /> </div> <div id=btnok class=btn v-bind:class="{ disabled: login }" @click=actions(holder,$event)>{{ login ? \'确 定\':\'登 录\'}}</div> </div> </div> <ul class=actlist> <li v-for="(item, index) in config"> <div class=titlebox> <span>{{ index+1 }}</span> / {{ item.title }} <p> 活动时间：{{ item.timers}}</p> <div class=goconcern @click=gogurl(item.skipValue,item.skipType,item.actid,$event)>{{ item.skipDesc }}</div> </div> <ul class=prizelist> <li v-for="plist in item.subAct"> <div class=prizeimg> <img :src=plist.pic /> </div> <div class=prizinfo> <p class=tt>{{ plist.prize }}</p> <p class=personnum>已有{{ plist.pickedNumber }}人领取</p> <p class=findpass>{{ plist.desc }}</p> </div> <div class=finised v-show=plist.noneLeft></div> </li> </ul> </li> </ul> </div> <mask-loading v-show=loading></mask-loading> <mask-fuwuhao v-show=showfwh></mask-fuwuhao> <mask-result v-show=showmask :show.sync=showmask :tktype=passgift.code hold=holder :chai=open :errstat=passgift.errcode :prizeco=passgift.type :prrzeinfo=passgift></mask-result> </div> '}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(1);
+
+	Vue.component('app', __webpack_require__(2));
+	var root = new Vue({
+		el: '#root',
+		template: '<app></app>'
+	});
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	(function (doc, win) {
+	    var docEl = doc.documentElement,
+	        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	        if (!clientWidth) return;
+	        // console.log(clientWidth)
+	        clientWidth = clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = clientWidth / 7.5 + 'px';
+	    };
+	    if (!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__;
+	var __vue_styles__ = {};
+	__vue_script__ = __webpack_require__(3);
+	if (Object.keys(__vue_script__).some(function (key) {
+	  return key !== "default" && key !== "__esModule";
+	})) {
+	  console.warn("[vue-loader] src/app.vue: named exports in *.vue files are ignored.");
+	}
+	__vue_template__ = __webpack_require__(20);
+	module.exports = __vue_script__ || {};
+	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_options__ = typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports;
+	if (__vue_template__) {
+	  __vue_options__.template = __vue_template__;
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {};
+	Object.keys(__vue_styles__).forEach(function (key) {
+	  var module = __vue_styles__[key];
+	  __vue_options__.computed[key] = function () {
+	    return module;
+	  };
+	});
+	if (false) {
+	  (function () {
+	    module.hot.accept();
+	    var hotAPI = require("vue-hot-reload-api");
+	    hotAPI.install(require("vue"), false);
+	    if (!hotAPI.compatible) return;
+	    var id = "_v-87bc0ca8/app.vue";
+	    if (!module.hot.data) {
+	      hotAPI.createRecord(id, module.exports);
+	    } else {
+	      hotAPI.update(id, module.exports, __vue_template__);
+	    }
+	  })();
+	}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		components: {
+			maskLoading: __webpack_require__(4),
+			maskFuwuhao: __webpack_require__(11),
+			maskResult: __webpack_require__(14)
+		},
+		data: function data() {
+			return {
+				loading: true,
+				open: false,
+				login: true,
+				showmask: false,
+				intok: false,
+				holder: '',
+				showfwh: false,
+				config: [{
+					platform: '',
+					title: '去微信关注QQ阅读公众号获口令',
+					startTime: '1489654414',
+					endTime: '1489654414',
+					timers: '',
+					skipValue: 'http://www.baidu.com',
+					skipType: 2,
+					skipDesc: '如何关注',
+					actid: '',
+					subAct: [{
+						toolNum: '100',
+						toolType: 0,
+						prize: '',
+						pic: './images/prizeimg.png',
+						pickedNumber: '1000',
+						desc: '去QQ阅读公众号《xxx》书中找口令' }]
+
+				}],
+				passgift: {
+					code: -109,
+					errcode: 0,
+					type: '',
+					amount: '100',
+					gigttt: '',
+					pic: './images/prizeimg.png',
+					expireTime: '1489654414',
+					ptxt: '',
+					bookinfos: [],
+					url: ''
+				}
+
+			};
+		},
+		methods: {
+			initpage: function initpage() {
+				var self = this;
+				Local.init();
+				Local.reqaObj(server() + "template/passwordgift/init?qimei=12351235", function (data) {
+					self.loading = false;
+					self.login = data.isLogin;
+					self.config = data.acts;
+					var stet = void 0;
+					for (var i = 0; i < self.config.length; i++) {
+						var stime = self.config[i].startTime;
+						var etime = self.config[i].endTime;
+						self.config[i].timers = self.getTime(stime, etime);
+					}
+				}, [], function () {
+					Local.showToast("网络异常，请稍候重试");
+				}, 1);
+				forceLog(param('act_f'));
+			},
+			getTime: function getTime(startT, endT) {
+				var st = new Date(startT);
+				var et = new Date(endT);
+				var rest = st.getFullYear() + '-' + parseInt(st.getMonth() + 1) + '-' + st.getDate() + ' ' + st.getHours() + '点 ~ ' + et.getFullYear() + '-' + parseInt(et.getMonth() + 1) + '-' + et.getDate() + ' ' + et.getHours() + '点';
+				return rest;
+			},
+			gogurl: function gogurl(url, type, actd, e) {
+				var $cur = $(e.currentTarget);
+				var self = this;
+				if (type == 3) {
+					Local.go(url);
+				}
+				if (type == 2) {
+					self.showfwh = true;
+				}
+				forceLog(param('act_f'), 'goUrl' + actd);
+			},
+			intblur: function intblur(ev) {
+				var self = this;
+				var len = self.holder.length;
+				if (len > 0) {
+					if (ev.keyCode == 13) {
+						self.showtank(self.holder);
+						$("input").blur();
+						forceLog(param('act_f'), 'keyNum');
+					}
+				}
+			},
+			actions: function actions(kouling, e) {
+				var $cur = $(e.currentTarget);
+				var self = this;
+				if (self.login) {
+					if (self.holder.length > 0) {
+						self.showtank(kouling);
+					}
+					forceLog(param('act_f'), 'btnNum');
+				} else {
+					Local.login();
+				}
+			},
+			showtank: function showtank(kouling) {
+				var self = this;
+				Local.init();
+				Local.reqaObj(server() + "template/passwordgift/pick?password=" + encodeURI(kouling), function (data) {
+					console.log(data);
+					self.passgift = data;
+					var timer = null;
+					self.showmask = true;
+					if (self.passgift.code == -108) {
+						var rand = -Math.floor(Math.random() * 3);
+						self.passgift.errcode = rand;
+						console.info(self.passgift.errcode);
+					}
+					if (self.passgift.code == 0) {
+						$(".chaibag").addClass('chaianim');
+						$(".tiparea").addClass('anmat');
+						var exptime = new Date(self.passgift.expireTime);
+						var txt = exptime.getFullYear() + '年' + parseInt(exptime.getMonth() + 1) + '月' + exptime.getDate() + '日';
+						if (self.passgift.type == 0) {
+							self.passgift.gigttt = '限时免费读';
+							self.passgift.ptxt = '免费读至' + txt;
+						}
+						if (self.passgift.type == 20) {
+							self.passgift.gigttt = '书包限时免费读';
+							self.passgift.ptxt = '免费读至' + txt;
+						}
+						if (self.passgift.type == 1) {
+							self.passgift.gigttt = self.passgift.amount + '书券';
+							self.passgift.ptxt = '有效期至' + txt;
+						}
+						if (self.passgift.type == 3) {
+							self.passgift.gigttt = self.passgift.amount + '成长值';
+							self.passgift.ptxt = '加速升级，更多福利';
+						}
+						if (self.passgift.type == 4) {
+							self.passgift.gigttt = self.passgift.amount + '天包月体验卡';
+							self.passgift.ptxt = '有效期至' + txt + '，赶紧使用吧';
+						}
+						if (self.passgift.type == 5) {
+							self.passgift.gigttt = self.passgift.amount + '书币';
+						}
+						if (self.passgift.type == 6) {
+							self.passgift.gigttt = self.passgift.amount + '次抽奖机会';
+						}
+					}
+				}, [], function () {
+					Local.showToast("网络异常，请稍候重试");
+				}, 1);
+				forceLog(param('act_f'), 'recevied');
+			}
+		},
+		watch: {
+			holder: {
+				handler: function handler(val, oldval) {
+					if (val.length > 0) {
+						$("#btnok").removeClass('disabled');
+					} else {
+						$("#btnok").addClass('disabled');
+					}
+				},
+				deep: true
+			}
+		},
+		created: function created() {
+			this.initpage();
+		}
+	};
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__;
+	var __vue_styles__ = {};
+	__webpack_require__(5);
+	__vue_script__ = __webpack_require__(9);
+	if (Object.keys(__vue_script__).some(function (key) {
+	  return key !== "default" && key !== "__esModule";
+	})) {
+	  console.warn("[vue-loader] src/MaskLoading.vue: named exports in *.vue files are ignored.");
+	}
+	__vue_template__ = __webpack_require__(10);
+	module.exports = __vue_script__ || {};
+	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_options__ = typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports;
+	if (__vue_template__) {
+	  __vue_options__.template = __vue_template__;
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {};
+	Object.keys(__vue_styles__).forEach(function (key) {
+	  var module = __vue_styles__[key];
+	  __vue_options__.computed[key] = function () {
+	    return module;
+	  };
+	});
+	if (false) {
+	  (function () {
+	    module.hot.accept();
+	    var hotAPI = require("vue-hot-reload-api");
+	    hotAPI.install(require("vue"), false);
+	    if (!hotAPI.compatible) return;
+	    var id = "_v-2859459b/MaskLoading.vue";
+	    if (!module.hot.data) {
+	      hotAPI.createRecord(id, module.exports);
+	    } else {
+	      hotAPI.update(id, module.exports, __vue_template__);
+	    }
+	  })();
+	}
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = {
+		data: function data() {
+			return {};
+		},
+		mounted: function mounted() {}
+	};
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"MaskLoading\" _v-2859459b=\"\">\n\t<p class=\"_text\" _v-2859459b=\"\"><img :src=\"'images/loading.png'\" _v-2859459b=\"\">正在加载...</p>\n</div>\n";
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__;
+	var __vue_styles__ = {};
+	__vue_script__ = __webpack_require__(12);
+	if (Object.keys(__vue_script__).some(function (key) {
+	  return key !== "default" && key !== "__esModule";
+	})) {
+	  console.warn("[vue-loader] src/MaskFuwuhao.vue: named exports in *.vue files are ignored.");
+	}
+	__vue_template__ = __webpack_require__(13);
+	module.exports = __vue_script__ || {};
+	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_options__ = typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports;
+	if (__vue_template__) {
+	  __vue_options__.template = __vue_template__;
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {};
+	Object.keys(__vue_styles__).forEach(function (key) {
+	  var module = __vue_styles__[key];
+	  __vue_options__.computed[key] = function () {
+	    return module;
+	  };
+	});
+	if (false) {
+	  (function () {
+	    module.hot.accept();
+	    var hotAPI = require("vue-hot-reload-api");
+	    hotAPI.install(require("vue"), false);
+	    if (!hotAPI.compatible) return;
+	    var id = "_v-84327d30/MaskFuwuhao.vue";
+	    if (!module.hot.data) {
+	      hotAPI.createRecord(id, module.exports);
+	    } else {
+	      hotAPI.update(id, module.exports, __vue_template__);
+	    }
+	  })();
+	}
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = {
+
+		data: function data() {
+			return {};
+		},
+		methods: {
+			closetk: function closetk() {
+				this.$parent.showfwh = false;
+			}
+		}
+	};
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"fwhmask\">\n\t<div class=\"fwhtip\">\n\t\t<p>打开微信</p>\n\t\t<ul>\n\t\t\t<li><span>1.</span>打开微信</li>\n\t\t\t<li><span>2.</span>搜索“QQ阅读服务号”，点击进入\n\t\t\t\t<img :src=\"'images/fwhimgs.jpg'\" />\n\t\t\t</li>\n\t\t\t<li><span>3.</span>关注服务号，在历史推送文章中寻找当期口令</li>\n\t\t</ul>\n\t\t<div class=\"btn_close\" @click=\"closetk\">我知道啦</div>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__;
+	var __vue_styles__ = {};
+	__vue_script__ = __webpack_require__(15);
+	if (Object.keys(__vue_script__).some(function (key) {
+	  return key !== "default" && key !== "__esModule";
+	})) {
+	  console.warn("[vue-loader] src/MaskResult.vue: named exports in *.vue files are ignored.");
+	}
+	__vue_template__ = __webpack_require__(19);
+	module.exports = __vue_script__ || {};
+	if (module.exports.__esModule) module.exports = module.exports.default;
+	var __vue_options__ = typeof module.exports === "function" ? module.exports.options || (module.exports.options = {}) : module.exports;
+	if (__vue_template__) {
+	  __vue_options__.template = __vue_template__;
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {};
+	Object.keys(__vue_styles__).forEach(function (key) {
+	  var module = __vue_styles__[key];
+	  __vue_options__.computed[key] = function () {
+	    return module;
+	  };
+	});
+	if (false) {
+	  (function () {
+	    module.hot.accept();
+	    var hotAPI = require("vue-hot-reload-api");
+	    hotAPI.install(require("vue"), false);
+	    if (!hotAPI.compatible) return;
+	    var id = "_v-4af3df8e/MaskResult.vue";
+	    if (!module.hot.data) {
+	      hotAPI.createRecord(id, module.exports);
+	    } else {
+	      hotAPI.update(id, module.exports, __vue_template__);
+	    }
+	  })();
+	}
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _stringify = __webpack_require__(16);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = {
+		props: ['show', 'tktype', 'hold', 'chai', 'errstat', 'prizeco', 'prrzeinfo'],
+		data: function data() {
+			return {};
+		},
+		methods: {
+			closemask: function closemask() {
+				this.$parent.showmask = false;
+				$("#btnok").addClass('disabled');
+				$(".chaibag").removeClass('chaianim');
+				$(".tiparea").removeClass('anmat');
+				this.$parent.holder = '';
+			},
+			goviparea: function goviparea() {
+				Local.goMontharea();
+				this.closemask();
+				forceLog(param('act_f'), 'goMontharea');
+			},
+			godraw: function godraw(url) {
+				Local.go(url);
+				this.closemask();
+				forceLog(param('act_f'), 'goLucydraw');
+			},
+			goreadbook: function goreadbook(onebbid) {
+				Local.addToShelfBooks((0, _stringify2.default)(onebbid));
+				console.log(onebbid[0].bid);
+				ABook.gotoRead(onebbid[0].bid);
+				this.closemask();
+				forceLog(param('act_f'), 'goRead');
+			},
+			goshelf: function goshelf(bookbid) {
+				Local.addToShelfBooks((0, _stringify2.default)(bookbid));
+				Local.goShelf();
+				this.closemask();
+				forceLog(param('act_f'), 'goShelf');
+			}
+		}
+	};
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	module.exports = { "default": __webpack_require__(17), __esModule: true };
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var core = __webpack_require__(18),
+	    $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
+	module.exports = function stringify(it) {
+	  // eslint-disable-line no-unused-vars
+	  return $JSON.stringify.apply($JSON, arguments);
+	};
+
+/***/ },
+/* 18 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var core = module.exports = { version: '2.4.0' };
+	if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"mask\">\n\t<div class=\"flash\" v-show=\"tktype==0\"><img :src=\"'images/flash.png'\" /></div>\n\t<div class=\"tiparea\" v-show=\"tktype==-105 || tktype==-109\">\n\t\t<img :src=\"'images/dclq.png'\" class=\"dclq\" />\n\t\t<p v-show=\"tktype==-109\">不要贪心哦，同一个口令只能领取一次礼包</p>\n\t\t<p v-show=\"tktype==-105\">本礼包为限量领取，已领罄<br>少侠，下回请早点来</p>\n\t\t<div class=\"btn_close\" @click=\"closemask\">我知道啦</div>\n\t</div>\n\t<div class=\"tiparea\" v-show=\"tktype==-108\">\n\t\t<div class=\"icon_close\" @click=\"closemask\"></div>\n\t\t<img :src=\"errstat==-1?'images/errimg3.png':errstat==-2?'images/errimg1.png':'images/errimg2.png'\" class=\"errimg\" />\n\t\t<p class=\"errtxt\">很遗憾，您的口令没有对应的礼包<br>{{errstat==-1?'需要下凡历个劫':errstat==-2?'三思而行哦':'遇到挫折要不放弃，不抛弃'}}</p>\n\t</div>\n\t<div class=\"tiparea\" v-show=\"tktype==0\">\n\t\t<div class=\"icon_close\" v-show=\"prizeco==0 || prizeco==4 || prizeco==6 || prizeco==20\" @click=\"closemask\"></div>\n\t\t<p class=\"prizett\">恭喜获得{{ prrzeinfo.gigttt }}</p>\n\t\t<div class=\"prizimg\">\n\t\t\t<img :src=\" prrzeinfo.pic \" class=\"errimg\" />\n\t\t</div>\n\t\t<p class=\"errtxt\">{{ prrzeinfo.ptxt }}</p>\n\t\t<div class=\"btn_close\" v-show=\"prizeco==1 || prizeco==3 || prizeco==5\" @click=\"closemask\">我知道啦</div>\n\t\t<div class=\"btn_close\" v-show=\"prizeco==4\" @click=\"goviparea\">去包月专区享特权</div>\n\t\t<div class=\"btn_close\" v-show=\"prizeco==6\" @click=\"godraw(prrzeinfo.url)\">去抽奖</div>\n\t\t<div class=\"btn_close\" v-show=\"prizeco==0\" @click=\"goreadbook(prrzeinfo.bookinfos)\">去阅读</div>\n\t\t<div class=\"btn_close\" v-show=\"prizeco==20\" @click=\"goshelf(prrzeinfo.bookinfos)\">去书架阅读</div>\n\t</div>\n</div>\t\n";
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div id=\"root\">\n\t<div class=\"wrap\">\n\t\t<div class=\"banner\">\n\t\t\t<div class=\"chaibag\"></div>\n\t\t\t<div class=\"redbag\">\n\t\t\t\t<p class=\"logintxt\" v-show=\"!login\">登录输入口令，领红包</p>\n\t\t\t\t<div v-show=\"login\">\n\t\t\t\t\t<input type=\"text\" class='kouling' placeholder=\"输入口令，100%领红包\" v-model='holder'  @keyup=\"intblur($event)\" ref=\"inptxt\" />\n\t\t\t\t</div>\n\t\t\t\t<div id=\"btnok\" class=\"btn\" v-bind:class=\"{ disabled: login }\" @click=\"actions(holder,$event)\">{{ login ? '确 定':'登 录'}}</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<ul class=\"actlist\">\n\t\t\t<li v-for=\"(item, index) in config\">\n\t\t\t\t<div class=\"titlebox\">\n\t\t\t\t\t<span>{{ index+1 }}</span> / {{ item.title }}\n\t\t\t\t\t<p> 活动时间：{{ item.timers}}</p>\n\t\t\t\t\t<div class=\"goconcern\" @click=\"gogurl(item.skipValue,item.skipType,item.actid,$event)\">{{ item.skipDesc }}</div>\n\t\t\t\t</div>\n\t\t\t\t<ul class=\"prizelist\">\n\t\t\t\t\t<li v-for=\"plist in item.subAct\">\n\t\t\t\t\t\t<div class=\"prizeimg\">\n\t\t\t\t\t\t\t<img :src=\"plist.pic\" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"prizinfo\">\n\t\t\t\t\t\t\t<p class=\"tt\">{{ plist.prize }}</p>\n\t\t\t\t\t\t\t<p class=\"personnum\">已有{{ plist.pickedNumber }}人领取</p>\n\t\t\t\t\t\t\t<p class=\"findpass\">{{ plist.desc }}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"finised\" v-show=\"plist.noneLeft\"></div>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t</ul>\n</div>\n<mask-loading v-show=\"loading\"></mask-loading>\n<mask-fuwuhao v-show=\"showfwh\"></mask-fuwuhao>\n<mask-result v-show=\"showmask\" :show.sync='showmask' :tktype=\"passgift.code\" hold=\"holder\" :chai='open' :errstat=\"passgift.errcode\" :prizeco=\"passgift.type\" :prrzeinfo=\"passgift\"></mask-result>\n</div>\n";
+
+/***/ }
+/******/ ]);

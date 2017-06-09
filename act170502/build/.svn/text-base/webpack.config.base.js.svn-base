@@ -24,7 +24,8 @@ module.exports = {
     alias: {
       components: path.resolve( __dirname,'../src/components/' ),
       lib: path.resolve( __dirname,'../src/lib/' ),
-      vue: 'vue/dist/vue.min.js'
+      vue: 'vue/dist/vue.min.js',
+      store: path.resolve( __dirname,'../src/store/' ),
     }
   },
   externals: {

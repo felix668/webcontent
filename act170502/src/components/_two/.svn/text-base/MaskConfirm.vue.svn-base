@@ -132,14 +132,14 @@ v-show="mask_confirm.show">
 	font-size: 0.32rem; font-weight: 600; text-align: center; line-height: 0.94rem;
 	border-radius: 0.08rem;
 	cursor: pointer;
-	transition-property: transform box-shadow;
-	transition-duration: 0.1s;
+	// transition-property: transform box-shadow;
+	// transition-duration: 0.1s;
 	background: @color-bg;
 	box-shadow: 0 0.04rem 0 @color-shadow;
 	&:active {
 		background: @color-shadow;
-		box-shadow: 0 0 0 @color-shadow;
-		transform: translate3d(0,0.04rem,0);
+		box-shadow: 0 0.04rem 0 @color-shadow;
+		// transform: translate3d(0,0.04rem,0);
 	}
 }
 </style>

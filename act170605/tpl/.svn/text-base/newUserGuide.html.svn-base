@@ -1,0 +1,99 @@
+<script id="t1" type="text/html">
+	<img src="images/limit10.png">
+	<div class="countDown auto-x">
+		<span id="countDownDay">00</span><span>天</span>
+		<span id="countDownHour">00</span><span>时</span>
+		<span id="countDownMin">00</span><span>分</span>
+	</div>
+	<p class="auto-x countInfo">个性免费库 限时免费</p>
+	<span class="perText auto-x"><img src="images/per.png"></span>
+	<a class="getGoods auto-x" onclick="gotoCount();">领取全场免费福利</a>
+</script>
+
+<script id="t2" type="text/html">
+	<div class="tabsMenu">
+		<ul>
+			<li class="cur">个性分类</li>
+			<li>最爱作家</li>
+			<li>同好在读</li>
+		</ul>
+		<span id="liCur" class="liCur"></span>
+	</div>
+	<div class="tabsBookList">
+		<ul class="tabsContent">
+			<li>
+				<div class="books">
+					{{if books[4]}}
+					<ul>
+						{{each books[4] as el ext i}}
+						<li>
+							<div class="bookface"><img src="{{el.cover}}"><span onclick="javascript:toBookDetail('{{el.id}}')"></span></div>
+							<div class="bookinfo">
+								<h4>{{el.title}}</h4>
+								<p class="detail_cj" onclick="javascript:toBookDetail('{{el.id}}')">{{el.intro}}</p>
+								<div class="new_author">{{el.categoryShortName}} | {{el.author}} {{if el.inBookShelf && el.inBookShelf == 1}}
+									<a onclick="javascript:void(0);" class="btn disable">已在书架</a>
+									{{else}}
+									<a id="shelf1{{el.id}}" onclick="javascript:addNewUserBookToShelf('{{el.id}}',1);" class="btn">加书架</a>
+									{{/if}}
+								</div>
+							</div>
+
+						</li>
+						{{/each}}
+					</ul>
+					{{/if}}
+					<div class="loadingTop"><span class="loadall">已显示全部</span></div>
+				</div>
+			</li>
+			<li>
+				<div class="books">
+					{{if books[6]}}
+					<ul>
+						{{each books[6] as second ext i}}
+						<li>
+							<div class="bookface"><img src="{{second.cover}}"><span onclick="javascript:toBookDetail('{{second.id}}')"></span></div>
+							<div class="bookinfo">
+								<h4>{{second.title}}</h4>
+								<p class="detail_cj" onclick="javascript:toBookDetail('{{second.id}}')">{{second.intro}}</p>
+								<div class="new_author">{{second.categoryShortName}} | {{second.author}} {{if second.inBookShelf && second.inBookShelf == 1}}
+									<a onclick="javascript:void(0);" class="btn disable">已在书架</a>
+									{{else}}
+									<a id="shelf2{{second.id}}" onclick="javascript:addNewUserBookToShelf('{{second.id}}',2);" class="btn">加书架</a>
+									{{/if}}
+								</div>
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+					{{/if}}
+					<div class="loadingTop"><span class="loadall">已显示全部</span></div>
+				</div>
+			</li>
+			<li>
+				<div class="books">
+					{{if books[5]}}
+					<ul>
+						{{each books[5] as third ext i}}
+						<li>
+							<div class="bookface"><img src="{{third.cover}}"><span onclick="javascript:toBookDetail('{{third.id}}')"></span></div>
+							<div class="bookinfo">
+								<h4>{{third.title}}</h4>
+								<p class="detail_cj" onclick="javascript:toBookDetail('{{third.id}}')">{{third.intro}}</p>
+								<div class="new_author">{{third.categoryShortName}} | {{third.author}} {{if third.inBookShelf && third.inBookShelf == 1}}
+									<a onclick="javascript:void(0);" class="btn disable">已在书架</a>
+									{{else}}
+									<a id="shelf3{{third.id}}" onclick="javascript:addNewUserBookToShelf('{{third.id}}',3);" class="btn">加书架</a>
+									{{/if}}
+								</div>
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+					{{/if}}
+					<div class="loadingTop"><span class="loadall">已显示全部</span></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</script>
