@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>囤书节</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	         //alert(docEl.clientHeight)
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+
+</script>
+<link href="../dist/share.style.css" rel="stylesheet">
+</head>
+<body>
+<div id="root" ref="root">
+	<mask-load v-if="loading"></mask-load>
+	<mask-over v-if="over"></mask-over>
+	<template v-if="!loading && !over">
+		<div class="top">
+			<img :src="page.pictureAndStyle.sharebanner">
+			<div class="userinfo">
+				<div class="uavor">
+					<img :src="page.userAvor ? page.userAvor : '../images/default.jpg'">
+				</div>
+				<p>你的好友<strong v-if="page.userNick">{{page.userNick}}</strong>已经抢疯了，</p>
+				<p>就在QQ阅读等你呢～</p>
+				<div class="go":style="{color:page.pictureAndStyle.color2}">
+					<a href="javascript:;" @click="isHasApp($event)" id="btn1" >去QQ阅读参加囤书节啦</a>
+					<div class="arrows"><i>&gt;</i><i>&gt;</i><i>&gt;</i></div>
+				</div>
+			</div>
+		</div>
+		<tab :flog="flog" :pkdata="page"></tab>
+		<div class="wrap">
+			<batch-package :pkdata="page"  v-on:load="isHasApp"></batch-package>
+			<choose-package :pkdata="page"  v-on:load="isHasApp"></choose-package>
+		</div>
+		<rule :rule="page.pictureAndStyle.rule"></rule>
+	</template>
+	<app-load v-if="loadmask"></app-load>
+	<mask-wb v-if="wb"></mask-wb>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="../js/fastclick.min.js"></script>
+<script src="../js/vue.min.js"></script>
+<script src="js/common.js"></script>
+<script src="https://yuedu.reader.qq.com/event/common/en.js"></script>
+<script src="../dist/share.js"></script>
+<script type="text/javascript" data-main="https://yuedu.reader.qq.com/event/common/ne.js" src="https://yuedu.reader.qq.com/event/common/require.js"></script>
+</body>
+</html>

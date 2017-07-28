@@ -1,0 +1,87 @@
+body,p,ul,li,h3,h1{margin:0;padding:0;}
+ul{list-style:none}
+img{border:none;display: block;}
+a{text-decoration:none;-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-animation-fill-mode:both!important}
+// html,body{width: 100%;height: 100%;}
+$fontSize:.28rem;
+$bodycolor:#2b2b2b;
+$bodyBgcolor:#fff;
+$greytext:#666;
+@mixin bgpic($url){
+	background: url("../images/"+$url) no-repeat;
+	background-size: 100% auto;
+}
+body{font-family: "microsoft yahei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;-webkit-user-select:none;font-size:$fontSize;color:$bodycolor;background-color:$bodyBgcolor;background-repeat:repeat-y;background-size: 100% auto;}
+#app{
+	background-color: #8b90e4;
+}
+#banner{
+	width: 100%;
+	height: 14rem;
+	background-size: 100% 13.34rem;
+	background-position: 0 -1rem;
+	background-repeat: no-repeat;
+	position: relative;
+	.again{
+		display: inline-block;
+		color: #fff;
+		border: 1px solid #fff;
+		width: 1.44rem;
+		height: .4rem;
+		font-size: .26rem;
+		line-height: .4rem;
+		text-align: center;
+		margin-left: 5.78rem;
+		margin-top: .4rem;
+		border-radius: .2rem;
+	}
+	.mask{
+		width: 1rem;
+		height: 2.2rem;
+		background-color: #8a90e4;
+		position: absolute;
+		left: 3.6rem;
+		top: 9.4rem;	
+	}
+	.share{
+		width: 7.12rem;
+		height: 1.27rem;
+		@include bgpic('share.png');
+		position: absolute;
+		top: 10.4rem;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		z-index: 99;
+	}
+	.desc{
+		position: absolute;
+		top: 11.7rem;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		color: #5246a6;
+		font-size: .24rem;
+		width: 6.2rem;
+		text-align: center;
+		span{
+			color: #fcdf99;
+		}
+	}
+	.test{
+		width: 1.91rem;
+		height: 1.14rem;
+		position: absolute;
+		bottom: .3rem;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		@include bgpic('test.png');
+	}
+	.qrcode{
+		position: absolute;
+		width: 2.81rem;
+		height: 2.86rem;
+		right: .25rem;
+		bottom: 1.6rem;
+		@include bgpic('qrcode.png');
+	}
+}

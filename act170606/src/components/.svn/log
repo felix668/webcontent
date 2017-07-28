@@ -1,0 +1,170 @@
+<modify-entry
+   name="Load.vue"
+   present-props=""
+   has-prop-mods="false"
+   has-props="false"/>
+<modify-entry
+   committed-rev="304339"
+   committed-date="2017-06-13T01:57:09.867438Z"
+   name="Load.vue"
+   last-author="p_zhizli"
+   uuid="0c6f6f88-3add-3146-a1f2-f283d9076221"/>
+<modify-wcprop
+   name="Load.vue"
+   propname="svn:wc:ra_dav:version-url"
+   propval="/mqq/mqq_book_rep/!svn/ver/304339/book_proj/trunk/src/BookEventFront/WebContent/act170606/src/components/Load.vue"/>
+<modify-entry
+   text-time="1970-01-01T00:00:00.000000Z"
+   name="Load.vue"
+   kind="file"
+   deleted="false"
+   working-size="-1"
+   absent="false"
+   revision="306291"/>
+<cp-and-translate
+   dest="Load.vue"
+   name=".svn/tmp/text-base/Load.vue.svn-base"/>
+<mv
+   dest=".svn/text-base/Load.vue.svn-base"
+   name=".svn/tmp/text-base/Load.vue.svn-base"/>
+<readonly
+   name=".svn/text-base/Load.vue.svn-base"/>
+<modify-entry
+   name="Load.vue"
+   checksum="cddfb4822c7684fb9188581cd1f65bcf"/>
+<modify-entry
+   name="Load.vue"
+   text-time="working"/>
+<modify-entry
+   name="Load.vue"
+   working-size="working"/>
+<modify-entry
+   name="Alert.vue"
+   present-props=""
+   has-prop-mods="false"
+   has-props="false"/>
+<modify-entry
+   committed-rev="305495"
+   committed-date="2017-06-19T09:01:27.431101Z"
+   name="Alert.vue"
+   last-author="p_zhizli"
+   uuid="0c6f6f88-3add-3146-a1f2-f283d9076221"/>
+<modify-wcprop
+   name="Alert.vue"
+   propname="svn:wc:ra_dav:version-url"
+   propval="/mqq/mqq_book_rep/!svn/ver/305495/book_proj/trunk/src/BookEventFront/WebContent/act170606/src/components/Alert.vue"/>
+<modify-entry
+   text-time="1970-01-01T00:00:00.000000Z"
+   name="Alert.vue"
+   kind="file"
+   deleted="false"
+   working-size="-1"
+   absent="false"
+   revision="306291"/>
+<cp-and-translate
+   dest="Alert.vue"
+   name=".svn/tmp/text-base/Alert.vue.svn-base"/>
+<mv
+   dest=".svn/text-base/Alert.vue.svn-base"
+   name=".svn/tmp/text-base/Alert.vue.svn-base"/>
+<readonly
+   name=".svn/text-base/Alert.vue.svn-base"/>
+<modify-entry
+   name="Alert.vue"
+   checksum="a3a0fa684cd44c723d57f79de9b74da1"/>
+<modify-entry
+   name="Alert.vue"
+   text-time="working"/>
+<modify-entry
+   name="Alert.vue"
+   working-size="working"/>
+<modify-entry
+   name="alert.vue"
+   present-props=""
+   has-prop-mods="false"
+   has-props="false"/>
+<modify-entry
+   committed-rev="304649"
+   committed-date="2017-06-14T07:34:38.377469Z"
+   name="alert.vue"
+   last-author="p_zhizli"
+   uuid="0c6f6f88-3add-3146-a1f2-f283d9076221"/>
+<modify-wcprop
+   name="alert.vue"
+   propname="svn:wc:ra_dav:version-url"
+   propval="/mqq/mqq_book_rep/!svn/ver/304649/book_proj/trunk/src/BookEventFront/WebContent/act170606/src/components/alert.vue"/>
+<modify-entry
+   text-time="1970-01-01T00:00:00.000000Z"
+   name="alert.vue"
+   kind="file"
+   deleted="false"
+   working-size="-1"
+   absent="false"
+   revision="306291"/>
+<cp-and-translate
+   dest="alert.vue"
+   name=".svn/tmp/text-base/alert.vue.svn-base"/>
+<mv
+   dest=".svn/text-base/alert.vue.svn-base"
+   name=".svn/tmp/text-base/alert.vue.svn-base"/>
+<readonly
+   name=".svn/text-base/alert.vue.svn-base"/>
+<modify-entry
+   name="alert.vue"
+   checksum="152007b6637e4cf78ff62985ba916598"/>
+<modify-entry
+   name="alert.vue"
+   text-time="working"/>
+<modify-entry
+   name="alert.vue"
+   working-size="working"/>
+<modify-entry
+   name="Over.vue"
+   present-props=""
+   has-prop-mods="false"
+   has-props="false"/>
+<modify-entry
+   committed-rev="304339"
+   committed-date="2017-06-13T01:57:09.867438Z"
+   name="Over.vue"
+   last-author="p_zhizli"
+   uuid="0c6f6f88-3add-3146-a1f2-f283d9076221"/>
+<modify-wcprop
+   name="Over.vue"
+   propname="svn:wc:ra_dav:version-url"
+   propval="/mqq/mqq_book_rep/!svn/ver/304339/book_proj/trunk/src/BookEventFront/WebContent/act170606/src/components/Over.vue"/>
+<modify-entry
+   text-time="1970-01-01T00:00:00.000000Z"
+   name="Over.vue"
+   kind="file"
+   deleted="false"
+   working-size="-1"
+   absent="false"
+   revision="306291"/>
+<cp-and-translate
+   dest="Over.vue"
+   name=".svn/tmp/text-base/Over.vue.svn-base"/>
+<mv
+   dest=".svn/text-base/Over.vue.svn-base"
+   name=".svn/tmp/text-base/Over.vue.svn-base"/>
+<readonly
+   name=".svn/text-base/Over.vue.svn-base"/>
+<modify-entry
+   name="Over.vue"
+   checksum="14a559816f34bd8c2775b957681048f0"/>
+<modify-entry
+   name="Over.vue"
+   text-time="working"/>
+<modify-entry
+   name="Over.vue"
+   working-size="working"/>
+<modify-entry
+   committed-rev="305495"
+   committed-date="2017-06-19T09:01:27.431101Z"
+   name=""
+   last-author="p_zhizli"
+   uuid="0c6f6f88-3add-3146-a1f2-f283d9076221"/>
+<modify-wcprop
+   name=""
+   propname="svn:wc:ra_dav:version-url"
+   propval="/mqq/mqq_book_rep/!svn/ver/305495/book_proj/trunk/src/BookEventFront/WebContent/act170606/src/components"/>

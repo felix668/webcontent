@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="copyright" content="Copyright (c) 1998-2014 Tencent." />
+<meta name="description" content="QQ阅读" />
+<meta name="format-detection" content="telephone=no" />
+<title>联系方式</title>
+<style type="text/css">
+/* CSS reset */
+body,div,p,ul,li,span,input{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+i{font-style: normal;}
+ul,li{list-style:none}
+a{text-decoration:none;-webkit-touch-callout:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input{border:none;-webkit-appearance:none;}
+body{font-family:"Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;background:#fff;font-size: 0.13rem;}
+/*=======填写联系方式=======*/
+.fillbox,.infobox{padding:0.14rem;}
+.tip{color: #999;line-height: 0.2rem;font-size: 0.12rem}
+.error{color: #dd3127;height: 0.35rem;line-height: 0.35rem;}
+.fillbox li{height:0.38rem;margin-bottom:0.1rem;}
+.fillbox input{display:inline-block;width:2.35rem;padding:0.11rem 0.1rem;background:#fff;border:1px solid #999;font-size:0.13rem;color:#333;vertical-align:top;-webkit-tap-highlight-color:rgba(0,0,0,0);outline:none;}
+.fillbox input:focus{border:1px solid #0a79af;}
+.fillbox .msg{color: #999;line-height: 0.38rem;margin-left: 0.08rem}
+.submit{display:block;margin:0.3rem 0.2rem 0;height:0.4rem;line-height:0.42rem;background:#6699cc;border-radius:5px;text-align:center;font-size:0.18rem;color:#fefefe;}
+.submit:active{background:#5a86b3;}
+/*=======展示联系方式=======*/
+.infobox{display: none}
+.detail{margin-top: 0.37rem}
+.detail li{word-wrap:break-word;position: relative;line-height: 0.24rem;min-height:0.24rem;padding:0.03rem 0;}
+.detail li i{position: absolute;top: 0.03rem;left: 0;}
+.detail li span{padding-left:0.4rem;display: block;}
+.infobox .submit{margin-top: 0.25rem}
+</style>
+</head>
+<body>
+<div class="fillbox" id="fillbox">
+    <p class="tip">中奖用户务必正确填写联系方式，方便客服与您联系。</p>
+    <p class="error" id="error"></p>
+    <ul class="form" id="form">
+   		<li>
+   			<input type="tel" id="usertel" placeholder="电话" value="" autofocus/><span class="msg">必填</span>
+   		</li>
+   		<li>
+   			<input type="text" id="userQQ" placeholder="QQ" value=""/><span class="msg">必填</span>
+   		</li>
+   		<li>
+   			<input type="text" id="username" placeholder="姓名" value=""/>
+   		</li>
+   		<li>
+   			<input type="text" id="usersite" placeholder="地址" value=""/>
+   		</li>
+    </ul>
+    <a href="javascript:;" class="submit" id="submit">提交</a>
+</div>
+<div class="infobox" id="infobox">
+    <p class="tip">中奖用户务必正确填写联系方式，方便客服与您联系。</p>
+  	<ul class="detail">
+   		<li>
+   			<i>姓名：</i><span class="name"></span>
+   		</li>
+   		<li>
+   			<i>QQ：</i><span class="qq"></span>
+   		</li>
+   		<li>
+   			<i>电话：</i><span class="telphone"></span>
+   		</li>
+   		<li>
+   			<i>地址：</i><span class="address"></span>
+   		</li>
+    </ul>
+   <a href="javascript:;" class="submit" id="edit">修改</a>
+</div>
+<script type="text/javascript" src="js/zepto-1.1.3.min.js"></script>
+<script type="text/javascript" src="contact.js"></script>
+<script type="text/javascript" src="js/jsbridge.js"></script>
+<script type="text/javascript" src="js/local.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

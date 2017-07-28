@@ -1,0 +1,45 @@
+有如下几个问题需要您这边给下答复：
+1、端内判断安装QQ阅读的接口
+2、分享链接设置
+3、开通VIP会员页的链接
+4、分享页里可以直接跳转到开通VIP页吗？
+5、分享页链接和活动页链接都是在一个域里
+6、统计是否可用
+
+
+我们的链接＋是否vip会员的参数值
+下载app
+TenvideoJSBridge.invoke("download3rdApp",{"downloadUrl":"http://106.38.181.154/rpcs.myapp.com/myapp/rcps/d/10028010/qqreader_6.5.1.999_android_20170613195705_304517_otherstore-release_10028010_170629103113a.apk?mkey=5954ff57b20d48d1&f=d287&c=0&p=.apk","packageName":"com.qq.reader","iconUrl":"http://pp.myapp.com/ma_icon/0/icon_10555_1497428260/96","appName":"qqreader","itunesUrl":"http://itunes.apple.com/cn/app/id414478124?mt=8", "packageUrl":"uniteqqreader://", "channel":"10028010"},function(res){console.log(res)})
+
+TenvideoJSBridge.invoke("isInstalled",{"pkgName":"com.qq.reader", "pkgUrl":"uniteqqreader://", "appName":"qq阅读"},function(res){console.log(res)})
+
+打开app 
+TenvideoJSBridge.invoke('launch3rdApp',{"pkgName":"com.qq.reader", "pkgUrl":"qqreader://", "appName":"QQ阅读"});	
+
+跳转开通window.location.href="tenvideo2://?action=20&newtenvideo2=1&callback=weixin%3A%2F%2F&sender=weixin"
+获取vip状态TenvideoJSBridge.invoke('getPayVip',function(res){console.log(res)});	 这个没调通
+
+测试链接
+https://ptsolomo.reader.qq.com/book_res/event/act170607qv/com/index.html?act_f=170607&tf=1&memberV=1
+正式链接
+https://yuedu.reader.qq.com/event/act170607qv/com/index.html?act_f=170607&tf=1&memberV=
+
+http://dev.film.qq.com/weixin/test.html
+
+// share(){
+	 		// 	let self=this;
+	 		// 	TenvideoJSBridge.on('setMoreInfo',{"title":self.shareObj.title, "subTitle":self.shareObj.subTitle,"imageUrl":self.shareObj.imageUrl, "url":self.shareObj.url })
+	 		// 	TenvideoJSBridge.invoke('shareWeixinTimeline',{'title':self.shareObj.title,'content':self.shareObj.subTitle,'imageUrl':self.shareObj.imageUrl,'url':self.shareObj.url},function(){});
+				// TenvideoJSBridge.on('shareWeixinUser',{'title':self.shareObj.title,'content':self.shareObj.content,'imageUrl':self.shareObj.imageUrl,'url':self.shareObj.url},function(){});
+				// TenvideoJSBridge.on('shareQQUser',{'title':self.shareObj.title,'content':self.shareObj.content,'imageUrl':self.shareObj.imageUrl,'url':self.shareObj.url},function(){});
+				// TenvideoJSBridge.invoke('shareQzone',{'title':self.shareObj.title,'content':self.shareObj.content,'imageUrl':self.shareObj.imageUrl,'url':self.shareObj.url},function(){});
+				// TenvideoJSBridge.invoke('shareSinaWeibo',{'title':self.shareObj.title,'content':self.shareObj.content,'imageUrl':self.shareObj.imageUrl,'url':self.shareObj.url},function(){});
+				// TenvideoJSBridge.invoke('shareTxWeibo',{'title':self.shareObj.title,'content':self.shareObj.content,'imageUrl':self.shareObj.imageUrl,'url':self.shareObj.url},function(){});
+	 		// },
+shareObj:{
+					title:'视频VIP会员大礼包',
+					subTitle:'开通腾讯视频VIP会员，超多影视热书三天免费看！',
+					imageUrl:pageurl('act170607dv/src/images/cover.jpg'),
+					url:pageurl("act170607qv/share.html?act_f=170607")
+
+				},

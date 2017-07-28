@@ -1,0 +1,246 @@
+body,p,ul,li,h3,h2{margin:0;padding:0;}
+ul,li{list-style:none}
+img{border:none;width:100%;display: block;}
+a{text-decoration:none;-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-animation-fill-mode:both!important}
+$fontSize:.28rem;
+$bodycolor:#fff;
+$bodyBgcolor:#fff;
+$greytext:#999;
+body{font-family: "microsoft yahei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;-webkit-user-select:none;font-size:$fontSize;color:$bodycolor;background:$bodyBgcolor;}
+%justifyflex{
+	display: -webkit-flex;
+	-webkit-align-items: center;
+    -webkit-justify-content: justify;
+	display: -webkit-box;
+	display: box;
+	-webkit-box-align:center;
+	-webkit-box-pack:justify;
+}
+%verticalflex{
+	display: -webkit-flex;
+	-webkit-align-items: center;
+    -webkit-justify-content: center;
+	display: -webkit-box;
+	display: box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+	-webkit-box-orient:vertical;
+    -webkit-flex-direction:column;
+}
+@mixin icobg($pos:0 0){
+	background:url("../images/icos.png") no-repeat;
+	background-size: 1.48rem auto;
+	background-position:$pos;
+}
+@mixin boxShadow($slength,$scolor){
+	-webkit-box-shadow: 0 $slength 0 $scolor; 
+}
+@mixin btnStyle($width,$height,$radius){
+	width:$width;
+	height:$height;
+	-webkit-border-radius:$radius;      
+    text-align:center;
+    color:#fff;
+}
+@mixin bgpic($width,$height,$pos:0 0){
+	width:$width;
+	height:$height;
+	background-size: $width auto;
+	background-repeat: no-repeat;      
+    background-position:$pos;
+}
+%fixpos{
+	position: fixed;
+	left:0;
+}
+.top{height: 6.16rem;}
+.anchor{width: 100%;height: 1.4rem;}
+/*栏目*/
+.title{width:100%;height: .88rem}
+.package{
+	position: relative;
+	@include bgpic(7.14rem,6.5rem);
+	margin:0 auto .3rem;
+	.pname{
+		padding-top:.42rem;
+		height:.36rem;
+		line-height:.36rem;
+		text-align:center;
+		font-size:.3rem;
+		color:#555;
+		h3{
+			display:inline-block;
+			position: relative;			
+			&::before,&::after{
+				content:"";
+				position:absolute;
+				top:0;
+				width: .26rem;
+				height:.36rem;
+				@include icobg();
+			}
+			&::before{
+				left:-.44rem;
+			}
+			&::after{
+				right:-.44rem;
+			}
+		}
+	}
+	.hot{
+		position: absolute;
+		top:.22rem;
+		right:.5rem;
+		width: .52rem;
+	}
+}
+#column1 .package:last-child{margin-bottom: 0}
+#column2 .package:last-child{margin-bottom: 0}
+#column2 .package{
+	@include bgpic(7.14rem,11.98rem);
+}
+.booklist{
+	@extend %justifyflex;
+	margin:.48rem .4rem 0;
+	li{
+		width:1.56rem;
+	}
+	.bcover{
+		position: relative;
+		min-height: 2.22rem;
+		&::after{
+			content:"";
+			width: 100%;
+			height: .08rem;
+			border:.02rem solid #d7d7d7;
+			border-right: none;
+			position: absolute;
+			top: -.12rem;
+			left:.02rem;
+			-webkit-transform:skewX(-20deg)
+		}
+		&::before{
+			content:"";
+			width: .1rem;
+			height: .2rem;
+			background: #fff;
+			position: absolute;
+			top: -.12rem;
+			right:-.1rem;
+			z-index: 10
+		}
+	}
+	p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:.4rem;font-size:.24rem;}
+	.bname{color:#333;font-weight:bold;margin-top:.18rem;}
+	.author{color:$greytext;}
+}
+.buyinfo{
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	-webkit-box-sizing:border-box;
+	height:1.8rem;
+	padding:0 .36rem 0 .5rem;
+	@extend %justifyflex;
+	.prices{
+		 strong{
+
+			font-size:.32rem;
+			line-height:.48rem;
+		}
+		p{
+			color:$greytext;
+			font-size:.24rem;
+			line-height:.4rem;
+			text-decoration:line-through;
+		}
+	}
+	@at-root .btn{
+		@include btnStyle(2rem,.94rem,.06rem);
+        @extend %verticalflex;
+		strong{				
+			display:block;
+		}
+		span{
+			display:block;
+			font-size:.2rem;
+		}
+		&:active{
+			-webkit-transform:scale(.9);
+			-webkit-transition:all .2s;
+		}
+	}
+	.disable{
+		background: #dbdbdb;
+		color:#8b8b8b;
+	}
+}
+
+.sharebtn{
+	margin:.36rem auto .3rem;
+	line-height: .98rem;
+	position: relative;
+	font-weight: bold;
+	@include btnStyle(6.28rem,.98rem,.06rem);
+	height: .98rem;
+    @at-root .arrows{
+    	display: inline-block;	
+    	position: relative;
+    	top:.35rem;
+    	left:.1rem;
+		i{
+			display: inline-block;
+			vertical-align: top;
+			width: .14rem;
+			height: .22rem;
+			@include icobg(-.68rem 0)
+			&:nth-child(1){-webkit-animation: arrow1 1.6s infinite;}
+			&:nth-child(2){-webkit-animation: arrow2 1.6s infinite;}
+			&:nth-child(3){-webkit-animation: arrow3 1.6s infinite;}
+		}
+		@at-root {
+			@-webkit-keyframes arrow1 {
+			  0% {
+			    opacity: 1;
+			  }
+			  100% {
+			    opacity: 0;
+			  }
+			}
+			@-webkit-keyframes arrow2 {
+			  0% {
+			    opacity: 0;
+			  }
+			  9% {
+			    opacity: 0;
+			  }
+			  10% {
+			    opacity: .5;
+			  }
+			  100% {
+			    opacity: 0;
+			  }
+			}
+			@-webkit-keyframes arrow3 {
+			  0% {
+			    opacity: 0;
+			  }
+			  19% {
+			    opacity: 0;
+			  }
+			  20% {
+			    opacity: .3;
+			  }
+			  100% {
+			    opacity: 0;
+			  }
+			}
+		}
+    }
+}
+.logo{
+	width: 2.3rem;
+	margin:0 auto .3rem;
+}

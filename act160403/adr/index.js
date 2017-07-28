@@ -204,13 +204,12 @@ Index.amusic=function(){
         music.play();
     });
 }
- 
 //滑屏切换
 var winW=$(window).width();
 var winH=$(window).height();
 Index.curPage = 0;
-Index.pageSild=function(slidepage,app){
-	console.log("第一页");
+Index.pageSild=function(slidepage){
+	//console.log("第一页");
 	// 每一页高度自适应
 	var len=$(slidepage+">.page").length;
 	$(slidepage+">.page").each(function () {
@@ -258,6 +257,7 @@ Index.pageSild=function(slidepage,app){
 			}
 	}
 }
+Index.pageSild('.new_user .box');
 //填充数据
 Index.Numerical=function(nums,sums){
     var arryimg=['images/0.png','images/1.png','images/2.png','images/3.png','images/4.png','images/5.png','images/6.png','images/7.png','images/8.png','images/9.png'];

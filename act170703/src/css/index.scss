@@ -1,0 +1,34 @@
+@import "common";
+
+[v-cloak] {
+  display: none;
+}
+.hide{
+    display: none;
+}
+.wrap{
+    overflow: hidden;
+    width: 100%;
+}
+.banner{
+    width: 100%;
+    height: auto;
+}
+.content{
+    overflow: hidden;
+    width:6.88rem;
+    margin:0 auto;
+    // background-size: 100% 100%;
+}
+.scorebtn{
+	width:5.98rem;
+	height:.98rem;
+	background:#7fc5df;
+	box-shadow:0 -.04rem #4f95c4 inset;
+	color: #fff;
+	font-size: .4rem;
+	line-height: .98rem;
+	margin:.32rem auto .56rem;
+	border-radius: .1rem;
+	text-align: center;
+}

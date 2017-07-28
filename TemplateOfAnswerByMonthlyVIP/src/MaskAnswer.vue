@@ -125,6 +125,7 @@
             	}
             },
             toNextQuestion:function(ind){
+            	forceLog(param("act_f"),'nextAnswer'+bid);
             	let self=this;
             	let len=self.cardlist.list.length-1;
             	$(".answerbox>li").eq(ind).addClass('flyout');
@@ -141,8 +142,6 @@
             		}, [], function() {
 						Local.showToast("网络异常，请稍候重试");
 					}, 1);
-            	}else{
-            		forceLog(param("act_f"),'nextAnswer'+num);
             	}
             }
 		}

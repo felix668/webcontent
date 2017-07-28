@@ -1,0 +1,342 @@
+body,p,ul,li,h3,h1{margin:0;padding:0;}
+ul{list-style:none}
+img{border:none;width:100%;display: block;}
+a{text-decoration:none;-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-animation-fill-mode:both!important}
+// html,body{width: 100%;height: 100%;}
+$fontSize:.28rem;
+$bodycolor:#2b2b2b;
+$bodyBgcolor:#f8fafc;
+$greytext:#666;
+body{font-family: "microsoft yahei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;-webkit-text-size-adjust:none;-webkit-user-select:none;font-size:$fontSize;color:$bodycolor;background-color:#fff;background-repeat:repeat-y;background-size: 100% auto;}
+%justifyflex{
+	display: -webkit-flex;
+	-webkit-align-items:start;
+    -webkit-justify-content: justify;
+	display: -webkit-box;
+	display: box;
+	-webkit-box-align:start;
+	-webkit-box-pack:justify;
+}
+%centerflex{
+	display: -webkit-flex;
+	-webkit-align-items:center;
+    -webkit-justify-content: center;
+	display: -webkit-box;
+	display: box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+%pos{
+	width: 100%;height: 100%;position: absolute;top:0;left:0;
+}
+@mixin center($top){
+	position: absolute;top: $top;left: 0;right: 0;margin:0 auto;
+}
+@mixin bgpic($url){
+	background: url("../images/"+$url) no-repeat;
+	background-size: 100% auto;
+}
+
+#banner{
+	width: 100%;
+	height: 10.28rem;
+	@include bgpic("banner.png");
+}
+
+#content{
+	text-align: center;
+	padding: 0 .32rem;
+	margin-top: -.2rem;
+	.content-video{
+		.title{
+			width: 4.36rem;
+			height: .48rem;
+			@include bgpic('video-title.png');
+			margin: 0 auto;
+		}
+		.video-box{
+			overflow: hidden;
+			width: 6.98rem;
+			height: 3.98rem;
+			@include bgpic('video-bg.png');
+			margin: .5rem auto .6rem;
+			position: relative;
+			.center{
+				position: absolute;
+				height: 3.78rem;
+				width: 6.8rem;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+			}
+			.poster{
+				@include bgpic('poster.png');
+				background-color: #fff;
+				z-index: 99;
+			}
+			.play-btn{
+				width: .7rem;
+				height: .7rem;
+				@include bgpic('play-btn.png');
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				z-index: 100;
+			}
+			
+		}
+	}
+	.content-task{
+		.title{
+			width: 5.33rem;
+			height: .48rem;
+			@include bgpic('task-title.png');
+			margin: 0 auto;
+
+		}
+		.task1{
+			font-size: .3rem;
+			color: #2f136e;
+			margin-top: .12rem;
+			margin-bottom: .5rem;
+		}
+		.book{
+			img{
+				width: 1.99rem;
+				height: 2.63rem;
+				float: left;
+				margin-right: .3rem;
+			}
+			.book-detail{
+				text-align: left;
+				h3{
+					color: #7d50a8;
+					font-weight: bold;
+				}
+				.book-name{
+					font-size: .26rem;
+					color: #806bb0;
+					font-weight: bold;
+					margin: .28rem 0 .18rem;
+				}
+				.book-desc{
+					font-size: .26rem;
+					color: #806bb0;
+					line-height: .42rem;
+				}
+			}
+		}
+		.toBookShelf{
+			width: 6.86rem;
+			height: .99rem;
+			@include bgpic('toBookShelf.png');
+			font-size: .36rem;
+			margin: .4rem auto .9rem;
+			p{
+				height: .94rem;
+				color: #fff;
+				line-height: .94rem;
+				font-weight: bold;
+			}
+		}
+		.rect{
+			width: 6.58rem;
+			height: 1.2rem;
+			@include bgpic('rect.png');
+			margin: 0 auto;	
+			border: 1px solid #fff;
+			.task2{
+				font-size: .3rem;
+				color: #3a1886;
+				margin-top: -.2rem;
+			}
+			.share{
+				width: 4.73rem;
+				height: 1.33rem;
+				margin: .5rem auto 0;
+				@include bgpic('share.png');
+				p{
+					font-size: .3rem;
+					font-weight: bold;
+					height: .94rem;
+					width: 4.65rem;
+					color: #fff;
+					line-height: .94rem;
+				}
+			}
+			.weibo{
+				color: #2f136e;
+				font-size: .2rem;
+			}
+		}
+	}
+	.content-lottery{
+		margin-top: 2rem;
+		.title{
+			width: 2.62rem;
+			height: .48rem;
+			@include bgpic('lottery-title.png');
+			margin: 0 auto;
+		}
+		.lottery-num{
+			margin-top: .5rem;
+			float: right;
+			font-size: .24rem;
+			.num{
+				color: #f15252;
+			}
+			.loginLook{
+				color: #5660c1;
+			}
+		}
+		.refresh-box{
+			padding: .2rem 0 .2rem .2rem;
+			float: right;
+			margin-top: .7rem;
+			margin-right: -1.7rem;
+			height: .36rem;
+			.refresh{
+				height: .36rem;
+				line-height: .36rem;
+				background: url('../images/refresh.png') no-repeat right center;
+				background-size: .2rem .2rem;
+				color: #5660c1;
+				font-size: .24rem;
+				padding-right: .2rem;
+			}
+		}
+		
+		.lottery-bg{
+			width: 6.78rem;
+			height: 6.78rem;
+			@include bgpic('lottery-bg.png');
+			margin-top: 1.4rem;
+			position: relative;
+			.arrow{
+				width: 2rem;
+				height: 2rem;
+				@include bgpic('arrow.png');
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -1rem;
+				margin-left: -1rem;
+			}
+			.start{
+				width: 1.11rem;
+				height: 1.11rem;
+				@include bgpic('start.png');
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				pointer-events: none;
+			}
+		}
+		.laud{
+			margin-top: 1.28rem;
+			font-size: .3rem;
+			color: #3a1886;
+		}
+	}
+	.blue-btn{
+		margin: .34rem auto 0;
+		width: 4.74rem;
+		height: .96rem;
+		@include bgpic('blue-btn.png');
+		line-height: .96rem;
+		font-size: .36rem;
+		color: #fff;
+		font-weight: bold;
+	}
+	.red-desc{
+		margin-top: .09rem;
+		font-size: .2rem;
+		color: #f15252;
+	}
+	.content-offline{
+		margin-top: .66rem;
+		.title{
+			width: 3.55rem;
+			height: .48rem;
+			@include bgpic('offline-title.png');
+			margin: 0 auto;
+		}
+		.head{
+			margin-top: .24rem;
+			width: 6.76rem;
+			height: 1.59rem;
+			margin: .24rem auto 0;
+			@include bgpic('offline-head.png');
+		}
+		.address{
+			li{
+				font-size: .24rem;
+				line-height: .42rem;
+			}
+		}
+	}
+	.content-rule{
+		.title{
+			color: #2f136e;
+			font-size: .42rem;
+			font-weight: bold;
+			margin: .84rem auto .42rem;
+		}
+		ul{
+			list-style: decimal outside none;
+			margin-left: .32rem;
+			li{
+				font-size: .28rem;
+				color: #2b2b2b;
+				line-height: .42rem;
+				text-align: left;
+				.writeAddress{
+					color: #5660c1;
+					text-decoration: underline;
+				}
+			}
+		}
+
+	}
+}
+.logo{
+	width: 7.5rem;
+	height: 3.44rem;
+	@include bgpic('logo.png');
+	margin-top: -1.66rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

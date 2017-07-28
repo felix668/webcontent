@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>发现好书</title>
+<script>
+	 document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px'
+</script>
+<style>
+	body{
+		margin: 0;
+		padding: .2rem .3rem .68rem;
+	}
+	h3{
+		margin: 0;
+	}
+	p{
+		margin: 0;
+		margin-bottom: .1rem;
+		width: 6.9rem;
+		height: 2.6rem;
+
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+	a{
+		display: block;
+		margin: 0;
+		margin-bottom: .1rem;
+		width: 6.9rem;
+		height: 2.6rem;
+
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+	section h3{
+		color: #333;
+		font-size: .32rem;
+		text-align: center;
+		height: .72rem;
+		line-height: .72rem;
+	}
+	.book1{
+		background-image: url('src/images/man11.jpg');
+	}
+	.book2{
+		background-image: url('src/images/woman11.jpg');
+	}
+	.book3{
+		background-image: url('src/images/chuban11.jpg');
+	}
+	.book4{
+		background-image: url('src/images/man22.jpg');
+	}
+	.book5{
+		background-image: url('src/images/woman22.jpg');
+	}
+	.book6{
+		background-image: url('src/images/chuban22.jpg');
+	}
+	.book7{
+		background-image: url('src/images/man33.jpg');
+	}
+	.book8{
+		background-image: url('src/images/woman33.jpg');
+	}
+	.book9{
+		background-image: url('src/images/chuban33.jpg');
+	}
+</style>
+</head>
+<body>
+	<section class="section1">
+		<h3>限免·福利</h3>
+		<a class="book1"></a>
+		<a class="book2"></a>
+		<a class="book3"></a>
+	</section>
+
+	<section class="section1">
+		<h3>发现·新书</h3>
+		<a class="book4"></a>
+		<a class="book5"></a>
+		<a class="book6"></a>
+	</section>
+
+	<section class="section1">
+		<h3>折扣·惊喜</h3>
+		<a class="book7"></a>
+		<a class="book8"></a>
+		<a class="book9"></a>
+	</section>
+</body>
+<script src="js/jsbridge.js"></script>
+<script src="js/common.js"></script>
+<script src="js/local.js"></script>
+<script>
+var qurl = [
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329369',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329369'
+	},
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329368',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329368'
+	},
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329620',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329621'
+	},
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329374',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329374'
+	},
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329365',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329365'
+	},
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329577',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329578'
+	},
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329363',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329363'
+	},
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329362',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329362'
+	},
+	{
+		adr: 'http://iyuedu.qq.com/common/common/topicV2.html?tid=329607',
+		ios: 'https://yuedu.reader.qq.com/common/common/topicV2.html?tid=329614'
+	}
+]
+
+var allA = document.getElementsByTagName('a')
+Array.prototype.forEach.call(allA,function(item,index){
+	item.onclick = function(){
+		console.log(pt)
+		if (pt == 'ios') {
+			console.log(qurl[index].ios)
+			Local.openInside(qurl[index].ios)
+		}else{
+			Local.openInside(qurl[index].adr)
+		}
+	}
+})
+
+</script>
+</html>
