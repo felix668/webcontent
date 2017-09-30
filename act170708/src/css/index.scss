@@ -35,7 +35,7 @@ body{font-family: "microsoft yahei","Helvetica Neue", Helvetica, STHeiTi, sans-s
 }
 @mixin bgpic($url){
 	background: url("../images/"+$url) no-repeat;
-	background-size: 100% auto;
+	background-size: 100% auto ;
 }
 #app{
 	background-color: #8b90e4;

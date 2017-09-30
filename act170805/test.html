@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>书单测试</title>
+    <style>
+        div {
+            width: 200px;
+            height: 88px;
+            margin: 100px auto;
+            background-color: skyblue;
+            line-height: 88px;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .t:nth-child(2) {
+            color: red
+        }
+    </style>
+</head>
+<body>
+<div class="t">创建书单</div>
+</body>
+<script src="src/js/set.js"></script>
+<script src="src/js/debug.js"></script>
+<script src="src/js/jsbridge.js"></script>
+<script src="src/js/common.js"></script>
+<script src="src/js/local.js"></script>
+<script>
+    if (window.sessionStorage.getItem('invite')) {
+        window.sessionStorage.setItem('invite', 0);
+        console.log("invite = 1"+window.pt);
+        if (window.pt == 'ios') {
+            Local.reqaObj("https://newcommon.reader.qq.com/v6_5_5/bookSheet/getMyBookSheets?c_platform=ioswp", function (data) {
+//        console.log(data);
+                if (!data.isLogin) {
+                    Local.login(0, "e");
+                } else if (data.guestcheckcode == 0 || data.gsid) {//todo 游客判断
+                    Local.login(0, "e");
+                } else if (data.isVIPOrLVAuthorityFlag == 0) {
+                    Local.showToast("暂无创建权限");
+                } else if (data.todaySubNum == data.todayLimitSubNum) {
+                    Local.showToast("每天最多可创建" + data.todayLimitSubNum + "个书单");
+                } else if (data.limitCreateNum == data.bookSheetList.length) {
+                    Local.showToast("最多可创建" + data.limitCreateNum + "个，已达上限");
+                } else {
+//          Local.showToast("符合条件 跳转创建"+data.maxAddBooksNum)
+                    Local.createBookList(data.maxAddBooksNum);
+                }
+            });
+        } else {
+            Local.reqaObj("http://newcommon.reader.qq.com/v6_5_5/bookSheet/getMyBookSheets", function (data) {
+//        console.log(data);
+                if (!data.isLogin) {
+                    Local.login(0, "e");
+                } else if (data.guestcheckcode == 0 || data.gsid) {//todo 游客判断
+                    Local.login(0, "e");
+                } else if (data.isVIPOrLVAuthorityFlag == 0) {
+                    Local.showToast("暂无创建权限");
+                } else if (data.todaySubNum == data.todayLimitSubNum) {
+                    Local.showToast("每天最多可创建" + data.todayLimitSubNum + "个书单");
+                } else if (data.limitCreateNum == data.bookSheetList.length) {
+                    Local.showToast("最多可创建" + data.limitCreateNum + "个，已达上限");
+                } else {
+//          Local.showToast("符合条件 跳转创建"+data.maxAddBooksNum)
+                    Local.createBookList(data.maxAddBooksNum);
+                }
+
+            });
+        }
+    }
+
+    var div = document.querySelector('div');
+    div.onclick = function (e) {
+        var server = window.pt == 'ios' ?
+            "https://newcommon.reader.qq.com/v6_5_5/bookSheet/getMyBookSheets?c_platform=ioswp"
+            : "http://newcommon.reader.qq.com/v6_5_5/bookSheet/getMyBookSheets";
+//      console.log(server);
+        Local.reqaObj(server, function (data) {
+            console.log(data);
+            if (!data.isLogin) {
+                window.sessionStorage.setItem('invite', 1);
+                Local.login(0, "e");
+            } else if (data.guestcheckcode == 0 || data.gsid) {//todo 游客判断
+                window.sessionStorage.setItem('invite', 1);
+                Local.login(0, "e");
+            } else if (data.isVIPOrLVAuthorityFlag == 0) {
+                Local.showToast("暂无创建权限");
+            } else if (data.todaySubNum == data.todayLimitSubNum) {
+                Local.showToast("每天最多可创建" + data.todayLimitSubNum + "个书单");
+            } else if (data.limitCreateNum == data.bookSheetList.length) {
+                Local.showToast("最多可创建" + data.limitCreateNum + "个，已达上限");
+            } else {
+                Local.createBookList(data.maxAddBooksNum);
+            }
+        }, [], function () {
+            Local.showToast("网络异常，请稍候重试");
+        });
+    }
+</script>
+</html>

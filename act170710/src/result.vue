@@ -2,32 +2,38 @@
 	<div id="app">
 		<div class="exchange">
 			  <div class="states"><img src="src/images/allRight.png"></div>
-			  <div class="explain">成功兑换<span>6</span>书券，已自动发放至账户
-			    <p>书券可直接购买书籍，1书券=1书币完美阅读！</p>
+			  <div class="explain">成功兑换<span>{{bookTicketNum}}</span>{{text1}}，已自动发放至账户
+			    <p>{{text1}}可直接购买书籍，1{{text1}}=1{{text2}}完美阅读！</p>
 			</div>
 		</div>
-		<div class="exchangeList">
-		  <div class="newtitle">
-		    <p>本周畅销书<em class="newtl"></em><em class="newtr"></em></p>
-		  </div>
-  		  <ul class="booklist">
-        	 <li class="active"> 
-          		<div class="bagCover"><img src="img/book100126.jpg"></div>
-	            <div class="bagDetail">
-		            <h3>1.嫡女惊华：倾世小魔妃倾世小魔妃倾世小魔妃倾世小魔妃倾世小魔妃倾世小魔妃倾世小魔妃倾世小魔妃倾世小魔妃</h3>
-		            <p>都市丨CHEN喜乐<span class="popul">3.8万热销</span></p>
-		            <p>在纷纷扰扰的江湖中，笑看武林纷乱！</p>
-	          </div>
-            </li>
-        </ul>
+		 <div class="exchangeList">
+			<div class="newtitle">
+			    <p>本周畅销书<em class="newtl"></em><em class="newtr"></em></p>
+			</div>
+	  		 <ul class="booklist">
+	        	<li v-for="item in books" @click="goDetail(item.cid)"> 
+	          		<div class="cover">
+	          			<img :src="item.cover">
+	          		</div>
+		            <div class="bagDetail">
+			            <h3>{{item.title}}</h3>
+			            <p>{{item.category}}丨{{item.author}}<span class="popul">{{item.hotvalue}}热销</span></p>
+			            <p>{{item.intro}}</p>
+		            </div>
+	            </li>
+	        </ul>
+	        <a href="uniteqqreader://nativepage/comic/bookstore" class="goComic" v-show="books.length">查看更多畅销书</a>
+		</div> 
 	</div>
 </template>
 <script type="text/javascript">
-	import "./css/index";
+	// import "./css/index";
 	export default {
 		data(){
 			return{
-		 		plat:window.pt
+		 		plat:window.pt,
+		 		bookTicketNum:common.param("bookTicketNum"),
+		 		books:[]
 			}
 		},
 		created(){
@@ -35,16 +41,23 @@
 	 	},
 	 	methods:{
 	 		init(){
-	 			var server = this.plat == "ios" ? "https://ptcommon.reader.qq.com/v6_3_9/nativepage/readTime/getWeekExchangeInfo?c_platform=ioswp" : "http://ptcommon.reader.qq.com/v6_3_9/nativepage/readTime/getWeekExchangeInfo";
-	 				Local.reqaObj(server, data => {
-						if(data.code==0){
-							
-						}
-					}, [], function() {
-						Local.showToast("网络异常，请稍候重试");
-					}, 1);				
-	 			}
+ 				Local.reqaObj(`${common.server()}pkg170710/getrank`, data => {
+					this.books=data.bookinfos;
+				}, [], function() {
+					Local.showToast("网络异常，请稍候重试");
+				}, 1);				
+	 		},
+	 		goDetail(cid){
+	 			location.href='uniteqqreader://nativepage/comic/detail?cid='+cid;
 	 		}
-		}
+		},
+	 	computed:{
+	 		text1(){
+	 			return this.plat=="ios" ? "阅券" : "书券";
+	 		},
+	 		text2(){
+	 			return this.plat=="ios" ? "阅点" : "书币";
+	 		}
+	 	}
 	};
 </script>	

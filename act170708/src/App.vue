@@ -3,7 +3,7 @@
 		<mask-load ref="loading"></mask-load>
 		<mask-over v-if="over"></mask-over>
 		<template v-if="!over">
-			<div id="banner"></div>
+			<div id="banner" @click="go"></div>
 			<div id="content">
 				<div class="first">
 					<p class="title"><span>1</span> 请选择性别</p>
@@ -63,18 +63,7 @@
 		created(){ 
 			this.initPage()
 			let self = this
-			window.afterShare = function(){
-		      	Local.reqaObj(common.server() + "pkg170708/pick", data=>{
-		      		console.log(data)
-		      		if (self.plat == 'ios') {
-	      				Local.showToast('分享成功')
-	      			}
-		      		// if (data.code == 1) {
-		      		// }
-				}, [], function() {
-						Local.showToast("网络异常，请稍候重试")
-				}, 1)
-		    }
+			
 	 	},
 	 	mounted(){
 	 		let self = this
@@ -94,6 +83,9 @@
 			})
 	 	},
 	 	methods:{
+	 		go(){
+	 			location.href="./flex.html"
+	 		},
 	 		initPage(){
 				Local.reqaObj('https://ptwapmusic3.reader.qq.com/activity/' + "pkg170708/init", data=>{
 					console.log(data)

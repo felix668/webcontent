@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no">
+<title>囤书节</title>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    (function (doc, win) {
+	    var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	    function recalc() {
+	        var clientWidth = docEl.clientWidth;
+	         //alert(docEl.clientHeight)
+	        if (!clientWidth) return;
+	        clientWidth=clientWidth > 750 ? 750 : clientWidth;
+	        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+	    };
+	    if(!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+
+</script>
+<link href="dist/bundle.style.css" rel="stylesheet">
+</head>
+<body>
+<div id="root" ref="root">
+	<mask-load v-if="loading"></mask-load>
+	<template v-if="!loading && !over">
+		<div class="top">
+			<img :src="page.pictureAndStyle.banner"/>
+		</div>
+		<tab :flog="flog" :pkdata="page"></tab>
+		<div class="wrap">			
+			<batch-package :pkdata="page"  v-on:buy="buy"></batch-package>
+			<choose-package :pkdata="page" v-on:buy="buy"></choose-package>
+		</div>
+		<div class="sharebtn" @click="sharePage" :style="{backgroundColor:page.pictureAndStyle.color2}">
+			<span>{{page.pictureAndStyle.sharebtnText}}</span>
+			<div class="arrows"><i></i><i></i><i></i></div>
+		</div>
+		<rule :rule="page.pictureAndStyle.rule"></rule>
+		<img src="images/logo.png" class="logo">
+	</template>	
+	<mask-buy v-if="mask" :buyinfo="buyinfo" :money="page.money" :zmoney="page.z_money" :btncolor="page.pictureAndStyle.color2" :plat="plat"></mask-buy>
+	<mask-over v-if="over"></mask-over>
+</div>
+<script src="js/jsbridge.js"></script>
+<script src="js/common.js"></script>
+<script src="js/local.js"></script>
+<script src="js/vue.min.js"></script>
+<!-- <script src="js/debug.js"></script> -->
+<script src="js/fastclick.min.js"></script>
+<script src="dist/bundle.js"></script>
+</body>
+</html>

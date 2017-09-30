@@ -80,7 +80,16 @@
 
 				});
 			});
-
+			//分享到qq
+			WeixinJSBridge.on('menu:share:qq', function(argv) {
+				WeixinJSBridge.invoke('shareQQ', {
+					"title": shareData.title, // 分享标题  
+				    "desc": shareData.desc, // 分享描述  
+				    "link": shareData.url, // 分享链接  
+				    "img_url":shareData.img // 分享图标  
+				}, function(res) {
+				});
+			});
 			// 分享到微博
 			WeixinJSBridge.on('menu:share:weibo', function(argv) {
 				WeixinJSBridge.invoke('shareWeibo', {
@@ -89,8 +98,7 @@
 				}, function(res) {
 				});
 			});
-		}
-		;
+		};
 
 		return {
 			set : function(obj) {
@@ -131,6 +139,15 @@
 				}
 			});
 		}
+	}
+	
+	WX.launchApplication = function(schema,ext){
+		WeixinJSBridge.invoke('launchApplication', {
+			'schemeUrl' : schema || 'uniteqqreader://nativepage/infostream/list'
+		}, function(e) {
+			var msg = e.err_msg; // 微信6.5.6后唤起app相关协议
+			console.log(msg);
+		});
 	}
 	return WX;
 });

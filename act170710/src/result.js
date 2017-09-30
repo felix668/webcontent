@@ -8,7 +8,7 @@ var vm=new Vue({
 		}
 	},
  	components: {
-		app: require('./result')
+		app: require('./result.vue')
 	},
 	template: '<app></app>'
 });

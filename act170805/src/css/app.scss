@@ -1,0 +1,183 @@
+@import "common";
+@font-face{
+  font-family: myFont;
+  src: url('../font/241-CAI978.ttf');
+}
+#app{
+  @include bgpic(7.5rem,12.06rem,"bgg.png");
+  text-align: center;
+  position: relative;
+  #banner{
+    width: 100%;
+  }
+  .wel{
+    color: #fefefe;
+    font-size: .24rem;
+    height: 0.65rem;
+    line-height: .65rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+            justify-content: center;
+    margin-top: -.8rem;
+    .leaf{
+      display: inline-block;
+      @include bgpic(0.55rem, 0.65rem, "leaf.png");
+      font-family: myFont;
+      font-size: .36rem;
+      color: #ff6633;
+      text-align: center;
+      line-height: .7rem;
+    }
+  }
+  #content{
+    height: 6rem;
+    position: relative;
+    line-height: .9;
+    .car{
+      position: absolute;
+      @include bgpic(.49rem,.31rem,"car.png");
+    }
+    .day{
+      position: absolute;
+      color: #975b2e;
+      font-size: .2rem;
+      .date{
+        font-size: .16rem;
+        display: block;
+        margin-top: .04rem;
+      }
+      .reward{
+        .item{
+          position: absolute;
+          @include bgpic(1.69rem,1.26rem,"item.png");
+          left: 50%;
+          top: .65rem;
+          -webkit-transform: translateX(-55%);
+          .item-title{
+            font-size: .25rem;
+            color: #37bdea;
+            margin-top: .4rem;
+          }
+          .item-num{
+            color: #06abf8;
+            font-size: .26rem;
+            margin-top: .2rem;
+            display: block;
+          }
+        }
+        .reward-btn{
+          border-radius: .18rem;         
+          background-color:#999;
+          box-shadow: inset 0px 0px 16.92px 1.08px rgba(30, 130, 82, 0.35);
+          position: absolute;
+          width: 1.66rem;
+          height: .48rem;
+          font-size: .26rem;
+          color: #fbf6f6;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-55%);
+          -webkit-transform: translateX(-55%);
+          line-height: .48rem;
+          top: 1.95rem; 
+        }
+        .reward-complete{
+          background-color: #fb6a7b;
+          box-shadow: inset 0px 0px 16.92px 1.08px rgba(185, 34, 50, 0.35);
+        }
+        .reward-already{
+          position: absolute;
+          width: 1.66rem;
+          height: .48rem;
+          font-size: .26rem;
+          color: #38bd7d;
+          left: 50%;
+          transform: translateX(-55%);
+          -webkit-transform: translateX(-55%);
+          line-height: .48rem;
+          top: 1.95rem; 
+        }
+        .reward-expired{
+          color: #999;
+        }
+      }
+      &:nth-child(1){
+        left: 1.7rem;
+        top: .26rem;
+      }
+      &:nth-child(2){
+        left: 3.85rem;
+        top: .26rem;
+      }
+      &:nth-child(3){
+        left: 5.25rem;
+        top: 3.05rem;
+      }
+      &:nth-child(4){
+        left: 3.1rem;
+        top: 3.08rem;
+      }
+      &:nth-child(5){
+        font-size: .24rem;
+        left: 1rem;
+        top: 5.3rem;
+        line-height: 1;
+        .date{
+          font-size: .2rem;
+        }
+      }
+    }
+  }
+  .prize{
+    @include bgpic(6.9rem,1.32rem,"prize.png");
+    position: absolute;
+    bottom: .28rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    box-sizing: border-box;
+    text-align: left;
+    line-height: 1;
+    padding: .33rem 0 .33rem 1.82rem;
+    .prize-num{
+      font-size: .36rem;
+      margin-bottom: .1rem;
+    }
+    .prize-desc{
+      font-size: .18rem;
+    }
+    .prize-btn{
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: center;
+      border-radius: .1rem;
+      width: 1.38rem;
+      height: 100%;
+      font-size: .42rem;
+      line-height: .48rem;
+      padding: .18rem .26rem;
+      box-sizing: border-box;
+      background-color: rgb(90, 205, 247);
+      box-shadow: inset 0px 0px 63.92px 4.08px rgba(102, 102, 102, 0.35);
+      .prize-already{
+        position: absolute;
+        left: -0.67rem;
+        top: -0.53rem;
+        @include bgpic(2.34rem,2.13rem,"seal.png");
+      }
+      .prize-expired{
+        position: absolute;
+        left: -0.67rem;
+        top: -0.53rem;
+        @include bgpic(2.34rem,2.13rem,"expired.png");
+      }
+    }
+    .locked{
+      background-color: rgb(153, 153, 153);
+      box-shadow: inset 0px 0px 63.92px 4.08px rgba(102, 102, 102, 0.35);
+    }
+  }
+}

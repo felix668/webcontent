@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+   
+</body>
+<script src="src/js/set.js"></script>
+<script src="src/js/debug.js"></script>
+<script>
+const EMPTY_VALUE = 100;
+const THREAD_HOLD = 13.8;//9.8 * sin(45o) * 2 = 13.8
+var minX = EMPTY_VALUE,
+    minY = EMPTY_VALUE;
+
+window.ondevicemotion = function(event){
+    var gravity = event.accelerationIncludingGravity,
+        x = gravity.x,
+        y = gravity.y;
+    if(x < minX) minX = x;
+    if(y < minY) minY = y;
+    if(Math.abs(x - minX) > THREAD_HOLD && Math.abs(y - minY) > THREAD_HOLD){
+        console.log("shake");
+        var event = new CustomEvent("shake");
+        window.dispatchEvent(event);
+        minX = minY = EMPTY_VALUE;
+    }   
+}   
+    
+window.addEventListener("shake", function(){
+    console.log("window shake callback was called");
+});
+
+</script>
+</html>

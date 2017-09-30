@@ -1,0 +1,314 @@
+@import "common";
+
+@-webkit-keyframes opacitys{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+
+@-webkit-keyframes rotats{
+100%{
+	-webkit-transform:rotate(0deg);transform:rotate(0deg);
+}
+}
+#app{
+	background-color: #99dedb;
+	overflow: hidden;
+ 	#top {
+ 		height: 10rem;
+ 		@include bgpic(100%, 10rem, "topbg.jpg");
+ 		position: relative;
+ 		.message {
+			width: 6.36rem;
+			height: 1.4rem;
+			@include bgpic(6.36rem, 1.4rem, "infobg.png");
+			position: absolute;
+			left: 0.57rem;
+			top: 6.66rem;
+			.mesName {			 
+				font-size: 0.28rem;
+				font-family: "MicrosoftYaHei";
+				color: rgb(99, 77, 68);
+				font-weight: bold;
+				margin: 0.25rem 0 0.1rem 0.48rem;
+			 	height: 0.38rem;
+				span {
+					float: left;
+				}
+				i {
+					margin-left: 0.2rem;float: left; width: .52rem; height: .52rem; background: url(../images/hongdian.png) no-repeat; background-size: 100% 100%;margin-top: -0.1rem;
+				}
+
+				
+			}
+			.mesContent{
+			  font-size: 0.3rem;
+			  font-family: "MicrosoftYaHei";
+			  color: rgb(148, 120, 71);
+			  padding-left: 0.48rem;
+ 
+			}
+
+ 		}
+ 		.activeRule {
+ 			width: 6.2rem;
+ 			height: 1.32rem;
+ 			position: absolute;
+ 			left: 1.3rem;
+ 			top: 8.68rem;	
+	 		.activeInfo {
+				margin-left: 0.94rem;
+				font-size: 0.4rem;
+				font-family: "MicrosoftYaHei";
+				color: #c45e45;
+				font-weight: bold;
+				line-height: 1.5;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				img {
+					width: 0.8rem;
+					height: 0.8rem;  
+					border-radius: 50%;				
+				} 
+				p {	
+					span {
+					    font-size: .52rem;
+					  	margin: -0.07rem 0.1rem 0 -0.05rem;			  
+	 				}
+				} 			
+	 			a {
+	 			  display: block;
+				  font-size: 0.24rem;
+				  font-family: "MicrosoftYaHei";
+				  color: #0fa8a4;
+				  line-height: 3.5;
+				  margin-left: 0.12rem;
+				  font-weight: normal;
+				
+	 			}
+	 		}
+	 		>p {
+			  font-size: 0.28rem;
+			  color: #c45e45;
+			  line-height: 2.143;
+			  font-family: "MicrosoftYaHei";
+			   font-weight: normal;
+
+	 		}
+ 		}
+ 	}
+ 	.classBook {
+		margin-top: 0.44rem;
+ 		.classTitle {
+			
+			height: 0.6rem;
+			padding-left: 1rem;
+			background:url(../images/flower.png) no-repeat  0.17rem 0;
+			background-size: 0.67rem 0.57rem; 	
+			overflow: hidden;	
+			img {
+				width: 2.02rem;
+				height: 0.34rem;
+				margin-top: 0.16rem;
+			}
+ 		}
+ 		
+ 		.bookList {
+ 			width: 7.5rem;		
+ 			display: -webkit-box;
+ 			display: -webkit-flex; 			
+			display: flex;
+			@extend %centerflex;  			
+ 			-webkit-flex-wrap:wrap; 						
+ 			        flex-wrap:wrap;		
+ 			
+ 			li {
+ 				width: 2.42rem;
+ 				margin-top: 0.5rem;
+				.Bcover {
+					width: 1.86rem;
+					height: 2.5rem;
+					margin: 0 auto;
+				}
+				.bookname{
+					font-size: 0.3rem;
+					font-family: "MicrosoftYaHei";
+					color: rgb(99, 77, 68);
+					line-height: 0.38rem;
+					margin: 0.2rem auto 0.1rem ;
+					/* text-align: center;*/
+					width: 1.86rem;
+					white-space:nowrap; 
+					overflow:hidden; 
+					text-overflow:ellipsis;
+				 	
+				  }
+				.author {
+					width: 1.86rem;
+					white-space:nowrap; 
+					overflow:hidden; 
+					text-overflow:ellipsis;
+					font-size: 0.24rem;
+					font-family: "MicrosoftYaHei";
+					color: rgb(119, 119, 119);
+					margin: 0 auto 0.1rem;
+				}
+ 			}
+ 		}
+ 		.beCenter {
+ 			li.bookContent {
+ 				 margin: 0.5rem auto .16rem;
+ 			}
+ 		}
+ 	}
+ 	.moreBook {
+		height: 1.3rem;
+		overflow: hidden;
+ 		img {
+ 			width: 1.58rem;
+ 			height: 0.32rem;
+ 			margin: 0.72rem auto 0;
+
+
+ 		}
+ 	}
+ 	.aboutvote {
+ 		height:7.2rem;
+ 		background:url(../images/bottomBg_02.png) no-repeat 0 bottom;
+ 		background-size: 100% 1.45rem;
+ 		padding-left: 0.36rem;
+ 		padding-right: 0.48rem;
+ 		.aboutPic {
+ 			width: 2.99rem;
+ 			height: 1.18rem;
+ 			margin: 0 auto 0.45rem;
+ 		}
+ 		.actime {
+ 				margin-bottom: 0.1rem;
+ 				b {
+ 					margin-left: 0.05rem;
+ 				}
+ 			}
+ 		p {
+
+		  font-size: 0.24rem;
+		  font-family: "MicrosoftYaHeiLight";
+		  color: rgb(112, 86, 85);
+		  line-height: 1.667;
+		  text-align: justifyLeft;
+ 			span {
+ 				width: 0.45rem;
+ 				height: 0.45rem;
+ 				display: inline-block;
+ 				@include bgpic(0.45rem, 0.45rem, "listBg.png");
+ 				text-align: center;
+ 				/* margin-top: 0.1rem;*/
+ 			}
+ 			b {
+				display: inline-block;
+				font-weight: normal;
+				margin-left: 0.45rem;
+				font-size: 0.24rem;
+				font-family: "MicrosoftYaHeiLight";
+				color: rgb(112, 86, 85);
+				line-height: 1.667;
+				text-align: justifyLeft;
+ 			}
+
+			
+ 		}
+ 		a {
+				font-size: 0.24rem;
+				font-family: "MicrosoftYaHeiLight";
+				color: #756766;
+				line-height: 1.667;
+				text-align: justifyLeft;
+				margin-left: 0.45rem;
+ 			}
+ 	}
+	
+.login{ position: absolute;left: 0; top: 0; z-index: 111; width: 100%; height: 100%; background:url(../images/loginbg.png) no-repeat; background-size:100% 100%; }
+.loginbtn{display: block; width: 3.98rem; height: 1.18rem; margin: 7.6rem auto 0; background: url(../images/loginbtnbg.png); background-size: 100% 100%;}
+.loginbtn:active{ background: url(../images/loginbtn2.png) no-repeat; background-size: 100% 100%;}
+.loginbtn span{display: block; width: 100%; height: 1.18rem; line-height: 1.0rem; text-align: center; font-size: .4rem; color: #fff;}
+/* .liu{ position: absolute; left: .6rem; top: 0; width: .78rem; height: 1.36rem; background: url(../images/icon.png) no-repeat; background-size: .78rem 1.36rem;-webkit-transform:rotate(-90deg);transform:rotate(-90deg); -webkit-animation:rotats 1s linear forwards;transform-origin:0 0;}*/
+
+
+
+.votebtn{ display: block; width: 1.84rem; height: .84rem; background: url(../images/btnbg.png) no-repeat; background-size: 1.84rem .94rem;margin: 0 auto; padding-top: .1rem;}
+.votebtn a{display: block; width: 1.6rem; height: .84rem;  border-radius:.1rem; margin: 0 auto; text-align: center; line-height: .66rem; overflow: hidden; font-size: .28rem; color: #fff;}
+// .votebtn a:active{display: block; background: #9d1b11;border-radius:.5rem; width: 1.6rem; }
+
+
+
+.maskchat{ position: fixed; left: 0; top: 0; z-index: 10000; background: #c8ecea; width: 100%; height: 100%; overflow: hidden;}
+.chatbox{position:absolute;left:50%; top:1rem; bottom:.4rem; width: 6.6rem; margin-left: -3.3rem; background: #eee9e1; padding: .76rem 0; border-radius: .2rem;}
+.chatbox p{font-size: .28rem; line-height: .28rem; color: #634d44; text-align: center;}
+.closechat{ position: absolute; top: .4rem; right: .42rem; z-index: 9; width: .48rem; height: .48rem; background: url(../images/close.png) no-repeat; background-size: 100% 100%;}
+.chatlist{ position: absolute; top: 1.4rem; left: 0; bottom: .76rem; right: 0;}
+.chatlist #scroller{width: 100%; height: 100%; overflow-y:auto; padding-top: .1rem;}
+.chatlist li{ position: relative; z-index: 1; padding: 0rem .25rem 0rem 1.3rem; padding-bottom: .7rem; min-height: 0.7rem; overflow: hidden;display: none; opacity: 0;}
+.chatlist li.animations{-webkit-animation:opacitys .5s linear forwards;}
+
+.chatlist li .face_name{ position: absolute; left: .1rem; top:.04rem; width: 1.2rem; text-align: center; font-size: .24rem; line-height: .48rem; color: #634d44;}
+.chatlist li .face_name img{ display: block; width: .8rem; height: .8rem; margin: 0 auto;}
+.chatinfo{ padding: .2rem; font-size: .28rem; line-height: .4rem; color: #634d44; background: #fec753; position: relative; z-index: 1; border-radius: .2rem; display: inline-block;}
+.chatlist li:nth-child(2n) .chatinfo,.chatlist li:last-child .chatinfo{ background: #50290d; color: #ffdeb4;}
+.chatinfo:before{content: ''; position: absolute; left: -8px; top: 0.24rem; border-top: 7px solid transparent;border-right: 14px solid #fec753;border-bottom: 7px solid transparent;}
+.chatlist li:nth-child(2n) .chatinfo:before,.chatlist li:last-child .chatinfo:before{content: ''; position: absolute; left:-8px; top: 0.24rem; border-top: 7px solid transparent;border-right: 14px solid #50290d;border-bottom: 7px solid transparent;}
+.chatlist li .imgbox{display: -webkit-flex; flex-wrap:nowrap;-webkit-flex-wrap:nowrap;}
+.chatlist li:nth-child(2n+1) .imgbox,.chatlist li:nth-child(2) .imgbox{ display: none;}
+.chatlist li:nth-child(4) .imgbox img,.chatlist li:nth-child(6) .imgbox img{ display: inline-block; width: 2.16rem;height: 3rem; margin: .2rem auto 0;}
+.chatlist li:nth-child(8) .imgbox img,.chatlist li:nth-child(10) .imgbox img{ display: block; width: 2.72rem; height: 3.54rem; margin-top:.2rem;}
+.chatlist .govote{ display: block; width: 3rem; height: 1rem; background: url(../images/tkbtnbg.png) no-repeat; background-size: 3rem 1rem;margin:.3rem auto 0; display: none;}
+.chatlist .govote span{display: block; width: 3rem; height: .8rem; background: #dc2e22; border-radius:.08rem; margin: 0 auto; text-align: center; line-height: .8rem; overflow: hidden; font-size: .28rem; color: #fff;}
+.chatlist .govote:active span{background: #9d1b11;}
+.h7{height: .8rem; overflow: hidden; font-size: 0; line-height: 0; display: none;}
+.gototal{display: block; width: 6.7rem; margin:.6rem auto;}
+
+
+.mask{position:fixed;top:0;left:0;width: 100%;height: 100%;background:rgba(0,0,0,0.64);-webkit-align-items:center;-webkit-justify-content:center;z-index: 1000;display:-webkit-flex;}
+.tiparea{border-radius: .1rem;position: relative;}
+.tiparea .votes {
+	width: 5.9rem;
+	height: 3.65rem;
+ 	background: url(../images/tanbg.png) no-repeat; background-size:100% auto;	
+ 	overflow: hidden;
+}
+
+.tiparea .msg{
+	font-size: 0.32rem;
+	font-family: "MicrosoftYaHei";
+	color: #ee6c6c;
+	font-weight: bold;
+	line-height: 1.132;
+	text-align: center;
+	margin-top: 0.7rem;
+	margin-bottom: 0.1rem;
+
+}
+.tiparea p#first {
+	text-align: center;
+}
+
+.tiparea p.bookname{text-align: center;padding-bottom: .1rem;color: #72300c;}
+.tiparea p.online{ 
+  font-size: 0.28rem;
+  font-family: "MicrosoftYaHei";
+  color: #72300c;
+  line-height: 1.714;
+  text-align: left;
+   padding: 0 0.41rem;
+
+}
+
+.tiparea p.first {
+	text-align: center;
+}
+.tiparea .closbtn{ position: absolute;bottom: 0.4rem;left: 50%;margin-left: -2.0rem;display: block; background:url(../images/tanbg2.png) no-repeat ;background-size:100% auto; width: 3.9rem; height: .8rem; line-height: .8rem; text-align:center;font-size: .32rem; color: #fff;}
+.tiparea .closbtn:active{background: #9d1b11;border-radius:0.8rem;}
+.tiparea .closemk{ position: absolute; top:.2rem; right: .2rem; width: .5rem; height: .5rem;background: url(../images/close.png) no-repeat; background-size: 100% 100%;}
+
+
+}
+

@@ -1,0 +1,93 @@
+const data={
+    "isVip":false,
+    "int":0,
+    "rule":{
+        "bgcolor":"#d8ebf3",
+        "rule_color":"#c37136",
+        "textios":[
+            "活动时间：2017年9月28日15点-10月5日0点",
+            "充值赠送：单次(一次性)充值达到指定额度，则赠送对应额度阅券和漫画抵扣券，多充多送! ",
+            "活动所有赠券有效期为7天并且即时到账，可用于正常消费；",
+            "本活动最终解释权归QQ阅读所有，与苹果公司无关"
+        ],
+         "textadr":[
+            "活动时间：2017年9月28日15点-10月5日0点",
+            "充值赠送：单次(一次性)充值达到指定额度，则赠送对应额度书券和漫画抵扣券，多充多送! ",
+            "活动所有赠券有效期为7天并且即时到账，可用于正常消费",
+            "本活动最终解释权归QQ阅读所有"
+        ],
+        "rule_hd":"img/rule.png",
+        "bottom_bg":"img/rulebg.png",
+        "copyright_color":"#999999"
+    },
+    "name":"国庆充赠",
+    "card":{
+        "card_font":"#464f54",
+        "bg_start":"#d8ebf3",
+        "btn_shadow":"#d66657",
+        "bg_end":"#eaedf1",
+        "card_border":"#feb999",
+        "tag_shadow":"#348478",
+        "listadr":[
+            {
+                "charge":10,
+                "coin":1000,
+                "coupon":"36"
+            },
+            {
+                "charge":500,
+                "coin":50000,
+                "coupon":"3999"
+            },
+            {
+                "charge":20,
+                "coin":2000,
+                "coupon":"88"
+            },
+            
+            {
+                "charge":50,
+                "coin":5000,
+                "coupon":"236"
+            },
+            {
+                "charge":100,
+                "coin":10000,
+                "coupon":"666"
+            },
+            {
+                "charge":200,
+                "coin":20000,
+                "coupon":"1366"
+            }
+        ],
+        "listios":[
+            {
+                "charge":12,
+                "coin":1200,
+                "coupon":"36"
+            },
+            {
+                "charge":30,
+                "coin":3000,
+                "coupon":"136"
+            },
+            {
+                "charge":98,
+                "coin":9800,
+                "coupon":"666"
+            },
+            
+            {
+                "charge":618,
+                "coin":61800,
+                "coupon":"4688"
+            }
+        ],
+        "tag_bg":"#469c8f",
+        "card_bg":"#fff",
+        "btn_bg":"rgb(247, 117, 104)"
+    },
+    "banner":window.pt == "ios" ? "img/bannerios.jpg" : "img/banner.jpg"
+}
+export default data;

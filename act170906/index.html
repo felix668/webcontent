@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title></title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" type="text/css" href="./build/index.css"/>
+    <script>
+        function setRem(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+        }
+        setRem();
+        window.addEventListener('resize',setRem);
+    </script>
+</head>
+<body>
+<div class="wrap" id="app" v-cloak :class="{'hide': showPage}">
+    <img class="banner" :src="config.banner" />
+    <div class="content">
+        <card :card="config.card" :is-login="isLogin"></card>
+        <i class="tip1"></i>
+        <i class="tip2"></i>
+        <i class="tip3"></i>
+    </div> 
+    <rule :rule="config.rule"></rule>
+    <over v-if="over"></over>
+</div>
+</body>
+<script type="text/javascript" src="src/js/base.js"></script>
+<script type="text/javascript" src="build/bundle.js"></script>
+</html>

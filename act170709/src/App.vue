@@ -157,9 +157,17 @@
 	 		},
 	 		goread(book){
 	 			Local.forceLog(common.param("act_f"),"MHXSreadCid="+book.bid);
-	 			this.bkbid[0]=book;
-	 			Local.addToShelfBooks(JSON.stringify(this.bkbid));
+	 			this.bkbid=[{
+	 				cid:'7782521204336702',
+	 				title:'',
+	 				author:'',
+	 				intro:''
+	 			}]
+	 			Local.addComicToShelf(this.bkbid);
+	 			//this.bkbid[0]=book;
+	 			//Local.addToShelfBooks(JSON.stringify(this.bkbid));
 	 			window.location.href = "uniteqqreader://nativepage/comic/open?cid="+book.bid;
+	 			console.log(book.bid+','+this.bkbid[0].cid);
 	 		},
 	 		receiveQuan(){
 	 			Local.forceLog(common.param("act_f"),"MHXSreceive");

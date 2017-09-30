@@ -1,0 +1,28 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width: 5rem;
+  height: 1rem;
+  background-color: black;
+  display: -webkit-flex;
+  display: flex;
+}
+.box div{
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+}
+.box .first{
+  -webkit-flex: 1;
+          flex: 1;
+  height: 1rem;
+  background-color: skyblue;
+}
+.box .second{
+  width: 1rem;
+  height: 1rem;
+  background-color: orangered;
+}

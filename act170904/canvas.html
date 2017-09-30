@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas</title>
+</head>
+<body>
+  <canvas width="600" height="600" style="border: 1px solid #ccc"></canvas>
+</body>
+<script src="src/js/set.js"></script>
+<script>
+  let canvas = document.querySelector('canvas')
+  let ctx = canvas.getContext('2d')
+  let centerX = canvas.width/2              
+  let centerY = canvas.height/2   
+
+ 
+  // ctx.scale(9, 1)
+  // ctx.fillRect(10,10,50,50)
+  
+  let img = new Image()
+  img.src = "src/images/chest.png"
+  img.onload = function() {
+    ctx.drawImage(img, 0, 0, 400, 400,80,50,400,400)
+    ctx.beginPath()
+    ctx.ellipse(280, 300, 60, 80, 0 * Math.PI/180, 0, 2 * Math.PI)
+    ctx.stroke()
+    // ctx.clip()
+    ctx.drawImage(img, 0, 0, 400, 400,80,50,400,400)
+  }
+  // ctx.save()
+  
+  // let i = 0
+  // setInterval(_=>{
+  //   i++
+  //   console.log(i)
+  //   if(i==4)i=0
+  //   ctx.clearRect(0, 0, canvas.width, canvas.height)
+  //   ctx.drawImage(img, 0, i*400, 400, 400,80,50,400,400)
+  // },100)
+</script>
+</html>

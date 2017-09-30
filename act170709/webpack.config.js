@@ -1,7 +1,6 @@
 var webpack = require("webpack");
 var path = require("path");
 var Ex = require("extract-text-webpack-plugin");
-// var extractCss=new Ex("[name].style.css");
 module.exports = {
 	entry: {
 		//share: "./share/main",

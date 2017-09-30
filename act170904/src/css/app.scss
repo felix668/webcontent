@@ -1,0 +1,204 @@
+@import "common";
+#app{
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+#banner{
+  @include bgpic(7.5rem,7.75rem,"banner.png");
+  overflow: hidden;
+  .timeBox{
+    @include bgpic(4.9rem,1.77rem,"timeBox.png");
+    margin: 5.74rem auto 0;
+    text-align: center;
+    line-height: 1;
+    padding: 0.2rem .26rem .48rem;
+    box-sizing: border-box;
+    &-title,.text{
+      font-size: .28rem;
+      color: #ecdfc1;
+    }
+    &-title{
+      margin-bottom: .28rem;
+    }
+    .time{
+      font-size: .48rem;
+      color: #c00041;
+      padding: 0rem .07rem;
+      background-color: #ecdfc1;
+      border: .02rem solid rgb(85, 84, 45);
+      border-radius: .02rem;
+      font-weight: bold;
+      margin-right: .1rem;
+    }
+    .text{
+      vertical-align: .08rem;
+    }
+  }
+}
+.title{
+  line-height: 1;
+  .line{
+    @include bgpic(.74rem,.11rem,"line.png");
+    display: inline-block;
+    vertical-align: .04rem;
+  }
+  .text{
+    font-size: .4rem;
+    font-weight: 600;
+  }
+}
+#share{
+  padding: 0 .3rem;
+  text-align: center;
+  margin-top: .4rem;
+  .email{
+    margin-top: .28rem;
+    width: 6.9rem;
+  }
+  .desc{
+    font-size: .24rem;
+    color: #000;
+    margin-top: .12rem;
+  }
+  .btn{
+    border-radius: .14rem;
+    background-color: rgb(190, 0, 63);
+    width: 3.8rem;
+    height: 1rem;
+    line-height: 1rem;
+    color: #fffffe;
+    font-size: .32rem;
+    margin: .18rem auto 0;
+  }
+    
+  
+}
+.vote{
+  margin-top: .6rem;
+  padding: 0 .3rem;
+  .desc{
+    margin-top: .2rem;
+    font-size: .24rem;
+    color: #5b6528;
+  }
+  &-content{
+    @include bgpic(7.5rem,8.1rem,"vote-bg.png");
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin-left: -.3rem;
+    position: relative;
+    margin-top: .2rem;
+    padding: 0 .3rem;
+    .vote-mask{
+      width: 7.3rem;
+      height: 6.22rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      left: .1rem;
+      top: .75rem;
+      z-index: 999;
+      .vote-warn{
+        color: #fff;
+        font-size: .28rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        .vote-time{
+          font-size: .36rem;
+        }
+      }
+    }        
+    .vote-tip{
+      @include bgpic(3.75rem,.58rem,"vote-tip.png");
+      position: absolute;
+      top: .1rem;
+      right: 0.6rem;
+      line-height: .58rem;
+      color: #d6cd9b;
+      font-size: .24rem;
+      .num{
+        color: #fffffe;
+      }
+    }
+    ul{
+      // overflow: hidden;
+      margin-top: 1rem;
+      li{
+        float: left;
+        border: .08rem solid #b7c675; 
+        background-color: rgb(249, 244, 232);
+        width: 2.22rem;
+        height: 2.78rem;
+        box-sizing: border-box;
+        margin-bottom: .26rem;
+        position: relative;
+        .shadow{
+          @include bgpic(2.22rem,.1rem,"shadow.png");
+          position: absolute;
+          bottom: -.18rem;
+          left: -.08rem;
+        }
+        &:nth-child(2),&:nth-child(5){
+          margin: 0 .12rem;
+        }
+        .star{
+          line-height: .63rem;
+          font-size: .28rem;
+          color: #fff;
+          text-align: center;
+          width: 0.62rem;
+          height: 0.63rem;
+          background-size: 100% auto;
+          text-indent: .02rem;
+          position: absolute;
+          left: -.08rem;
+          top: -.2rem;
+        }
+        .vote-main{
+          width: 1.86rem;
+          height: 2.42rem;
+          background-color: red;
+          margin: .1rem auto;
+          background-size: 100% auto;
+          overflow: hidden;
+          .vote-btn{
+            border-radius: .04rem;
+            background-color: rgb(190, 0, 63);
+            width: 1.2rem;
+            height: .48rem;
+            margin: 1.42rem auto 0;
+            color: #fff;
+            font-size: .24rem;
+            line-height: .48rem;
+          }
+          .vote-num{
+            margin-top: .1rem;
+            font-size: .24rem;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+  
+}
+.rule{
+  margin-top: .6rem;
+  padding: 0 .3rem;
+  ul{
+    text-align: left;
+    font-size: .28rem;
+  }
+}
+.logo{
+  @include bgpic(7.5rem,1.86rem,"bottom-bg.png");
+  margin-top: .1rem;
+  i{
+    @include bgpic(2.33rem,.86rem,"logo.png");
+    display: inline-block;
+    margin-top: .6rem;
+  }
+}

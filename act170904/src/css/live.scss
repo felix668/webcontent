@@ -1,0 +1,65 @@
+@import "common";
+body{
+  background-color: #dfdfdf;
+  text-align: center;
+}
+#banner{
+  position: absolute;
+  left: 0;
+  top: 0;
+  @include bgpic(7.5rem,19.24rem,"live-banner.jpg");
+  z-index: -1
+}
+.video{
+  .title{
+    margin: 5.6rem auto 0;
+    @include bgpic(3.75rem,1.32rem,"live-title1.png");
+  }
+  .box{
+    margin: 0 auto;
+    @include bgpic(6.96rem,4.07rem,"video-bg.png");
+    position: relative;
+    .mask{
+      @include bgpic(6.3rem,3.42rem,'video-mask.png');
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+    }
+    .btn{
+      @include bgpic(.86rem,.86rem,'video-btn.png');
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+    }
+  }
+
+}
+.book{
+  .title{
+    margin: .8rem auto 0;
+    @include bgpic(3.85rem,1.32rem,"live-title2.png");
+  }
+  .box{
+    @include bgpic(6.94rem,4.92rem,"book-bg.png");
+    margin: 0 auto;
+    ul{
+      overflow: hidden;
+      li{
+        float: left;
+        width: 2rem;
+        height: 2rem;
+        background-size: 100% auto;
+        margin-left: .22rem;
+        margin-top: .4rem;
+        &:nth-child(n+4){
+          margin-top: .18rem;
+        }
+      }
+      
+    }
+  }
+}

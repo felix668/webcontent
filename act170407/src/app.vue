@@ -111,6 +111,8 @@
 					self.loading=false;
 					if(data.code==-4){
 						self.over=true;
+						
+
 					}
 					self.totalNum=data.totalNum;
 					self.provinceNum=data.provinceNum;

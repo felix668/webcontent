@@ -7,7 +7,7 @@
 	    </div>
 	</div>
 </template>
-<style lang="scss" scoped>
+<style lang="sass" scoped>
 .over {
   position: fixed;
   top: 0;
@@ -17,30 +17,32 @@
   background: #fff;
   z-index: 1001;
   .over-c {
-	  height: 4.16rem;
-	  overflow: hidden;
-	  text-align: center;
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  bottom: 0;
-	  margin: auto; 
-	  img {
+		height: 4.16rem;
+		overflow: hidden;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto; 
+	  	img{
 		  width: 2.05rem;
 		  height: 2.19rem;
-		  margin: 0.32rem auto 0; }
-		}
-		p {
-	  	 color: #999;
-	 	 font-size: 0.30rem;
-	  	 line-height: 1;
-  		 }
-  		 .over-p1 {
-  margin-top: 0.33rem; }
-
-.over-p2 {
-  margin-top: 0.24rem;
-  margin-bottom: 0.48rem; }
- }
+		  margin: 0.32rem auto 0; 
+	  	}
+	}
+	p {
+	  	color: #999;
+	 	font-size: 0.30rem;
+	  	line-height: 1;
+  	}
+  	.over-p1 {
+		margin-top: 0.33rem; 
+	}
+	.over-p2 {
+	  margin-top: 0.24rem;
+	  margin-bottom: 0.48rem; 
+	}
+}
 </style>

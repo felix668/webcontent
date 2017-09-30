@@ -399,6 +399,7 @@ if(window.pt=="adr"){
                 }
             }
         };
+
         //漫画加书架
         Local.addComicToShelf = function(bookInfo, needToast) {
             // var info = obj(bookInfo);

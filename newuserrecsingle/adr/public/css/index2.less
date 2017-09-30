@@ -1,0 +1,233 @@
+
+@maincolor:#9ea2ae;
+@bgcolor:#fff;
+@blackcolor:#333;
+@greenbordcolor:#c7e5e0;
+@ft24:.24rem;
+@ft28:.28rem;
+@ft32:.32rem;
+@ft36:.36rem;
+
+body,div,p,h4,ul,li{margin:0;padding:0; font-weight: normal;}
+img{border:0 none;vertical-align:middle;}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{ list-style:none;}
+em,i,span{ font-style:normal; font-weight: normal;}
+input{-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*-webkit-user-select: none;*/-webkit-appearance:none;outline: none;border: none;}
+input::-webkit-input-placeholder{ color: #948076; }
+input:focus::-webkit-input-placeholder { /*color:transparent;*/ }
+body{font-family:"Microsoft YaHei",Helvetica,STHeiTi,sans-serif,sans-serif;-webkit-text-size-adjust:none; font-size: .24rem; line-height: .42rem; background:@bgcolor; color: @maincolor}
+.hide{display: none;}
+/*===========main==========*/
+.warp{ width: 100%; padding-bottom: 1.6rem; background: url(../images/botombg2.jpg) no-repeat left bottom; background-size: 100% auto; }
+.ban{ width: 100%; height: 5.5rem; margin-bottom: .1rem; background: url(../images/banner2.jpg) no-repeat; background-size: 100% 100%; }
+.boxshadow{ width: 7.2rem; margin: 0 auto; padding-bottom: .7rem; background: url(../images/shadow2.png) no-repeat left bottom; 
+    background-size: 100% auto;}
+.gomore:extend(.boxcard .readbtn){
+  width: 3.94rem;
+}
+.boxcard{ 
+  position: relative; 
+  z-index: 1; 
+  border-radius: .1rem;
+  padding: .4rem .38rem .4rem .5rem; 
+  margin: 0 .17rem;
+  box-shadow: 1px 1px 20px rgba(202,215,254,1);
+  background: @bgcolor;
+  &:after{ 
+    clear:both;
+    content:'';
+    height: 0; 
+    overflow: hidden; 
+  }
+  .bookcover{
+    margin:.1rem auto;
+    width: 2.54rem;
+    height: 3.4rem;
+    box-shadow: 1px 1px 20px rgba(202,215,254,1);
+    img{
+      display: block;
+      width: 100%; 
+      height: 100%;
+    }
+  }
+  .bookinfo{
+    text-align: center;
+    margin-top: .3rem;
+    h4{
+      font-size: @ft32;
+      color: @blackcolor;
+      height: .48rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p{
+      font-size: @ft24;
+      line-height: .48rem;
+      span{
+        color:@blackcolor;
+        margin-right: .3rem;
+      }
+    }
+    p.author{
+      font-size: @ft28;
+      color: @blackcolor;
+      margin-bottom: .3rem;
+    }
+  }
+  .readbtn{
+    display: block;
+    width: 3.7rem;
+    height: .76rem; 
+    line-height: .76rem;
+    background: -webkit-linear-gradient(top,#6ea3fb,#6c8bfd);
+    border-radius: 5px;
+    text-align: center;
+    font-size: @ft32;
+    color: @bgcolor;
+    margin:0 auto;
+  }
+  .freeTime{
+    text-align: center;
+    line-height: .68rem;
+  }
+  .jiejian{
+    text-indent: 2em;
+    position: relative;
+    z-index: 1;
+    word-break: break-all;
+    span{
+      display: block;
+      position: absolute;
+      right: 0; bottom: 0;
+      width: .84rem;
+      height: .42rem;
+      background: #fff;
+      text-align: left;
+      text-indent: 0;
+    }
+    em{
+      display: block;
+      position: absolute;
+      right: 0; bottom: .15rem;
+      background: #fff;
+      width: 0;
+      height: 0;
+      border-left: .1rem solid transparent;
+      border-right: .1rem solid transparent;
+      border-bottom: .1rem solid @maincolor;
+    }
+  }
+  .h4hang{
+    height: 2.52rem;
+    overflow: hidden;
+    &:after{
+      content:'';
+      position: absolute;
+      right: 0; 
+      bottom: .15rem;
+      background: #fff;
+      width: 0;
+      height: 0;
+      border-left: .1rem solid transparent;
+      border-right: .1rem solid transparent;
+      border-top: .1rem solid @maincolor;
+    }
+  }
+}
+.titles{
+    text-align: center;
+    font-size: @ft32;
+    color: @blackcolor;
+    margin-top: -.3rem;
+    margin-bottom: .3rem;
+}
+.comment li{
+  padding: .3rem 0 .2rem .7rem;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid #eee;
+  &:last-child{
+    border-bottom:0;
+  }
+  .useface{
+    position: absolute;
+    left: -.1rem;
+    top: .3rem;
+    width: .56rem;
+    height: .56rem;
+    border-radius: 100%;
+    border:1px solid #eee;
+  }
+  .nick{
+    font-size: @ft28;
+    color: #6990f5;
+    line-height: .32rem;
+  }
+  .times{
+    font-size: @ft24;
+    color: #999;
+    line-height: .32rem;
+    margin-bottom: .1rem;
+  }
+  p{
+    color: #555;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

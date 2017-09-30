@@ -1,0 +1,15 @@
+import Vue from 'vue';
+import "./js/set";
+var vm=new Vue({
+	el:"#app",
+	created(){
+		if(process.env.NODE_ENV === 'development'){
+			require("./js/debug")
+		}
+	},
+ 	components: {
+		app: require('./book.vue')
+	},
+	template: '<app></app>'
+});
+

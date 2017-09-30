@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>开学季</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" type="text/css" href="./build/bundle.style.css" />
+    <script>
+        function setRem() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        setRem();
+        window.addEventListener('resize', setRem);
+    </script>
+</head>
+
+<body>
+    <div class="wrap" id="app" v-cloak :class="{'hide': showPage}">
+        <over v-if="over"></over>
+        <img class="banner" :src="config.banner" />
+        <img class="banner-tip" :src="config.bannerTip" >
+        <div class="content" :style="styleObj.content">
+            <card :card="config.card" :is-login="isLogin"></card>
+        </div>
+        <rule :rule="config.rule"></rule>
+    </div>
+</body>
+
+<script src="src/js/jsbridge.js"></script>
+<script src="src/js/common.js"></script>
+<script src="src/js/local.js"></script>
+<script type="text/javascript" src="build/bundle.js"></script>
+
+</html>

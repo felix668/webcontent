@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 88px;
+      margin: 100px auto;
+      background-color: skyblue;
+      line-height: 88px;
+      text-align: center;
+      font-size: 30px;
+      color: #fff;
+    }
+    .t:nth-child(2){
+      color: red
+    }
+  </style>
+</head>
+<body>
+  <div>合成图片</div>
+</body>
+<script src="src/js/set.js"></script>
+<script src="src/js/debug.js"></script>
+<script src="src/js/jsbridge.js"></script>
+<script src="src/js/common.js"></script>
+<script src="src/js/local.js"></script>
+<script>
+  var bgURL = common.front()+"act170805/src/images/bgg.png"
+  var bannerURL = common.front()+"act170805/src/images/banner.png"
+  Local.cacheImage(bgURL)
+  Local.cacheImage(bannerURL)
+  var div = document.querySelector('div')
+  div.onclick = function(){
+    Local.shareStyleImage(bgURL,bannerURL,{
+      text: "yyyyy",
+      location: {
+        x: 100,
+        y: 400
+      },
+      color: "00eeff",
+      fontSize: "40"
+    })
+  }
+</script>
+</html>

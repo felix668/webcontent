@@ -112,7 +112,7 @@
 	    var hotAPI = require("vue-hot-reload-api");
 	    hotAPI.install(require("vue"), false);
 	    if (!hotAPI.compatible) return;
-	    var id = "_v-2bee41fe/app.vue";
+	    var id = "_v-dfdc8118/app.vue";
 	    if (!module.hot.data) {
 	      hotAPI.createRecord(id, module.exports);
 	    } else {
@@ -188,11 +188,8 @@
 				Local.reqaObj(server() + "pkg170409/init?pt=" + self.urlis, function (data) {
 					console.log(data);
 					self.loading = false;
-					if (data.code == -4) {
-						self.over = true;
-					}
-					self.islogin = data.isLogin;
-					self.tabstaus = data.tabstatus;
+					if (data.code == -4) {}
+
 					self.tabdiff(self.tabstaus);
 					self.shareObj.url = front() + "act170409/com/index.html?tf=1&act_f=170409";
 					self.shareObj.cover = front() + "act170409/adr/public/images/coverm.jpg";
@@ -360,7 +357,7 @@
 	    var hotAPI = require("vue-hot-reload-api");
 	    hotAPI.install(require("vue"), false);
 	    if (!hotAPI.compatible) return;
-	    var id = "_v-6d6dc826/MaskLoading.vue";
+	    var id = "_v-1c2ac363/MaskLoading.vue";
 	    if (!module.hot.data) {
 	      hotAPI.createRecord(id, module.exports);
 	    } else {
@@ -395,7 +392,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"MaskLoading\" _v-6d6dc826=\"\">\n\t<p class=\"_text\" _v-6d6dc826=\"\"><img :src=\"'../adr/public/images/loading.png'\" _v-6d6dc826=\"\">正在加载...</p>\n</div>\n";
+	module.exports = "\n<div class=\"MaskLoading\" _v-1c2ac363=\"\">\n\t<p class=\"_text\" _v-1c2ac363=\"\"><img :src=\"'../adr/public/images/loading.png'\" _v-1c2ac363=\"\">正在加载...</p>\n</div>\n";
 
 /***/ },
 /* 11 */
@@ -424,7 +421,7 @@
 	    var hotAPI = require("vue-hot-reload-api");
 	    hotAPI.install(require("vue"), false);
 	    if (!hotAPI.compatible) return;
-	    var id = "_v-09cb841a/MaskOver.vue";
+	    var id = "_v-680e8b86/MaskOver.vue";
 	    if (!module.hot.data) {
 	      hotAPI.createRecord(id, module.exports);
 	    } else {
@@ -444,7 +441,7 @@
 /* 14 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"over\" _v-09cb841a=\"\">\n\t<div class=\"over-c\" _v-09cb841a=\"\">\n        <img :src=\"'../adr/public/images/over.png'\" alt=\"本期活动已结束\" _v-09cb841a=\"\">\n        <p class=\"over-p1\" _v-09cb841a=\"\">本期活动已结束</p>\n        <p class=\"over-p2\" _v-09cb841a=\"\">敬请期待下一波活动</p>\n    </div>\n</div>\n";
+	module.exports = "\n<div class=\"over\" _v-680e8b86=\"\">\n\t<div class=\"over-c\" _v-680e8b86=\"\">\n        <img :src=\"'../adr/public/images/over.png'\" alt=\"本期活动已结束\" _v-680e8b86=\"\">\n        <p class=\"over-p1\" _v-680e8b86=\"\">本期活动已结束</p>\n        <p class=\"over-p2\" _v-680e8b86=\"\">敬请期待下一波活动</p>\n    </div>\n</div>\n";
 
 /***/ },
 /* 15 */
@@ -477,7 +474,7 @@
 	    var hotAPI = require("vue-hot-reload-api");
 	    hotAPI.install(require("vue"), false);
 	    if (!hotAPI.compatible) return;
-	    var id = "_v-506e3427/MaskDownload.vue";
+	    var id = "_v-59c17b71/MaskDownload.vue";
 	    if (!module.hot.data) {
 	      hotAPI.createRecord(id, module.exports);
 	    } else {
@@ -521,7 +518,7 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"MaskDownload\" _v-506e3427=\"\">\n\t<div class=\"mask-panel\" _v-506e3427=\"\">\n\t\t<div class=\"top\" _v-506e3427=\"\">下载QQ阅读，畅读海量小说</div>\n\t\t<p class=\"middle\" _v-506e3427=\"\">如果还未安装QQ阅读，你可以：</p>\n\t\t<ul class=\"bottom\" _v-506e3427=\"\">\n\t\t\t<li class=\"confirm\" @click=\"downapp\" _v-506e3427=\"\">下载QQ阅读</li>\n\t\t\t<li class=\"cancel\" @click=\"closemask\" _v-506e3427=\"\">取消</li>\n\t\t</ul>\n\t</div>\n</div>\n";
+	module.exports = "\n<div class=\"MaskDownload\" _v-59c17b71=\"\">\n\t<div class=\"mask-panel\" _v-59c17b71=\"\">\n\t\t<div class=\"top\" _v-59c17b71=\"\">下载QQ阅读，畅读海量小说</div>\n\t\t<p class=\"middle\" _v-59c17b71=\"\">如果还未安装QQ阅读，你可以：</p>\n\t\t<ul class=\"bottom\" _v-59c17b71=\"\">\n\t\t\t<li class=\"confirm\" @click=\"downapp\" _v-59c17b71=\"\">下载QQ阅读</li>\n\t\t\t<li class=\"cancel\" @click=\"closemask\" _v-59c17b71=\"\">取消</li>\n\t\t</ul>\n\t</div>\n</div>\n";
 
 /***/ },
 /* 20 */
@@ -554,7 +551,7 @@
 	    var hotAPI = require("vue-hot-reload-api");
 	    hotAPI.install(require("vue"), false);
 	    if (!hotAPI.compatible) return;
-	    var id = "_v-4ae32c42/MaskBrowers.vue";
+	    var id = "_v-2d701155/MaskBrowers.vue";
 	    if (!module.hot.data) {
 	      hotAPI.createRecord(id, module.exports);
 	    } else {
@@ -591,7 +588,7 @@
 /* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"maskbrow\" @click=\"closemask()\" _v-4ae32c42=\"\">\n\t<img :src=\"'../adr/public/images/browers.png'\" _v-4ae32c42=\"\">\n</div>\n";
+	module.exports = "\n<div class=\"maskbrow\" @click=\"closemask()\" _v-2d701155=\"\">\n\t<img :src=\"'../adr/public/images/browers.png'\" _v-2d701155=\"\">\n</div>\n";
 
 /***/ },
 /* 25 */

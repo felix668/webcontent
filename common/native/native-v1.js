@@ -6,31 +6,71 @@
 	//打开app
 	bnative.openApp = function(front) {
 		front = front || BASE_URL;
+		
 		if (env.pt == "adr") {
 			requirejs([ front + "/native/androidScheme.js" ],
 					function() {
-						window.location.href = "uniteqqreader://nativepage/infostream/list";
+//						if(env.wv >= 656){
+//							WX.launchApplication("uniteqqreader://nativepage/infostream/list");
+//						}else{
+							window.location.href = "uniteqqreader://nativepage/infostream/list";
+//						}
 					});
 		} else if (env.pt == "ios") {
 			requirejs([ front + "/native/iosscheme.js" ], function() {
-				window.location = iOSScheme.simpleScheme();
+				if(env.wv >= 656){
+					WX.launchApplication("uniteqqreader://nativepage/infostream/list");
+				}else{
+					window.location = iOSScheme.simpleScheme();
+				}
 			});
 		} else {
 			console.log("请在移动设备打开~");
 		}
 	}
-	//在app打开指定页面
+	//打开app指定活动页面
 	bnative.openPage = function(url, front) {
 		front = front || BASE_URL;
 		if (env.pt == "adr") {
 			requirejs([ front + "/native/androidScheme.js" ],
 					function() {
-						window.location.href = "uniteqqreader://webpage/" + url;
-						//androidScheme.open("uniteqqreader://webpage/" +url);
+//						if(env.wv >= 656){
+//							WX.launchApplication("uniteqqreader://webpage/" + url);
+//						}else{
+							window.location.href = "uniteqqreader://webpage/" + url;
+//						}
 					});
 		} else if (env.pt == "ios") {
 			requirejs([ front + "/native/iosscheme.js" ], function() {
-				iOSScheme.open(iOSScheme.getUrlScheme(url));
+				if(env.wv >= 656){
+					WX.launchApplication("uniteqqreader://webpage/" + url);
+				}else{
+					iOSScheme.open(iOSScheme.getUrlScheme(url));
+				}
+			});
+		} else {
+			console.log("请在移动设备打开~");
+		}
+	}
+	//打开app指定native页面
+	bnative.openNativePage = function(url, front) {
+		front = front || BASE_URL;
+		if (env.pt == "adr") {
+			requirejs([ front + "/native/androidScheme.js" ],
+					function() {
+//						if(env.wv >= 656){
+//							WX.launchApplication("uniteqqreader://webpage/" + url);
+//						}else{
+							window.location.href = url;
+//						}
+					});
+		} else if (env.pt == "ios") {
+			requirejs([ front + "/native/iosscheme.js" ], function() {
+				if(env.wv >= 656){
+					WX.launchApplication(url);
+				}else{
+					iOSScheme.open(url);
+				}
 			});
 		} else {
 			console.log("请在移动设备打开~");
@@ -56,16 +96,20 @@
 	bnative.toBookDetail = function(bid, front) {
 		front = front || BASE_URL;
 		if (env.pt == "adr") {
-			requirejs([ front + "/native/androidScheme.js" ],
-					function() {
-						//androidScheme.open("uniteqqreader://nativepage/book/detail?bid="+bid);
-				window.location.href = "uniteqqreader://nativepage/book/detail?bid="+bid;
+			requirejs([ front + "/native/androidScheme.js" ], function() {
+//				if(env.wv >= 656){
+//					WX.launchApplication("uniteqqreader://nativepage/book/detail?bid="+bid);
+//				}else{
+					window.location.href = "uniteqqreader://nativepage/book/detail?bid="+bid;
+//				}
 			});
 		} else if (env.pt == "ios") {
 			requirejs([ front + "/native/iosscheme.js" ], function() {
-//				iOSScheme.open(iOSScheme.getUrlScheme("uniteqqreader://nativepage/book/detail?bid="+bid));
-				//window.location.href = "uniteqqreader://nativepage/book/detail?bid="+bid;
-				iOSScheme.open(iOSScheme.getBookScheme(bid));
+				if(env.wv >= 656){
+					WX.launchApplication("uniteqqreader://nativepage/book/detail?bid="+bid);
+				}else{
+					iOSScheme.open(iOSScheme.getBookScheme(bid));
+				}
 			});
 		} else {
 			console.log("请在移动设备打开~");
@@ -77,11 +121,19 @@
 		if (env.pt == "adr") {
 			requirejs([ front + "/native/androidScheme.js" ],
 					function() {
-				window.location.href = "uniteqqreader://nativepage/client/readepage?bid="+bid;
+//				if(env.wv >= 656){
+//					WX.launchApplication("uniteqqreader://nativepage/client/readepage?bid="+bid);
+//				}else{
+					window.location.href = "uniteqqreader://nativepage/client/readepage?bid="+bid;
+//				}
 			});
 		} else if (env.pt == "ios") {
 			requirejs([ front + "/native/iosscheme.js" ], function() {
-				window.location.href = "uniteqqreader://nativepage/client/readepage?bid="+bid;
+				if(env.wv >= 656){
+					WX.launchApplication("uniteqqreader://nativepage/client/readepage?bid="+bid);
+				}else{
+					window.location.href = "uniteqqreader://nativepage/client/readepage?bid="+bid;
+				}
 			});
 		} else {
 			console.log("请在移动设备打开~");

@@ -62,7 +62,7 @@ module.exports = {
     },
 	plugins: [
 		new Ex({
-	      filename: 'css/index.css',
+	      filename: 'css/[name].style.css',
 	      // allChunks: true  所有的CSS文件合并成1个文件, allChunks设置成true
 	      // publicPath:""
 	    })

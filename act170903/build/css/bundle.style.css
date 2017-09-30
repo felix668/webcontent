@@ -1,0 +1,687 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btnstyle {
+  height: .76rem;
+  line-height: .74rem;
+  text-align: center;
+  border-radius: .76rem;
+  background: #4f75a7;
+  color: #fff;
+  font-size: 0.32rem;
+}
+.centerflex {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+body,
+div,
+p,
+h4,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+li {
+  list-style: none;
+}
+em,
+i,
+span {
+  font-style: normal;
+}
+body {
+  font-family: "Microsoft YaHei", Helvetica, STHeiTi, sans-serif, sans-serif;
+  -webkit-text-size-adjust: none;
+  font-size: 0.26rem;
+  line-height: .42rem;
+  color: #ad622a;
+}
+/*===========main==========*/
+.wrap {
+  width: 100%;
+  background: #fdcaa0 url(../images/baner.jpg) no-repeat;
+  background-size: 100% auto;
+  padding-top: 6.56rem;
+  position: relative;
+  z-index: 1;
+}
+.wrap .adtime {
+  position: absolute;
+  left: 50%;
+  top: 6.46rem;
+  margin-left: -3.2rem;
+  font-size: 0.28rem;
+  color: #fff;
+  width: 6.4rem;
+  height: .54rem;
+  line-height: .46rem;
+  text-align: center;
+  background: url(../images/timebg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.wrap .moread {
+  display: block;
+  width: 6.86rem;
+  margin: .5rem auto;
+  height: .98rem;
+  line-height: .98rem;
+  text-align: center;
+  border: 2px solid #f6a060;
+  border-radius: 5px;
+}
+/*=========弹框==========*/
+.mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0 ;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  width: 100%;
+  height: 100%;
+}
+.teaparea {
+  width: 5.2rem;
+  background: #f8ead9 url(../images/maskbot.png) no-repeat;
+  background-size: 100% 100%;
+  padding-top: .5rem;
+  padding-bottom: .3rem;
+  box-shadow: 0 2px 20px rgba(205, 120, 85, 0.6);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+.teaparea h4 {
+  font-size: .32rem;
+  color: #1b1b1b;
+  font-weight: normal;
+  text-align: center;
+  line-height: .8rem;
+}
+.teaparea h4.online {
+  margin: .1rem 0 .4rem;
+}
+.teaparea h4.freeh {
+  line-height: .48rem;
+}
+.teaparea .closeicon {
+  position: absolute;
+  top: .24rem;
+  right: .24rem;
+  width: .4rem;
+  height: .4rem;
+  background: url(../images/closeicon.png) no-repeat top right;
+  background-size: .26rem .26rem;
+}
+.teaparea .img {
+  width: 1.94rem;
+  width: 1,94rem;
+  background: #fefbf4;
+  border: 2px solid #c6e4b8;
+  margin: .2rem auto .3rem;
+}
+.teaparea .img img {
+  width: 100%;
+  display: block;
+}
+.teaparea .freebook {
+  display: block;
+  width: 1.52rem;
+  height: 2.02rem;
+  margin: .3rem auto;
+  box-shadow: 0 4px 18px rgba(182, 129, 79, 0.5);
+}
+.teaparea p {
+  font-size: .24rem;
+  text-align: center;
+  line-height: .48rem;
+  margin: 0 auto .1rem;
+}
+.teaparea p.online {
+  margin: .1rem 0 .4rem;
+}
+.teaparea .prizelist {
+  width: 3.6rem;
+  margin: 0 auto .4rem;
+}
+.teaparea .prizelist p {
+  color: #1b1b1b;
+  height: .8rem;
+  text-align: left;
+  line-height: .8rem;
+  border-bottom: 1px solid #ad622a;
+}
+.teaparea .prizelist li {
+  height: .8rem;
+  text-align: left;
+  line-height: .8rem;
+  border-bottom: 1px solid #ad622a;
+  padding: 0 0 0 .8rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.teaparea .prizelist li img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: .72rem;
+  height: .72rem;
+  margin-top: -0.36rem;
+}
+.teaparea .prizelist li img.bookimg {
+  width: .44rem;
+  height: .6rem;
+  margin-top: -0.3rem;
+  left: 0.1rem;
+}
+.teaparea .prizelist li .gouse {
+  display: block;
+  width: .8rem;
+  height: .8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  font-size: .24rem;
+  background: none;
+  color: #6cabd5;
+}
+.teaparea a {
+  display: block;
+  width: 4.5rem;
+  height: .88rem;
+  line-height: .78rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0.32rem;
+  color: #fff;
+  background: url(../images/maskbtn.png) no-repeat;
+  background-size: 100% 100%;
+}
+.teaparea .btnbox {
+  width: 4.58rem;
+  height: .88rem;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
+  margin: .1rem auto 0;
+}
+.teaparea .btnbox li {
+  width: 2.28rem;
+  height: .88rem;
+  background: url(../images/addbtn.png) no-repeat;
+  background-size: 100% 100%;
+}
+.teaparea .btnbox li:last-child {
+  background: url(../images/readbtn.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.loadingbox{position: fixed;left: 0;top:0;width: 100%;height: 100%;background: white;color: grey;text-align: center;font-size: 14px;z-index: 9999;
+}
+.loadingTop{ display:block; margin:0 auto; text-align:center; padding:160px 0;
+}
+.loads{ width:24px; height:24px; padding: 8px; -webkit-animation:rotate 1s linear infinite;display:inline-block; margin:0 auto;vertical-align: middle;
+}
+svg{margin:0;padding:0;
+}
+.cls-default { fill: #3399ff; fill-rule: evenodd;
+}
+@-webkit-keyframes rotate{
+0%{-webkit-transform:rotate(0deg)
+}
+100%{-webkit-transform:rotate(360deg);
+}
+}
+
+.over {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1999;
+}
+.over .over-c {
+  height: 4.16rem;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.over .over-c img {
+  width: 2.05rem;
+  height: 2.19rem;
+  margin: 0.32rem auto 0;
+}
+.over p {
+  color: #999;
+  font-size: 0.30rem;
+  line-height: 1;
+}
+.over .over-p1 {
+  margin-top: 0.33rem;
+}
+.over .over-p2 {
+  margin-top: 0.24rem;
+  margin-bottom: 0.48rem;
+}
+
+.rules {
+  margin: .5rem 0 0;
+  width: 100%;
+  background: url(../images/botbg.png) no-repeat center bottom;
+  background-size: 100% auto;
+}
+.rules .ttbox {
+  width: 3rem;
+  height: 1.18rem;
+  background: url(../images/rulett.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto .2rem;
+}
+.rules p {
+  font-size: .36rem;
+  line-height: .68rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.rules li {
+  text-align: left;
+  margin: 0 .4rem 0 .27rem;
+  padding-left: .53rem;
+  padding-bottom: .18rem;
+  position: relative;
+  z-index: 1;
+  font-size: .26rem;
+  line-height: .48rem;
+}
+.rules li span {
+  position: absolute;
+  left: 0;
+  top: .07rem;
+  z-index: 1;
+  text-align: center;
+  display: block;
+  width: .46rem;
+  height: .46rem;
+  background: url(../images/ruleicon.png) no-repeat;
+  background-size: 100% 100%;
+  line-height: .46rem;
+}
+.rules li a {
+  text-decoration: underline;
+  color: #6cabd5;
+}
+.rules p.copyright {
+  width: 2.32rem;
+  height: 1.6rem;
+  background: url(../images/logo.png) no-repeat center center;
+  background-size: 2.32rem auto;
+  margin: 0 auto;
+}
+
+.chestbox {
+  width: 6.48rem;
+  height: 4.34rem;
+  padding: .68rem .4rem .4rem;
+  background: url(../images/chestbg.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.chestbox .userbox {
+  padding-left: 1rem;
+  position: relative;
+  z-index: 1;
+  height: .86rem;
+  line-height: .86rem;
+  font-size: 0.28rem;
+}
+.chestbox .userbox .userface {
+  position: absolute;
+  left: 0 ;
+  top: 0;
+  border: 2px solid #dd8f60;
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px rgba(201, 120, 85, 0.45);
+}
+.chestbox .userbox .userface img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  display: block;
+}
+.chestbox .userbox a {
+  display: block;
+  height: 38px;
+}
+.chestbox .userbox a span {
+  color: #00adfc;
+  text-decoration: underline;
+}
+.chestbox .userbox .tomyprize {
+  position: absolute;
+  top: .16rem;
+  right: .16rem;
+  width: 1.42rem;
+  height: .88rem;
+  background: url(../images/myprize.png) no-repeat;
+  background-size: 100% 100%;
+}
+.chestbox .chestinfo {
+  width: 5.78rem;
+  margin: 0 auto;
+  background: url(../images/chest.png) no-repeat center 0.28rem;
+  background-size: 4.66rem auto;
+}
+.chestbox .chestinfo .prizeintroduce {
+  font-size: 0.2rem;
+  margin-bottom: 1.76rem;
+  height: .56rem;
+  line-height: 0.28rem;
+  color: #d14343;
+  text-align: center;
+}
+.chestbox .chestinfo .chance {
+  text-align: center;
+  font-size: 0.24rem;
+  color: #d14343;
+  line-height: .56rem;
+  height: .56rem;
+}
+.chestbox .chestinfo .chance span {
+  font-size: .36rem;
+}
+.chestbox .chestinfo ul {
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
+}
+.chestbox .chestinfo ul li {
+  width: 2.34rem;
+  height: .66rem;
+  line-height: .58rem;
+  text-align: center;
+  font-size: 0.28rem;
+  color: #fff;
+  background: url(../images/redbtn.png) no-repeat;
+  background-size: 100% 100%;
+}
+.chestbox .chestinfo ul li:last-child {
+  width: 2.36rem;
+  background: url(../images/orangebtn.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.receivebox {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 6;
+}
+.receivebox:after {
+  content: '';
+  position: absolute;
+  left: 0 ;
+  top: .46rem;
+  z-index: -1;
+  width: 7.5rem;
+  height: 4.9rem;
+  background: url(../images/clund.png) no-repeat;
+  background-size: 100% 100%;
+}
+.receivebox .title {
+  width: 2.68rem;
+  height: 1.1rem;
+  margin: 0 auto;
+  background: url(../images/tt.png) no-repeat;
+  background-size: 100% 100%;
+}
+.receivebox .freeRe,
+.receivebox .readexchange {
+  /*display: -webkit-flex;-webkit-flex-direction: row;-webkit-align-items:center;-webkit-justify-content:center; */
+  width: 6.4rem;
+  padding-left: .62rem;
+  height: 1.3rem;
+  margin: 0 auto;
+  background: url(../images/freerebg.png) no-repeat;
+  background-size: 100% 100%;
+  line-height: 1.2rem;
+  color: #fff;
+  font-size: 0.28rem;
+  position: relative;
+  z-index: 2;
+}
+.receivebox .freeRe a,
+.receivebox .readexchange a,
+.receivebox .freeRe span,
+.receivebox .readexchange span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: .32rem;
+  margin-top: -0.33rem;
+  width: 2.36rem;
+  height: .66rem;
+  line-height: .58rem;
+  text-align: center;
+  font-size: 0.28rem;
+  background: url(../images/bluebtn.png) no-repeat;
+  background-size: 100% 100%;
+}
+.receivebox .freeRe span,
+.receivebox .readexchange span {
+  background: none;
+  line-height: .42rem;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  height: .82rem;
+  margin-top: -0.41rem;
+  color: #6e391d;
+}
+.receivebox .readexchange {
+  width: 6.52rem;
+  padding-left: .76rem;
+  height: 1.98rem;
+  line-height: 1.92rem;
+  color: #ad622a;
+  background: url(../images/readtimebg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.receivebox .readexchange a {
+  background: url(../images/redbtn.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+.receivebox .buybox {
+  width: 7.02rem;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
+  margin: .1rem auto;
+}
+.receivebox .buybox li {
+  width: 3.46rem;
+  height: 1.7rem;
+  background: url(../images/buybg.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  line-height: .7rem;
+}
+.receivebox .buybox li a {
+  display: block;
+  width: 2.34rem;
+  height: .66rem;
+  line-height: .58rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.28rem;
+  background: url(../images/redbtn.png) no-repeat;
+  background-size: 100% 100%;
+}
+.receivebox .buybox li:last-child:after {
+  content: '';
+  position: absolute;
+  left: .1rem;
+  top: -0.04rem;
+  width: .62rem;
+  height: .6rem;
+  background: url(../images/icon.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+/*# sourceMappingURL=bundle.style.css.map*/

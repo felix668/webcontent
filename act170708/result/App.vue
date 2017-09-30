@@ -44,7 +44,23 @@
 			}
 		},
 		created(){
+			console.log(0)
+
 			Local.cacheImage(this.imageUrl)
+			let self = this
+			// window.afterShare = function(){
+			// 	console.log(11)
+		 //      	Local.reqaObj(common.server() + "pkg170708/pick", data=>{
+		 //      		console.log(data)
+		 //      		if (self.plat == 'ios') {
+	  //     				Local.showToast('分享成功')
+	  //     			}
+		 //      		// if (data.code == 1) {
+		 //      		// }
+			// 	}, [], function() {
+			// 			Local.showToast("网络异常，请稍候重试")
+			// 	}, 1)
+		 //    }
 		},
 		mounted(){
 			window.onload = _=>{

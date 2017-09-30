@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<style>
+		body{padding: 0;margin: 0;}
+		nav{
+			display: -webkit-flex;
+			width: 300px;
+			flex-flow: wrap row;
+		}
+		div{
+			width: 100px;
+			margin: 10px;
+			height: 50px;
+			background-color: skyblue;
+		}
+		div:nth-child(n+5){
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</nav>
+</body>
+<script src="js/debug.js"></script>
+<script>
+	var nav = document.querySelector('nav')
+	var computedStyle = document.defaultView.getComputedStyle(nav,null)
+	console.log(computedStyle.display)
+	console.log(computedStyle.flexDirection)
+	console.log(computedStyle.flexWrap)
+</script>
+</html>

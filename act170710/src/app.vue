@@ -1,6 +1,7 @@
 <template>
-	<div id="app">
-		<template v-if="!over && !loading">
+	<div id="app">	
+		<template v-if="!over">
+			<img src="src/images/banner.jpg">
 		    <div class="userinfo">
  				<div class="avor">
  					<img :src="readpack.icon">
@@ -40,7 +41,7 @@
 	export default {
 		data(){
 			return{
-		 		loading:true,
+		 		// loading:true,
 		 		over:false,
 		 		isLogin:true,
 		 		plat:window.pt,
@@ -64,12 +65,13 @@
 						this.readpack.icon=data.icon && data.guestcheckcode!=0 ? data.icon : "src/images/default.png";
 					}   
 					document.querySelector("#loadingbox").style.display="none";
-					this.loading=false;			
+					// this.loading=false;			
 	 			}else{
 	 				var server = this.plat == "ios" ? "https://ptcommon.reader.qq.com/v6_3_9/nativepage/readTime/getWeekExchangeInfo?c_platform=ioswp" : "http://ptcommon.reader.qq.com/v6_3_9/nativepage/readTime/getWeekExchangeInfo";
 	 				Local.reqaObj(server, data => {
 	 					if(data.code == -4){
 		 			    	this.over = true;
+		 			    	document.querySelector("#loadingbox").style.display="none";
 		 			    	return;
 	 			    	}
 	 			    	this.isLogin=data.isLogin;
@@ -79,12 +81,12 @@
 							this.readpack.icon=data.icon && !data.gsid ? data.icon : "src/images/default.png";
 						}
 						document.querySelector("#loadingbox").style.display="none";
-						this.loading=false;
+						// this.loading=false;
 					}, [], function() {
 						Local.showToast("网络异常，请稍候重试");
 					}, 1);				
 	 			}
-	 			// Local.forceLog(common.param("act_f"),"init");
+	 			Local.forceLog(common.param("act_f"),"YDDYinit");
 	 		},
 	 		pick(){
 				if(!this.isLogin){
@@ -104,7 +106,7 @@
 				}, [], function() {
 					Local.showToast("网络异常，请稍候重试");
 				}, 1);
-				// Local.forceLog(common.param("act_f"),"pick");
+				Local.forceLog(common.param("act_f"),"YDDYpick");
 			}		
 		},
 	 	components:{

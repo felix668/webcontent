@@ -196,10 +196,10 @@
 					console.log(data);
 					self.loading=false;
 					if(data.code==-4){
-						self.over=true;
+						//self.over=true;
 					}
-					self.islogin=data.isLogin;
-					self.tabstaus=data.tabstatus;
+					//self.islogin=data.isLogin;
+					//self.tabstaus=data.tabstatus;
 					self.tabdiff(self.tabstaus);
 					self.shareObj.url=front()+"act170409/com/index.html?tf=1&act_f=170409";
 					self.shareObj.cover=front()+"act170409/adr/public/images/coverm.jpg";
